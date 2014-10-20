@@ -1,0 +1,48 @@
+@import 'reset_meyer'
+
+@import 'rules'
+@import 'colors'
+@import 'mixins'
+
+html
+    font: $regularFont
+body
+    position: realtive
+.accueil
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url(images/backgroundImage.jpg) center no-repeat
+    z-index: -9999
+header
+    width: 100%
+    background: $headerFooterBackground
+    position: relative
+    img
+        position: absolute
+        top: -5em
+        left: 0
+nav
+    margin: 2em 0
+    padding: 0.5em 0
+    ul
+        padding: 1.5em 0
+        border-top: 1px solid white
+        border-bottom: 1px solid white
+    li
+        display: inline-block
+        margin-right: 0.75em
+        &:last-child
+            margin-right: 0
+    a
+        +headFontStyle( 1.25em )
+        color: white
+        text-decoration: none
+        +transition( all, 0.25s )
+        &:hover
+            padding-bottom: 0.15em
+            border-bottom: 2px solid white
+.banners
+    width: 150px

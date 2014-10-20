@@ -1,0 +1,35 @@
+extends layout
+
+block title
+    title Resto Rallye - Accueil
+
+block header
+    header
+        img(src="css/images/Banners.png", alt="Banners Resto Rallye")
+        nav
+            ul
+                li.banners
+                li.target
+                    a(href="#") Food
+                li
+                    a(href="#") About Us
+                li
+                    a(href="#") Contact
+
+block content
+    div.accueil
+    blockquote
+        | RestoRallye description here
+
+block footer
+    footer
+        p
+            | designed by&nbsp;
+            a(href="http://portfolio.simon-leyder.be/") Simon Leyder
+            | &nbsp;and&nbsp;
+            a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
+            |  &nbsp;at 2014
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    script(src="js/script-min.js")
