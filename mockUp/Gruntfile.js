@@ -15,7 +15,7 @@ module.exports = function( grunt ) {
 		        "style": 'expanded'
 		      },
 		      "files": {
-		        "lib/css/screen.css": "src/sass/screen.sass"
+		        "bin/css/screen.css": "src/sass/screen.sass"
 		      }
 		    }
 		},
@@ -28,14 +28,14 @@ module.exports = function( grunt ) {
 					},
 				},
 				"files": {
-					"lib/index.html": "src/jade/index.jade"
+					"bin/index.html": "src/jade/index.jade"
 				}
 			}
 		},
 		"uglify": {
 			"scripts": {
 				"files": {
-					"lib/js/script.min.js": "src/js/script.js"
+					"bin/js/script.min.js": "src/js/script.js"
 				}
 			}
 		},
@@ -56,6 +56,7 @@ module.exports = function( grunt ) {
 	} );
 
 	grunt.registerTask( "build", [
+		"jade",
 		"sass",
 		"uglify"
 	] );
