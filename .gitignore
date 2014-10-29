@@ -1,0 +1,4 @@
+mockup/node_modules
+#.sass-cache
+#mockup/bin
+#.DS_Store
