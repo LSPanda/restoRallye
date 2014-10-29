@@ -10,3 +10,9 @@ Réalisation d’un site web en groupe à l’aide d’un framework **PHP** dans
 
 ***
 
+### Compiler le mockup depuis les sources
+
+1. Cloner le repo
+1. Se placer dans le répertoire `mockUp`
+1. Lancer `npm install` pour avoir les dépendances
+1. Lancer `grunt build` pour compiler le site
