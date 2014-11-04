@@ -3,6 +3,11 @@
 #############
 
 node_modules/
+bin/css/*.css
+bin/css/*.map
+bin/html
+bin/js
+bin/index.html
 
 #############
 ## Sass
