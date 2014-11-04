@@ -9,16 +9,21 @@ html
     height: 100%
     overflow: hidden
 body
-    perspective: 1px
     transform-style: preserve-3d
     height: 100%
     overflow-y: scroll
     overflow-x: hidden
 h2
     +getOffMyPage()
+.stick
+    margin-top: 0
 nav
     background: $headerBackground
+    margin-top: 1em
     padding: 0.5em 0
+    position: fixed
+    width: 100%
+    z-index: 1
     ul
         text-align: center
         border-top: 2px solid white
@@ -47,7 +52,7 @@ nav
 //Pure CSS - Parallax
 .slideImage
     position: relative
-    min-height: 75vh
+    min-height: 85vh
     box-sizing: border-box
     transform-style: inherit
     &:before
@@ -68,8 +73,11 @@ nav
 #slide1
     background-image: url("images/backgroundImage.jpg")
     background-attachment: fixed
-#slide3
+#slide2
     background-image: url("images/backgroundImage1.jpg")
+    background-attachment: fixed
+#slide3
+    background-image: url("images/backgroundImage2.jpg")
     background-attachment: fixed
 
 //@import 'tablette'
