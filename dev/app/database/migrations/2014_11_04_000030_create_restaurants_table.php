@@ -19,12 +19,12 @@ class CreateRestaurantsTable extends Migration {
 			$table->text('body');
 			$table->string('adress');
 			$table->integer('adress_number');
-			$table->integer('postal_code', 4);
+			$table->integer('postal_code');
 			$table->string('city');
 			$table->string('website');
 			$table->string('email');
 			$table->string('tel');
-			$table->integer('note', 1);
+			$table->integer('note');
 			$table->timestamps();
 		});
 	}

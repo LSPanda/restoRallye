@@ -9,10 +9,6 @@ class CommentsTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(range(1, 10) as $index)
-		{
-
-		}
 	}
 
 }

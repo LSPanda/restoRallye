@@ -11,6 +11,6 @@ class Restaurant extends \Eloquent {
 	protected $fillable = [];
 
     public function events () {
-        return $this->belongsToMany('Event');
+        return $this->belongsToMany('Event')->withPivot ( 'menu_id' );
     }
 }
