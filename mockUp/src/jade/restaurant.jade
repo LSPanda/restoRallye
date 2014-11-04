@@ -1,0 +1,41 @@
+extends layout
+
+block title
+    title Resto Rallye - Restaurant partenaire
+    
+block stylesheet
+    link(rel="stylesheet" href="../css/screen.css")
+
+block header
+    header
+        h2 Menu de navigation du site Resto Rallye
+        nav
+            ul
+                li.focus
+                    a(href="restaurant.html") Restaurant
+                li
+                    a(href="rallye.html") Rallye
+                li.banners
+                    a(href="../index.html")
+                        img(src="", alt="Banners Resto Rallye")
+                li
+                    a(href="blog.html") Blog
+                li
+                    a(href="contact.html") Contact
+                
+
+block content
+    p Page Restaurant
+
+block footer
+    footer
+        p
+            | designed by&nbsp;
+            a(href="http://portfolio.simon-leyder.be/") Simon Leyder
+            | &nbsp;and&nbsp;
+            a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
+            |  &nbsp;at 2014
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    script(src="js/script-min.js")
