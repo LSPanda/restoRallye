@@ -1,9 +1,12 @@
 <?php
+use Faker\Factory as Faker;
 
 class MenusTableSeeder extends Seeder {
 
     public function run () {
-        $menu    = [
+        $faker = Faker::create ( 'fr_FR' );
+
+        $menu = [
             'name'    => 'Mon menu',
             'content' => [
                 $faker->sentence (),

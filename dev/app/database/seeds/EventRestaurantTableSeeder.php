@@ -10,7 +10,7 @@ class EventRestaurantTableSeeder extends Seeder {
         $resto[ 'jeux2saveurs' ] = Restaurant::whereName ( 'Jeux2Saveurs' )->first ();
         $resto[ 'alPierino' ]    = Restaurant::whereName ( 'Al Pierino' )->first ();
         // Getting the menu
-        $menu = Menu::all()->first();
+        $menu = Menu::all ()->first ();
 
         // Future event
         $event = Event::whereCity ( 'Blehen' )->first ();

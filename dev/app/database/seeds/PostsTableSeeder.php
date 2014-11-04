@@ -4,12 +4,12 @@ use Faker\Factory as Faker;
 class PostsTableSeeder extends Seeder {
 
     public function run () {
-        $faker = Faker::create ();
+        $faker = Faker::create ( 'fr_FR' );
 
         Post::create ( [
-            'name' => 'Qu\'est ce que le RestoRallye ?',
-            'body' => $faker->text (),
-            'type_id' => Type::whereName('about-home')->first()->id
+            'name'    => 'Qu\'est ce que le RestoRallye ?',
+            'body'    => $faker->text (),
+            'type_id' => Type::whereName ( 'about-home' )->first ()->id
         ] );
     }
 

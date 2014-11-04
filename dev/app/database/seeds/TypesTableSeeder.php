@@ -2,19 +2,18 @@
 
 class TypesTableSeeder extends Seeder {
 
-	public function run()
-	{
-        Type::create([
+    public function run () {
+        Type::create ( [
             'name' => 'about-home'
-        ]);
+        ] );
 
-        Type::create([
+        Type::create ( [
             'name' => 'post'
-        ]);
+        ] );
 
-        Type::create([
+        Type::create ( [
             'name' => 'newsletter'
-        ]);
-	}
+        ] );
+    }
 
 }

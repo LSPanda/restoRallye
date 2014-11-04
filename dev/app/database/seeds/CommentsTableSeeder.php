@@ -1,14 +1,11 @@
 <?php
-
-// Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
 
 class CommentsTableSeeder extends Seeder {
 
-	public function run()
-	{
-		$faker = Faker::create();
+    public function run () {
+        $faker = Faker::create ( 'fr_FR' );
 
-	}
+    }
 
 }

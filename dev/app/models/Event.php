@@ -14,10 +14,6 @@ class Event extends \Eloquent {
         return $this->belongsToMany ( 'Restaurant' )->withPivot ( 'menu_id' );
     }
 
-    public function menus () {
-        return $this->belongsToMany ( 'Menu' );
-    }
-
     public function users () {
         return $this->belongsToMany ( 'User' );
     }

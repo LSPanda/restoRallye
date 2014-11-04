@@ -4,7 +4,7 @@ use Faker\Factory as Faker;
 class RestaurantsTableSeeder extends Seeder {
 
     public function run () {
-        $faker = Faker::create ();
+        $faker = Faker::create ( 'fr_FR' );
 
         Restaurant::create ( [
             'name'          => 'La Tambouille',
