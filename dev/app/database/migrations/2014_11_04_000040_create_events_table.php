@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration {
 			$table->string('adress');
 			$table->integer('adress_number')->nullable();
 			$table->integer('postal_code', 4);
-			$table->string('town');
+			$table->string('city');
 			$table->timestamps();
 		});
 	}

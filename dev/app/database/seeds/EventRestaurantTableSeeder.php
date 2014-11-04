@@ -1,20 +1,26 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
-use Faker\Factory as Faker;
 
 class EventRestaurantTableSeeder extends Seeder {
 
-	public function run()
-	{
-		$faker = Faker::create();
+    public function run () {
+        // Future event
+        $event = Event::whereCity ( 'Blehen' )->first();
+        // Atach the restaurants
+        $event->restaurants()->attach(Restaurant::whereName('La Tambouille')->first()->id);
+        $event->restaurants()->attach(Restaurant::whereName('Fallais-Oser')->first()->id);
+        $event->restaurants()->attach(Restaurant::whereName('Jeux2Saveurs')->first()->id);
+        // Atach the menus
+        $event->restaurants()->attach(Restaurant::whereName('Jeux2Saveurs')->first()->id);
 
-		foreach(range(1, 10) as $index)
-		{
-			EventRestaurant::create([
+        // Past event
+        $event = Event::whereCity ( 'Liège' )->first();
+        // Atach the restaurants
+        $event->restaurants()->attach(Restaurant::whereName('Al Pierino')->first()->id);
+        $event->restaurants()->attach(Restaurant::whereName('Jeux2Saveurs')->first()->id);
+        $event->restaurants()->attach(Restaurant::whereName('La Tambouille')->first()->id);
+        // Atach the menus
 
-			]);
-		}
-	}
+    }
 
 }

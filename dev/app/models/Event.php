@@ -14,6 +14,10 @@ class Event extends \Eloquent {
         return $this->belongsToMany('Restaurant');
     }
 
+    public function menus () {
+        return $this->belongsToMany('Menu');
+    }
+
     public function users () {
         return $this->belongsToMany('User');
     }
