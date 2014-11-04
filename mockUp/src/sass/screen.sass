@@ -6,18 +6,20 @@
 
 html
     font: $regularFont
+    height: 100%
+    overflow: hidden
 body
-    position: relative
+    perspective: 1px
+    transform-style: preserve-3d
+    height: 100%
+    overflow-y: scroll
+    overflow-x: hidden
 h2
     +getOffMyPage()
 
 nav
     background: $headerBackground
     padding: 0.25em 0
-    position: fixed
-    width: 100%
-    left: 0
-    top: 0
     ul
         text-align: center
         border-top: 2px solid white
@@ -42,13 +44,34 @@ nav
         position: absolute
         top: -8em
         left: 0
-
-.thumbnail
-    height: 600px
-    overflow: hidden
-    img
-        display: block
-        width: 100%
+        z-index: 9999
+//Pure CSS - Parallax
+.slide
+    position: relative
+    padding: 25vh 10%
+    min-height: 100vh
+    width: 100vw
+    box-sizing: border-box
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.8)
+    transform-style: inherit
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+#slide1:before
+    background-image: url("images/backgroundImage.jpg")
+    transform: translateZ(-1px) scale(2)
+    z-index: -1
+#slide2
+    background-image: url("images/backgroundImage2.jpg")
+    background-attachment: fixed
+#slide3:before
+    background-image: url("images/backgroundImage3.jpg")
+    transform: translateZ(-1px) scale(2)
+    z-index: -1
 
 //@import 'tablette'
 //@import 'smartphone'
