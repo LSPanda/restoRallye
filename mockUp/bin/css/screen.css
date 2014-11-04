@@ -134,8 +134,7 @@ nav a {
 }
 
 #slide2 {
-  background-image: url("images/backgroundImage2.jpg");
-  background-attachment: fixed;
+  background: white;
 }
 
 #slide3:before {
