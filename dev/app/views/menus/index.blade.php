@@ -1,0 +1,1 @@
+/var/www/local.dev/restoRallye/dev/app/views/menus/index.blade.php
