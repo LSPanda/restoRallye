@@ -66,14 +66,18 @@ h2 {
 }
 
 nav {
-  background-color: #4bcbf2;
+  background: #4bcbf2;
   padding: 0.25em 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 nav ul {
   text-align: center;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  padding: 1em 0;
+  padding: 2.5em 0;
 }
 nav li {
   display: inline-block;
@@ -89,7 +93,26 @@ nav a {
 }
 
 .banners {
-  display: inline;
+  position: relative;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+}
+.banners img {
+  display: block;
+  width: 160px;
+  position: absolute;
+  top: -8em;
+  left: 0;
+}
+
+.thumbnail {
+  height: 600px;
+  overflow: hidden;
+}
+.thumbnail img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=screen.css.map */

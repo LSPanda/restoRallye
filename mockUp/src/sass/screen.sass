@@ -12,13 +12,17 @@ h2
     +getOffMyPage()
 
 nav
-    background-color: $headerFooterBackground
+    background: $headerBackground
     padding: 0.25em 0
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
     ul
         text-align: center
         border-top: 2px solid white
         border-bottom: 2px solid white
-        padding: 1em 0
+        padding: 2.5em 0
     li
         display: inline-block
         padding: 0 1em
@@ -28,7 +32,23 @@ nav
         text-decoration: none
         color: white
 .banners
-    display: inline
+    position: relative
+    width: 160px
+    margin: 0
+    padding: 0
+    img
+        display: block
+        width: 160px
+        position: absolute
+        top: -8em
+        left: 0
+
+.thumbnail
+    height: 600px
+    overflow: hidden
+    img
+        display: block
+        width: 100%
 
 //@import 'tablette'
 //@import 'smartphone'
