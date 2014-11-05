@@ -10,7 +10,7 @@ class Restaurant extends \Eloquent {
     // Don't forget to fill this array
     protected $fillable = [ ];
 
-    public function events () {
-        return $this->belongsToMany ( 'Event' )->withPivot ( 'menu_id' );
+    public function rallyes () {
+        return $this->belongsToMany ( 'Rallye' )->withPivot ( 'menu_id' );
     }
 }

@@ -19,6 +19,8 @@ class CreateRallyeUserTable extends Migration {
 			$table->foreign('rallye_id')->references('id')->on('rallyes')->onDelete('cascade');
 			$table->integer('user_id')->unsigned()->index();
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('gift_id')->unsigned()->index();
+            $table->foreign('gift_id')->references('id')->on('gifts')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

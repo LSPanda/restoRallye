@@ -14,7 +14,6 @@ class RallyeRestaurantTableSeeder extends Seeder {
 
         // Future rallye
         $rallye = Rallye::whereCity ( 'Blehen' )->first ();
-
         // Attach the restaurants
         $rallye->restaurants ()->attach ( $resto[ 'tambouille' ]->id, [ 'menu_id' => $menu->id ] );
         $rallye->restaurants ()->attach ( $resto[ 'fallais_oser' ]->id, [ 'menu_id' => $menu->id ] );
