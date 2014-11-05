@@ -24,6 +24,39 @@ a
     &:hover
         color: $hoverLinkColor
         text-decoration: none
+/*.error
+    display: block
+    color: $errorColor
+    margin-top: 1em
+    padding: 0.5em 1em
+    border-top: 1px solid $borderError
+    text-align: center*/
+.error
+    display: block
+    position: relative
+    border-top: 1px solid $borderError
+    margin-top: 1.25em
+    padding: 0.5em
+    text-align: center
+.error:after, .error:before
+    bottom: 100%
+    left: 50%
+    border: solid transparent
+    content: ""
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+.error:after
+    border-color: $borderErrorT
+    border-bottom-color: $slideText
+    border-width: 10px
+    margin-left: -10px
+.error:before
+    border-color: $borderErrorT
+    border-bottom-color: $borderError
+    border-width: 12px
+    margin-left: -12px
 
 //Style header
 .stick
@@ -115,8 +148,6 @@ footer
 h4
     padding-bottom: 1em
     +headingStyle( 1.15em )
-.myFooter
-    background-color: $footerBackground
 .newsletter
     width: 20%
     float: right
