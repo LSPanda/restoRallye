@@ -121,22 +121,30 @@ h4
     width: 20%
     float: right
     margin: 0
+    form
+        position: relative
     input[type=text]
-        width: 80%
-        float: left
-        padding: 0.5em 1em
+        width: 100%
+        border: none
+        padding: 1em 1.5em
+        background-color: $backgroundFormColor
+        +border-radius( 0.5em )
         box-sizing: border-box
-        +border-radius( 0.5em, 0, 0, 0.5em )
+        &:focus
+            outline: none
+            background-color: $focusBackgroundFormColor
     input[type=submit]
-        color: $color
-        width: 20%
-        float: right
-        padding: 0.5em 1em
-        +border-radius(  0, 0.5em, 0.5em, 0 )
+        position: absolute
+        right: 5px
+        top: 5px
+        width: 25px
+        height: 25px
+        text-indent: -100em
+        border: none
+        background: url("images/arrow.png") no-repeat center
+        +border-radius(  0.5em )
         &:hover
             cursor: pointer
-    input[type="text"]:focus, input[type="password"]:focus, textarea:focus
-        outline: none
     &:after
         +clearFloat()
 .designed
