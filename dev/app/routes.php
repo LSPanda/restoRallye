@@ -25,13 +25,19 @@ Route::pattern ( 'slug', '[a-z0-9-]+' );
 Route::get ( '/',
     [
         'as'   => 'home',
-        'uses' => 'pagesController@home'
+        'uses' => 'PagesController@home'
     ] );
 
 Route::get ( '/contact',
     [
         'as'   => 'contact',
-        'uses' => 'pagesController@contact'
+        'uses' => 'PagesController@contact'
+    ] );
+
+Route::post ( '/sendMail',
+    [
+        'as'   => 'sendMail',
+        'uses' => 'PagesController@sendMail'
     ] );
 
 /**
@@ -85,38 +91,51 @@ Route::group ( [ 'before' => 'auth', 'prefix' => $_ENV[ 'PREFIX' ] ],
     }
 );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/restaurants',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/restaurants',
     [
-        'as'   => 'restaurantAdminIndex',
-        'uses' => 'RestaurantsController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'restaurantAdminIndex',
+        'uses'   => 'RestaurantsController@adminIndex'
     ] );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/restaurants/show/{id}',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/restaurants/show/{id}',
     [
-        'as'   => 'restaurantAdminIndex',
-        'uses' => 'RestaurantsController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'restaurantAdminIndex',
+        'uses'   => 'RestaurantsController@adminIndex'
     ] );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/menus',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/menus',
     [
-        'as'   => 'menuAdminIndex',
-        'uses' => 'MenusController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'menuAdminIndex',
+        'uses'   => 'MenusController@adminIndex'
     ] );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/menus/show/{id}',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/menus/show/{id}',
     [
-        'as'   => 'menuAdminIndex',
-        'uses' => 'MenusController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'menuAdminIndex',
+        'uses'   => 'MenusController@adminIndex'
     ] );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/posts',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/posts',
     [
-        'as'   => 'postAdminIndex',
-        'uses' => 'PostsController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'postAdminIndex',
+        'uses'   => 'PostsController@adminIndex'
     ] );
 
-Route::get ( $_ENV[ 'PREFIX' ] . '/posts/show/{id}',
+Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/posts/show/{id}',
     [
-        'as'   => 'postAdminIndex',
-        'uses' => 'PostsController@adminIndex'
+        'before' => 'auth',
+        'as'     => 'postAdminIndex',
+        'uses'   => 'PostsController@adminIndex'
+    ] );
+
+Route::get ( '/' . $_ENV[ 'PREFIX' ],
+    [
+        'before' => 'auth',
+        'as'     => 'adminIndex',
+        'uses'   => 'PagesController@adminIndex'
     ] );
