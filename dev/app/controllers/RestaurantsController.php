@@ -14,6 +14,18 @@ class RestaurantsController extends \BaseController {
 		return View::make('restaurants.index', compact('restaurants'));
 	}
 
+    /**
+     * Display a listing of restaurants for the admin
+     *
+     * @return Response
+     */
+    public function adminIndex()
+    {
+        $restaurants = Restaurant::all();
+
+        return View::make('restaurants.adminIndex', compact('restaurants'));
+    }
+
 	/**
 	 * Show the form for creating a new restaurant
 	 *

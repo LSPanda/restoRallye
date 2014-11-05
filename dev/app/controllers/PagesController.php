@@ -2,11 +2,17 @@
 
 class PagesController extends \BaseController {
 
-    public function home (){
-        return View::make('hello');
+    public function home () {
+        $about = Type::whereName ( 'about-home' )->first ()->posts ()->first ();
+
+        return View::make ( 'pages.home', compact ( 'about' ) );
     }
 
-    public function contact (){
-        return View::make('contact');
+    public function adminIndex () {
+        return View::make ( 'pages.adminIndex' );
+    }
+
+    public function contact () {
+        return View::make ( 'pages.contact' );
     }
 }
