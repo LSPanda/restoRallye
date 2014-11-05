@@ -8,6 +8,7 @@ class PostsTableSeeder extends Seeder {
 
         Post::create ( [
             'name'    => 'Qu\'est ce que le RestoRallye ?',
+            'slug'    => 'what-is-restorallye',
             'body'    => $faker->text (),
             'type_id' => Type::whereName ( 'about-home' )->first ()->id
         ] );

@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->string('slug')->unique();
 			$table->text('body');
 			$table->integer('type_id')->unsigned();
             $table->foreign('type_id')

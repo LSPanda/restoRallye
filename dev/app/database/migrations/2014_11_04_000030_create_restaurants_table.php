@@ -16,6 +16,7 @@ class CreateRestaurantsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->string('slug')->unique();
 			$table->text('body');
 			$table->string('adress');
 			$table->integer('adress_number');
