@@ -12,6 +12,10 @@ class PagesController extends \BaseController {
         return View::make ( 'pages.adminIndex' );
     }
 
+    public function adminList () {
+        return View::make ( 'pages.adminIndex' );
+    }
+
     public function contact () {
         return View::make ( 'pages.contact' );
     }

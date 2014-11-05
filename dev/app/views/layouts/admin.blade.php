@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{ HTML::style('css/bootstrap.min.css') }}
-        {{ HTML::style('css/customStyles/login.css') }}
+        {{ HTML::style('css/customStyles/dashboard.css') }}
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,10 +21,18 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        @include('partials.nav.adminMain')
+
         <div class="container-fluid">
-            @yield('content')
+            <div class="row">
+                @include('partials.nav.adminSideBar')
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    @yield('content')
+                </div>
+            </div>
         </div>
 
+        {{ HTML::script('js/jquery.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
     </body>
 </html>

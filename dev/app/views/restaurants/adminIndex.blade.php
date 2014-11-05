@@ -1,7 +1,9 @@
-/var/www/local.dev/restoRallye/dev/app/views/restaurants/index.blade.php
+@extends('layouts.admin')
 
-<ul>
-    @foreach($restaurants as $restaurant)
-        <li>{{ $restaurant->name }}</li>
-    @endforeach
-</ul>
+@section('content')
+    <ul>
+        @foreach($restaurants as $restaurant)
+            <li>{{ $restaurant->name }}</li>
+        @endforeach
+    </ul>
+@stop
