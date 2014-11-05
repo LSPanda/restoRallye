@@ -89,8 +89,22 @@ nav
 
 //Style footer
 footer
-    h4
-        +footerFontStyle( 1.15em )
+    section
+        display: block
+        width: 20%
+        float: left
+    .newsletter
+        float: right
+    &:after
+        +clearFloat()
+h4
+    padding-bottom: 1em
+    +footerFontStyle( 1.15em )
+.designed
+    font-size: 0.85em
+    padding-top: 2em
+    font-style: italic
+    text-align: center
 
 //@import 'tablette'
 //@import 'smartphone'

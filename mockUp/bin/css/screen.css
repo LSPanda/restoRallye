@@ -167,10 +167,32 @@ nav a {
   background-attachment: fixed;
 }
 
-footer h4 {
+footer section {
+  display: block;
+  width: 20%;
+  float: left;
+}
+footer .newsletter {
+  float: right;
+}
+footer:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+h4 {
+  padding-bottom: 1em;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.15em;
-  font-size: italic;
+  font-style: italic;
+}
+
+.designed {
+  font-size: 0.85em;
+  padding-top: 2em;
+  font-style: italic;
+  text-align: center;
 }
 
 /*# sourceMappingURL=screen.css.map */
