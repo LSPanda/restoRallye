@@ -63,11 +63,31 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  color: #7f8c8d;
 }
 
 h2 {
   text-indent: -100em;
   display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #677171;
+}
+
+a {
+  color: #3498db;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover {
+  color: #90b4c5;
+  text-decoration: none;
 }
 
 .stick {
@@ -86,7 +106,7 @@ h2 {
 }
 
 nav {
-  background: #4bcbf2;
+  background: #3498db;
   margin-top: 1.5em;
   padding: 0.5em 0;
   position: fixed;
@@ -169,23 +189,34 @@ nav a {
 
 footer section {
   display: block;
-  width: 20%;
+  width: 16%;
   float: left;
-}
-footer .newsletter {
-  float: right;
+  margin-right: 0.5em;
 }
 footer:after {
   display: block;
   clear: both;
   content: "";
 }
+footer li {
+  padding: 0.15em 0;
+}
 
 h4 {
   padding-bottom: 1em;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.15em;
-  font-style: italic;
+  font-weight: 100;
+  color: #677171;
+}
+
+.myFooter {
+  background-color: #ffffff;
+}
+
+.newsletter {
+  float: right;
+  margin: 0;
 }
 
 .designed {
