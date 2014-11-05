@@ -11,6 +11,6 @@ class Post extends \Eloquent {
 	protected $fillable = [];
 
     public function type () {
-        $this->belongsTo ( 'Type' );
+        return $this->belongsTo ( 'Type' );
     }
 }
