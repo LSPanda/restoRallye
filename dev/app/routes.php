@@ -61,6 +61,28 @@ Route::resource ( 'posts',
     [ 'only' => [ 'index', 'show' ] ] );
 
 /**
+ * Login routes
+ */
+
+Route::get ( '/login',
+    [
+        'as'   => 'login',
+        'uses' => 'AuthController@login'
+    ] );
+
+Route::post ( '/doLogin',
+    [
+        'as'   => 'doLogin',
+        'uses' => 'AuthController@doLogin'
+    ] );
+
+Route::get ( '/logout',
+    [
+        'as'   => 'logout',
+        'uses' => 'AuthController@logout'
+    ] );
+
+/**
  * Back End routes
  */
 
