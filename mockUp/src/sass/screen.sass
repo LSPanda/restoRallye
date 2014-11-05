@@ -52,6 +52,10 @@ nav
     a
         text-decoration: none
         color: white
+        +transition( all, 0.25s )
+        &:hover
+            color: white
+            text-decoration: underline
 .banners
     position: relative
     width: 160px
@@ -114,8 +118,27 @@ h4
 .myFooter
     background-color: $footerBackground
 .newsletter
+    width: 20%
     float: right
     margin: 0
+    input[type=text]
+        width: 80%
+        float: left
+        padding: 0.5em 1em
+        box-sizing: border-box
+        +border-radius( 0.5em, 0, 0, 0.5em )
+    input[type=submit]
+        color: $color
+        width: 20%
+        float: right
+        padding: 0.5em 1em
+        +border-radius(  0, 0.5em, 0.5em, 0 )
+        &:hover
+            cursor: pointer
+    input[type="text"]:focus, input[type="password"]:focus, textarea:focus
+        outline: none
+    &:after
+        +clearFloat()
 .designed
     font-size: 0.85em
     padding-top: 2em

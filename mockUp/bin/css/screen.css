@@ -130,6 +130,14 @@ nav li {
 nav a {
   text-decoration: none;
   color: white;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+nav a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .banners {
@@ -215,8 +223,40 @@ h4 {
 }
 
 .newsletter {
+  width: 20%;
   float: right;
   margin: 0;
+}
+.newsletter input[type=text] {
+  width: 80%;
+  float: left;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.5em 0 0 0.5em;
+  -moz-border-radius: 0.5em 0 0 0.5em;
+  -ms-border-radius: 0.5em 0 0 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
+}
+.newsletter input[type=submit] {
+  color: #7f8c8d;
+  width: 20%;
+  float: right;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 0 0.5em 0.5em 0;
+  -moz-border-radius: 0 0.5em 0.5em 0;
+  -ms-border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0 0.5em 0.5em 0;
+}
+.newsletter input[type=submit]:hover {
+  cursor: pointer;
+}
+.newsletter input[type="text"]:focus, .newsletter input[type="password"]:focus, .newsletter textarea:focus {
+  outline: none;
+}
+.newsletter:after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
 .designed {
