@@ -97,9 +97,7 @@ Route::group ( [ 'before' => 'auth', 'prefix' => $_ENV[ 'PREFIX' ] ],
             'RallyesController',
             [ 'except' => [ 'index', 'show' ] ] );
 
-        Route::resource ( 'menus',
-            'MenusController',
-            [ 'except' => [ 'index', 'show' ] ] );
+        Route::resource ( 'menus', 'MenusController' );
 
         Route::resource ( 'posts',
             'PostsController',
