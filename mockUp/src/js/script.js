@@ -5,15 +5,14 @@
  * Started @ 04/11/2014
  */
 
- ( function( $ ) {
-     "user strict";
+( function( $ ) {
+    "user strict";
 
-     $( function() {
-         //Detect scroll for stick my nav-menu
-         $( "body" ).scroll( function() {
-             console.log( "prout" );
-             $( "header nav" ).addClass( "stick" );
-         } );
-     } );
+    $( function() {
+        //Detect scroll for stick and reduce my nav-menu
+        $( "body" ).scroll( function() {
+            $( "header nav" ).addClass( "stick" );
+        } );
+    } );
 
- } ) (jQuery);
+} ) (jQuery);

@@ -33,6 +33,31 @@ block content
 block footer
     div.slideText
         footer
+            section.nav
+                h4 Navigation
+                ul
+                    li
+                        a(href="html/restaurant.html") Restaurant
+                    li
+                        a(href="html/rallye.html") Rallye
+                    li
+                        a(href="html/blog.html") Blog
+                    li
+                        a(href="html/contact.html") Contact
+            section.looking
+                h4 Nous contacter
+            section.follow
+                h4 Rejoingez-nous
+                ul
+                    li
+                        a(href="#") RSS
+                    li
+                        a(href="#") Facebook
+            section.newsletter
+                h4 Inscrivez-vous à la NewsLetter
+                form
+                    input(type="text" placeholder="votre@mail.com")
+                    input(type="submit" value="S'inscrire")
             p
                 | designed and created by&nbsp;
                 a(href="http://portfolio.simon-leyder.be/") Simon Leyder
@@ -40,6 +65,5 @@ block footer
                 a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
                 |  &nbsp;at 2014
 
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
     script(src="js/script.min.js")
