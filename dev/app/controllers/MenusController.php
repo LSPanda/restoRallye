@@ -9,7 +9,7 @@ class MenusController extends \BaseController {
 	 */
 	public function index()
 	{
-		$menus = Menus::all();
+		$menus = Menu::all();
 
 		return View::make('menus.index', compact('menus'));
 	}
@@ -31,14 +31,14 @@ class MenusController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Menus::$rules);
+		$validator = Validator::make($data = Input::all(), Menu::$rules);
 
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Menus::create($data);
+		Menu::create($data);
 
 		return Redirect::route('menus.index');
 	}
@@ -51,7 +51,7 @@ class MenusController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$menus = Menus::findOrFail($id);
+		$menus = Menu::findOrFail($id);
 
 		return View::make('menus.show', compact('menus'));
 	}
@@ -64,7 +64,7 @@ class MenusController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$menus = Menus::find($id);
+		$menus = Menu::find($id);
 
 		return View::make('menus.edit', compact('menus'));
 	}
@@ -77,9 +77,9 @@ class MenusController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$menus = Menus::findOrFail($id);
+		$menus = Menu::findOrFail($id);
 
-		$validator = Validator::make($data = Input::all(), Menus::$rules);
+		$validator = Validator::make($data = Input::all(), Menu::$rules);
 
 		if ($validator->fails())
 		{
@@ -99,7 +99,7 @@ class MenusController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		Menus::destroy($id);
+		Menu::destroy($id);
 
 		return Redirect::route('menus.index');
 	}

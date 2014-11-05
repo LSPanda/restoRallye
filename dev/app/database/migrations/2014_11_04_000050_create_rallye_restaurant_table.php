@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEventRestaurantTable extends Migration {
+class CreateRallyeRestaurantTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,11 @@ class CreateEventRestaurantTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('event_restaurant', function(Blueprint $table)
+		Schema::create('rallye_restaurant', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('event_id')->unsigned()->index();
-			$table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+			$table->integer('rallye_id')->unsigned()->index();
+			$table->foreign('rallye_id')->references('id')->on('rallyes')->onDelete('cascade');
 			$table->integer('restaurant_id')->unsigned()->index();
 			$table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
             $table->integer('menu_id')->unsigned()->index();
@@ -33,7 +33,7 @@ class CreateEventRestaurantTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('event_restaurant');
+		Schema::drop('rallye_restaurant');
 	}
 
 }

@@ -27,5 +27,4 @@ class UsersTableSeeder extends Seeder {
             'role'     => 'a'
         ] );
     }
-
 }

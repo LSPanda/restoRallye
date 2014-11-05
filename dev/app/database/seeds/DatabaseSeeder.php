@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder {
         $this->call ( 'TypesTableSeeder' );
         $this->call ( 'PostsTableSeeder' );
         $this->call ( 'RestaurantsTableSeeder' );
-        $this->call ( 'EventsTableSeeder' );
+        $this->call ( 'RallyesTableSeeder' );
         $this->call ( 'MenusTableSeeder' );
-        $this->call ( 'EventRestaurantTableSeeder' );
+        $this->call ( 'RallyeRestaurantTableSeeder' );
         $this->call ( 'UsersTableSeeder' );
-        $this->call ( 'EventUserTableSeeder' );
+        $this->call ( 'RallyeUserTableSeeder' );
         $this->call ( 'CommentsTableSeeder' );
         $this->call ( 'NewsletterEmailsTableSeeder' );
     }

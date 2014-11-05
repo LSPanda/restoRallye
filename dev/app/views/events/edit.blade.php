@@ -1,1 +1,0 @@
-/var/www/local.dev/restoRallye/dev/app/views/events/edit.blade.php
