@@ -125,20 +125,6 @@ Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/restaurants/show/{id}',
         'uses'   => 'RestaurantsController@adminIndex'
     ] );
 
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/menus',
-    [
-        'before' => 'auth',
-        'as'     => 'menuAdminIndex',
-        'uses'   => 'MenusController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/menus/show/{id}',
-    [
-        'before' => 'auth',
-        'as'     => 'menuAdminShow',
-        'uses'   => 'MenusController@adminIndex'
-    ] );
-
 Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/posts',
     [
         'before' => 'auth',

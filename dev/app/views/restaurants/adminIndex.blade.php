@@ -7,17 +7,19 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Nom</th>
                     <th>Adresse</th>
                     <th>Site</th>
                     <th>Email</th>
-                    <th>Téléphonne</th>
+                    <th>Téléphone</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($restaurants as $restaurant)
                     <tr>
+                        <td>{{ $restaurant->id }}</td>
                         <td>{{ $restaurant->name }}</td>
                         <td>{{ $restaurant->adress . ' ' . $restaurant->adress_number }}<br>
                             {{ $restaurant->postal_code . ' ' . $restaurant->city }}</td>
@@ -25,14 +27,16 @@
                         <td>{{ $restaurant->email }}</td>
                         <td>{{ $restaurant->tel }}</td>
                         <td>
-                            <a href="{{ route('admin.restaurants.edit') }}">
+                            <a href="{{ route('admin.restaurants.edit', $restaurant->id) }}" title="Éditer le restaurant">
                                 <button class="btn btn-primary">
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </button>
                             </a>
-                            <button class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </button>
+                            <a href="{{ route('admin.restaurants.destroy', $restaurant->id) }}" title="Supprimer le restaurant">
+                                <button class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

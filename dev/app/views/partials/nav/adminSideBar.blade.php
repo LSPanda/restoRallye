@@ -5,7 +5,7 @@
     <hr>
     <ul class="nav nav-sidebar">
         <li><a href="{{ route('restaurantAdminIndex') }}">Restaurants</a></li>
-        <li><a href="{{ route('menuAdminIndex') }}">Menus</a></li>
+        <li><a href="{{ route('admin.menus.index') }}">Menus</a></li>
         <li><a href="{{ route('rallyeAdminIndex') }}">Rallyes</a></li>
         <li><a href="{{ route('postAdminIndex') }}">Articles</a></li>
         <li><a href="{{ route('pageAdminList') }}">Contenus</a></li>

@@ -14,6 +14,24 @@ class RallyesController extends \BaseController {
 		return View::make('rallyes.index', compact('rallyes'));
 	}
 
+    /**
+     * Display a listing of rallyes
+     *
+     * @return Response
+     */
+    public function adminIndex()
+    {
+        $rallyes = Rallye::all();
+        $restaurants = [];
+
+        foreach($rallyes as $rallye)
+        {
+            $restaurants[$rallye->id][] = $rallye->restaurants();
+        }
+
+        return View::make('rallyes.adminIndex', compact('rallyes', 'restaurants'));
+    }
+
 	/**
 	 * Show the form for creating a new rallye
 	 *
