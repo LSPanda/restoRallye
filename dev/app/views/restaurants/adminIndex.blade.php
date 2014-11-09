@@ -2,8 +2,8 @@
 
 @section('content')
     <h2 class="sub-header">Liste des restaurants</h2>
-    <button type="button" class="reset btn btn-xs btn-primary" data-column="0" data-filter="">
-        <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser
+    <button type="button" class="reset btn btn-block btn-primary" data-column="0" data-filter="">
+        <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser les filtres
     </button>
 
     <div class="table-responsive">
@@ -112,11 +112,6 @@
         $(document).ready(function(){
             $(function(){
                 $("#tableSorter").tablesorter();
-
-                $('.reset').click(function(){
-                    $('table').trigger('sortReset');
-                    return false;
-                  });
             });
         });
     </script>
