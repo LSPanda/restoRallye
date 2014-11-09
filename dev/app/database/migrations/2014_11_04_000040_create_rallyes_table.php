@@ -18,7 +18,6 @@ class CreateRallyesTable extends Migration {
 			$table->text('body');
 			$table->date('date');
 			$table->string('adress');
-			$table->integer('adress_number')->nullable();
 			$table->integer('postal_code');
 			$table->string('city');
 			$table->timestamps();

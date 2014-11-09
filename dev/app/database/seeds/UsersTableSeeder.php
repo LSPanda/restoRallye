@@ -12,8 +12,7 @@ class UsersTableSeeder extends Seeder {
                 'login'         => $faker->userName,
                 'password'      => Hash::make ( 'azerty' ),
                 'email'         => $faker->safeEmail,
-                'adress'        => $faker->streetName,
-                'adress_number' => $faker->numberBetween ( 1, 500 ),
+                'adress'        => $faker->streetName . ' ' . $faker->numberBetween ( 1, 500 ),
                 'postal_code'   => $faker->randomNumber ( 4 ),
                 'city'          => $faker->city,
                 'role'          => 'u'

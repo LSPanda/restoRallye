@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration {
 			$table->string('email')-> unique();
 			$table->string('password');
 			$table->string('adress');
-			$table->integer('adress_number');
 			$table->integer('postal_code');
 			$table->string('role')->default('u');
 			$table->string('city');
