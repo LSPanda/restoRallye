@@ -28,14 +28,48 @@ block content
     p Page Evènement
 
 block footer
-    footer
-        p
-            | designed by&nbsp;
-            a(href="http://portfolio.simon-leyder.be/") Simon Leyder
-            | &nbsp;and&nbsp;
-            a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
-            |  &nbsp;at 2014
+    div.slideText.myFooter
+        footer
+            section.nav
+                h4 Navigation
+                ul
+                    li
+                        a(href="restaurant.html") Restaurant
+                    li
+                        a(href="rallye.html") Rallye
+                    li
+                        a(href="blog.html") Blog
+                    li
+                        a(href="contact.html") Contact
+            section.looking
+                h4 Notre adresse
+                p
+                    span Mail&nbsp;: 
+                    | adress@gmail.com
+                p
+                    span Téléphone&nbsp;: 
+                    | 0476 34 21 67
+                
+            section.follow
+                h4 Suivez-nous
+                ul
+                    li.fb
+                        a(href="#") Facebook
+                    li.rss
+                        a(href="#") RSS
+            section.newsletter
+                h4 NewsLetter
+                form
+                    input(type="text" placeholder="votre@mail.com")
+                    input(type="submit" value="S'inscrire")
+                    span.error Il y a une faute de frappe bitchies
+        div.designed
+            p
+                | Designed and created by&nbsp;
+                a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
+                | &nbsp;and&nbsp;
+                a(href="http://portfolio.simon-leyder.be/") Simon Leyder
+                |  &nbsp;@ 2014
 
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    script(src="js/script-min.js")
+    script(src="js/script.min.js")
