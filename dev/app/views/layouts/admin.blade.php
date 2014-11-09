@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{ HTML::style('css/bootstrap.min.css') }}
+        {{ HTML::style('css/theme.bootstrap.css') }}
         {{ HTML::style('css/customStyles/dashboard.css') }}
 
         <!--[if lt IE 9]>
@@ -33,6 +34,7 @@
         </div>
 
         {{ HTML::script('js/jquery.min.js') }}
+        @yield('tableSorter')
         {{ HTML::script('js/bootstrap.min.js') }}
         <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
     </body>
