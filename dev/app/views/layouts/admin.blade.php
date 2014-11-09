@@ -7,9 +7,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{ HTML::style('css/bootstrap.min.css') }}
-        {{ HTML::style('css/theme.bootstrap.css') }}
+        {{ HTML::style('css/vendor/pace/pace.min.css') }}
+
+        {{ HTML::style('css/vendor/bootstrap/bootstrap.min.css') }}
+        {{ HTML::style('css/vendor/bootstrap/theme.bootstrap.css') }}
         {{ HTML::style('css/customStyles/dashboard.css') }}
+        @yield('styles')
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,9 +37,9 @@
             </div>
         </div>
 
-        {{ HTML::script('js/jquery.min.js') }}
-        @yield('tableSorter')
-        {{ HTML::script('js/bootstrap.min.js') }}
-        <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+        {{ HTML::script('js/vendor/jquery/jquery.min.js') }}
+        {{ HTML::script('js/vendor/bootstrap/bootstrap.min.js') }}
+        @yield('scripts')
+        {{ HTML::script('js/vendor/pace/pace.min.js') }}
     </body>
 </html>
