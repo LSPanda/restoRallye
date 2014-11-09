@@ -1,9 +1,16 @@
-/var/www/local.dev/restoRallye/dev/app/views/restaurants/show.blade.php
+@extends('layouts.admin')
 
-<h1>{{ $restaurant->name }}</h1>
+@section('breadcrumb')
+    <li><a href="{{ route('admin.restaurants.index') }}">Restaurants</a></li>
+    <li>{{ $restaurant->name }}</li>
+@stop
 
-{{ $restaurant->body }}
+@section('content')
+    <h2 class="sub-header">{{ $restaurant->name }}</h2>
 
-<p>
-    <adress>{{ $restaurant->adress }} {{ $restaurant->adress_number }}, {{ $restaurant->postal_code }} {{ $restaurant->city }}</adress>
-</p>
+    {{ $restaurant->body }}
+
+    <p>
+        <adress>{{ $restaurant->adress }} {{ $restaurant->adress_number }}, {{ $restaurant->postal_code }} {{ $restaurant->city }}</adress>
+    </p>
+@stop

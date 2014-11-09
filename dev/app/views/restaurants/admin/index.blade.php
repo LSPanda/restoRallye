@@ -1,4 +1,8 @@
-@extends('......layouts.admin')
+@extends('layouts.admin')
+
+@section('breadcrumb')
+    <li>Restaurants</li>
+@stop
 
 @section('content')
     <h2 class="sub-header">Liste des restaurants</h2>

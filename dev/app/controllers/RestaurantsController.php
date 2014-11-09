@@ -10,7 +10,7 @@ class RestaurantsController extends \BaseController {
     public function index () {
         $restaurants = Restaurant::all ();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a')
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is('admin*'))
         {
             return View::make ( 'restaurants.admin.index', compact ( 'restaurants' ) );
         }
@@ -26,7 +26,7 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function create () {
-        return View::make ( 'restaurants.create' );
+        return View::make ( 'restaurants.admin.create' );
     }
 
     /**
@@ -44,7 +44,7 @@ class RestaurantsController extends \BaseController {
 
         Restaurant::create ( $data );
 
-        return Redirect::route ( 'restaurants.index' );
+        return Redirect::route ( 'restaurants.admin.index' );
     }
 
     /**
@@ -57,7 +57,14 @@ class RestaurantsController extends \BaseController {
     public function show ($id) {
         $restaurant = Restaurant::findOrFail ( $id );
 
-        return View::make ( 'restaurants.show', compact ( 'restaurant' ) );
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is('admin*'))
+        {
+            return View::make ( 'restaurants.admin.show', compact ( 'restaurant' ) );
+        }
+        else
+        {
+            return View::make ( 'restaurants.show', compact ( 'restaurant' ) );
+        }
     }
 
     /**
@@ -70,7 +77,7 @@ class RestaurantsController extends \BaseController {
     public function edit ($id) {
         $restaurant = Restaurant::find ( $id );
 
-        return View::make ( 'restaurants.edit', compact ( 'restaurant' ) );
+        return View::make ( 'restaurants.admin.edit', compact ( 'restaurant' ) );
     }
 
     /**
@@ -92,7 +99,7 @@ class RestaurantsController extends \BaseController {
 
         $restaurant->update ( $data );
 
-        return Redirect::route ( 'restaurants.index' );
+        return Redirect::route ( 'restaurants.admin.index' );
     }
 
     /**
@@ -105,7 +112,7 @@ class RestaurantsController extends \BaseController {
     public function destroy ($id) {
         Restaurant::destroy ( $id );
 
-        return Redirect::route ( 'restaurants.index' );
+        return Redirect::route ( 'restaurants.admin.index' );
     }
 
 }
