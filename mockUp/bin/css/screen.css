@@ -90,13 +90,6 @@ a:hover {
   text-decoration: none;
 }
 
-/*.error
- * display: block
- * color: $errorColor
- * margin-top: 1em
- * padding: 0.5em 1em
- * border-top: 1px solid $borderError
- * text-align: center */
 .error {
   display: block;
   position: relative;
@@ -259,6 +252,43 @@ h4 {
   color: #677171;
 }
 
+.looking p {
+  padding-bottom: 0.85em;
+  font-style: italic;
+}
+.looking p:last-child {
+  padding: 0;
+}
+.looking span {
+  display: block;
+  padding-bottom: 0.3em;
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.follow li {
+  display: inline-block;
+  text-indent: -100em;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5em;
+  opacity: 0.5;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.follow li:hover {
+  opacity: 1;
+}
+.follow .rss {
+  background: url("images/sprite.png") -70px -10px;
+}
+.follow .fb {
+  background: url("images/sprite.png") -10px -10px;
+}
+
 .newsletter {
   width: 20%;
   float: right;
@@ -285,7 +315,7 @@ h4 {
 .newsletter input[type=submit] {
   position: absolute;
   right: 5px;
-  top: 5px;
+  top: 7px;
   width: 25px;
   height: 25px;
   text-indent: -100em;
