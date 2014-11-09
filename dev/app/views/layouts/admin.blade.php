@@ -34,5 +34,6 @@
 
         {{ HTML::script('js/jquery.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
+        <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
     </body>
 </html>
