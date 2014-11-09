@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{ $restaurant->id }}</td>
                             <td>{{ $restaurant->name }}</td>
-                            <td>{{ $restaurant->adress . ' ' . $restaurant->adress_number }}<br>
+                            <td>{{ $restaurant->adress }}<br>
                                 {{ $restaurant->postal_code . ' ' . $restaurant->city }}</td>
                             <td><a href="{{ $restaurant->website }}" target="_blank">{{ $restaurant->website }}</a></td>
                             <td>{{ $restaurant->email }}</td>

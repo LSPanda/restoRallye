@@ -11,6 +11,6 @@
     {{ $restaurant->body }}
 
     <p>
-        <adress>{{ $restaurant->adress }} {{ $restaurant->adress_number }}, {{ $restaurant->postal_code }} {{ $restaurant->city }}</adress>
+        <adress>{{ $restaurant->adress }}, {{ $restaurant->postal_code }} {{ $restaurant->city }}</adress>
     </p>
 @stop

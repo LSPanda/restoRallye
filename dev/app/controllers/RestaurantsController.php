@@ -1,6 +1,13 @@
 <?php
+use App\Forms\Restaurant as FormRestaurant;
 
 class RestaurantsController extends \BaseController {
+
+    protected $formRestaurant;
+
+    public function __construct (FormRestaurant $formRestaurant) {
+        $this->formRestaurant = $formRestaurant;
+    }
 
     /**
      * Display a listing of restaurants
@@ -10,7 +17,7 @@ class RestaurantsController extends \BaseController {
     public function index () {
         $restaurants = Restaurant::all ();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is('admin*'))
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {
             return View::make ( 'restaurants.admin.index', compact ( 'restaurants' ) );
         }
@@ -57,7 +64,7 @@ class RestaurantsController extends \BaseController {
     public function show ($id) {
         $restaurant = Restaurant::findOrFail ( $id );
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is('admin*'))
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {
             return View::make ( 'restaurants.admin.show', compact ( 'restaurant' ) );
         }
@@ -88,18 +95,13 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function update ($id) {
+        $this->formRestaurant->validate ( Input::all () );
+
         $restaurant = Restaurant::findOrFail ( $id );
 
-        $validator = Validator::make ( $data = Input::all (), Restaurant::$rules );
+        $restaurant->update ( Input::all () );
 
-        if ($validator->fails ())
-        {
-            return Redirect::back ()->withErrors ( $validator )->withInput ();
-        }
-
-        $restaurant->update ( $data );
-
-        return Redirect::route ( 'restaurants.admin.index' );
+        return Redirect::route ( 'admin.restaurants.show', $id );
     }
 
     /**

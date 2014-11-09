@@ -2,13 +2,7 @@
 
 class Restaurant extends \Eloquent {
 
-    // Add your validation rules here
-    public static $rules = [
-        // 'title' => 'required'
-    ];
-
-    // Don't forget to fill this array
-    protected $fillable = [ ];
+    protected $fillable = [ 'name', 'body', 'adress', 'postal_code', 'city', 'email', 'website' ];
 
     public function rallyes () {
         return $this->belongsToMany ( 'Rallye' )->withPivot ( 'menu_id' );
