@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('......layouts.admin')
 
 @section('content')
     <h2 class="sub-header">Liste des restaurants</h2>
@@ -26,10 +26,15 @@
                         <td>{{ $restaurant->name }}</td>
                         <td>{{ $restaurant->adress . ' ' . $restaurant->adress_number }}<br>
                             {{ $restaurant->postal_code . ' ' . $restaurant->city }}</td>
-                        <td>{{ $restaurant->website }}</td>
+                        <td><a href="{{ $restaurant->website }}" target="_blank">{{ $restaurant->website }}</a></td>
                         <td>{{ $restaurant->email }}</td>
                         <td>{{ $restaurant->tel }}</td>
                         <td>
+                            <a href="{{ route('admin.restaurants.show', $restaurant->id) }}" title="Voir la fiche restaurant">
+                                <button class="btn btn-info">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </a>
                             <a href="{{ route('admin.restaurants.edit', $restaurant->id) }}" title="Éditer le restaurant">
                                 <button class="btn btn-primary">
                                     <span class="glyphicon glyphicon-pencil"></span>
@@ -79,7 +84,7 @@
             sortAsc    : 'icon-chevron-up glyphicon glyphicon-chevron-up',     // includes classes for Bootstrap v2 & v3
             sortDesc   : 'icon-chevron-down glyphicon glyphicon-chevron-down', // includes classes for Bootstrap v2 & v3
             active     : '', // applied when column is sorted
-            hover      : '', // use custom css here - bootstrap class may not override it
+            hover      : 'tablesorter-hover', // use custom css here - bootstrap class may not override it
             filterRow  : 'sorter-false', // filter row class
         };
 

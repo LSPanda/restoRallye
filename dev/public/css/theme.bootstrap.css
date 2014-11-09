@@ -150,3 +150,7 @@
 	cursor: pointer;
 	background-color: #e6bf99;
 }
+
+.tablesorter-hover {
+	color: #428bca;
+}

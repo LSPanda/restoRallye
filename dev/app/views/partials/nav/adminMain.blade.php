@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ route('adminIndex') }}">Dashboard</a></li>
+                <li><a href="{{ route('admin.home') }}">Dashboard</a></li>
                 <li><a href="{{ route('home') }}">Voir le site</a></li>
                 <li><a href="#">Profil</a></li>
                 <li><a href="{{ route('logout') }}">Déconnexion</a></li>

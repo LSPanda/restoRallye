@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('......layouts.admin')
 
 @section('content')
 <h2 class="sub-header">Liste des rallyes</h2>

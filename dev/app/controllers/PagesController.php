@@ -8,12 +8,12 @@ class PagesController extends \BaseController {
         return View::make ( 'pages.home', compact ( 'about' ) );
     }
 
-    public function adminIndex () {
-        return View::make ( 'pages.adminIndex' );
+    public function homeAdmin () {
+        return View::make ( 'pages.admin.index', compact ( 'about' ) );
     }
 
-    public function adminList () {
-        return View::make ( 'pages.adminIndex' );
+    public function contents () {
+        return View::make ( 'pages.admin.contents' );
     }
 
     public function contact () {

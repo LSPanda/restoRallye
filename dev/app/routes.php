@@ -86,97 +86,35 @@ Route::get ( '/logout',
  * Back End routes
  */
 
+Route::get ( '/' . $_ENV[ 'PREFIX' ],
+    [
+        'before' => 'auth',
+        'as'     => 'admin.home',
+        'uses'   => 'PagesController@homeAdmin'
+    ] );
+
 Route::group ( [ 'before' => 'auth', 'prefix' => $_ENV[ 'PREFIX' ] ],
     function ()
     {
-        Route::resource ( 'restaurants',
-            'RestaurantsController',
-            [ 'except' => [ 'index', 'show' ] ] );
+        Route::resource ( 'restaurants', 'RestaurantsController' );
 
-        Route::resource ( 'rallyes',
-            'RallyesController',
-            [ 'except' => [ 'index', 'show' ] ] );
+        Route::resource ( 'rallyes', 'RallyesController' );
 
         Route::resource ( 'menus', 'MenusController' );
 
-        Route::resource ( 'posts',
-            'PostsController',
-            [ 'except' => [ 'index', 'show' ] ] );
+        Route::resource ( 'posts', 'PostsController' );
 
-        Route::resource ( 'comments',
-            'CommentsController',
-            [ 'except' => [ 'create' ] ] );
+        Route::resource ( 'comments', 'CommentsController' );
 
         Route::resource ( 'types', 'TypesController' );
+
+        Route::resource ( 'users', 'UsersController' );
     }
 );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/restaurants',
-    [
-        'before' => 'auth',
-        'as'     => 'restaurantAdminIndex',
-        'uses'   => 'RestaurantsController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/restaurants/show/{id}',
-    [
-        'before' => 'auth',
-        'as'     => 'restaurantAdminShow',
-        'uses'   => 'RestaurantsController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/posts',
-    [
-        'before' => 'auth',
-        'as'     => 'postAdminIndex',
-        'uses'   => 'PostsController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/posts/show/{id}',
-    [
-        'before' => 'auth',
-        'as'     => 'postAdminShow',
-        'uses'   => 'PostsController@adminShow'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/rallyes',
-    [
-        'before' => 'auth',
-        'as'     => 'rallyeAdminIndex',
-        'uses'   => 'RallyesController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/rallyes/show/{id}',
-    [
-        'before' => 'auth',
-        'as'     => 'rallyeAdminShow',
-        'uses'   => 'RallyesController@adminShow'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/users',
-    [
-        'before' => 'auth',
-        'as'     => 'userAdminIndex',
-        'uses'   => 'UsersController@adminIndex'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/users/show/{id}',
-    [
-        'before' => 'auth',
-        'as'     => 'userAdminShow',
-        'uses'   => 'UsersController@adminShow'
-    ] );
 
 Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/contents',
     [
         'before' => 'auth',
-        'as'     => 'pageAdminList',
-        'uses'   => 'PagesController@adminList'
-    ] );
-
-Route::get ( '/' . $_ENV[ 'PREFIX' ],
-    [
-        'before' => 'auth',
-        'as'     => 'adminIndex',
-        'uses'   => 'PagesController@adminIndex'
+        'as'     => 'admin.pages.index',
+        'uses'   => 'PagesController@contents'
     ] );
