@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
     <li><a href="{{ route('admin.restaurants.index') }}">Restaurants</a></li>
-    <li>{{ $restaurant->name }}</li>
+    <li class="active">{{ $restaurant->name }}</li>
 @stop
 
 @section('content')

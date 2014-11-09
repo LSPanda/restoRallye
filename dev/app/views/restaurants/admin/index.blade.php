@@ -1,19 +1,21 @@
 @extends('layouts.admin')
 
 @section('breadcrumb')
-    <li>Restaurants</li>
+    <li class="active">Restaurants</li>
 @stop
 
 @section('content')
-    <h2 class="sub-header">Liste des restaurants</h2>
-    <button type="button" class="reset btn btn-block btn-primary" data-column="0" data-filter="">
-        <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser les filtres
-    </button>
+    <div class="panel panel-info">
+        <div class="panel-heading">Liste des restaurants</div>
+        <div class="panel-body">
+            <button type="button" class="reset btn btn-block btn-primary" data-column="0" data-filter="">
+                <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser les filtres
+            </button>
+          </div>
 
-    <div class="table-responsive">
         <table id="tableSorter">
             <thead>
-                <tr>
+                <tr class="info">
                     <th>#</th>
                     <th>Nom</th>
                     <th>Adresse</th>
@@ -89,7 +91,6 @@
             sortDesc   : 'icon-chevron-down glyphicon glyphicon-chevron-down', // includes classes for Bootstrap v2 & v3
             active     : '', // applied when column is sorted
             hover      : 'tablesorter-hover', // use custom css here - bootstrap class may not override it
-            filterRow  : 'sorter-false', // filter row class
         };
 
         $("table").tablesorter({
