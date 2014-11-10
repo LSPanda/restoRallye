@@ -2,12 +2,12 @@
 ## Grunt
 #############
 
-node_modules/
-bin/css/*.css
-bin/css/*.map
-bin/html
-bin/js
-bin/index.html
+node_modules
+mockUp/bin/css/*.css
+mockUp/bin/css/*.map
+mockUp/bin/html
+mockUp/bin/js
+mockUp/bin/index.html
 
 #############
 ## Sass
