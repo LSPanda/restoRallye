@@ -6,7 +6,7 @@ node_modules
 mockUp/bin/css/*.css
 mockUp/bin/css/*.map
 mockUp/bin/html
-mockUp/bin/js
+mockUp/bin/js/scrpit.js
 mockUp/bin/index.html
 
 #############
