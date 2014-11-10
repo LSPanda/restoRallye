@@ -157,7 +157,7 @@ nav li {
   display: inline-block;
   padding: 0 1em;
   color: #ffffff;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.25em;
   text-transform: uppercase;
 }
@@ -224,6 +224,24 @@ nav a:hover {
 #slide3 {
   background-image: url("images/backgroundImage2.jpg");
   background-attachment: fixed;
+}
+
+blockquote {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 20em;
+  height: 2.5em;
+  font-family: "Dancing Script", cursive;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 400;
+  color: #eaeaea;
+  line-height: 1.25;
+  text-align: center;
 }
 
 footer section {

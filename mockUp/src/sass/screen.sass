@@ -24,6 +24,7 @@ a
     &:hover
         color: $hoverLinkColor
         text-decoration: none
+//Message d'erreur de formulaire
 .error
     display: block
     position: relative
@@ -74,7 +75,7 @@ nav
         display: inline-block
         padding: 0 1em
         color: $headerColor
-        +headFontStyle( 1.25em )
+        +menuFontStyle( 1.25em )
     a
         text-decoration: none
         color: white
@@ -127,6 +128,19 @@ nav
     background-image: url("images/backgroundImage2.jpg")
     background-attachment: fixed
 
+//Style content
+blockquote
+    position: absolute
+    top: 2em
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    width: 20em
+    height: 2.5em
+    +quoteStyle( 2em )
+    line-height: 1.25
+    text-align: center
 //Style footer
 footer
     section
