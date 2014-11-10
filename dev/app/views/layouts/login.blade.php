@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{ HTML::style('css/bootstrap.min.css') }}
+        {{ HTML::style('css/vendor/bootstrap/bootstrap.min.css') }}
         {{ HTML::style('css/customStyles/login.css') }}
 
         <!--[if lt IE 9]>
@@ -25,6 +25,6 @@
             @yield('content')
         </div>
 
-        {{ HTML::script('js/bootstrap.min.js') }}
+        {{ HTML::script('js/vendor/bootstrap/bootstrap.min.js') }}
     </body>
 </html>
