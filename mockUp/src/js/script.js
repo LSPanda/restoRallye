@@ -8,14 +8,23 @@
 ( function( $ ) {
     "user strict";
 
+    var gMap,
+        gMarker;
+
+
     var generateGoogleMap = function() {
         gMap = new google.maps.Map( document.getElementById("slideMap"), {
             center: new google.maps.LatLng( 50.846686, 4.352425 ),
-            zoom: 12,
+            zoom: 16,
             disableDefaultUI: true,
             scrollwheel: false,
             draggable: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAPx
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        } );
+
+        gMarker = new google.maps.Marker( {
+            position: new google.maps.LatLng( 50.846686, 4.352425 ),
+            map: gMap
         } );
     }
 
