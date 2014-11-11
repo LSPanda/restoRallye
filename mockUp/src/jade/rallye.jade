@@ -2,9 +2,6 @@ extends layout
 
 block title
     title Resto Rallye - Rallye
-    
-block stylesheet
-    link(rel="stylesheet" href="../css/screen.css")
 
 block header
     header
@@ -13,7 +10,7 @@ block header
             ul
                 li
                     a(href="restaurant.html") Restaurant
-                li.focus
+                li
                     a(href="rallye.html") Rallye
                 li.banners
                     a(href="../index.html")
@@ -25,7 +22,11 @@ block header
                 
 
 block content
-    p Page Evènement
+    div#slideMap.slideImage
+    div.slideText
+        h3 Bienvenue au Resto-Rally
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos reiciendis numquam accusamus qui aut autem eaque maxime voluptate tempore incidunt enim, placeat sunt ipsum minus, officiis culpa molestiae architecto.
+    div#slide4.slideImage
 
 block footer
     div.slideText.myFooter
@@ -71,5 +72,4 @@ block footer
                 a(href="http://portfolio.simon-leyder.be/") Simon Leyder
                 |  &nbsp;@ 2014
 
-    script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    script(src="js/script.min.js")
+block script

@@ -2,7 +2,9 @@ extends layout
 
 block title
     title Resto Rallye - Accueil
-
+block stylesheet
+    link(rel="stylesheet" href="css/screen.css")
+        
 block header
     header
         h2 Menu de navigation du site Resto Rallye
@@ -96,5 +98,7 @@ block footer
                 a(href="http://portfolio.simon-leyder.be/") Simon Leyder
                 |  &nbsp;@ 2014
 
+block script
+    script(src="js/vendor/modernizr-2.6.2.min.js")
     script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
     script(src="js/script.min.js")

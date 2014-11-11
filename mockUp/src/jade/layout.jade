@@ -12,8 +12,7 @@ head
     meta(name="viewport" content="width-device-width, initial-scale=1")
     link(rel="icon" type="image/png" href="")
     block stylesheet
-        link(rel="stylesheet" href="css/screen.css")
-    script(src="js/vendor/modernizr-2.6.2.min.js")
+        link(rel="stylesheet" href="../css/screen.css")
     link(src="http://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet" type="text/css")
     link(src="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css")
         
@@ -21,3 +20,7 @@ body
     block header
     block content
     block footer
+    block script
+        script(src="../js/vendor/modernizr-2.6.2.min.js")
+        script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+        script(src="../js/script.min.js")
