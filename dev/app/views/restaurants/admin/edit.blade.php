@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    {{ Form::label('tel', 'Site internet') }}
+                    {{ Form::label('tel', 'Téléphonne') }}
                     <div class="input-group">
                         <span class="input-group-addon glyphicon glyphicon-earphone"></span>
                         {{ Form::text('tel', $restaurant->tel, ['class' => 'form-control', 'placeholder' => '0*********']) }}
