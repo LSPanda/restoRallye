@@ -9,21 +9,24 @@
     "user strict";
 
     var gMap,
-        gMarker;
+        gMarker,
+        oPosition;
 
 
     var generateGoogleMap = function() {
+        oPosition = new google.maps.LatLng( 50.846686, 4.352425 );
+
         gMap = new google.maps.Map( document.getElementById("slideMap"), {
-            center: new google.maps.LatLng( 50.846686, 4.352425 ),
-            zoom: 16,
+            center: oPosition,
+            zoom: 17,
             disableDefaultUI: true,
             scrollwheel: false,
             draggable: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAPx
         } );
 
         gMarker = new google.maps.Marker( {
-            position: new google.maps.LatLng( 50.846686, 4.352425 ),
+            position: oPosition,
             map: gMap
         } );
     }
@@ -34,6 +37,7 @@
             $( "header nav" ).addClass( "stick" );
         } );
 
+        //Generate google map for event
         generateGoogleMap();
     } );
 
