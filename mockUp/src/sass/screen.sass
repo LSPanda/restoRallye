@@ -18,6 +18,7 @@ h2
     +getOffMyPage()
 h1, h2, h3, h4, h5, h6
     +headingStyle( 1.5em )
+    padding-bottom: 1em
 a
     color: $linkColor
     +transition( all, 0.25s )
@@ -141,6 +142,28 @@ blockquote
     +quoteStyle( 2em )
     line-height: 1.25
     text-align: center
+.slideRestaurant
+    &:after
+        +clearFloat()
+.restaurants
+    display: block
+    width: 30%
+    float: left
+    padding: 1em 1.5%
+    +border-radius( 0.25em )
+    +transition( all, 0.5s )
+    &:hover
+        background: $hoverRest
+    a
+        color: $color
+        text-decoration: none
+    img
+        width: 100%
+    p
+        text-align: center
+        padding: 0.5em 0
+        span
+            display: block
 //Style footer
 footer
     section
