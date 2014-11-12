@@ -12,7 +12,7 @@ class Home extends FormValidator {
      * @var array
      */
     protected $rules = [
-        'email'    => 'email|unique:newsletter_emails'
+        'email'    => 'required|email|unique:newsletter_emails'
     ];
 
     /**
@@ -21,6 +21,7 @@ class Home extends FormValidator {
      * @var array
      */
     protected $messages = [
+        'email.required'    => 'Veuillez entrer une adresse email.',
         'email.email'    => 'L\'adresse email entrée est incorrecte.',
         'email.unique'    => 'L\'adresse email entrée existe déjà dans la base de donnée.',
     ];
