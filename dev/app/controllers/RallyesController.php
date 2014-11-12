@@ -11,7 +11,7 @@ class RallyesController extends \BaseController {
 	{
 		$rallyes = Rallye::all();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a')
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {
             $restaurants = [];
 
