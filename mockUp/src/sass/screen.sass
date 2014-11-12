@@ -121,14 +121,14 @@ nav
 //Images Parallax accueil
 //Accueil
 #slide1
-    background: url("images/backgroundImage.jpg") center fixed
+    background: url("images/backgroundImage.jpg") center fixed no-repeat
 #slide2
-    background: url("images/backgroundImage1.jpg") center fixed
+    background: url("images/backgroundImage1.jpg") center fixed no-repeat
 #slide3
-    background: url("images/backgroundImage2.jpg") center fixed
+    background: url("images/backgroundImage2.jpg") center fixed no-repeat
 //Rallye
 #slide4
-    background: url("images/backgroundImage3.jpg") center fixed
+    background: url("images/backgroundImage3.jpg") center fixed no-repeat
 
 //Style content
 blockquote
@@ -150,9 +150,9 @@ blockquote
     &:after
         +clearFloat()
 .restaurants
-    display: block
+    display: inline-block
     width: 30%
-    float: left
+    margin-bottom: 1.5em
     padding: 1em 1.5%
     +border-radius( 0.25em )
     +transition( all, 0.5s )
@@ -203,6 +203,10 @@ h4
         +transition( all, 0.25s )
         &:hover
             opacity: 1
+    a
+        display: block
+        width: 100%
+        height: 100%
     .rss
         background: url("images/sprite.png") -70px -10px
     .fb
