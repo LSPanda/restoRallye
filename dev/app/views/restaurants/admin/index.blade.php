@@ -9,12 +9,23 @@
         <div class="panel-heading">Liste des restaurants</div>
         <div class="table-responsive">
             <div class="panel-body">
-                <button type="button" class="reset btn btn-block btn-primary" data-column="0" data-filter="">
-                    <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser les filtres
-                </button>
-                <a href="{{ route('admin.restaurants.create') }}" class="reset btn btn-block btn-success" data-column="0" data-filter="">
-                    <i class="icon-white icon-refresh glyphicon glyphicon-plus"></i> Ajouter un restaurant
-                </a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form action="#" class="form-group">
+                            <input class="search form-control" type="search" data-column="all" placeholder="Rechercher...">
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="reset btn btn-block btn-primary" data-column="0">
+                            <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser le filtre
+                        </button>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <a href="{{ route('admin.restaurants.create') }}" class="reset btn btn-block btn-success" data-column="0" data-filter="">
+                            <i class="icon-white icon-refresh glyphicon glyphicon-plus"></i> Ajouter un restaurant
+                        </a>
+                    </div>
+                </div>
             </div>
             <table id="tableSorter">
                 <thead>
@@ -25,7 +36,7 @@
                         <th>Site</th>
                         <th>Email</th>
                         <th>Téléphone</th>
-                        <th class="sorter-false filter-false">Action</th>
+                        <th class="sorter-false">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +50,6 @@
                             <td>{{ $restaurant->email }}</td>
                             <td>{{ $restaurant->tel }}</td>
                             <td>
-                                {{ Form::open(['route' => ['admin.restaurants.destroy', $restaurant->id], 'method' => 'delete']) }}
                                 <a href="{{ route('admin.restaurants.show', $restaurant->id) }}" title="Voir la fiche restaurant">{{--
                                     --}}<button class="btn btn-info">{{--
                                         --}}<span class="glyphicon glyphicon-search"></span>{{--
@@ -50,9 +60,10 @@
                                         --}}<span class="glyphicon glyphicon-pencil"></span>{{--
                                     --}}</button>{{--
                                 --}}</a>{{--
-                                --}}<button type="submit" class="btn btn-danger" title="Supprimer le restaurant">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </button>
+                                --}}{{ Form::open(['route' => ['admin.restaurants.destroy', $restaurant->id], 'method' => 'delete', 'class' => 'inline']) }}{{--
+                                --}}<button type="submit" class="btn btn-danger" title="Supprimer le restaurant">{{--
+                                    --}}<span class="glyphicon glyphicon-remove"></span>{{--
+                                --}}</button>
                                 {{ Form::close() }}
                             </td>
                         </tr>
@@ -89,13 +100,11 @@
     <script id="js">
         $(function() {
             $.tablesorter.themes.bootstrap = {
-
                 table      : 'table table-bordered table-striped table-hover',
                 sortNone   : 'bootstrap-icon-unsorted',
                 sortAsc    : 'icon-chevron-up glyphicon glyphicon-chevron-up',     // includes classes for Bootstrap v2 & v3
                 sortDesc   : 'icon-chevron-down glyphicon glyphicon-chevron-down', // includes classes for Bootstrap v2 & v3
-                active     : '', // applied when column is sorted
-                hover      : 'tablesorter-hover', // use custom css here - bootstrap class may not override it
+                hover      : 'tablesorter-hover'
             };
 
             $("table").tablesorter({
@@ -104,7 +113,9 @@
                 widgets : [ "uitheme", "filter", "zebra" ],
                 widgetOptions : {
                     zebra : ["even", "odd"],
-                    filter_reset : ".reset"
+                    filter_external : '.search',
+                    filter_reset : ".reset",
+                    filter_columnFilters: false
                 }
             })
             .tablesorterPager({
