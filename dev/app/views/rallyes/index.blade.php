@@ -1,1 +1,8 @@
-/var/www/local.dev/restoRallye/dev/app/views/rallyes/index.blade.php
+@extends('layouts.default')
+
+@section('content')
+    <div id="slideMap" class="slideImage"></div>
+    <div class="slideText">
+        <h3>Liste des rallyes</h3>
+    </div>
+@stop

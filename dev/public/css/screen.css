@@ -257,9 +257,8 @@ blockquote {
 }
 
 .restaurants {
-  display: block;
+  display: inline-block;
   width: 30%;
-  float: left;
   padding: 1em 1.5%;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;

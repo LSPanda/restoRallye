@@ -35,4 +35,8 @@ class PagesController extends \BaseController {
     public function contact () {
         return View::make ( 'pages.contact' );
     }
+
+    public function sendMail (){
+        return View::make ( 'pages.contact' );
+    }
 }
