@@ -28,6 +28,12 @@ Route::get ( '/',
         'uses' => 'PagesController@home'
     ] );
 
+Route::post ( '/storeEmailNewsletter',
+    [
+        'as'   => 'storeEmailNewsletter',
+        'uses' => 'PagesController@storeEmailNewsletter'
+    ] );
+
 Route::get ( '/contact',
     [
         'as'   => 'contact',

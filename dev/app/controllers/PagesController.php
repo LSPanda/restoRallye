@@ -1,11 +1,27 @@
 <?php
-
+use App\Forms\Home as FormHome;
 class PagesController extends \BaseController {
+
+    protected $formHome;
+
+    public function __construct (FormHome $formHome) {
+        $this->formHome = $formHome;
+    }
 
     public function home () {
         $about = Type::whereName ( 'about-home' )->first ()->posts ()->first ();
 
-        return View::make ( 'pages.home', compact ( 'about' ) );
+        $restaurants = Restaurant::all()->random(3);
+
+        return View::make ( 'pages.home', compact ( 'about', 'restaurants' ) );
+    }
+
+    public function storeEmailNewsletter () {
+        $this->formHome->validate ( Input::all () );
+
+        NewsletterEmail::create ( Input::all () );
+
+        return Redirect::route ( 'home' );
     }
 
     public function homeAdmin () {
