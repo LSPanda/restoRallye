@@ -12,6 +12,9 @@
                 <button type="button" class="reset btn btn-block btn-primary" data-column="0" data-filter="">
                     <i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Réinitialiser les filtres
                 </button>
+                <a href="{{ route('admin.restaurants.create') }}" class="reset btn btn-block btn-success" data-column="0" data-filter="">
+                    <i class="icon-white icon-refresh glyphicon glyphicon-plus"></i> Ajouter un restaurant
+                </a>
             </div>
             <table id="tableSorter">
                 <thead>
@@ -36,21 +39,21 @@
                             <td>{{ $restaurant->email }}</td>
                             <td>{{ $restaurant->tel }}</td>
                             <td>
-                                <a href="{{ route('admin.restaurants.show', $restaurant->id) }}" title="Voir la fiche restaurant">
-                                    <button class="btn btn-info">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                </a>
-                                <a href="{{ route('admin.restaurants.edit', $restaurant->id) }}" title="Éditer le restaurant">
-                                    <button class="btn btn-primary">
-                                        <span class="glyphicon glyphicon-pencil"></span>
-                                    </button>
-                                </a>
-                                <a href="{{ route('admin.restaurants.destroy', $restaurant->id) }}" title="Supprimer le restaurant">
-                                    <button class="btn btn-danger">
-                                        <span class="glyphicon glyphicon-remove"></span>
-                                    </button>
-                                </a>
+                                {{ Form::open(['route' => ['admin.restaurants.destroy', $restaurant->id], 'method' => 'delete']) }}
+                                <a href="{{ route('admin.restaurants.show', $restaurant->id) }}" title="Voir la fiche restaurant">{{--
+                                    --}}<button class="btn btn-info">{{--
+                                        --}}<span class="glyphicon glyphicon-search"></span>{{--
+                                    --}}</button>{{--
+                                --}}</a>{{--
+                                --}}<a href="{{ route('admin.restaurants.edit', $restaurant->id) }}" title="Éditer le restaurant">{{--
+                                    --}}<button class="btn btn-primary">{{--
+                                        --}}<span class="glyphicon glyphicon-pencil"></span>{{--
+                                    --}}</button>{{--
+                                --}}</a>{{--
+                                --}}<button type="submit" class="btn btn-danger" title="Supprimer le restaurant">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                                {{ Form::close() }}
                             </td>
                         </tr>
                     @endforeach

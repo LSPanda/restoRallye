@@ -42,16 +42,11 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function store () {
-        $validator = Validator::make ( $data = Input::all (), Restaurant::$rules );
+        $this->formRestaurant->validate ( Input::all () );
 
-        if ($validator->fails ())
-        {
-            return Redirect::back ()->withErrors ( $validator )->withInput ();
-        }
+        Restaurant::create ( Input::all() );
 
-        Restaurant::create ( $data );
-
-        return Redirect::route ( 'restaurants.admin.index' );
+        return Redirect::route ( 'admin.restaurants.index' );
     }
 
     /**
@@ -114,7 +109,7 @@ class RestaurantsController extends \BaseController {
     public function destroy ($id) {
         Restaurant::destroy ( $id );
 
-        return Redirect::route ( 'restaurants.admin.index' );
+        return Redirect::route ( 'admin.restaurants.index' );
     }
 
 }
