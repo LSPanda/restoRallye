@@ -6,3 +6,4 @@ composer.lock
 .DS_Store
 Thumbs.db
 /bootstrap/start.php
+/app/config/local/app.php
