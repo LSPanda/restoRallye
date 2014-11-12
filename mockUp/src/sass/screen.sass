@@ -140,12 +140,19 @@ blockquote
     margin: auto
     width: 20em
     height: 2.5em
-    +quoteStyle( 2em )
+    +quoteStyle( 2.5em )
     line-height: 1.25
     text-align: center
+    -webkit-text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
+    -moz-text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
+    -o-text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
 .explain
     p
         margin-left: 0.85em
+        padding: 0.5em 0
+        &firsr-child
+            padding: 0
 .slideRestaurant
     &:after
         +clearFloat()
