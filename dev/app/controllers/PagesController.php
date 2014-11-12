@@ -1,11 +1,13 @@
 <?php
 use App\Forms\Home as FormHome;
+use App\Forms\Contact as FormContact;
 class PagesController extends \BaseController {
 
-    protected $formHome;
+    protected $formHome, $formContact;
 
-    public function __construct (FormHome $formHome) {
+    public function __construct (FormHome $formHome, FormContact $formContact) {
         $this->formHome = $formHome;
+        $this->formContact = $formContact;
     }
 
     public function home () {
@@ -37,6 +39,8 @@ class PagesController extends \BaseController {
     }
 
     public function sendMail (){
-        return View::make ( 'pages.contact' );
+        $this->formContact->validate(Input::all());
+
+        return Redirect::route ( 'pages.contact' );
     }
 }
