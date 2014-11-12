@@ -2,11 +2,9 @@
 
 @section('content')
     <div class="container">
-        @if(isset($message))
-            <p>{{ $message }}</p>
-        @endif
         {{ Form::open(['route' => 'doLogin', 'class' => 'form-signin']) }}
         <h2 class="form-signin-heading">Connectez vous</h2>
+            <p class="text-danger"><strong>{{ Session::get('message') }}</strong></p>
             {{ Form::text('login', null, [
                 'placeholder'   => 'Login',
                 'class'         => 'form-control',
