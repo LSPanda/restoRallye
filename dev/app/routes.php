@@ -124,3 +124,10 @@ Route::get ( '/' . $_ENV[ 'PREFIX' ] . '/contents',
         'as'     => 'admin.pages.index',
         'uses'   => 'PagesController@contents'
     ] );
+
+Route::put ( '/' . $_ENV[ 'PREFIX' ] . '/contents/{posts}',
+    [
+        'before' => 'auth',
+        'as'     => 'admin.contents.update',
+        'uses'   => 'PagesController@updateContent'
+    ] );

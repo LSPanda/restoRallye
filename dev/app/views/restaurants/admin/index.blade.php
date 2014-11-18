@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="col-md-4 col-md-offset-1">
-                        <a href="{{ route('admin.restaurants.create') }}" class="reset btn btn-block btn-success" data-column="0" data-filter="">
+                        <a href="{{ route('admin.restaurants.create') }}" class="reset btn btn-block btn-success" data-column="0">
                             <i class="icon-white icon-refresh glyphicon glyphicon-plus"></i> Ajouter un restaurant
                         </a>
                     </div>
