@@ -7,6 +7,7 @@
 
 @section('content')
     {{ Form::open(['route' => 'admin.restaurants.store']) }}
+        {{ Form::hidden('slug', null) }}
         <div class="form-group">
             {{ Form::label('name', 'Nom du restaurant') }}
             {{ Form::text('name', null, ['class' => 'form-control', 'require']) }}

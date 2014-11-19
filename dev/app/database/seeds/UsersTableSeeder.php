@@ -19,11 +19,6 @@ class UsersTableSeeder extends Seeder {
             ] );
         }
 
-        User::create ( [
-            'login'    => 'admin',
-            'password' => Hash::make ( 'admin' ),
-            'email'    => 'admin@admin.admin',
-            'role'     => 'a'
-        ] );
+        User::create ( [ 'login'    => 'admin', 'password' => Hash::make ( 'admin' ), 'email'    => 'admin@admin.admin', 'role'     => 'a'   ] );
     }
 }

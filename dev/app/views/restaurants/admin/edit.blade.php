@@ -7,6 +7,7 @@
 
 @section('content')
     {{ Form::open(['route' => ['admin.restaurants.update', $restaurant->id], 'method' => 'put']) }}
+        {{ Form::hidden('slug', $restaurant->slug) }}
         <div class="form-group">
             {{ Form::label('name', 'Nom du restaurant') }}
             {{ Form::text('name', $restaurant->name, ['class' => 'form-control', 'require']) }}

@@ -1,12 +1,14 @@
 <?php
 use App\Forms\Restaurant as FormRestaurant;
+use App\Helpers\Slug as HelperSlug;
 
 class RestaurantsController extends \BaseController {
 
-    protected $formRestaurant;
+    protected $formRestaurant, $helperSlug;
 
-    public function __construct (FormRestaurant $formRestaurant) {
+    public function __construct (FormRestaurant $formRestaurant, HelperSlug $helperSlug) {
         $this->formRestaurant = $formRestaurant;
+        $this->helperSlug     = $helperSlug;
     }
 
     /**
@@ -44,7 +46,11 @@ class RestaurantsController extends \BaseController {
     public function store () {
         $this->formRestaurant->validate ( Input::all () );
 
-        Restaurant::create ( Input::all() );
+        $inputs = Input::all ();
+
+        $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
+
+        Restaurant::create ( $inputs );
 
         return Redirect::route ( 'admin.restaurants.index' );
     }
@@ -93,8 +99,14 @@ class RestaurantsController extends \BaseController {
         $this->formRestaurant->validate ( Input::all () );
 
         $restaurant = Restaurant::findOrFail ( $id );
+        $inputs     = Input::all ();
 
-        $restaurant->update ( Input::all () );
+        if ($restaurant->name != $inputs[ 'name' ])
+        {
+            $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
+        }
+
+        $restaurant->update ( $inputs );
 
         return Redirect::route ( 'admin.restaurants.show', $id );
     }
