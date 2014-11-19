@@ -9,6 +9,9 @@ mockUp/bin/html
 mockUp/bin/js/script.min.js
 mockUp/bin/index.html
 
+
+.rocketeer
+
 #############
 ## Sass
 #############
