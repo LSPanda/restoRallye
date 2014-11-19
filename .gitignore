@@ -12,6 +12,13 @@ mockUp/bin/index.html
 
 .rocketeer
 
+composer.phar
+composer.lock
+.env.php
+
+/bootstrap/compiled.php
+/vendor
+
 #############
 ## Sass
 #############
