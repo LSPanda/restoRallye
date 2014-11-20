@@ -38,8 +38,8 @@ return array(
 	'connections'      => array(
 		'production' => array(
 			'host'      => 'resto-rallye.que.lu',
-			'username'  => 'quelu',
-			'password'  => '',
+			'username'  => 'root',
+			'key'       => '/home/vagrant/.ssh/id_rsa',
 			'db_role'   => false,
 		),
 	),
