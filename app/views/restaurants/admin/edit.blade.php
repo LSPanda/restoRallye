@@ -25,24 +25,24 @@
                     <div class="input-group">
                         <span class="input-group-addon glyphicon glyphicon-envelope"></span>
                         {{ Form::email('email', $restaurant->email, ['class' => 'form-control', 'placeholder' => 'email@domaine.com']) }}
-                        {{ $errors->first('email', '<div class="alert alert-danger">:message</div>') }}
                     </div>
+                    {{ $errors->first('email', '<div class="alert alert-danger">:message</div>') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('website', 'Site internet') }}
                     <div class="input-group">
                         <span class="input-group-addon glyphicon glyphicon-globe"></span>
                         {{ Form::url('website', $restaurant->website, ['class' => 'form-control', 'placeholder' => 'http://nom-du-site.com']) }}
-                        {{ $errors->first('website', '<div class="alert alert-danger">:message</div>') }}
                     </div>
+                    {{ $errors->first('website', '<div class="alert alert-danger">:message</div>') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('tel', 'Téléphonne') }}
                     <div class="input-group">
                         <span class="input-group-addon glyphicon glyphicon-earphone"></span>
                         {{ Form::text('tel', $restaurant->tel, ['class' => 'form-control', 'placeholder' => '0*********']) }}
-                        {{ $errors->first('tel', '<div class="alert alert-danger">:message</div>') }}
                     </div>
+                    {{ $errors->first('tel', '<div class="alert alert-danger">:message</div>') }}
                 </div>
             </div>
             <div class="col-md-7">
