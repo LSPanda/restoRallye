@@ -29,8 +29,8 @@ module.exports = function( grunt ) {
 				},
 				"files": {
 					"bin/index.html": "src/jade/index.jade",
-					"bin/html/rallye.html": "src/jade/rallye.jade",
-					"bin/html/restaurant.html": "src/jade/restaurant.jade",
+					"bin/html/evenements.html": "src/jade/evenements.jade",
+					"bin/html/restaurants.html": "src/jade/restaurants.jade",
 					"bin/html/blog.html": "src/jade/blog.jade",
 					"bin/html/contact.html": "src/jade/contact.jade"
 				}

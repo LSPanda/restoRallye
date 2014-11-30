@@ -1,7 +1,10 @@
 extends layout
 
 block title
-    title Resto Rallye - Rallye
+    title Resto Rallye - Restaurant partenaire
+    
+block stylesheet
+    link(rel="stylesheet" href="../css/screen.css")
 
 block header
     header
@@ -9,24 +12,19 @@ block header
         nav
             ul
                 li
-                    a(href="restaurant.html") Restaurants
+                    a(href="evenements.html") Événements
                 li
-                    a(href="rallye.html") Rallye
+                    a(href="blog.html") Actualités
                 li.banners
                     a(href="../index.html")
                         img(src="../css/images/Ecusson.png", alt="Banners Resto Rallye")
                 li
-                    a(href="blog.html") Blog
+                    a(href="restaurants.html") Restaurants
                 li
                     a(href="contact.html") Contact
-                
 
 block content
-    div#slideMap.slideImage
-    div.slideText
-        h3 Bienvenue au Resto-Rally
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos reiciendis numquam accusamus qui aut autem eaque maxime voluptate tempore incidunt enim, placeat sunt ipsum minus, officiis culpa molestiae architecto.
-    div#slide4.slideImage
+    p Page Restaurant
 
 block footer
     div.slideText.myFooter
@@ -35,11 +33,11 @@ block footer
                 h4 Navigation
                 ul
                     li
-                        a(href="restaurant.html") Restaurant
+                        a(href="evenements.html") Événements
                     li
-                        a(href="rallye.html") Rallye
+                        a(href="blog.html") Actualités
                     li
-                        a(href="blog.html") Blog
+                        a(href="restaurants.html") Restaurants
                     li
                         a(href="contact.html") Contact
             section.looking
@@ -76,6 +74,4 @@ block script
     script(src="../js/vendor/modernizr-2.6.2.min.js")
     script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&sensor=false")
     script(src="../js/vendor/jquery.js")
-    script.
-        var myAddress = "Rue Peetermans 80, 4100 Seraing, Belgique"
     script(src="../js/script.min.js")
