@@ -30,9 +30,9 @@
         //Marker personnalisé
         image = {
             url: '../css/images/marker.png',
-            size: new google.maps.Size( 54,75 ),
+            size: new google.maps.Size( 55,60 ),
             origin: new google.maps.Point( 0,0 ),
-            anchor: new google.maps.Point( 25, 75 )
+            anchor: new google.maps.Point( 20, 60 )
         };
         //Init Geocoder
         Geocoder = new google.maps.Geocoder();
