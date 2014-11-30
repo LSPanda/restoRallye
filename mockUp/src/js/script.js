@@ -14,7 +14,7 @@
 
 
     var generateGoogleMap = function() {
-        oPosition = new google.maps.LatLng( 50.846686, 4.352425 );
+        oPosition = new google.maps.LatLng( long, lat );
 
         gMap = new google.maps.Map( document.getElementById("slideMap"), {
             center: oPosition,
