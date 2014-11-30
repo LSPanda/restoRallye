@@ -8,26 +8,40 @@
 ( function( $ ) {
     "user strict";
 
-    var gMap,
-        gMarker,
-        oPosition;
+    var defaultPosition,
+        mapOptions,
+        gMap,
+        Geocoder,
+        gMarker;
 
-
-    var generateGoogleMap = function() {
-        oPosition = new google.maps.LatLng( long, lat );
-
-        gMap = new google.maps.Map( document.getElementById("slideMap"), {
-            center: oPosition,
+    function generateGoogleMap() {
+        //Set position to Bruxelle
+        defaultPosition = new google.maps.LatLng( 50.8504500, 4.3487800 );
+        //Init mapOptions
+        mapOptions = {
+            center: defaultPosition,
             zoom: 17,
             disableDefaultUI: true,
             scrollwheel: false,
             draggable: false,
             mapTypeId: google.maps.MapTypeId.ROADMAPx
-        } );
+        }
+        //Init Geocoder
+        Geocoder = new google.maps.Geocoder();
+        selectedAdress();
+        //Set defaultGmap
+        gMap = new google.maps.Map( document.getElementById( "slideMap" ), mapOptions );
+    }
 
-        gMarker = new google.maps.Marker( {
-            position: oPosition,
-            map: gMap
+    function selectedAdress() {
+        Geocoder.geocode( { 'address': myAddress}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                gMap.setCenter(results[0].geometry.location);
+                gMarker = new google.maps.Marker( {
+                    map: gMap,
+                    position: results[0].geometry.location
+                } );
+            }
         } );
     }
 
@@ -37,7 +51,7 @@
             $( "header nav" ).addClass( "stick" );
         } );
 
-        //Generate google map for event
+        //Generate google gMap for event
         generateGoogleMap();
     } );
 
