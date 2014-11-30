@@ -12,7 +12,8 @@
         mapOptions,
         gMap,
         Geocoder,
-        gMarker;
+        gMarker,
+        image;
 
     function generateGoogleMap() {
         //Set position to Bruxelle
@@ -25,7 +26,14 @@
             scrollwheel: false,
             draggable: false,
             mapTypeId: google.maps.MapTypeId.ROADMAPx
-        }
+        };
+        //Marker personnalisé
+        image = {
+            url: '../css/images/marker.png',
+            size: new google.maps.Size( 54,75 ),
+            origin: new google.maps.Point( 0,0 ),
+            anchor: new google.maps.Point( 25, 75 )
+        };
         //Init Geocoder
         Geocoder = new google.maps.Geocoder();
         selectedAdress();
@@ -39,7 +47,8 @@
                 gMap.setCenter(results[0].geometry.location);
                 gMarker = new google.maps.Marker( {
                     map: gMap,
-                    position: results[0].geometry.location
+                    position: results[0].geometry.location,
+                    icon: image
                 } );
             }
         } );
