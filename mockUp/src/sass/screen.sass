@@ -103,7 +103,7 @@ nav
 //Pure CSS - Parallax
 .slideImage
     position: relative
-    min-height: 70vh
+    min-height: 75vh
     box-sizing: border-box
     transform-style: inherit
     &:before
@@ -115,7 +115,7 @@ nav
         right: 0
 .slideText
     position: relative
-    padding: 8vh 10%
+    padding: 4vh 10%
     width: 100vw
     box-sizing: border-box
     box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.8)
@@ -164,20 +164,23 @@ blockquote
         padding: 0.25em 0
         &firsr-child
             padding: 0
-
-dt
-    font-family: $boldFont
-    padding-top: 0.5em
-    &first-child
-        padding: 0
-dd
-    padding: 0.25em 0
-
+.addDL:after
+    +clearFloat()
+dl
+    float: left
+    width: 45%
+    margin-right: 5%
+    dt
+        font-family: $boldFont
+        padding-top: 0.5em
+        &first-child
+            padding: 0
+    dd
+        padding: 0.25em 0
 .tarif li
     padding: 0.25em 0
     margin-left: 1.25em
     list-style-type: circle
-
 .restaurants
     display: inline-block
     width: 30%
