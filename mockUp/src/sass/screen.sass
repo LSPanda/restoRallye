@@ -19,7 +19,9 @@ h2
     +getOffMyPage()
 h1, h2, h3, h4, h5, h6
     +headingStyle( 1.5em )
-    padding-bottom: 1em
+    padding: 1.5em 0 0.75em 0
+    &:first-child
+        padding-top: 0
 a
     color: $linkColor
     +transition( all, 0.25s )
@@ -101,7 +103,7 @@ nav
 //Pure CSS - Parallax
 .slideImage
     position: relative
-    min-height: 85vh
+    min-height: 70vh
     box-sizing: border-box
     transform-style: inherit
     &:before
@@ -127,9 +129,13 @@ nav
     background: url("images/backgroundImage1.jpg") center fixed no-repeat
 #slide3
     background: url("images/backgroundImage2.jpg") center fixed no-repeat
-//Rallye
 #slide4
     background: url("images/backgroundImage3.jpg") center fixed no-repeat
+#slide5
+    background: url("images/backgroundImage4.jpg") center fixed no-repeat
+//Evenement
+#slide6
+    background: url("images/backgroundImage5.jpg") center fixed no-repeat
 
 //Style content
 blockquote
@@ -155,7 +161,7 @@ blockquote
         text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.6)
 .addText
     p
-        padding: 0.5em 0
+        padding: 0.25em 0
         &firsr-child
             padding: 0
 .slideRestaurant
