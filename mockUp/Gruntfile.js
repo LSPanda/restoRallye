@@ -21,8 +21,8 @@ module.exports = function( grunt ) {
 		},
 		"jade": {
 			"jades": {
-				"option": {
-					"pretty": false,
+				"options": {
+					"pretty": true,
 					"data": {
 						"debug": false,
 					},
