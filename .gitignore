@@ -2,7 +2,7 @@
 ## Grunt
 #############
 
-mockUp
+npm-debug.log
 node_modules
 _mockUp/bin/css/*.css
 _mockUp/bin/css/*.map
