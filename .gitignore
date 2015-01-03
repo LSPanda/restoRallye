@@ -2,12 +2,13 @@
 ## Grunt
 #############
 
+mockUp
 node_modules
-mockUp/bin/css/*.css
-mockUp/bin/css/*.map
-mockUp/bin/html
-mockUp/bin/js/script.min.js
-mockUp/bin/index.html
+_mockUp/bin/css/*.css
+_mockUp/bin/css/*.map
+_mockUp/bin/html
+_mockUp/bin/js/script.min.js
+_mockUp/bin/index.html
 
 
 .rocketeer
