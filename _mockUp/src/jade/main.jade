@@ -1,0 +1,69 @@
+// - index.html
+
+extends layout
+
+block title
+    title Resto Rallye - Accueil
+
+block content
+    div#slide1.slideImage
+        blockquote 
+            | Ne manquez pas notre prochain 
+            a(href="html/evenements.html") Rendez-vous 
+            | dans la région de Namur
+    div.slideText.addText
+        h3 Bienvenue au Resto-Rally
+        p Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ?
+        p Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
+        p A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
+        p Ensuite, départ vers l’inconnu… Il faut expérimenter les papilles ! C’est la seule constante des étapes… La première halte est consacrée à la dégustation de l‘entrée froide, la deuxième à l’entrée chaude et la dernière au plat principal. Tous les Resto Rallyens se retrouvent ensuite pour savourer le dessert et le café dans le même endroit où ils ont pris l‘apéro et dans lequel ils peuvent échanger leurs avis sur leurs parcours respectifs.
+        
+    div#slide2.slideImage    
+    div.slideText.addDL
+        h3 Programme type de la soirée
+        dl
+            dt 18.30 - 19.30
+            dd Réception des Resto Rallyens au lieu d’accueil
+            dt 19.30 - 19.45
+            dd Déplacement des Resto Rallyens vers les différents restaurants
+            dt 19.45 - 20.30
+            dd Entrée froide
+            dt 20.30 - 20.45
+            dd Déplacement des Resto Rallyens vers les différents restaurants
+        dl
+            dt 20.45 - 21.30
+            dd Entrée chaude
+            dt 21.30 - 21.45
+            dd Déplacementx des Resto Rallyens vers les différents restaurants
+            dt 21.45 - 22.30
+            dd Plat principal
+            dt 22.30 - …
+            dd Retour au lieu d’accueil pour café, pousse et dessert
+            
+    div#slide3.slideImage 
+    div.slideText.addText
+        h3 Le tarif par participant s'élève à 60 €, ce prix comprend
+        ul.tarif
+            li L'apéro et ses zakouskis
+            li L'entrée froide
+            li L'entrée chaude
+            li Le plat principal
+            li Le café et son dessert
+            li Le pousse-café
+            li + un verre de vin et d'eau dans chaque restaurant
+            
+    div#slide4.slideImage
+        div.slideText
+            - var numberItem = 0
+            h3 Nous vous conseillons ces adresses
+            
+            while numberItem < 3            
+                div.restaurants
+                    a(href="#")
+                        h4 
+                            | Chez René, 
+                            span Liège
+                        img(src="../css/images/exempleRest.jpg", alt="")
+                - numberItem++
+    
+    div#slide5.slideImage    
