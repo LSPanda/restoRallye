@@ -347,10 +347,7 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
-.header__nav {
-  text-align: center;
-}
-.nav__element {
+.inline-block {
   display: inline-block;
 }
 /*
@@ -382,19 +379,13 @@ h6:first-child,
 .header__nav {
   position: fixed;
   width: 100%;
+  text-align: center;
   background: #3498db;
   padding: 8px 0;
   padding: 0.5rem 0rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
+  margin-top: 8px;
+  margin-top: 0.5rem;
   z-index: 1;
-}
-.header__nav--stick {
-  margin-top: 0;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
 }
 .nav {
   border-top: 2px solid #fbfbfb;
@@ -427,8 +418,8 @@ h6:first-child,
 }
 .banners__link {
   position: absolute;
-  top: -128px;
-  top: -8rem;
+  top: -158px;
+  top: -9.875rem;
   left: 0;
 }
 /*
