@@ -15,6 +15,10 @@
 strip-units( val )
     unit( val, "" )
 
+// Remove units of a number
+calc_line-height( val1, val2 )
+    strip-units( val1 ) / strip-units( val2 )
+
 // Converse PX to REM with PX fallback
 rem-fallback( property, arguments )
     px-fall  = arguments

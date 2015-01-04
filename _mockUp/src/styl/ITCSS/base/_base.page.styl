@@ -11,9 +11,10 @@
 
 
 // Base style for web-page
-html
+body
     rem-fallback( font-size, wf_font-size )
-    line-height wf_line-height / wf_font-size
+    line-height calc_line-height( wf_line-height, wf_font-size )
+    font-family wf_font-labeur
     background-color wf_background-color
     color wf_labeur-color
     overflow-y scroll

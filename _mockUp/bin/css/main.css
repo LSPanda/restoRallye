@@ -3,6 +3,41 @@
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+@font-face {
+  font-family: "RochterQuote";
+  font-weight: normal;
+  src: url("fonts/Rochter/Rochester-Regular.otf.eot");
+  src: url("fonts/Rochter/Rochester-Regular.otf.eot?#iefix") format("embedded-opentype"), url("fonts/Rochter/Rochester-Regular.otf.woff2") format("woff2"), url("fonts/Rochter/Rochester-Regular.otf.woff") format("woff"), url("fonts/Rochter/Rochester-Regular.otf.ttf") format("truetype"), url("fonts/Rochter/Rochester-Regular.otf.svg#RochterQuote") format("svg");
+}
+@font-face {
+  font-family: "RobotoLabeur";
+  font-weight: lighter;
+  src: url("fonts/Roboto/Roboto-Light.ttf.eot");
+  src: url("fonts/Roboto/Roboto-Light.ttf.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto/Roboto-Light.ttf.woff2") format("woff2"), url("fonts/Roboto/Roboto-Light.ttf.woff") format("woff"), url("fonts/Roboto/Roboto-Light.ttf.ttf") format("truetype"), url("fonts/Roboto/Roboto-Light.ttf.svg#RobotoLabeur") format("svg");
+}
+@font-face {
+  font-family: "RobotoBold";
+  font-weight: bold;
+  src: url("fonts/Roboto/Roboto-Bold.ttf.eot");
+  src: url("fonts/Roboto/Roboto-Bold.ttf.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto/Roboto-Bold.ttf.woff2") format("woff2"), url("fonts/Roboto/Roboto-Bold.ttf.woff") format("woff"), url("fonts/Roboto/Roboto-Bold.ttf.ttf") format("truetype"), url("fonts/Roboto/Roboto-Bold.ttf.svg#RobotoBold") format("svg");
+}
+@font-face {
+  font-family: "RobotoNav";
+  font-weight: normal;
+  src: url("fonts/Roboto/Roboto-Regular.ttf.eot");
+  src: url("fonts/Roboto/Roboto-Regular.ttf.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto/Roboto-Regular.ttf.woff2") format("woff2"), url("fonts/Roboto/Roboto-Regular.ttf.woff") format("woff"), url("fonts/Roboto/Roboto-Regular.ttf.ttf") format("truetype"), url("fonts/Roboto/Roboto-Regular.ttf.svg#RobotoNav") format("svg");
+}
+@font-face {
+  font-family: "RobotoHeading";
+  font-weight: lighter;
+  src: url("fonts/Roboto/Roboto-Thin.ttf.eot");
+  src: url("fonts/Roboto/Roboto-Thin.ttf.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto/Roboto-Thin.ttf.woff2") format("woff2"), url("fonts/Roboto/Roboto-Thin.ttf.woff") format("woff"), url("fonts/Roboto/Roboto-Thin.ttf.ttf") format("truetype"), url("fonts/Roboto/Roboto-Thin.ttf.svg#RobotoHeading") format("svg");
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
 *
@@ -146,193 +181,6 @@ table {
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background: transparent;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-img {
-  border: 0;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-input {
-  line-height: normal;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  border: 0;
-  padding: 0;
-}
-textarea {
-  overflow: auto;
-}
-optgroup {
-  font-weight: bold;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
-/*
-* CSS Methodology based on InuitCSS, used for my owned workflow
-*
-* https://github.com/LSPanda | http://portfolio.simon-leyder.be
-*/
 h1,
 h2,
 h3,
@@ -349,8 +197,8 @@ table,
 fieldset,
 figure,
 pre {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 ul,
 ol,
@@ -380,6 +228,17 @@ html {
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+a {
+  color: #3498db;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover {
+  color: #90b4c5;
+  text-decoration: none;
+}
 .removeLink {
   color: inherit;
   text-decoration: none;
@@ -392,9 +251,10 @@ html {
 html {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 24px/16px;
+  line-height: 1.25;
+  font-family: "RobotoLabeur", sans-serif;
   background-color: #fff;
-  color: #333;
+  color: #7f8c8d;
   overflow-y: scroll;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
@@ -430,31 +290,67 @@ h1,
 .alpha {
   font-size: 41.887px;
   font-size: 2.6179375rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h1:first-child,
+.alpha:first-child {
+  padding-top: 0;
 }
 h2,
 .beta {
   font-size: 34.269px;
   font-size: 2.1418125rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h2:first-child,
+.beta:first-child {
+  padding-top: 0;
 }
 h3,
 .gamma {
   font-size: 25.888px;
   font-size: 1.618rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h3:first-child,
+.gamma:first-child {
+  padding-top: 0;
 }
 h4,
 .delta {
   font-size: 21.18px;
   font-size: 1.32375rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h4:first-child,
+.delta:first-child {
+  padding-top: 0;
 }
 h5,
 .epsilon {
   font-size: 16px;
   font-size: 1rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h5:first-child,
+.epsilon:first-child {
+  padding-top: 0;
 }
 h6,
 .zeta {
   font-size: 13.09px;
   font-size: 0.818125rem;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+}
+h6:first-child,
+.zeta:first-child {
+  padding-top: 0;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
