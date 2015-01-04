@@ -1,0 +1,49 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS HEADER
+//\*------------------------------------*/
+
+
+
+
+// Font settings.
+.header__nav
+    position fixed
+    width 100%
+    background wf_background-header
+    rem-fallback( padding, 8px 0 )
+    rem-fallback( margin-top, 24px )
+    z-index 1
+.header__nav--stick
+    margin-top 0
+    transition( all, 0.5s )
+
+.nav
+    border-top 2px solid wf_border-menu
+    border-bottom 2px solid wf_border-menu
+.nav__element
+    font-family wf_font-nav
+    rem-fallback( font-size, 20px )
+    text-transform uppercase
+    rem-fallback( padding, 16px 0 )
+    rem-fallback( margin, 0 12px )
+
+.element__link
+    color wf_nav-color
+    text-decoration none
+    &:hover
+        color wf_nav-color
+        rem-fallback( padding-bottom, 4px )
+        border-bottom 1px solid wf_nav-color
+
+.banners
+    position relative
+    rem-fallback( width, 160px )
+.banners__link
+    position absolute
+    rem-fallback( top, -128px )
+    left 0

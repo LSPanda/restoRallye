@@ -57,7 +57,7 @@
     $( function() {
         //Detect scroll for stick and reduce my nav-menu
         $( "body" ).scroll( function() {
-            $( "header nav" ).addClass( "stick" );
+            $( "header__nav" ).addClass( "header__nav--stick" );
         } );
 
         //Generate google gMap for event

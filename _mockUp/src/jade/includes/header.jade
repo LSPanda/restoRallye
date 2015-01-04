@@ -1,18 +1,18 @@
 // - includes/header.jade
 
-header
+header.header
     h1.hiddenTitle Bienvenue sur le site de Resto Rallye 
-    nav
-        h2.hiddenTitle Menu de navigation du site
-        ul
-            li
-                a(href="evenements.html") Événements
-            li
-                a(href="blog.html") Actualités
-            li.banners
-                a(href="index.html")
+    nav.header__nav
+        div.nav
+            h2.hiddenTitle Menu de navigation du site
+            span.nav__element
+                a(href="evenements.html").element__link Événements
+            span.nav__element
+                a(href="blog.html").element__link Actualités
+            span.nav__element.banners
+                a(href="index.html").banners__link
                     img(src="../css/images/Ecusson.png", alt="Banners Resto Rallye")
-            li
-                a(href="restaurants.html") Restaurants
-            li
-                a(href="contact.html") Contact
+            span.nav__element
+                a(href="restaurants.html").element__link Restaurants
+            span.nav__element
+                a(href="contact.html").element__link Contact
