@@ -243,7 +243,7 @@ body {
   font-size: 1rem;
   line-height: 1.25;
   font-family: "RobotoLabeur", sans-serif;
-  background-color: #fff;
+  background-color: wf_background-color;
   color: #7f8c8d;
   overflow-y: scroll;
   min-height: 100%;
@@ -358,6 +358,27 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.parallax__img {
+  position: relative;
+  min-height: 75vh;
+}
+.parallax__img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__body {
+  position: relative;
+  width: 100vw;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .header__nav {
   position: fixed;
   width: 100%;
@@ -409,6 +430,34 @@ h6:first-child,
   top: -128px;
   top: -8rem;
   left: 0;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.parallax__body {
+  padding: 4vh 10%;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.8);
+  background: #fff;
+}
+.parallax__img--one {
+  background: url("images/backgroundImage.jpg") center fixed no-repeat;
+}
+.parallax__img--two {
+  background: url("images/backgroundImage1.jpg") center fixed no-repeat;
+}
+.parallax__img--three {
+  background: url("images/backgroundImage2.jpg") center fixed no-repeat;
+}
+.parallax__img--four {
+  background: url("images/backgroundImage3.jpg") center fixed no-repeat;
+}
+.parallax__img--five {
+  background: url("images/backgroundImage4.jpg") center fixed no-repeat;
+}
+.parallax__img--six {
+  background: url("images/backgroundImage5.jpg") center fixed no-repeat;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
