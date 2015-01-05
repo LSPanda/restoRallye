@@ -555,22 +555,22 @@ h6:first-child,
   background: #fff;
 }
 .parallax__img--one {
-  background: url("images/backgroundImage.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage.jpg") center fixed no-repeat;
 }
 .parallax__img--two {
-  background: url("images/backgroundImage1.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage1.jpg") center fixed no-repeat;
 }
 .parallax__img--three {
-  background: url("images/backgroundImage2.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage2.jpg") center fixed no-repeat;
 }
 .parallax__img--four {
-  background: url("images/backgroundImage3.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage3.jpg") center fixed no-repeat;
 }
 .parallax__img--five {
-  background: url("images/backgroundImage4.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage4.jpg") center fixed no-repeat;
 }
 .parallax__img--six {
-  background: url("images/backgroundImage5.jpg") center fixed no-repeat;
+  background: url("images/parallax/backgroundImage5.jpg") center fixed no-repeat;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
@@ -598,9 +598,9 @@ h6:first-child,
   width: 1.5625rem;
   height: 25px;
   height: 1.5625rem;
-  background: url("images/arrow.png") no-repeat center;
-  top: 7px;
-  top: 0.4375rem;
+  background: url("images/sprite.png") -90px -10px;
+  top: 9px;
+  top: 0.5625rem;
   right: 5px;
   right: 0.3125rem;
   border: none;
