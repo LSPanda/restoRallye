@@ -21,7 +21,7 @@ block content
     div.parallax__img.parallax__img--two  
     div.parallax__body.addDL
         h3.gamma Programme type de la soirée
-        dl
+        dl.inline-block.one-half
             dt 18.30 - 19.30
             dd Réception des Resto Rallyens au lieu d’accueil
             dt 19.30 - 19.45
@@ -30,7 +30,7 @@ block content
             dd Entrée froide
             dt 20.30 - 20.45
             dd Déplacement des Resto Rallyens vers les différents restaurants
-        dl
+        dl.inline-block.one-half
             dt 20.45 - 21.30
             dd Entrée chaude
             dt 21.30 - 21.45
@@ -58,8 +58,8 @@ block content
         h3 Nous vous conseillons ces adresses
         
         while numberItem < 3            
-            div.restaurants
-                a(href="#")
+            div.inline-block.one-third
+                a(href="#").removeLink
                     h4.delta 
                         | Chez René, 
                         span Liège
