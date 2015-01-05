@@ -419,6 +419,85 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.hightlight {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "RobotoBold", sans-serif;
+}
+.quote {
+  position: absolute;
+  width: 660px;
+  width: 41.25rem;
+  height: 40px;
+  height: 2.5rem;
+  top: 32px;
+  top: 2rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-size: 44px;
+  font-size: 2.75rem;
+  font-family: "RochterQuote", sans-serif;
+  font-style: italic;
+  color: #eaeaea;
+  text-align: center;
+  -webkit-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  -moz-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  -ms-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+.quote__link {
+  -webkit-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  -moz-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  -ms-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+}
+.programme {
+  width: 50%;
+}
+.tarif {
+  list-style-type: none;
+}
+.tarif__element:before {
+  content: "- ";
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.social__link {
+  width: 35px;
+  width: 2.1875rem;
+  height: 35px;
+  height: 2.1875rem;
+  text-indent: -1000000px;
+  text-indent: -62500rem;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+}
+.social__link--fb {
+  width: 100%;
+  height: 100%;
+  background: url("images/sprite.png") -50px -50px;
+}
+.social__link--fb:hover {
+  background: url("images/sprite.png") -50px -10px;
+}
+.social__link--rss {
+  width: 100%;
+  height: 100%;
+  background: url("images/sprite.png") -10px -50px;
+}
+.social__link--rss:hover {
+  background: url("images/sprite.png") -10px -10px;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .header__nav {
   position: fixed;
   width: 100%;
@@ -498,44 +577,12 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
-.newsletter {
+.footer__information {
+  width: 16.666666%;
+}
+.footer__newsletter {
   float: right;
-}
-.hightlight {
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-family: "RobotoBold", sans-serif;
-}
-/*
-* CSS Methodology based on InuitCSS, used for my owned workflow
-*
-* https://github.com/LSPanda | http://portfolio.simon-leyder.be
-*/
-.social__link {
-  width: 35px;
-  width: 2.1875rem;
-  height: 35px;
-  height: 2.1875rem;
-  text-indent: -1000000px;
-  text-indent: -62500rem;
-  margin-right: 8px;
-  margin-right: 0.5rem;
-}
-.social__link--fb {
-  width: 100%;
-  height: 100%;
-  background: url("images/sprite.png") -50px -50px;
-}
-.social__link--fb:hover {
-  background: url("images/sprite.png") -50px -10px;
-}
-.social__link--rss {
-  width: 100%;
-  height: 100%;
-  background: url("images/sprite.png") -10px -50px;
-}
-.social__link--rss:hover {
-  background: url("images/sprite.png") -10px -10px;
+  width: 20%;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
