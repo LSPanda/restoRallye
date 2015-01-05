@@ -1,18 +1,18 @@
 // - includes/header.jade
 
-header.header
-    h1.hiddenTitle Bienvenue sur le site de Resto Rallye 
-    nav.header__nav
+header(itemscope itemtype="http://schema.org/WPHeader").header
+    h1(itemprop="headline").hiddenTitle Bienvenue sur le site de Resto Rallye 
+    nav(itemscope itemtype="http://schema.org/SiteNavigationElement").header__nav
         div.nav
-            h2.hiddenTitle Menu de navigation du site
-            span.inline-block.nav__element
-                a(href="evenements.html").element__link Événements
-            span.inline-block.nav__element
-                a(href="blog.html").element__link Actualités
+            h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation du site
+            span(itemprop="keywords").inline-block.nav__element
+                a(itemprop="url" href="evenements.html").element__link Événements
+            span(itemprop="keywords").inline-block.nav__element
+                a(itemprop="url" href="blog.html").element__link Actualités
             span.inline-block.banners
-                a(href="index.html").banners__link
-                    img(src="../css/images/Ecusson.png", alt="Banners Resto Rallye")
-            span.inline-block.nav__element
-                a(href="restaurants.html").element__link Restaurants
-            span.inline-block.nav__element
-                a(href="contact.html").element__link Contact
+                a(itemprop="url" href="index.html").banners__link
+                    img(itemprop="image" src="../css/images/Ecusson.png", alt="Banners Resto Rallye")
+            span(itemprop="keywords").inline-block.nav__element
+                a(itemprop="url" href="restaurants.html").element__link Restaurants
+            span(itemprop="keywords").inline-block.nav__element
+                a(itemprop="url" href="contact.html").element__link Contact

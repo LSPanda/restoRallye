@@ -1,46 +1,46 @@
 // - includes/footer.jade
 
 div.parallax__body.myFooter
-    footer
-        section.inline-block.footer__information
-            h5.delta Navigation
-            ul
-                li
-                    a(href="evenements.html") Événements
-                li
-                    a(href="blog.html") Actualités
-                li
-                    a(href="restaurants.html") Restaurants
-                li
-                    a(href="contact.html") Contact
+    footer(itemscope itemtype="http://schema.org/WPFooter")
+        section(itemscope itemtype="http://schema.org/SiteNavigationElement").inline-block.footer__information
+            h5(itemprop="headline").delta Navigation
+            ul(itemprop="about")
+                li(itemprop="keywords")
+                    a(itemprop="url" href="evenements.html") Événements
+                li(itemprop="keywords")
+                    a(itemprop="url" href="blog.html") Actualités
+                li(itemprop="keywords")
+                    a(itemprop="url" href="restaurants.html") Restaurants
+                li(itemprop="keywords")
+                    a(itemprop="url" href="contact.html") Contact
         
-        section.inline-block.footer__information
-            h5.delta Notre adresse
-            p
+        section(itemscope itemtype="http://schema.org/TouristInformationCenter").inline-block.footer__information
+            h5(itemprop="headline").delta Notre adresse 
+            p(itemprop="contactPoint")
                 span.block.hightlight Mail&nbsp;: 
-                a(href="mailto adress@gmail.com") adress@gmail.com
-            p
+                a(itemprop="url" href="mailto adress@gmail.com") adress@gmail.com
+            p(itemprop="telephone")
                 span.block.hightlight Téléphone&nbsp;: 
                 | 0476 34 21 67                                            
     
-        section.inline-block.footer__information
-            h5.delta Suivez-nous
-            span.inline-block.social__link
-                a(href="#").block.social__link--fb Facebook
-            span.inline-block.social__link
-                a(href="#").block.social__link--rss RSS
+        section(itemscope itemtype="http://schema.org/Action").inline-block.footer__information
+            h5(itemprop="headline").delta Suivez-nous
+            span(itemprop="result").inline-block.social__link
+                a(itemprop="url" href="https://www.facebook.com/RestoRallye?fref=ts").block.social__link--fb Accèder à la page Facebook
+            span(itemprop="result").inline-block.social__link
+                a(itemprop="url" href="#").block.social__link--rss Inscriver vous au flux RSS
         
-        section.inline-block.footer__newsletter
-            h5.delta NewsLetter
+        section(itemscope itemtype="http://schema.org/Action").inline-block.footer__newsletter
+            h5(itemprop="headline").delta NewsLetter
             form#ancreError.forms__newsletter
-                input(type="text" placeholder="votre@mail.com").input__text
-                input(type="submit" value="S'inscrire").newsletter__submit
-                span.error Il y a une faute de frappe bitchies
+                input(itemprop="object" type="text" placeholder="votre@mail.com").input__text
+                input(itemprop="target" type="submit" value="S'inscrire").newsletter__submit
+                span(itemprop="error").error Il y a une faute de frappe bitchies
         
         div.signature
             p
                 | Designed and created by&nbsp;
-                a(href="http://luc-matagne.be/Portfolio/") Luc Matagne
+                a(itemprop="url" href="http://luc-matagne.be/Portfolio/") Luc Matagne
                 | &nbsp;and&nbsp;
-                a(href="http://portfolio.simon-leyder.be/") Simon Leyder
+                a(itemprop="url" href="http://portfolio.simon-leyder.be/") Simon Leyder
                 |  &nbsp;@ 2014
