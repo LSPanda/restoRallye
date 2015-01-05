@@ -1,0 +1,39 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS ERRORS
+//\*------------------------------------*/
+
+
+
+
+// Errors for forms
+.error
+    position relative
+    display block
+    rem-fallback( padding, 8px )
+    rem-fallback( margin-top, 20px )
+    border-top 1px solid wf_border-error
+    text-align center
+    &:after, &:before
+        content ""
+        position absolute
+        width 0
+        height 0
+        bottom 100%
+        left 50%
+        border solid transparent
+        pointer-events none
+    &:after
+        rem-fallback( margin-left, -10px )
+        border-color wf_border-error-opacity
+        border-bottom-color wf_background-parallax
+        rem-fallback( border-width, 10px )
+    &:before
+        rem-fallback( margin-left, -12px )
+        border-color wf_border-error-opacity
+        border-bottom-color wf_border-error
+        rem-fallback( border-width, 12px )

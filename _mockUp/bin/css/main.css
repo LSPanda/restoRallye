@@ -347,6 +347,19 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.signature {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: italic;
+  padding-top: 32px;
+  padding-top: 2rem;
+  text-align: center;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .inline-block {
   display: inline-block;
 }
@@ -449,6 +462,53 @@ h6:first-child,
 }
 .parallax__img--six {
   background: url("images/backgroundImage5.jpg") center fixed no-repeat;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.error {
+  position: relative;
+  display: block;
+  padding: 8px;
+  padding: 0.5rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  border-top: 1px solid #c0392b;
+  text-align: center;
+}
+.error:after,
+.error:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  pointer-events: none;
+}
+.error:after {
+  margin-left: -10px;
+  margin-left: -0.625rem;
+  border-color: rgba(194,47,43,0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  border-width: 0.625rem;
+}
+.error:before {
+  margin-left: -12px;
+  margin-left: -0.75rem;
+  border-color: rgba(194,47,43,0);
+  border-bottom-color: #c0392b;
+  border-width: 12px;
+  border-width: 0.75rem;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
