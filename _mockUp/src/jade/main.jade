@@ -6,64 +6,64 @@ block title
     title Resto Rallye - Accueil
 
 block content
-    div.parallax__img.parallax__img--one   
-        blockquote.quote 
+    div(itemscope itemtype="http://schema.org/Thing").parallax__img.parallax__img--one   
+        blockquote(itemprop="description").quote 
             | Ne manquez pas notre prochain 
-            a(href="evenements.html").quote__link Rendez-vous 
+            a(itemprop="url" href="evenements.html").quote__link Rendez-vous 
             | dans la région de Namur
-    div.parallax__body.addText
-        h3.gamma Bienvenue au Resto-Rally
-        p Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ?
-        p Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
-        p A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
-        p Ensuite, départ vers l’inconnu… Il faut expérimenter les papilles ! C’est la seule constante des étapes… La première halte est consacrée à la dégustation de l‘entrée froide, la deuxième à l’entrée chaude et la dernière au plat principal. Tous les Resto Rallyens se retrouvent ensuite pour savourer le dessert et le café dans le même endroit où ils ont pris l‘apéro et dans lequel ils peuvent échanger leurs avis sur leurs parcours respectifs.
+    div(itemscope itemtype="http://schema.org/Thing").parallax__body.addText
+        h3(itemprop="headline").gamma Bienvenue au Resto-Rally
+        p(itemprop="description") Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ?
+        p(itemprop="description") Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
+        p(itemprop="description") A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
+        p(itemprop="description") Ensuite, départ vers l’inconnu… Il faut expérimenter les papilles ! C’est la seule constante des étapes… La première halte est consacrée à la dégustation de l‘entrée froide, la deuxième à l’entrée chaude et la dernière au plat principal. Tous les Resto Rallyens se retrouvent ensuite pour savourer le dessert et le café dans le même endroit où ils ont pris l‘apéro et dans lequel ils peuvent échanger leurs avis sur leurs parcours respectifs.
         
     div.parallax__img.parallax__img--two  
-    div.parallax__body.addDL
-        h3.gamma Programme type de la soirée
+    div(itemscope itemtype="http://schema.org/Event").parallax__body.addDL
+        h3(itemprop="headline").gamma Programme type de la soirée
         dl.inline-block.programme
-            dt.hightlight 18.30 - 19.30
-            dd Réception des Resto Rallyens au lieu d’accueil
-            dt.hightlight 19.30 - 19.45
-            dd Déplacement des Resto Rallyens vers les différents restaurants
-            dt.hightlight 19.45 - 20.30
-            dd Entrée froide
-            dt.hightlight 20.30 - 20.45
-            dd Déplacement des Resto Rallyens vers les différents restaurants
+            dt(itemprop="doorTime").hightlight 18.30 - 19.30
+            dd(itemprop="description") Réception des Resto Rallyens au lieu d’accueil
+            dt(itemprop="duration").hightlight 19.30 - 19.45
+            dd(itemprop="description") Déplacement des Resto Rallyens vers les différents restaurants
+            dt(itemprop="duration").hightlight 19.45 - 20.30
+            dd(itemprop="description") Entrée froide
+            dt(itemprop="duration").hightlight 20.30 - 20.45
+            dd(itemprop="description") Déplacement des Resto Rallyens vers les différents restaurants
         dl.inline-block.programme
-            dt.hightlight 20.45 - 21.30
-            dd Entrée chaude
-            dt.hightlight 21.30 - 21.45
-            dd Déplacementx des Resto Rallyens vers les différents restaurants
-            dt.hightlight 21.45 - 22.30
-            dd Plat principal
-            dt.hightlight 22.30 - …
-            dd Retour au lieu d’accueil pour café, pousse et dessert
+            dt(itemprop="duration").hightlight 20.45 - 21.30
+            dd(itemprop="description") Entrée chaude
+            dt(itemprop="duration").hightlight 21.30 - 21.45
+            dd(itemprop="description") Déplacementx des Resto Rallyens vers les différents restaurants
+            dt(itemprop="duration").hightlight 21.45 - 22.30
+            dd(itemprop="description") Plat principal
+            dt(itemprop="endDate").hightlight 22.30 - …
+            dd(itemprop="description") Retour au lieu d’accueil pour café, pousse et dessert
             
     div.parallax__img.parallax__img--three  
-    div.parallax__body.addText
-        h3.gamma Le tarif par participant s'élève à 60 €, ce prix comprend
+    div(itemscope itemtype="http://schema.org/Event").parallax__body.addText
+        h3(itemprop="headline").gamma Le tarif par participant s'élève à 60 €, ce prix comprend
         ul.tarif
-            li.tarif__element L'apéro et ses zakouskis
-            li.tarif__element L'entrée froide
-            li.tarif__element L'entrée chaude
-            li.tarif__element Le plat principal
-            li.tarif__element Le café et son dessert
-            li.tarif__element Le pousse-café
-            li.tarif__element + un verre de vin et d'eau dans chaque restaurant
+            li(itemprop="description").tarif__element L'apéro et ses zakouskis
+            li(itemprop="description").tarif__element L'entrée froide
+            li(itemprop="description").tarif__element L'entrée chaude
+            li(itemprop="description").tarif__element Le plat principal
+            li(itemprop="description").tarif__element Le café et son dessert
+            li(itemprop="description").tarif__element Le pousse-café
+            li(itemprop="description").tarif__element + un verre de vin et d'eau dans chaque restaurant
             
     div.parallax__img.parallax__img--four
-    div.parallax__body
+    div(itemscope itemtype="http://schema.org/Thing").parallax__body
         - var numberItem = 0
-        h3 Nous vous conseillons ces adresses
+        h3(itemprop="headline").gamma Nous vous conseillons ces adresses
         
         while numberItem < 3            
-            div.inline-block.restaurants
-                a(href="#").removeLink
-                    h4.delta 
+            div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.restaurants
+                a(itemprop="url" href="#").removeLink
+                    h4(itemprop="brand").delta 
                         | Chez René, 
-                        span Liège
-                    img(src="../css/images/mockUp/exempleRest.jpg").restaurants__img
+                        span(itemprop="location") Liège
+                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").restaurants__img
             - numberItem++
     
     div.parallax__img.parallax__img--five    
