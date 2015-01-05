@@ -673,6 +673,41 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.restaurants {
+  width: 33.333333%;
+  max-height: 300px;
+  max-height: 18.75rem;
+  padding: 16px 8px;
+  padding: 1rem 0.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.restaurants:hover {
+  background: #fafafa;
+}
+.restaurants__img {
+  min-width: 320px;
+  min-width: 20rem;
+  min-height: 200px;
+  min-height: 12.5rem;
+  max-width: 325px;
+  max-width: 20.3125rem;
+  max-height: 205px;
+  max-height: 12.8125rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .one-whole {
   width: 100% !important;
 }

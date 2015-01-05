@@ -9,7 +9,7 @@ block content
     div.parallax__img.parallax__img--one   
         blockquote.quote 
             | Ne manquez pas notre prochain 
-            a(href="html/evenements.html").quote__link Rendez-vous 
+            a(href="evenements.html").quote__link Rendez-vous 
             | dans la région de Namur
     div.parallax__body.addText
         h3.gamma Bienvenue au Resto-Rally
@@ -58,12 +58,12 @@ block content
         h3 Nous vous conseillons ces adresses
         
         while numberItem < 3            
-            div.inline-block.one-third
+            div.inline-block.restaurants
                 a(href="#").removeLink
                     h4.delta 
                         | Chez René, 
                         span Liège
-                    img(src="../css/images/exempleRest.jpg", alt="")
+                    img(src="../css/images/exempleRest.jpg", alt="").restaurants__img
             - numberItem++
     
     div.parallax__img.parallax__img--five    
