@@ -2,38 +2,41 @@
 
 div.parallax__body.myFooter
     footer
-        section.nav
-            h5.epsilon Navigation
+        section.inline-block.one-sixth
+            h5.delta Navigation
             ul
                 li
-                    a(href="html/evenements.html") Événements
+                    a(href="evenements.html") Événements
                 li
-                    a(href="html/blog.html") Actualités
+                    a(href="blog.html") Actualités
                 li
-                    a(href="html/restaurants.html") Restaurants
+                    a(href="restaurants.html") Restaurants
                 li
-                    a(href="html/contact.html") Contact
-        section.looking
-            h5.epsilon Notre adresse
+                    a(href="contact.html") Contact
+        
+        section.inline-block.one-sixth
+            h5.delta Notre adresse
             p
-                span Mail&nbsp;: 
+                span.block.hightlight Mail&nbsp;: 
                 a(href="mailto adress@gmail.com") adress@gmail.com
             p
-                span Téléphone&nbsp;: 
+                span.block.hightlight Téléphone&nbsp;: 
                 | 0476 34 21 67                                            
-        section.follow
-            h5.epsilon Suivez-nous
-            ul
-                li.fb
-                    a(href="#") Facebook
-                li.rss
-                    a(href="#") RSS
-        section.newsletter
-            h5.epsilon NewsLetter
-            form#ancreError
-                input(type="text" placeholder="votre@mail.com")
-                input(type="submit" value="S'inscrire")
+    
+        section.inline-block.one-sixth
+            h5.delta Suivez-nous
+            span.inline-block.social__link
+                a(href="#").block.social__link--fb Facebook
+            span.inline-block.social__link
+                a(href="#").block.social__link--rss RSS
+        
+        section.inline-block.one-fifth.newsletter
+            h5.delta NewsLetter
+            form#ancreError.forms__newsletter
+                input(type="text" placeholder="votre@mail.com").input__text
+                input(type="submit" value="S'inscrire").newsletter__submit
                 span.error Il y a une faute de frappe bitchies
+        
         div.signature
             p
                 | Designed and created by&nbsp;

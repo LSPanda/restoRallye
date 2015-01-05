@@ -1,0 +1,33 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS EXTERN-LINK
+//\*------------------------------------*/
+
+
+
+
+// Social Network
+.social__link
+    rem-fallback( width, 35px )
+    rem-fallback( height, 35px )
+    rem-fallback( text-indent, -1000000px )
+    rem-fallback( margin-right, 8px )
+    transtion( all, 0.25s )
+//- Facebook
+.social__link--fb
+    width 100%
+    height 100%
+    background: url("images/sprite.png") -50px -50px
+    &:hover
+        background: url("images/sprite.png") -50px -10px
+//- RSS
+.social__link--rss
+    width 100%
+    height 100%
+    background: url("images/sprite.png") -10px -50px
+    &:hover
+        background: url("images/sprite.png") -10px -10px
