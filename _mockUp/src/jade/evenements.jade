@@ -8,14 +8,14 @@ block title
 block content
     div#slideMap.parallax__img
     div.parallax__body  
-        h3.gamma Inscrivez-vous pour le prochain rallye
+        h3.gamma Inscrivez-vous pour le prochain Resto-Rallye
         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos reiciendis numquam accusamus qui aut autem eaque maxime voluptate tempore incidunt enim, placeat sunt ipsum minus, officiis culpa molestiae architecto.
 
     div.parallax__img.parallax__img--six
     div.parallax__body
         - var numberItem = 0
         div.position--relative
-            h3.gamma Nos précédents rallyes
+            h3.gamma Nos précédents Resto-Rallye
             form.forms__search.forms__search--right
                 input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
@@ -23,8 +23,8 @@ block content
                 div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
                     a(itemprop="url" href="evenement.html").removeLink
                         h4(itemprop="brand").delta 
-                            | Resto Rallye à 
-                            span(itemprop="location") Spa
+                            | Resto-Rallye à 
+                            span(itemprop="location") Namur
                         img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img
                 - numberItem++
             div.pagination

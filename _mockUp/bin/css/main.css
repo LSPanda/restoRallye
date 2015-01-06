@@ -665,7 +665,7 @@ h6:first-child,
 .forms,
 .input__text {
   width: 100%;
-  background-color: #eee;
+  background-color: #f5f5f5;
   padding: 12px 24px;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -676,7 +676,7 @@ h6:first-child,
 }
 .forms:focus,
 .input__text:focus {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   outline: none;
 }
 .error {
@@ -739,7 +739,7 @@ h6:first-child,
   transition: all 0.5s;
 }
 .thumbnails:hover {
-  background: #fafafa;
+  background: #f5f5f5;
 }
 .thumbnails__img {
   min-width: 320px;
@@ -760,7 +760,7 @@ h6:first-child,
   text-align: center;
 }
 .pagination__element {
-  background: #fafafa;
+  background: #f5f5f5;
   margin: 0 4px;
   margin: 0rem 0.25rem;
   -webkit-transition: all 0.25s;
@@ -769,7 +769,7 @@ h6:first-child,
   transition: all 0.25s;
 }
 .pagination__element:hover {
-  background: #fff;
+  background: #fafafa;
 }
 .pagination__element--links {
   padding: 12px;
