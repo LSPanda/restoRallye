@@ -7,70 +7,139 @@ block title
 
 block content
     div#slideMap.parallax__img
+    div.parallax__body
+        div(itemscope itemtype="http://schema.org/FoodEvent")
+            h3(itemprop="headline").gamma
+                | Rendez-vous le 
+                span(itemprop="startDate") 21 Octobre 
+                | à 
+                span(itemprop="location") Seraing
+            p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eaque quia reiciendis voluptate atque minus maiores a in, nihil magnam. Iure molestias quos reiciendis ducimus magni magnam eos at quibusdam!
+            p(itemprop="description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit illo atque incidunt pariatur saepe reprehenderit recusandae omnis repellendus temporibus optio porro totam nesciunt, iusto placeat labore magni molestiae delectus quam.
+            
+    div.parallax__img.parallax__img--six            
     div.parallax__body  
-        h3.gamma Inscrivez-vous pour le prochain Resto-Rallye
-        p  
-            | Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne resque actuellement que 
-            span.hightlight 30 places 
-            | disponible.
-        form.form
-            div.inline-block.form__element
-                label(for="participant").hightlight.label__text 
-                    | Nombre de participants
-                    span.asterisque  *
-                input(id="participant" type="text" placeholder="Nombre de participants").input__text
-            div.inline-block.form__element
-                label(for="nom").hightlight.label__text
-                    | Nom
-                    span.asterisque  *
-                input(id="nom" type="text" placeholder="Nom").input__text
-            div.inline-block.form__element
-                label(for="prenom").hightlight.label__text
-                    | Prénom
-                    span.asterisque  *
-                input(id="prenom" type="text" placeholder="Prénom").input__text
-            div.inline-block.form__element
-                label(for="address").hightlight.label__text Adresse
-                input(id="address" type="text" placeholder="Adresse").input__text
-            div.inline-block.form__element
-                label(for="ville").hightlight.label__text Ville
-                input(id="ville" type="text" placeholder="Ville").input__text
-            div.inline-block.form__element
-                label(for="postal").hightlight.label__text  Code postal
-                input(id="postal" type="text" placeholder="Code postal").input__text
-            div.inline-block.form__element
-                label(for="tel").hightlight.label__text
-                    | Tel ou GSM
-                    span.asterisque  *
-                input(id="tel" type="text" placeholder="Tel ou GSM").input__text
-            div.inline-block.form__element
-                label(for="fax").hightlight.label__text Fax
-                input(id="fax" type="text" placeholder="Fax").input__text
-            div.inline-block.form__element
-                label(for="mail").hightlight.label__text
-                    | Mail
-                    span.asterisque  *
-                input(id="mail" type="text" placeholder="Mail").input__text
-            div.inline-block.form__element
-                label(for="confirmMail").hightlight.label__text
-                    | Confirmer mail
-                    span.asterisque  *
-                input(id="confirmMail" type="text" placeholder="Confirmer mail").input__text
-            div.block.form__element--fullSize
-                label(for="msg").hightlight.label__text Votre message
-                textarea(id="msg" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
-            div.block.form__element--fullSize
-                input(type="submit" value="Inscrivez-vous !").input__submit
-                label.hightlight.label__text
-                    | Tous les champs munis d’un astérisque
-                    span.asterisque  (*) 
-                    | sont obligatoires
-        
-    div.parallax__img.parallax__img--six
-    div.parallax__body    
-        p Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation.
+        div(itemscope itemtype="http://schema.org/Thing")
+            h3(itemprop="headline").gamma Inscrivez-vous pour le prochain Resto-Rallye
+            p(itemprop="description") 
+                | Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne reste plus que 
+                span.hightlight 30 places 
+                | disponible.
+            form.form
+                div.inline-block.form__element
+                    label(for="participant").hightlight.label__text 
+                        | Nombre de participants
+                        span.asterisque  *
+                    input(id="participant" type="text" placeholder="Nombre de participants").input__text
+                div.inline-block.form__element
+                    label(for="nom").hightlight.label__text
+                        | Nom
+                        span.asterisque  *
+                    input(id="nom" type="text" placeholder="Nom").input__text
+                div.inline-block.form__element
+                    label(for="prenom").hightlight.label__text
+                        | Prénom
+                        span.asterisque  *
+                    input(id="prenom" type="text" placeholder="Prénom").input__text
+                div.inline-block.form__element
+                    label(for="address").hightlight.label__text Adresse
+                    input(id="address" type="text" placeholder="Adresse").input__text
+                div.inline-block.form__element
+                    label(for="ville").hightlight.label__text Ville
+                    input(id="ville" type="text" placeholder="Ville").input__text
+                div.inline-block.form__element
+                    label(for="postal").hightlight.label__text  Code postal
+                    input(id="postal" type="text" placeholder="Code postal").input__text
+                div.inline-block.form__element
+                    label(for="tel").hightlight.label__text
+                        | Tel ou GSM
+                        span.asterisque  *
+                    input(id="tel" type="text" placeholder="Tel ou GSM").input__text
+                div.inline-block.form__element
+                    label(for="fax").hightlight.label__text Fax
+                    input(id="fax" type="text" placeholder="Fax").input__text
+                div.inline-block.form__element
+                    label(for="mail").hightlight.label__text
+                        | Mail
+                        span.asterisque  *
+                    input(id="mail" type="text" placeholder="Mail").input__text
+                div.inline-block.form__element
+                    label(for="confirmMail").hightlight.label__text
+                        | Confirmer mail
+                        span.asterisque  *
+                    input(id="confirmMail" type="text" placeholder="Confirmer mail").input__text
+                div.block.form__element--fullSize
+                    label(for="msg").hightlight.label__text Votre message
+                    textarea(id="msg" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
+                div.block.form__element--fullSize
+                    input(type="submit" value="Inscrivez-vous !").input__submit
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.asterisque  (*) 
+                        | sont obligatoires
         
     div.parallax__img.parallax__img--seven
+    div.parallax__body    
+        div(itemscope itemtype="http://schema.org/Thing")
+            h3(itemprop="headline").gamma Invitez vos amis au prochain Resto-Rallye
+            p(itemprop="description") 
+                | Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que 
+                span.hightlight 30 places 
+                | disponible.
+                form.form
+                    div.inline-block.form__element
+                        label(for="participant").hightlight.label__text 
+                            | Nombre de participants
+                            span.asterisque  *
+                        input(id="participant" type="text" placeholder="Nombre de participants").input__text
+                    div.inline-block.form__element
+                        label(for="nom").hightlight.label__text
+                            | Nom
+                            span.asterisque  *
+                        input(id="nom" type="text" placeholder="Nom").input__text
+                    div.inline-block.form__element
+                        label(for="prenom").hightlight.label__text
+                            | Prénom
+                            span.asterisque  *
+                        input(id="prenom" type="text" placeholder="Prénom").input__text
+                    div.inline-block.form__element
+                        label(for="address").hightlight.label__text Adresse
+                        input(id="address" type="text" placeholder="Adresse").input__text
+                    div.inline-block.form__element
+                        label(for="ville").hightlight.label__text Ville
+                        input(id="ville" type="text" placeholder="Ville").input__text
+                    div.inline-block.form__element
+                        label(for="postal").hightlight.label__text  Code postal
+                        input(id="postal" type="text" placeholder="Code postal").input__text
+                    div.inline-block.form__element
+                        label(for="tel").hightlight.label__text
+                            | Tel ou GSM
+                            span.asterisque  *
+                        input(id="tel" type="text" placeholder="Tel ou GSM").input__text
+                    div.inline-block.form__element
+                        label(for="fax").hightlight.label__text Fax
+                        input(id="fax" type="text" placeholder="Fax").input__text
+                    div.inline-block.form__element
+                        label(for="mail").hightlight.label__text
+                            | Mail
+                            span.asterisque  *
+                        input(id="mail" type="text" placeholder="Mail").input__text
+                    div.inline-block.form__element
+                        label(for="confirmMail").hightlight.label__text
+                            | Confirmer mail
+                            span.asterisque  *
+                        input(id="confirmMail" type="text" placeholder="Confirmer mail").input__text
+                    div.block.form__element--fullSize
+                        label(for="msg").hightlight.label__text Votre message
+                        textarea(id="msg" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
+                    div.block.form__element--fullSize
+                        input(type="submit" value="Inviter vos amis !").input__submit
+                        label.hightlight.label__text
+                            | Tous les champs munis d’un astérisque
+                            span.asterisque  (*) 
+                            | sont obligatoires
+        
+    div.parallax__img.parallax__img--height
     div.parallax__body
         - var numberItem = 0
         div.position--relative
@@ -79,9 +148,9 @@ block content
                 input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
             while numberItem < 3            
-                div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
+                div(itemscope itemtype="http://schema.org/FoodEvent").inline-block.thumbnails
                     a(itemprop="url" href="evenement.html").removeLink
-                        h4(itemprop="brand").delta 
+                        h4(itemprop="attendee").delta 
                             | Resto-Rallye à 
                             span(itemprop="location") Namur
                         img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img
@@ -98,7 +167,7 @@ block content
                 span.inline-block.pagination__element
                     a(href="#").block.removeLink.pagination__element--links &rang;&rang;
                 
-    div.parallax__img.parallax__img--height    
+    div.parallax__img.parallax__img--nine    
         
     script.
         var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"

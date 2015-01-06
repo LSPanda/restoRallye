@@ -596,6 +596,9 @@ h6:first-child,
 .parallax__img--height {
   background: url("images/parallax/backgroundImage7.jpg") center fixed no-repeat;
 }
+.parallax__img--nine {
+  background: url("images/parallax/backgroundImage8.jpg") center fixed no-repeat;
+}
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
 *
@@ -651,8 +654,8 @@ h6:first-child,
   height: 25px;
   height: 1.5625rem;
   background: url("images/sprite.png") -120px -10px;
-  top: 7px;
-  top: 0.4375rem;
+  top: 10px;
+  top: 0.625rem;
   right: 8px;
   right: 0.5rem;
   border: none;
