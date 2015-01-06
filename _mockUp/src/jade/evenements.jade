@@ -13,10 +13,64 @@ block content
             | Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne resque actuellement que 
             span.hightlight 30 places 
             | disponible.
-        p Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Indiquez le en cochant la case correspondante et completer le formulaire, nous nous occuperons de lui envoyer l'invitation.
+        form.form
+            div.inline-block.form__element
+                label(for="participant").hightlight.label__text 
+                    | Nombre de participants
+                    span.asterisque  *
+                input(id="participant" type="text" placeholder="Nombre de participants").input__text
+            div.inline-block.form__element
+                label(for="nom").hightlight.label__text
+                    | Nom
+                    span.asterisque  *
+                input(id="nom" type="text" placeholder="Nom").input__text
+            div.inline-block.form__element
+                label(for="prenom").hightlight.label__text
+                    | Prénom
+                    span.asterisque  *
+                input(id="prenom" type="text" placeholder="Prénom").input__text
+            div.inline-block.form__element
+                label(for="address").hightlight.label__text Adresse
+                input(id="address" type="text" placeholder="Adresse").input__text
+            div.inline-block.form__element
+                label(for="ville").hightlight.label__text Ville
+                input(id="ville" type="text" placeholder="Ville").input__text
+            div.inline-block.form__element
+                label(for="postal").hightlight.label__text  Code postal
+                input(id="postal" type="text" placeholder="Code postal").input__text
+            div.inline-block.form__element
+                label(for="tel").hightlight.label__text
+                    | Tel ou GSM
+                    span.asterisque  *
+                input(id="tel" type="text" placeholder="Tel ou GSM").input__text
+            div.inline-block.form__element
+                label(for="fax").hightlight.label__text Fax
+                input(id="fax" type="text" placeholder="Fax").input__text
+            div.inline-block.form__element
+                label(for="mail").hightlight.label__text
+                    | Mail
+                    span.asterisque  *
+                input(id="mail" type="text" placeholder="Mail").input__text
+            div.inline-block.form__element
+                label(for="confirmMail").hightlight.label__text
+                    | Confirmer mail
+                    span.asterisque  *
+                input(id="confirmMail" type="text" placeholder="Confirmer mail").input__text
+            div.block.form__element--fullSize
+                label(for="msg").hightlight.label__text Votre message
+                textarea(id="msg" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
+            div.block.form__element--fullSize
+                input(type="submit" value="Inscrivez-vous !").input__submit
+                label.hightlight.label__text
+                    | Tous les champs munis d’un astérisque
+                    span.asterisque  (*) 
+                    | sont obligatoires
         
-
     div.parallax__img.parallax__img--six
+    div.parallax__body    
+        p Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation.
+        
+    div.parallax__img.parallax__img--seven
     div.parallax__body
         - var numberItem = 0
         div.position--relative
@@ -44,7 +98,7 @@ block content
                 span.inline-block.pagination__element
                     a(href="#").block.removeLink.pagination__element--links &rang;&rang;
                 
-    div.parallax__img.parallax__img--seven    
+    div.parallax__img.parallax__img--height    
         
     script.
         var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"

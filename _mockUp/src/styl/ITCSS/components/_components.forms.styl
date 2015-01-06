@@ -45,13 +45,40 @@
         cursor pointer
 
 // Forms
+.form
+    rem-fallback( margin, 36px 0 )
+.form__element
+    width 50%
+    padding 0 2.5%
+    rem-fallback( margin-bottom, 28px )
+.form__element--fullSize
+    width 100%
+    padding 0 2.5%
+    rem-fallback( margin-bottom, 28px )
+.label__text
+    display block
+    rem-fallback( margin, 10px 0 )
 .input__text
     width 100%
+    rem-fallback( font-size, 14px )
     background-color wf_form-background-color
     rem-fallback( padding, 12px 24px )
     border none
     &:focus
         background-color wf_form-background-color-focus
+.input__submit
+    width 100%
+    rem-fallback( font-size, 24px )
+    font-family wf_font-heading
+    text-transform uppercase
+    color wf_nav-color
+    rem-fallback( padding, 18px 0 )
+    border none
+    background wf_background-submit
+    transition( all, 0.25s )
+    cursor pointer
+    &:hover
+        background wf_background-submit-hover
 
 // Errors for forms
 .error
