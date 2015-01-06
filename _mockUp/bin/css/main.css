@@ -756,6 +756,30 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.pagination {
+  text-align: center;
+}
+.pagination__element {
+  background: #fafafa;
+  margin: 0 4px;
+  margin: 0rem 0.25rem;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.pagination__element:hover {
+  background: #fff;
+}
+.pagination__element--links {
+  padding: 12px;
+  padding: 0.75rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .one-whole {
   width: 100% !important;
 }
