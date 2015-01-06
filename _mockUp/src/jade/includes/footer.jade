@@ -4,15 +4,14 @@ div.parallax__body.myFooter
     footer(itemscope itemtype="http://schema.org/WPFooter")
         section(itemscope itemtype="http://schema.org/SiteNavigationElement").inline-block.footer__information
             h5(itemprop="headline").delta Navigation
-            ul(itemprop="about")
-                li(itemprop="keywords")
-                    a(itemprop="url" href="evenements.html") Événements
-                li(itemprop="keywords")
-                    a(itemprop="url" href="blog.html") Actualités
-                li(itemprop="keywords")
-                    a(itemprop="url" href="restaurants.html") Restaurants
-                li(itemprop="keywords")
-                    a(itemprop="url" href="contact.html") Contact
+            span.block(itemprop="keywords")
+                a(itemprop="url" href="evenements.html") Événements
+            span.block(itemprop="keywords")
+                a(itemprop="url" href="blog.html") Actualités
+            span.block(itemprop="keywords")
+                a(itemprop="url" href="restaurants.html") Restaurants
+            span.block(itemprop="keywords")
+                a(itemprop="url" href="contact.html") Contact
         
         section(itemscope itemtype="http://schema.org/TouristInformationCenter").inline-block.footer__information
             h5(itemprop="headline").delta Notre adresse 

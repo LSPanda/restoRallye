@@ -21,15 +21,22 @@
         //Init mapOptions
         mapOptions = {
             center: defaultPosition,
-            zoom: 17,
+            zoom: 15,
             disableDefaultUI: true,
             scrollwheel: false,
             draggable: false,
             mapTypeId: google.maps.MapTypeId.ROADMAPx
         };
-        //Marker personnalisé
-        image = {
-            url: '../css/images/marker.png',
+        //Marker rendez-vous
+        imageRdv = {
+            url: '../css/images/markerRdv.png',
+            size: new google.maps.Size( 55,60 ),
+            origin: new google.maps.Point( 0,0 ),
+            anchor: new google.maps.Point( 20, 60 )
+        };
+        //Marker restaurant
+        imageRsts = {
+            url: '../css/images/markerRst.png',
             size: new google.maps.Size( 55,60 ),
             origin: new google.maps.Point( 0,0 ),
             anchor: new google.maps.Point( 20, 60 )
@@ -42,24 +49,32 @@
     }
 
     function selectedAdress() {
-        Geocoder.geocode( { 'address': myAddress}, function(results, status) {
+        //Stick rendez-vous marker on gMap
+        Geocoder.geocode( { 'address': addressRdv}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 gMap.setCenter(results[0].geometry.location);
                 gMarker = new google.maps.Marker( {
                     map: gMap,
                     position: results[0].geometry.location,
-                    icon: image
+                    icon: imageRdv
                 } );
             }
         } );
+        //Stick restaurants marker on gMap
+        for( var i = 0; i < addressRsts.length; i++ ) {
+            Geocoder.geocode( { 'address': addressRsts[i]}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    gMarker = new google.maps.Marker( {
+                        map: gMap,
+                        position: results[0].geometry.location,
+                        icon: imageRsts
+                    } );
+                }
+            } );
+        }
     }
 
     $( function() {
-        //Detect scroll for stick and reduce my nav-menu
-        $( "body" ).scroll( function() {
-            $( "header__nav" ).addClass( "header__nav--stick" );
-        } );
-
         //Generate google gMap for event
         generateGoogleMap();
     } );
