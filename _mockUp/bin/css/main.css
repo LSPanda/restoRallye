@@ -404,6 +404,14 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.position--relative {
+  position: relative;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .parallax__img {
   position: relative;
   min-height: 75vh;
@@ -417,7 +425,6 @@ h6:first-child,
   left: 0;
 }
 .parallax__body {
-  position: relative;
   width: 100vw;
 }
 /*
@@ -578,6 +585,9 @@ h6:first-child,
 .parallax__img--six {
   background: url("images/parallax/backgroundImage5.jpg") center fixed no-repeat;
 }
+.parallax__img--seven {
+  background: url("images/parallax/backgroundImage6.jpg") center fixed no-repeat;
+}
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
 *
@@ -622,6 +632,13 @@ h6:first-child,
 }
 .forms__search {
   position: relative;
+  width: 250px;
+  width: 15.625rem;
+}
+.forms__search--right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .search__submit {
   position: absolute;
@@ -704,7 +721,7 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
-.restaurants {
+.thumbnails {
   width: 33.333333%;
   max-height: 300px;
   max-height: 18.75rem;
@@ -721,10 +738,10 @@ h6:first-child,
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
-.restaurants:hover {
+.thumbnails:hover {
   background: #fafafa;
 }
-.restaurants__img {
+.thumbnails__img {
   min-width: 320px;
   min-width: 20rem;
   min-height: 200px;

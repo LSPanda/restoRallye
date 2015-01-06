@@ -12,7 +12,7 @@ block content
             a(itemprop="url" href="evenements.html").quote__link Rendez-vous 
             | dans la région de Namur
     div(itemscope itemtype="http://schema.org/Thing").parallax__body.addText
-        h3(itemprop="headline").gamma Bienvenue au Resto-Rally
+        h3(itemprop="headline").gamma Bienvenue au Resto-Rallye
         p(itemprop="description") Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ?
         p(itemprop="description") Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
         p(itemprop="description") A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
@@ -20,7 +20,7 @@ block content
         
     div.parallax__img.parallax__img--two  
     div(itemscope itemtype="http://schema.org/Event").parallax__body.addDL
-        h3(itemprop="headline").gamma Programme type de la soirée
+        h3(itemprop="headline").gamma Programme de la soirée
         dl.inline-block.programme
             dt(itemprop="doorTime").hightlight 18.30 - 19.30
             dd(itemprop="description") Réception des Resto Rallyens au lieu d’accueil
@@ -34,7 +34,7 @@ block content
             dt(itemprop="duration").hightlight 20.45 - 21.30
             dd(itemprop="description") Entrée chaude
             dt(itemprop="duration").hightlight 21.30 - 21.45
-            dd(itemprop="description") Déplacementx des Resto Rallyens vers les différents restaurants
+            dd(itemprop="description") Déplacement des Resto Rallyens vers les différents restaurants
             dt(itemprop="duration").hightlight 21.45 - 22.30
             dd(itemprop="description") Plat principal
             dt(itemprop="endDate").hightlight 22.30 - …
@@ -58,12 +58,12 @@ block content
         h3(itemprop="headline").gamma Nous vous conseillons ces adresses
         
         while numberItem < 3            
-            div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.restaurants
-                a(itemprop="url" href="#").removeLink
+            div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
+                a(itemprop="url" href="restaurant.html").removeLink
                     h4(itemprop="brand").delta 
                         | Chez René, 
                         span(itemprop="location") Liège
-                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").restaurants__img
+                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").thumbnails__img
             - numberItem++
     
     div.parallax__img.parallax__img--five    

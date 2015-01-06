@@ -1,17 +1,46 @@
-// - index.html
+// - evenements.html
 
 extends includes/layout
 
 block title
-    title Resto Rallye - Accueil
+    title Resto Rallye - Événements
 
 block content
     div#slideMap.parallax__img
-    div.parallax__body.addText    
-        h3.gamma Bienvenue au Resto-Rally
+    div.parallax__body  
+        h3.gamma Inscrivez-vous pour le prochain rallye
         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos reiciendis numquam accusamus qui aut autem eaque maxime voluptate tempore incidunt enim, placeat sunt ipsum minus, officiis culpa molestiae architecto.
-    div.parallax__img.parallax__img--six
 
+    div.parallax__img.parallax__img--six
+    div.parallax__body
+        - var numberItem = 0
+        div.position--relative
+            h3.gamma Nos précédents rallyes
+            form.forms__search.forms__search--right
+                input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
+                input(itemprop="target" type="submit" value="S'inscrire").search__submit
+            while numberItem < 3            
+                div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
+                    a(itemprop="url" href="evenement.html").removeLink
+                        h4(itemprop="brand").delta 
+                            | Resto Rallye à 
+                            span(itemprop="location") Spa
+                        img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img
+                - numberItem++
+            div.pagination
+                span.inline-block.pagination__element
+                    a(href="#") &lang;&lang;
+                span.inline-block.pagination__element
+                    a(href="#") 1
+                span.inline-block.pagination__element
+                    a(href="#") 2
+                span.inline-block.pagination__element
+                    a(href="#") 3
+                span.inline-block.pagination__element
+                    a(href="#") &rang;&rang;
+                
+    div.parallax__img.parallax__img--seven    
+        
     script.
         var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"
         var addressRsts = ["Rue Peetermans 40, 4100 Seraing, Belgique", "Rue Puit Marie 10, 4100 Seraing, Belgique","Rue du Marais 30, 4100 Seraing, Belgique"]
