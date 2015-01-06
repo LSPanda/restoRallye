@@ -13,7 +13,7 @@
 // Parallax placements
 .parallax__img
     position relative
-    min-height 75vh
+    rem-fallback( min-height, 550px )
     &:before
         content ""
         position absolute
@@ -23,4 +23,5 @@
         left 0
 
 .parallax__body
-    width: 100vw
+    rem-fallback( max-width, 1260px )
+    margin 0 auto

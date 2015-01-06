@@ -1,4 +1,4 @@
-/*!
+    /*!
 * CSS Methodology based on InuitCSS, used for my owned workflow
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
@@ -10,7 +10,7 @@
 
 
 
-// Forms
+// Forms newsletter AND search
 .forms__newsletter
     position relative
 .newsletter__submit
@@ -21,7 +21,6 @@
     rem-fallback( top, 9px )
     rem-fallback( right, 5px )
     border none
-    border-radius( 0.5rem )
     rem-fallback( text-indent, -1000000px )
     &:hover
         cursor pointer
@@ -38,25 +37,21 @@
     rem-fallback( width, 25px )
     rem-fallback( height, 25px )
     background: url("images/sprite.png") -120px -10px
-    rem-fallback( top, 9px )
-    rem-fallback( right, 5px )
+    rem-fallback( top, 7px )
+    rem-fallback( right, 8px )
     border none
-    border-radius( 0.5rem )
     rem-fallback( text-indent, -1000000px )
     &:hover
         cursor pointer
 
-
-.forms
+// Forms
 .input__text
     width 100%
     background-color wf_form-background-color
     rem-fallback( padding, 12px 24px )
     border none
-    border-radius( 0.5rem )
     &:focus
         background-color wf_form-background-color-focus
-        outline none
 
 // Errors for forms
 .error
