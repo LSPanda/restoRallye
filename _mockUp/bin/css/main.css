@@ -268,7 +268,7 @@ body {
 */
 li > ul,
 li > ol {
-  margin-bottom: 0;
+  margin-bottom: 1.25;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
