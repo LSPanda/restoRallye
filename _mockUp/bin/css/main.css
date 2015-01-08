@@ -801,6 +801,75 @@ h6:first-child,
     background: url("images/parallax/400x200/backgroundImage8.jpg") center fixed no-repeat;
   }
 }
+.parallax__img--ten {
+  background: url("images/parallax/2560x1707/backgroundImage9.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--ten {
+    background: url("images/parallax/1920x1080/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--ten {
+    background: url("images/parallax/1280x800/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--ten {
+    background: url("images/parallax/800x500/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--ten {
+    background: url("images/parallax/400x200/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--eleven {
+  background: url("images/parallax/2560x1707/backgroundImage10.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/1920x1080/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/1280x800/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/800x500/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/400x200/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--twelve {
+  background: url("images/parallax/2560x1707/backgroundImage11.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/1920x1080/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/1280x800/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/800x500/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/400x200/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
 *
