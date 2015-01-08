@@ -1,9 +1,16 @@
-// - index.html
+// - Contact.html
 
 extends includes/layout
 
 block title
-    title Resto Rallye - Accueil
+    title Resto Rallye - Contact
+
+block header
+    - var current = { second: 'html' }
+    include includes/header.jade
 
 block content
     p Page Contact
+
+block footer
+    include includes/footer.jade

@@ -5,6 +5,10 @@ extends includes/layout
 block title
     title Resto Rallye - Événements
 
+block header
+    - var current = { second: 'html' }
+    include includes/header.jade
+
 block content
     div#slideMap.parallax__img
     div.parallax__body
@@ -18,8 +22,6 @@ block content
             p(itemprop="description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit illo atque incidunt pariatur saepe reprehenderit recusandae omnis repellendus temporibus optio porro totam nesciunt, iusto placeat labore magni molestiae delectus quam.
             p(itemprop="description") 
                 | Retrouver nous à 
-                span(itemprop="doorTime").hightlight 18h30
-                | , à 
                 span(itemprop="location").hightlight l'Église St Etienne
             
     div.parallax__img.parallax__img--six            
@@ -152,7 +154,7 @@ block content
             form.forms__search.forms__search--right
                 input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
-            while numberItem < 3            
+            while numberItem < 6           
                 div(itemscope itemtype="http://schema.org/FoodEvent").inline-block.thumbnails
                     a(itemprop="url" href="evenement.html").removeLink
                         h4(itemprop="attendee").delta 
@@ -173,7 +175,10 @@ block content
                     a(href="#").block.removeLink.pagination__element--links &rang;&rang;
                 
     div.parallax__img.parallax__img--nine    
+    
+block footer
+    include includes/footer.jade
         
     script.
         var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"
-        var addressRsts = ["Rue Peetermans 40, 4100 Seraing, Belgique", "Rue Puit Marie 10, 4100 Seraing, Belgique","Rue du Marais 30, 4100 Seraing, Belgique"]
+        var addressRsts = []

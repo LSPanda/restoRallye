@@ -15,9 +15,10 @@ head
         link(rel="stylesheet" href="../css/main.css")
         
 body
-    include header.jade
+    block header
     
     block content
     
-    include footer.jade
+    block footer
+        
     include script.jade

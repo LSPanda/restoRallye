@@ -417,8 +417,7 @@ h6:first-child,
 */
 .parallax__img {
   position: relative;
-  min-height: 550px;
-  min-height: 34.375rem;
+  min-height: 80vh;
 }
 .parallax__img:before {
   content: "";
@@ -502,18 +501,18 @@ h6:first-child,
 .social__link--fb {
   width: 100%;
   height: 100%;
-  background: url("images/sprite.png") -10px -50px;
+  background: url("images/links/sprite.png") -10px -50px;
 }
 .social__link--fb:hover {
-  background: url("images/sprite.png") -10px -10px;
+  background: url("images/links/sprite.png") -10px -10px;
 }
 .social__link--rss {
   width: 100%;
   height: 100%;
-  background: url("images/sprite.png") -50px -50px;
+  background: url("images/links/sprite.png") -50px -50px;
 }
 .social__link--rss:hover {
-  background: url("images/sprite.png") -50px -10px;
+  background: url("images/links/sprite.png") -50px -10px;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
@@ -576,31 +575,211 @@ h6:first-child,
   background: #fff;
 }
 .parallax__img--one {
-  background: url("images/parallax/backgroundImage.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--one {
+    background: url("images/parallax/1920x1080/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--one {
+    background: url("images/parallax/1280x800/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--one {
+    background: url("images/parallax/800x500/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--one {
+    background: url("images/parallax/400x200/backgroundImage.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--two {
-  background: url("images/parallax/backgroundImage1.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage1.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--two {
+    background: url("images/parallax/1920x1080/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--two {
+    background: url("images/parallax/1280x800/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--two {
+    background: url("images/parallax/800x500/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--two {
+    background: url("images/parallax/400x200/backgroundImage1.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--three {
-  background: url("images/parallax/backgroundImage2.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage2.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--three {
+    background: url("images/parallax/1920x1080/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--three {
+    background: url("images/parallax/1280x800/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--three {
+    background: url("images/parallax/800x500/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--three {
+    background: url("images/parallax/400x200/backgroundImage2.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--four {
-  background: url("images/parallax/backgroundImage3.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage3.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--four {
+    background: url("images/parallax/1920x1080/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--four {
+    background: url("images/parallax/1280x800/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--four {
+    background: url("images/parallax/800x500/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--four {
+    background: url("images/parallax/400x200/backgroundImage3.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--five {
-  background: url("images/parallax/backgroundImage4.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage4.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--five {
+    background: url("images/parallax/1920x1080/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--five {
+    background: url("images/parallax/1280x800/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--five {
+    background: url("images/parallax/800x500/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--five {
+    background: url("images/parallax/400x200/backgroundImage4.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--six {
-  background: url("images/parallax/backgroundImage5.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage5.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--six {
+    background: url("images/parallax/1920x1080/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--six {
+    background: url("images/parallax/1280x800/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--six {
+    background: url("images/parallax/800x500/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--six {
+    background: url("images/parallax/400x200/backgroundImage5.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--seven {
-  background: url("images/parallax/backgroundImage6.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage6.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--seven {
+    background: url("images/parallax/1920x1080/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--seven {
+    background: url("images/parallax/1280x800/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--seven {
+    background: url("images/parallax/800x500/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--seven {
+    background: url("images/parallax/400x200/backgroundImage6.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--height {
-  background: url("images/parallax/backgroundImage7.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage7.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--height {
+    background: url("images/parallax/1920x1080/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--height {
+    background: url("images/parallax/1280x800/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--height {
+    background: url("images/parallax/800x500/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--height {
+    background: url("images/parallax/400x200/backgroundImage7.jpg") center fixed no-repeat;
+  }
 }
 .parallax__img--nine {
-  background: url("images/parallax/backgroundImage8.jpg") center fixed no-repeat;
+  background: url("images/parallax/2560x1707/backgroundImage8.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--nine {
+    background: url("images/parallax/1920x1080/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--nine {
+    background: url("images/parallax/1280x800/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--nine {
+    background: url("images/parallax/800x500/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--nine {
+    background: url("images/parallax/400x200/backgroundImage8.jpg") center fixed no-repeat;
+  }
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
@@ -628,9 +807,9 @@ h6:first-child,
   width: 1.5625rem;
   height: 25px;
   height: 1.5625rem;
-  background: url("images/sprite.png") -90px -10px;
-  top: 9px;
-  top: 0.5625rem;
+  background: url("images/links/sprite.png") -90px -10px;
+  top: 10px;
+  top: 0.625rem;
   right: 5px;
   right: 0.3125rem;
   border: none;
@@ -656,7 +835,7 @@ h6:first-child,
   width: 1.5625rem;
   height: 25px;
   height: 1.5625rem;
-  background: url("images/sprite.png") -120px -10px;
+  background: url("images/links/sprite.png") -120px -10px;
   top: 10px;
   top: 0.625rem;
   right: 8px;

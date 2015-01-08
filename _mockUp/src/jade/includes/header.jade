@@ -5,14 +5,35 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
     nav(itemscope itemtype="http://schema.org/SiteNavigationElement").header__nav
         div.nav
             h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation du site
-            span(itemprop="keywords").inline-block.nav__element
-                a(itemprop="url" href="evenements.html").element__link Événements
-            span(itemprop="keywords").inline-block.nav__element
-                a(itemprop="url" href="blog.html").element__link Actualités
-            span.inline-block.banners
-                a(itemprop="url" href="index.html").banners__link
-                    img(itemprop="image" src="../css/images/Ecusson.png", alt="Banners Resto Rallye")
-            span(itemprop="keywords").inline-block.nav__element
-                a(itemprop="url" href="restaurants.html").element__link Restaurants
-            span(itemprop="keywords").inline-block.nav__element
-                a(itemprop="url" href="contact.html").element__link Contact
+            if current.main
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="html/evenements.html").element__link Événements
+            else    
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="evenements.html").element__link Événements
+            if current.main
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="html/blog.html").element__link Actualités
+            else    
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="blog.html").element__link Actualités
+            if current.main
+                span.inline-block.banners
+                    a(itemprop="url" href="index.html").banners__link
+                        img(itemprop="image" src="css/images/links/Ecusson.png", alt="Banners Resto Rallye")
+            else    
+                span.inline-block.banners
+                    a(itemprop="url" href="../index.html").banners__link
+                        img(itemprop="image" src="../css/images/links/Ecusson.png", alt="Banners Resto Rallye")
+            if current.main
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="html/restaurants.html").element__link Restaurants
+            else    
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="restaurants.html").element__link Restaurants
+            if current.main
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="html/contact.html").element__link Contact
+            else
+                span(itemprop="keywords").inline-block.nav__element
+                    a(itemprop="url" href="contact.html").element__link Contact

@@ -4,14 +4,30 @@ div.parallax__body.myFooter
     footer(itemscope itemtype="http://schema.org/WPFooter")
         section(itemscope itemtype="http://schema.org/SiteNavigationElement").inline-block.footer__information
             h5(itemprop="headline").delta Navigation
-            span.block(itemprop="keywords")
-                a(itemprop="url" href="evenements.html") Événements
-            span.block(itemprop="keywords")
-                a(itemprop="url" href="blog.html") Actualités
-            span.block(itemprop="keywords")
-                a(itemprop="url" href="restaurants.html") Restaurants
-            span.block(itemprop="keywords")
-                a(itemprop="url" href="contact.html") Contact
+            if current.main
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="html/evenements.html") Événements
+            else    
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="evenements.html") Événements
+            if current.main
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="html/blog.html") Actualités
+            else
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="blog.html") Actualités
+            if current.main
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="html/restaurants.html") Restaurants
+            else    
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="restaurants.html") Restaurants
+            if current.main
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="html/contact.html") Contact
+            else    
+                span.block(itemprop="keywords")
+                    a(itemprop="url" href="contact.html") Contact
         
         section(itemscope itemtype="http://schema.org/TouristInformationCenter").inline-block.footer__information
             h5(itemprop="headline").delta Nous contacter 

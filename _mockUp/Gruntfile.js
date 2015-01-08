@@ -33,11 +33,13 @@ module.exports = function( grunt ) {
 					},
 				},
 				"files": { // - Add jade's fill to compile here
-					"bin/html/blog.html": "src/jade/blog.jade",
-					"bin/html/contact.html": "src/jade/contact.jade",
+					"bin/index.html": "src/jade/main.jade",
 					"bin/html/evenements.html": "src/jade/evenements.jade",
-					"bin/html/index.html": "src/jade/main.jade",
-					"bin/html/restaurants.html": "src/jade/restaurants.jade"
+					"bin/html/evenement.html": "src/jade/evenement.jade",
+					"bin/html/blog.html": "src/jade/blog.jade",
+					"bin/html/restaurants.html": "src/jade/restaurants.jade",
+					"bin/html/restaurant.html": "src/jade/restaurant.jade",
+					"bin/html/contact.html": "src/jade/contact.jade"
 				}
 			}
 		},
@@ -57,7 +59,7 @@ module.exports = function( grunt ) {
 		},
 		"watch": {
 			"styles": {
-				"files": [ "src/styl/*.styl" ],
+				"files": [ "src/styl/**/*.styl" ],
 				"tasks": [ "stylus:styles", "notify_hooks" ]
 			},
 			"html": {

@@ -29,14 +29,14 @@
         };
         //Marker rendez-vous
         imageRdv = {
-            url: '../css/images/markerRdv.png',
+            url: '../css/images/gMap/markerRdv.png',
             size: new google.maps.Size( 55,60 ),
             origin: new google.maps.Point( 0,0 ),
             anchor: new google.maps.Point( 20, 60 )
         };
         //Marker restaurant
         imageRsts = {
-            url: '../css/images/markerRst.png',
+            url: '../css/images/gMap/markerRst.png',
             size: new google.maps.Size( 55,60 ),
             origin: new google.maps.Point( 0,0 ),
             anchor: new google.maps.Point( 20, 60 )

@@ -6,9 +6,9 @@ npm-debug.log
 node_modules
 _mockUp/bin/css/*.css
 _mockUp/bin/css/*.map
-_mockUp/bin/html
-_mockUp/bin/js/script.min.js
 _mockUp/bin/index.html
+_mockUp/bin/html
+_mockUp/bin/js/script.js
 
 
 .rocketeer

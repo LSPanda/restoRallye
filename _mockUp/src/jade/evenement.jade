@@ -1,0 +1,20 @@
+// - evenement.html
+
+extends includes/layout
+
+block title
+    title Resto Rallye - Événement
+
+block header
+    - var current = { second: 'html' }
+    include includes/header.jade
+
+block content
+    p Page Restaurant
+
+block footer
+    include includes/footer.jade
+
+    script.
+        var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"
+        var addressRsts = ["Rue Peetermans 40, 4100 Seraing, Belgique", "Rue Puit Marie 10, 4100 Seraing, Belgique","Rue du Marais 30, 4100 Seraing, Belgique"]
