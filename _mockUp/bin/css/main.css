@@ -419,6 +419,26 @@ h6:first-child,
   position: relative;
   min-height: 80vh;
 }
+@media screen and (max-width: 1920px) {
+  .parallax__img {
+    min-height: 75vh;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img {
+    min-height: 50vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img {
+    min-height: 25vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img {
+    min-height: 15vh;
+  }
+}
 .parallax__img:before {
   content: "";
   position: absolute;

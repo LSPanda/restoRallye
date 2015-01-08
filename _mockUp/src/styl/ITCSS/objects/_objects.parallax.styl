@@ -14,6 +14,14 @@
 .parallax__img
     position relative
     min-height 80vh
+    +media-query( screen, max-width 1920px )
+        min-height 75vh
+    +media-query( screen, max-width 1280px )
+        min-height 50vh
+    +media-query( screen, max-width 800px )
+        min-height 25vh
+    +media-query( screen, max-width 400px )
+        min-height 15vh
     &:before
         content ""
         position absolute
