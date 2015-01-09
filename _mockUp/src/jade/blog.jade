@@ -2,8 +2,12 @@
 
 extends includes/layout
 
-block title    
+block title
     title Resto Rallye - Actualités
+
+block style
+    link(rel="stylesheet" href="../css/main.css")
+    link(rel="stylesheet" href="../css/fresco/fresco.css")
 
 block header
     - var current = { second: 'html' }
@@ -13,12 +17,16 @@ block content
     div.parallax__img.parallax__img--thirteen
     div.parallax__body
         p Actualités
-    
+
     div.parallax__img.parallax__img--fourteen
     div.parallax__body
         p Galerie
-        
+
     div.parallax__img.parallax__img--fiveteen
 
 block footer
     include includes/footer.jade
+
+block script
+    include includes/script.jade
+    script(src="../js/fresco.js")

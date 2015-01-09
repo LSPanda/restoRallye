@@ -5,6 +5,10 @@ extends includes/layout
 block title
     title Resto Rallye - Événement
 
+block style
+    link(rel="stylesheet" href="../css/main.css")
+    link(rel="stylesheet" href="../css/fresco/fresco.css")
+
 block header
     - var current = { second: 'html' }
     include includes/header.jade
@@ -47,7 +51,7 @@ block content
         div(itemscope itemrprop="about")
         while numberPhoto < 10
             div.inline-block.gallery
-                a(itemprop="url" href="#").
+                a(itemprop="url" href="../css/images/mockUp/exempleGallery.jpg" data-fresco-group="unique_name").fresco
                     img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
             - numberPhoto++
         div.pagination
@@ -68,6 +72,10 @@ block content
 block footer
     include includes/footer.jade
 
+block script
     script.
         var addressRdv = "Rue Rogier 80, 5000 Namur, Belgique"
         var addressRsts = ["Rue des Brasseurs 40, 5000 Namur, Belgique", "Rue de Bruxelles 10, 5000 Namur, Belgique", "Boulevard d'Herbatte 30, 5000 Namur, Belgique"]
+
+    include includes/script.jade
+    script(src="../js/fresco.js")
