@@ -5,7 +5,7 @@ extends includes/layout
 
 block title
     title Resto Rallye - Accueil
-    
+
 block style
     link(rel="stylesheet" href="css/main.css")
 
@@ -14,10 +14,10 @@ block header
     include includes/header.jade
 
 block content
-    div(itemscope itemtype="http://schema.org/Thing").parallax__img.parallax__img--one   
-        blockquote(itemprop="description").quote 
-            | Ne manquez pas notre prochain 
-            a(itemprop="url" href="evenements.html").quote__link Rendez-vous 
+    div(itemscope itemtype="http://schema.org/Thing").parallax__img.parallax__img--one
+        blockquote(itemprop="description").quote
+            | Ne manquez pas notre prochain
+            a(itemprop="url" href="evenements.html").quote__link Rendez-vous
             | dans la région de Liège, à Seraing
     div(itemscope itemtype="http://schema.org/Thing").parallax__body.addText
         h3(itemprop="headline").gamma Bienvenue au Resto-Rallye
@@ -25,8 +25,8 @@ block content
         p(itemprop="description") Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
         p(itemprop="description") A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
         p(itemprop="description") Ensuite, départ vers l’inconnu… Il faut expérimenter les papilles ! C’est la seule constante des étapes… La première halte est consacrée à la dégustation de l‘entrée froide, la deuxième à l’entrée chaude et la dernière au plat principal. Tous les Resto Rallyens se retrouvent ensuite pour savourer le dessert et le café dans le même endroit où ils ont pris l‘apéro et dans lequel ils peuvent échanger leurs avis sur leurs parcours respectifs.
-        
-    div.parallax__img.parallax__img--two  
+
+    div.parallax__img.parallax__img--two
     div(itemscope itemtype="http://schema.org/Event").parallax__body.addDL
         h3(itemprop="headline").gamma Programme de la soirée
         dl.inline-block.programme
@@ -47,8 +47,8 @@ block content
             dd(itemprop="description") Plat principal
             dt(itemprop="endDate").hightlight 22.30 - …
             dd(itemprop="description") Retour au lieu d’accueil pour café, pousse et dessert
-            
-    div.parallax__img.parallax__img--three  
+
+    div.parallax__img.parallax__img--three
     div(itemscope itemtype="http://schema.org/Event").parallax__body.addText
         h3(itemprop="headline").gamma Le tarif par participant s'élève à 60 €, ce prix comprend
         ul.tarif
@@ -59,22 +59,22 @@ block content
             li(itemprop="description").tarif__element Le café et son dessert
             li(itemprop="description").tarif__element Le pousse-café
             li(itemprop="description").tarif__element + un verre de vin et d'eau dans chaque restaurant
-            
+
     div.parallax__img.parallax__img--four
     div(itemscope itemtype="http://schema.org/Thing").parallax__body
         - var numberItem = 0
         h3(itemprop="headline").gamma Nous vous conseillons ces adresses
-        
-        while numberItem < 3            
+
+        while numberItem < 3
             div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
                 a(itemprop="url" href="html/restaurant.html").removeLink
-                    h4(itemprop="brand").delta 
-                        | Chez René, 
-                        span(itemprop="location") Liège
+                    h4(itemprop="brand").delta
+                        | Chez René,
+                        span(itemprop="location").span--spacing Liège
                     img(itemprop="image" src="css/images/mockUp/exempleRest.jpg").thumbnails__img
             - numberItem++
-    
-    div.parallax__img.parallax__img--five    
+
+    div.parallax__img.parallax__img--five
 
 block footer
     include includes/footer.jade

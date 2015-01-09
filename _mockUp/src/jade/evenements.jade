@@ -15,14 +15,14 @@ block content
         div(itemscope itemtype="http://schema.org/FoodEvent")
             h3(itemprop="headline").gamma
                 | Rendez-vous le
-                span(itemprop="startDate") 21 Octobre
+                span(itemprop="startDate").span--spacing 21 Octobre
                 | à
                 span(itemprop="location") Seraing
             p(itemprop="description") Pour la première fois dans l'historie de Resto-Rallye, nous organisons un évènement dans la ville de Seraing. Trois restaurants de la ville ont accepté de recevoir nos gastronomades et leurs faire découvrir les spécialités de leurs établissements.
             p(itemprop="description") Que vous soyez habitué ou encore novice à ses évènements, nous vous invitons chaleureusement à nous rejoindre ce mardi 21 Octobre pour de nouvelle découverte gastronomique.
             p(itemprop="description")
                 | Retrouver nous à
-                span(itemprop="location").hightlight l'Église St Etienne
+                span(itemprop="location").span--spacing.hightlight l'Église St Etienne
 
     div.parallax__img.parallax__img--six
     div.parallax__body
@@ -30,23 +30,23 @@ block content
             h3(itemprop="headline").gamma Inscrivez-vous pour le prochain Resto-Rallye
             p(itemprop="description")
                 | Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne reste plus que
-                span.hightlight 30 places
+                span.span--spacing.hightlight 30 places
                 | disponible.
             form.form
                 div.inline-block.form__element
                     label(for="participantRallye").hightlight.label__text
                         | Nombre de participants
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="participantRallye" type="text" placeholder="1").input__text
                 div.inline-block.form__element
                     label(for="nomRallye").hightlight.label__text
                         | Nom
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="nomRallye" type="text" placeholder="Doe").input__text
                 div.inline-block.form__element
                     label(for="prenomRallye").hightlight.label__text
                         | Prénom
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="prenomRallye" type="text" placeholder="John").input__text
                 div.inline-block.form__element
                     label(for="addressRallye").hightlight.label__text Adresse
@@ -60,7 +60,7 @@ block content
                 div.inline-block.form__element
                     label(for="telRallye").hightlight.label__text
                         | Tel ou GSM
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="telRallye" type="text" placeholder="0498 32 72 89").input__text
                 div.inline-block.form__element
                     label(for="faxRallye").hightlight.label__text Fax
@@ -68,12 +68,12 @@ block content
                 div.inline-block.form__element
                     label(for="mailRallye").hightlight.label__text
                         | Mail
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="mailRallye" type="text" placeholder="johndoe@gmail.com").input__text
                 div.inline-block.form__element
                     label(for="confirmMailRallye").hightlight.label__text
                         | Confirmer mail
-                        span.asterisque  *
+                        span.span--spacing.asterisque *
                     input(id="confirmMailRallye" type="text" placeholder="johndoe@gmail.com").input__text
                 div.block.form__element--fullSize
                     label(for="msgRallye").hightlight.label__text Votre message
@@ -82,7 +82,7 @@ block content
                     input(type="submit" value="Inscrivez-vous !").input__submit
                     label.hightlight.label__text
                         | Tous les champs munis d’un astérisque
-                        span.asterisque  (*)
+                        span.span--spacing.asterisque (*)
                         | sont obligatoires
 
     div.parallax__img.parallax__img--seven
@@ -91,23 +91,23 @@ block content
             h3(itemprop="headline").gamma Invitez vos amis au prochain Resto-Rallye
             p(itemprop="description")
                 | Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que
-                span.hightlight 30 places
+                span.span--spacing.hightlight 30 places
                 | disponible.
                 form.form
                     div.inline-block.form__element
                         label(for="participantInvitation").hightlight.label__text
                             | Nombre de participants
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="participantInvitation" type="text" placeholder="1").input__text
                     div.inline-block.form__element
                         label(for="nomInvitation").hightlight.label__text
                             | Nom
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="nomInvitation" type="text" placeholder="Doe").input__text
                     div.inline-block.form__element
                         label(for="prenomInvitation").hightlight.label__text
                             | Prénom
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="prenomInvitation" type="text" placeholder="John").input__text
                     div.inline-block.form__element
                         label(for="addressInvitation").hightlight.label__text Adresse
@@ -121,7 +121,7 @@ block content
                     div.inline-block.form__element
                         label(for="telInvitation").hightlight.label__text
                             | Tel ou GSM
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="telInvitation" type="text" placeholder="0498 32 72 89").input__text
                     div.inline-block.form__element
                         label(for="faxInvitation").hightlight.label__text Fax
@@ -129,12 +129,12 @@ block content
                     div.inline-block.form__element
                         label(for="mailInvitation").hightlight.label__text
                             | Mail
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="mailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
                     div.inline-block.form__element
                         label(for="confirmMailInvitation").hightlight.label__text
                             | Confirmer mail
-                            span.asterisque  *
+                            span.span--spacing.asterisque *
                         input(id="confirmMailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
                     div.block.form__element--fullSize
                         label(for="msgInvitation").hightlight.label__text Votre message
@@ -143,7 +143,7 @@ block content
                         input(type="submit" value="Inviter vos amis !").input__submit
                         label.hightlight.label__text
                             | Tous les champs munis d’un astérisque
-                            span.asterisque  (*)
+                            span.span--spacing.asterisque (*)
                             | sont obligatoires
 
     div.parallax__img.parallax__img--height
@@ -159,7 +159,7 @@ block content
                     a(itemprop="url" href="evenement.html").removeLink
                         h4(itemprop="attendee").delta
                             | Resto-Rallye à
-                            span(itemprop="location") Namur
+                            span(itemprop="location").span--spacing Namur
                         img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img
                 - numberItem++
             div.pagination
