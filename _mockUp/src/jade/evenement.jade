@@ -11,22 +11,63 @@ block header
 
 block content
     div#slideMap.parallax__img
-    div.parallax__body
-        p Description
-            
+    div(itemscope itemtype="http://schema.org/FoodEvent").parallax__body
+        h3(itemprop="attendee").gamma
+            | Resto-Rallye de
+            span(itemprop="location").span--spacing Namur
+        p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ipsum, tenetur. Molestias nihil tenetur amet, aliquid ipsa inventore officiis aperiam sapiente esse, dolorum, recusandae obcaecati sed perferendis possimus expedita magni!
+        p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ipsum, tenetur. Molestias nihil tenetur amet, aliquid ipsa inventore officiis aperiam sapiente esse, dolorum, recusandae obcaecati sed perferendis possimus expedita magni!
+        p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ipsum, tenetur. Molestias nihil tenetur amet, aliquid ipsa inventore officiis aperiam sapiente esse, dolorum, recusandae obcaecati sed perferendis possimus expedita magni!
+
     div.parallax__img.parallax__img--ten
-    div.parallax__body
-        p Restaurant
-    
+    div(itemscope itemtype="http://schema.org/Thing").parallax__body
+        - var numberItem = 0
+        h3(itemprop="headline").gamma Les hôtes de la soirée
+
+        while numberItem < 3
+            div(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
+                a(itemprop="url" href="restaurant.html").removeLink
+                    h4(itemprop="name").delta Chez René
+                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").thumbnails__img
+                    dl.block
+                        dt.hightlight Entrée froide
+                        dd(itemprop="menu") Foie gras de canard
+                        dt.hightlight Entrée chaude
+                        dd(itemprop="menu") Croquette de fromage sur son lit de laitue
+                        dt.hightlight Plat principale
+                        dd(itemprop="menu") Ours à la bière
+            - numberItem++
+
+
     div.parallax__img.parallax__img--eleven
-    div.parallax__body
-        p Galerie
-    
+    div(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
+        h3(itemprop="headline") Souvenirs en image
+        - var numberPhoto = 0
+
+        div(itemscope itemrprop="about")
+        while numberPhoto < 10
+            div.inline-block.gallery
+                a(itemprop="url" href="#").
+                    img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
+            - numberPhoto++
+        div.pagination
+                span.inline-block.pagination__element
+                    a(href="#").block.removeLink.pagination__element--links &lang;&lang;
+                span.inline-block.pagination__element
+                    a(href="#").block.pagination__element--links 1
+                span.inline-block.pagination__element
+                    a(href="#").block.pagination__element--links 2
+                span.inline-block.pagination__element
+                    a(href="#").block.pagination__element--links 3
+                span.inline-block.pagination__element
+                    a(href="#").block.removeLink.pagination__element--links &rang;&rang;
+
+
     div.parallax__img.parallax__img--twelve
 
 block footer
     include includes/footer.jade
 
     script.
-        var addressRdv = "Rue Peetermans 80, 4100 Seraing, Belgique"
-        var addressRsts = []
+        var addressRdv = "Rue Rogier 80, 5000 Namur, Belgique"
+        var addressRsts = ["Rue des Brasseurs 40, 5000 Namur, Belgique", "Rue de Bruxelles 10, 5000 Namur, Belgique", "Boulevard d'Herbatte 30, 5000 Namur, Belgique"]

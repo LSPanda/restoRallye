@@ -66,11 +66,11 @@ block content
         h3(itemprop="headline").gamma Nous vous conseillons ces adresses
 
         while numberItem < 3
-            div(itemscope itemtype="http://schema.org/FoodEstablishment").inline-block.thumbnails
+            div(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
                 a(itemprop="url" href="html/restaurant.html").removeLink
-                    h4(itemprop="brand").delta
+                    h4(itemprop="name").delta
                         | Chez René,
-                        span(itemprop="location").span--spacing Liège
+                        span(itemprop="addressLocality").span--spacing Liège
                     img(itemprop="image" src="css/images/mockUp/exempleRest.jpg").thumbnails__img
             - numberItem++
 
