@@ -12,12 +12,103 @@ block header
 block content
     div.parallax__img.parallax__img--nineteen
     div.parallax__body
-        p Formulaire contact
-        
+        div(itemscope itemtype="http://schema.org/Thing")
+            h3(itemprop="headline").gamma Un problème&nbsp;?
+            p(itemprop="description") La moindre question &nbsp;? N'hesiter pas à nous contacter par mail ou via ce formulaire, nous serons heureux de vous répondre.
+            form.form
+                div.inline-block.form__element
+                    label(for="nomQuestion").hightlight.label__text
+                        | Nom
+                        span.asterisque  *
+                    input(id="nomQuestion" type="text" placeholder="Doe").input__text
+                div.inline-block.form__element
+                    label(for="prenomQuestion").hightlight.label__text
+                        | Prénom
+                        span.asterisque  *
+                    input(id="prenomQuestion" type="text" placeholder="John").input__text
+                div.inline-block.form__element
+                    label(for="sujetQuestion").hightlight.label__text
+                        | Sujet
+                        span.asterisque  *
+                    input(id="sujetQuestion" type="text" placeholder="Votre question").input__text
+                div.inline-block.form__element
+                    label(for="mailQuestion").hightlight.label__text
+                        | Mail
+                        span.asterisque  *
+                    input(id="mailQuestion" type="text" placeholder="johndoe@gmail.com").input__text
+                div.block.form__element--fullSize
+                    label(for="msgQuestion").hightlight.label__text Votre message
+                    textarea(id="msgQuestion" rows="10" placeholder="Votre question").input__text
+                div.block.form__element--fullSize
+                    input(type="submit" value="Envoyez").input__submit
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.asterisque  (*)
+                        | sont obligatoires
+
     div.parallax__img.parallax__img--twenty
     div.parallax__body
-        p Formulaire Restaurant
-    
+        div(itemscope itemtype="http://schema.org/Thing")
+            h3(itemprop="headline").gamma Accueillir nos gastronomades
+            p(itemprop="description") Désireux de faire connaître votre restaurant, et par la même occasion faire découvrir votre carte à nos membres&nbsp;? Remplissez donc ce formulaire, il vous permettera de rentrer en contact avec l'un de nos organisateur et peut-être, vous serez à l'affiche du prochain Resto-Rallye&nbsp;!
+                div.inline-block.form__element
+                    label(for="nomRestaurant").hightlight.label__text
+                        | Nom du restaurant
+                        span.asterisque  *
+                    input(id="nomRestaurant" type="text" placeholder="La Bonne Fourchette").input__text
+                div.inline-block.form__element
+                    label(for="nomResponsable").hightlight.label__text
+                        | Nom du responsable
+                        span.asterisque  *
+                    input(id="nomResponsable" type="text" placeholder="Doe").input__text
+                div.inline-block.form__element
+                    label(for="prenomResponsable").hightlight.label__text
+                        | Prénom du responsable
+                        span.asterisque  *
+                    input(id="prenomResponsable" type="text" placeholder="John").input__text
+                div.inline-block.form__element
+                    label(for="addressRestaurant").hightlight.label__text
+                        | Adresse
+                        span.asterisque  *
+                    input(id="addressRestaurant" type="text" placeholder="Rue de la Province, n° 10").input__text
+                div.inline-block.form__element
+                    label(for="villeRestaurant").hightlight.label__text
+                        | Ville
+                        span.asterisque  *
+                    input(id="villeRestaurant" type="text" placeholder="Liège").input__text
+                div.inline-block.form__element
+                    label(for="postalRestaurant").hightlight.label__text
+                        | Code Postal
+                        span.asterisque  *
+                    input(id="postalRestaurant" type="text" placeholder="4400").input__text
+                div.inline-block.form__element
+                    label(for="telRestaurant").hightlight.label__text
+                        | Tel ou GSM
+                        span.asterisque  *
+                    input(id="telRestaurant" type="text" placeholder="0498 32 72 89").input__text
+                div.inline-block.form__element
+                    label(for="faxRestaurant").hightlight.label__text Fax
+                    input(id="faxRestaurant" type="text" placeholder="063 14 85 62").input__text
+                div.inline-block.form__element
+                    label(for="mailRestaurant").hightlight.label__text
+                        | Mail
+                        span.asterisque  *
+                    input(id="mailRestaurant" type="text" placeholder="johndoe@gmail.com").input__text
+                div.inline-block.form__element
+                    label(for="confirmMailRestaurant").hightlight.label__text
+                        | Confirmer mail
+                        span.asterisque  *
+                    input(id="confirmMailRestaurant" type="text" placeholder="johndoe@gmail.com").input__text
+                div.block.form__element--fullSize
+                    label(for="msgRestaurant").hightlight.label__text Votre message
+                    textarea(id="msgRestaurant" rows="10" placeholder="Quelque chose à rajouter ?").input__text
+                div.block.form__element--fullSize
+                    input(type="submit" value="Inscrivez votre restaurant !").input__submit
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.asterisque  (*) 
+                        | sont obligatoires
+
     div.parallax__img.parallax__img--twenty-one
 
 block footer
