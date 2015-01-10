@@ -264,7 +264,7 @@ body {
   line-height: 1.25;
   font-family: "RobotoLabeur", sans-serif;
   background-color: wf_background-color;
-  color: #7f8c8d;
+  color: #5b6464;
   overflow-y: scroll;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
@@ -1276,8 +1276,8 @@ h6:first-child,
 */
 .articles {
   width: 100%;
-  margin: 24px 0;
-  margin: 1.5rem 0rem;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .articles__img {
   width: 25%;
@@ -1314,6 +1314,12 @@ h6:first-child,
 .restaurant__details--tel {
   margin: 8px 0;
   margin: 0.5rem 0rem;
+}
+.restaurant__gallery {
+  padding: 0 16px;
+  padding: 0rem 1rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
