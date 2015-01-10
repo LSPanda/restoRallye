@@ -1274,6 +1274,29 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
+.articles {
+  width: 100%;
+  margin: 24px 0;
+  margin: 1.5rem 0rem;
+}
+.articles__img {
+  width: 25%;
+}
+.articles__body {
+  width: 75%;
+  padding: 0 24px;
+  padding: 0rem 1.5rem;
+}
+.body__dates {
+  font-style: italic;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
 .restaurant {
   padding: 0;
   margin: 0;

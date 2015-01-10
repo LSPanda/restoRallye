@@ -15,15 +15,42 @@ block header
 
 block content
     div.parallax__img.parallax__img--thirteen
-    div.parallax__body
-        p Actualités
+    div(itemscope itemtype="http://schema.org/BlogPosting").parallax__body
+        h3(itemprop="headline").gamma Les dernières nouvelles
+        
+        - var numberArticle = 0
+        
+        div(itemrprop="about")
+            while numberArticle < 3
+                div.articles
+                    div(itemrprop="pageStart").inline-block.articles__img
+                        img(itemrprop="image" src="../css/images/mockUp/exempleBlog.jpg")
+                    div(itemrprop="articleBody").inline-block.articles__body
+                        h4(itemrprop="headline").delta Un chouette article
+                        span(itemrprop="date").block.body__dates Le 7 Janvier 2015
+                        p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate consequatur molestiae debitis cumque impedit et, in sint maiores eaque numquam! Veritatis deleniti dolor sapiente obcaecati alias quis, et nemo.
+                        p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga laboriosam iure beatae in, quidem, veritatis nesciunt, mollitia sit, cumque inventore tempora culpa sint. Hic perspiciatis libero doloremque laborum, voluptatem, delectus!
+                - numberArticle++
+        
+        div(itemprop="pagination").pagination
+            span.inline-block.pagination__element
+                a(href="#").block.removeLink.pagination__element--links &lang;&lang;
+            span.inline-block.pagination__element
+                a(href="#").block.pagination__element--links 1
+            span.inline-block.pagination__element
+                a(href="#").block.pagination__element--links 2
+            span.inline-block.pagination__element
+                a(href="#").block.pagination__element--links 3
+            span.inline-block.pagination__element
+                a(href="#").block.removeLink.pagination__element--links &rang;&rang;    
+
 
     div.parallax__img.parallax__img--fourteen
     div(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
         h3(itemprop="headline") Nos souvenirs à travers tous nos Rallyes
         - var numberPhoto = 0
 
-        div(itemscope itemrprop="about")
+        div(itemrprop="about")
             while numberPhoto < 20
                 div.inline-block.gallery
                     a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco.gallery__link
