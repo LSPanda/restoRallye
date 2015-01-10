@@ -1279,6 +1279,17 @@ h6:first-child,
   padding: 8px;
   padding: 0.5rem;
 }
+.gallery__link {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.gallery__link:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
 .gallery__img {
   width: 100%;
   margin-bottom: 12px;

@@ -24,11 +24,11 @@ block content
         - var numberPhoto = 0
 
         div(itemscope itemrprop="about")
-        while numberPhoto < 20
-            div.inline-block.gallery
-                a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco
-                    img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
-            - numberPhoto++
+            while numberPhoto < 20
+                div.inline-block.gallery
+                    a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco.gallery__link
+                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
+                - numberPhoto++
         div.pagination
                 span.inline-block.pagination__element
                     a(href="#").block.removeLink.pagination__element--links &lang;&lang;
