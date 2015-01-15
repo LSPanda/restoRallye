@@ -417,16 +417,8 @@ h6:first-child,
 *
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
-.position--relative {
-  position: relative;
-}
-/*
-* CSS Methodology based on InuitCSS, used for my owned workflow
-*
-* https://github.com/LSPanda | http://portfolio.simon-leyder.be
-*/
 .parallax__img {
-  position: relative;
+  position: static;
   min-height: 80vh;
 }
 @media screen and (max-width: 1920px) {
@@ -448,14 +440,6 @@ h6:first-child,
   .parallax__img {
     min-height: 35vh;
   }
-}
-.parallax__img:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 .parallax__body {
   max-width: 1260px;
@@ -481,8 +465,7 @@ h6:first-child,
   width: 41.25rem;
   height: 40px;
   height: 2.5rem;
-  top: 32px;
-  top: 2rem;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1372,6 +1355,14 @@ h6:first-child,
 .pagination__element--links {
   padding: 12px;
   padding: 0.75rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.position--relative {
+  position: relative !important;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
