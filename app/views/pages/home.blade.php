@@ -65,3 +65,5 @@
     </div>
     <div class="parallax__img parallax__img--five"></div>
 @stop
+@section('script')
+@stop
