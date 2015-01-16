@@ -51,8 +51,8 @@
     <div class="parallax__img parallax__img--four"></div>
     <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
         <h3 itemprop="headline" class="gamma">Nous vous conseillons ces adresses</h3>
-        @foreach($restaurants as $restaurant)
-            <div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
+        @foreach($restaurants as $restaurant){{--
+            --}}<div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
                 <a itemprop="url" href="{{ route('restaurants.show', $restaurant->id) }}" class="removeLink">
                     <h4 itemprop="name" class="delta">
                         {{ $restaurant->name }},
@@ -60,8 +60,8 @@
                     </h4>
                     <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
                 </a>
-            </div>
-        @endforeach
+            </div>{{--
+        --}}@endforeach
     </div>
     <div class="parallax__img parallax__img--five"></div>
 @stop
