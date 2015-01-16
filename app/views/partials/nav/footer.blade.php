@@ -1,8 +1,15 @@
-<section class="nav"><h4>Navigation</h4>
-    <ul>
-        <li><a href="{{ route('restaurants.index') }}">Restaurant</a></li>
-        <li><a href="{{ route('rallyes.index') }}">Rallye</a></li>
-        <li><a href="{{ route('posts.index') }}">Blog</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
-    </ul>
+<section itemscope itemtype="http://schema.org/SiteNavigationElement" class="inline-block footer__information">
+    <h5 itemprop="headline" class="delta">Navigation</h5>
+    <span itemprop="keywords" class="block">
+        <a itemprop="url" href="{{ route('rallyes.index') }}">Événements</a>
+    </span>
+    <span itemprop="keywords" class="block">
+        <a itemprop="url" href="{{ route('posts.index') }}">Actualités</a>
+    </span>
+    <span itemprop="keywords" class="block">
+        <a itemprop="url" href="{{ route('restaurants.index') }}">Restaurants</a>
+    </span>
+    <span itemprop="keywords" class="block">
+        <a itemprop="url" href="{{ route('contact') }}">Contact</a>
+    </span>
 </section>

@@ -1,25 +1,40 @@
-<div class="slideText myFooter">
-    <footer>
+<div class="parallax__body myFooter">
+    <footer itemscope itemtype="http://schema.org/WPFooter">
         @include('partials.nav.footer')
-        <section class="looking">
-            <h4>Notre adresse</h4>
-            <p><span>Mail&nbsp;: </span><a href="mailto:adress@gmail.com">adress@gmail.com</a></p>
-            <p><span>Téléphone&nbsp;: </span>0476 34 21 67</p></section>
-        <section class="follow"><h4>Suivez-nous</h4>
-            <ul>
-                <li class="fb"><a href="https://www.facebook.com/RestoRallye">Facebook</a></li>
-                <li class="rss"><a href="#">RSS</a></li>
-            </ul>
+        <section itemscope itemtype="http://schema.org/TouristInformationCenter" class="inline-block footer__information">
+            <h5 itemprop="headline" class="delta">Nous contacter</h5>
+            <p itemprop="contactPoint">
+                <!-- TODO Informations de contact dynamiques -->
+                <span class="block hightlight">Mail&nbsp;: </span>
+                <a itemprop="url" href="mailto: info@restorallye.com">info@restorallye.com</a>
+            </p>
+            <p itemprop="telephone">
+                <span class="block hightlight">Téléphone&nbsp;: </span>
+                0471 38 06 38
+            </p>
         </section>
-        <section class="newsletter"><h4>NewsLetter</h4>
-
-            {{ Form::open(['route' => 'storeEmailNewsletter']) }}
-                {{ Form::text('email', null, ['placeholder' => 'votre@mail.com' ]) }}
-                {{ Form::submit('S\'inscrire') }}
-                {{ $errors->first('email', '<span class="error">:message</span>') }}
-            {{ Form::close() }}
+        <section itemscope itemtype="http://schema.org/Action" class="inline-block footer__information">
+            <h5 itemprop="headline" class="delta">Suivez-nous</h5>
+            <span itemprop="result" class="inline-block social__link">
+                <a itemprop="url" href="https://www.facebook.com/RestoRallye" class="block social__link--fb">Accèder à la page Facebook</a>
+            </span>
+            <span itemprop="result" class="inline-block social__link">
+                <!-- TODO Flux RSS -->
+                <a itemprop="url" href="#" class="block social__link--rss">Inscriver vous au flux RSS</a>
+            </span>
         </section>
+        <section itemscope itemtype="http://schema.org/Action" class="inline-block footer__newsletter">
+            <h5 itemprop="headline" class="delta">Newsletter</h5>
+            {{ Form::open( [ 'route' => 'storeEmailNewsletter', 'id' => 'ancreError', 'class' => 'forms__newsletter' ] ) }}
+                {{ Form::text( 'email', null, [ 'placeholder' => 'votre@mail.com', 'class' => 'input__text', 'itempprop' => 'object' ] ) }}
+                {{ Form::submit( 'S\'inscrire', [ 'itemprop' => 'target', 'class' => 'newsletter__submit' ] ) }}
+                {{ $errors->first( 'email', '<span itemprop="error" class="error">:message</span>' ) }}
+        </section>
+        <div class="signature">
+            <p>Designed and created by&nbsp;
+            <a itemprop="url" href="http://luc-matagne.be/Portfolio/">Luc Matagne</a>
+            &nbsp;and&nbsp;
+            <a itemprop="url" href="http://portfolio.simon-leyder.be/">Simon Leyder</a> &nbsp;@ 2014</p>
+        </div>
     </footer>
-    <div class="designed"><p>Designed and created by&nbsp;<a href="http://luc-matagne.be/Portfolio/">Luc Matagne</a>&nbsp;and&nbsp;<a
-            href="http://portfolio.simon-leyder.be/">Simon Leyder</a> &nbsp;@ 2014</p></div>
 </div>

@@ -84,3 +84,4 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+require dirname(__FILE__) . '/form_macros.php';

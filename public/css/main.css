@@ -1,0 +1,1380 @@
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+@font-face {
+  font-family: "RochterQuote";
+  src: url("fonts/Rochter/Rochester-Regular.otf");
+}
+@font-face {
+  font-family: "RobotoLabeur";
+  src: url("fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "RobotoBold";
+  src: url("fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "RobotoNav";
+  src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "RobotoHeading";
+  src: url("fonts/Roboto/Roboto-Thin.ttf");
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+table,
+fieldset,
+figure,
+pre {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+ul,
+ol,
+dd {
+  margin-left: 16px;
+  margin-left: 1rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+a {
+  color: #3498db;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover {
+  color: #90b4c5;
+  text-decoration: none;
+}
+.removeLink {
+  color: inherit;
+  text-decoration: none;
+}
+.removeLink:hover {
+  color: inherit;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+p {
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+dt {
+  padding: 8px 0 4px 0;
+  padding: 0.5rem 0rem 0.25rem 0rem;
+}
+.span--spacing {
+  padding: 0 4px;
+  padding: 0rem 0.25rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "RobotoLabeur", sans-serif;
+  background-color: wf_background-color;
+  color: #5b6464;
+  overflow-y: scroll;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+li > ul,
+li > ol,
+dt,
+dd {
+  margin-bottom: 1.25;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+h1,
+.alpha {
+  font-size: 41.887px;
+  font-size: 2.6179375rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
+}
+h1:first-child,
+.alpha:first-child {
+  padding-top: 0;
+}
+h2,
+.beta {
+  font-size: 34.269px;
+  font-size: 2.1418125rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
+}
+h2:first-child,
+.beta:first-child {
+  padding-top: 0;
+}
+h3,
+.gamma {
+  font-size: 25.888px;
+  font-size: 1.618rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
+}
+h3:first-child,
+.gamma:first-child {
+  padding-top: 0;
+}
+h4,
+.delta {
+  font-size: 21.18px;
+  font-size: 1.32375rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;
+}
+h4:first-child,
+.delta:first-child {
+  padding-top: 0;
+}
+h5,
+.epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;
+}
+h5:first-child,
+.epsilon:first-child {
+  padding-top: 0;
+}
+h6,
+.zeta {
+  font-size: 13.09px;
+  font-size: 0.818125rem;
+  font-family: "RobotoHeading", sans-serif;
+  padding: 24px 0 12px 0;
+  padding: 1.5rem 0rem 0.75rem 0rem;
+  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;
+}
+h6:first-child,
+.zeta:first-child {
+  padding-top: 0;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.signature {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: italic;
+  padding-top: 32px;
+  padding-top: 2rem;
+  text-align: center;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.block {
+  display: block;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.parallax__img {
+  position: static;
+  min-height: 80vh;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img {
+    min-height: 75vh;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img {
+    min-height: 70vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img {
+    min-height: 50vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img {
+    min-height: 35vh;
+  }
+}
+.parallax__body {
+  max-width: 1260px;
+  max-width: 78.75rem;
+  margin: 0 auto;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.hightlight {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "RobotoBold", sans-serif;
+}
+.asterisque {
+  color: #3498db;
+}
+.quote {
+  position: absolute;
+  width: 660px;
+  width: 41.25rem;
+  height: 40px;
+  height: 2.5rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-size: 44px;
+  font-size: 2.75rem;
+  font-family: "RochterQuote", sans-serif;
+  font-style: italic;
+  color: #eaeaea;
+  text-align: center;
+  -webkit-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  -moz-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  -ms-text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+.quote__link {
+  -webkit-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  -moz-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  -ms-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+  text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
+}
+.programme {
+  width: 50%;
+}
+.tarif {
+  list-style-type: none;
+}
+.tarif__element:before {
+  content: "- ";
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.social__link {
+  width: 35px;
+  width: 2.1875rem;
+  height: 35px;
+  height: 2.1875rem;
+  text-indent: -1000000px;
+  text-indent: -62500rem;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+}
+.social__link--fb {
+  width: 100%;
+  height: 100%;
+  background: url("images/links/sprite.png") -10px -50px;
+}
+.social__link--fb:hover {
+  background: url("images/links/sprite.png") -10px -10px;
+}
+.social__link--rss {
+  width: 100%;
+  height: 100%;
+  background: url("images/links/sprite.png") -50px -50px;
+}
+.social__link--rss:hover {
+  background: url("images/links/sprite.png") -50px -10px;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.header__nav {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: #3498db;
+  padding: 8px 0;
+  padding: 0.5rem 0rem;
+  margin-top: 8px;
+  margin-top: 0.5rem;
+  z-index: 1;
+}
+.nav {
+  border-top: 2px solid #fbfbfb;
+  border-bottom: 2px solid #fbfbfb;
+}
+.nav__element {
+  font-family: "RobotoNav", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 16px 0;
+  padding: 1rem 0rem;
+  margin: 0 12px;
+  margin: 0rem 0.75rem;
+}
+.element__link {
+  color: #fff;
+  text-decoration: none;
+}
+.element__link:hover {
+  color: #fff;
+  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #fff;
+}
+.banners {
+  position: relative;
+  width: 160px;
+  width: 10rem;
+}
+.banners__link {
+  position: absolute;
+  top: -128px;
+  top: -8rem;
+  left: 0;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.parallax__body {
+  padding: 2.5% 10%;
+  background: #fff;
+}
+.parallax__img--one {
+  background: url("images/parallax/2560x1707/backgroundImage.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--one {
+    background: url("images/parallax/1920x1080/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--one {
+    background: url("images/parallax/1280x800/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--one {
+    background: url("images/parallax/800x500/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--one {
+    background: url("images/parallax/400x200/backgroundImage.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--two {
+  background: url("images/parallax/2560x1707/backgroundImage1.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--two {
+    background: url("images/parallax/1920x1080/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--two {
+    background: url("images/parallax/1280x800/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--two {
+    background: url("images/parallax/800x500/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--two {
+    background: url("images/parallax/400x200/backgroundImage1.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--three {
+  background: url("images/parallax/2560x1707/backgroundImage2.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--three {
+    background: url("images/parallax/1920x1080/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--three {
+    background: url("images/parallax/1280x800/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--three {
+    background: url("images/parallax/800x500/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--three {
+    background: url("images/parallax/400x200/backgroundImage2.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--four {
+  background: url("images/parallax/2560x1707/backgroundImage3.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--four {
+    background: url("images/parallax/1920x1080/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--four {
+    background: url("images/parallax/1280x800/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--four {
+    background: url("images/parallax/800x500/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--four {
+    background: url("images/parallax/400x200/backgroundImage3.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--five {
+  background: url("images/parallax/2560x1707/backgroundImage4.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--five {
+    background: url("images/parallax/1920x1080/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--five {
+    background: url("images/parallax/1280x800/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--five {
+    background: url("images/parallax/800x500/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--five {
+    background: url("images/parallax/400x200/backgroundImage4.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--six {
+  background: url("images/parallax/2560x1707/backgroundImage5.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--six {
+    background: url("images/parallax/1920x1080/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--six {
+    background: url("images/parallax/1280x800/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--six {
+    background: url("images/parallax/800x500/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--six {
+    background: url("images/parallax/400x200/backgroundImage5.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--seven {
+  background: url("images/parallax/2560x1707/backgroundImage6.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--seven {
+    background: url("images/parallax/1920x1080/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--seven {
+    background: url("images/parallax/1280x800/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--seven {
+    background: url("images/parallax/800x500/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--seven {
+    background: url("images/parallax/400x200/backgroundImage6.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--height {
+  background: url("images/parallax/2560x1707/backgroundImage7.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--height {
+    background: url("images/parallax/1920x1080/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--height {
+    background: url("images/parallax/1280x800/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--height {
+    background: url("images/parallax/800x500/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--height {
+    background: url("images/parallax/400x200/backgroundImage7.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--nine {
+  background: url("images/parallax/2560x1707/backgroundImage8.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--nine {
+    background: url("images/parallax/1920x1080/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--nine {
+    background: url("images/parallax/1280x800/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--nine {
+    background: url("images/parallax/800x500/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--nine {
+    background: url("images/parallax/400x200/backgroundImage8.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--ten {
+  background: url("images/parallax/2560x1707/backgroundImage9.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--ten {
+    background: url("images/parallax/1920x1080/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--ten {
+    background: url("images/parallax/1280x800/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--ten {
+    background: url("images/parallax/800x500/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--ten {
+    background: url("images/parallax/400x200/backgroundImage9.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--eleven {
+  background: url("images/parallax/2560x1707/backgroundImage10.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/1920x1080/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/1280x800/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/800x500/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--eleven {
+    background: url("images/parallax/400x200/backgroundImage10.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--twelve {
+  background: url("images/parallax/2560x1707/backgroundImage11.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/1920x1080/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/1280x800/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/800x500/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--twelve {
+    background: url("images/parallax/400x200/backgroundImage11.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--thirteen {
+  background: url("images/parallax/2560x1707/backgroundImage12.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--thirteen {
+    background: url("images/parallax/1920x1080/backgroundImage12.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--thirteen {
+    background: url("images/parallax/1280x800/backgroundImage12.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--thirteen {
+    background: url("images/parallax/800x500/backgroundImage12.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--thirteen {
+    background: url("images/parallax/400x200/backgroundImage12.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--fourteen {
+  background: url("images/parallax/2560x1707/backgroundImage13.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--fourteen {
+    background: url("images/parallax/1920x1080/backgroundImage13.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--fourteen {
+    background: url("images/parallax/1280x800/backgroundImage13.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--fourteen {
+    background: url("images/parallax/800x500/backgroundImage13.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--fourteen {
+    background: url("images/parallax/400x200/backgroundImage13.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--fiveteen {
+  background: url("images/parallax/2560x1707/backgroundImage14.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--fiveteen {
+    background: url("images/parallax/1920x1080/backgroundImage14.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--fiveteen {
+    background: url("images/parallax/1280x800/backgroundImage14.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--fiveteen {
+    background: url("images/parallax/800x500/backgroundImage14.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--fiveteen {
+    background: url("images/parallax/400x200/backgroundImage14.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--sixteen {
+  background: url("images/parallax/2560x1707/backgroundImage15.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--sixteen {
+    background: url("images/parallax/1920x1080/backgroundImage15.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--sixteen {
+    background: url("images/parallax/1280x800/backgroundImage15.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--sixteen {
+    background: url("images/parallax/800x500/backgroundImage15.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--sixteen {
+    background: url("images/parallax/400x200/backgroundImage15.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--seventeen {
+  background: url("images/parallax/2560x1707/backgroundImage16.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--seventeen {
+    background: url("images/parallax/1920x1080/backgroundImage16.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--seventeen {
+    background: url("images/parallax/1280x800/backgroundImage16.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--seventeen {
+    background: url("images/parallax/800x500/backgroundImage16.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--seventeen {
+    background: url("images/parallax/400x200/backgroundImage16.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--heighteen {
+  background: url("images/parallax/2560x1707/backgroundImage17.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--heighteen {
+    background: url("images/parallax/1920x1080/backgroundImage17.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--heighteen {
+    background: url("images/parallax/1280x800/backgroundImage17.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--heighteen {
+    background: url("images/parallax/800x500/backgroundImage17.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--heighteen {
+    background: url("images/parallax/400x200/backgroundImage17.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--nineteen {
+  background: url("images/parallax/2560x1707/backgroundImage18.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--nineteen {
+    background: url("images/parallax/1920x1080/backgroundImage18.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--nineteen {
+    background: url("images/parallax/1280x800/backgroundImage18.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--nineteen {
+    background: url("images/parallax/800x500/backgroundImage18.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--nineteen {
+    background: url("images/parallax/400x200/backgroundImage18.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--twenty {
+  background: url("images/parallax/2560x1707/backgroundImage19.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--twenty {
+    background: url("images/parallax/1920x1080/backgroundImage19.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--twenty {
+    background: url("images/parallax/1280x800/backgroundImage19.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--twenty {
+    background: url("images/parallax/800x500/backgroundImage19.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--twenty {
+    background: url("images/parallax/400x200/backgroundImage19.jpg") center fixed no-repeat;
+  }
+}
+.parallax__img--twenty-one {
+  background: url("images/parallax/2560x1707/backgroundImage20.jpg") center fixed no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .parallax__img--twenty-one {
+    background: url("images/parallax/1920x1080/backgroundImage20.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .parallax__img--twenty-one {
+    background: url("images/parallax/1280x800/backgroundImage20.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parallax__img--twenty-one {
+    background: url("images/parallax/800x500/backgroundImage20.jpg") center fixed no-repeat;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parallax__img--twenty-one {
+    background: url("images/parallax/400x200/backgroundImage20.jpg") center fixed no-repeat;
+  }
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.footer__information {
+  width: 20%;
+}
+.footer__newsletter {
+  float: right;
+  width: 25%;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.forms__newsletter {
+  position: relative;
+}
+.newsletter__submit {
+  position: absolute;
+  width: 25px;
+  width: 1.5625rem;
+  height: 25px;
+  height: 1.5625rem;
+  background: url("images/links/sprite.png") -90px -10px;
+  top: 10px;
+  top: 0.625rem;
+  right: 5px;
+  right: 0.3125rem;
+  border: none;
+  text-indent: -1000000px;
+  text-indent: -62500rem;
+}
+.newsletter__submit:hover {
+  cursor: pointer;
+}
+.forms__search {
+  position: relative;
+  width: 250px;
+  width: 15.625rem;
+}
+.forms__search--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.search__submit {
+  position: absolute;
+  width: 25px;
+  width: 1.5625rem;
+  height: 25px;
+  height: 1.5625rem;
+  background: url("images/links/sprite.png") -120px -10px;
+  top: 10px;
+  top: 0.625rem;
+  right: 8px;
+  right: 0.5rem;
+  border: none;
+  text-indent: -1000000px;
+  text-indent: -62500rem;
+}
+.search__submit:hover {
+  cursor: pointer;
+}
+.form {
+  margin: 36px 0;
+  margin: 2.25rem 0rem;
+}
+.form__element {
+  width: 50%;
+  padding: 0 2.5%;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+.form__element--fullSize {
+  width: 100%;
+  padding: 0 2.5%;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+.label__text {
+  display: block;
+  margin: 10px 0;
+  margin: 0.625rem 0rem;
+}
+.input__text {
+  width: 100%;
+  font-size: 14px;
+  font-size: 0.875rem;
+  background-color: #f5f5f5;
+  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+}
+.input__text:focus {
+  background-color: #fafafa;
+}
+.input__submit {
+  width: 100%;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: "RobotoHeading", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 18px 0;
+  padding: 1.125rem 0rem;
+  border: none;
+  background: #3498db;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.input__submit:hover {
+  background: #6db1d8;
+}
+.error {
+  position: relative;
+  display: block;
+  padding: 8px;
+  padding: 0.5rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  border-top: 1px solid #c0392b;
+  text-align: center;
+}
+.error:after,
+.error:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  pointer-events: none;
+}
+.error:after {
+  margin-left: -10px;
+  margin-left: -0.625rem;
+  border-color: rgba(194,47,43,0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  border-width: 0.625rem;
+}
+.error:before {
+  margin-left: -12px;
+  margin-left: -0.75rem;
+  border-color: rgba(194,47,43,0);
+  border-bottom-color: #c0392b;
+  border-width: 12px;
+  border-width: 0.75rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.thumbnails {
+  width: 33.333333%;
+  padding: 16px 24px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.thumbnails:hover {
+  background: #f5f5f5;
+}
+.thumbnails__img {
+  width: 100%;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  max-height: 210px;
+  max-height: 13.125rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.articles {
+  width: 100%;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+.articles__img {
+  width: 25%;
+}
+.articles__body {
+  width: 75%;
+  padding: 0 24px;
+  padding: 0rem 1.5rem;
+}
+.body__dates {
+  font-style: italic;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.restaurant {
+  padding: 0;
+  margin: 0;
+}
+.restaurant__body {
+  width: 75%;
+  padding: 0 16px;
+  padding: 0rem 1rem;
+}
+.restaurant__details {
+  width: 25%;
+  padding: 0 16px;
+  padding: 0rem 1rem;
+}
+.restaurant__details--tel {
+  margin: 8px 0;
+  margin: 0.5rem 0rem;
+}
+.restaurant__gallery {
+  padding: 0 16px;
+  padding: 0rem 1rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.gallery {
+  width: 20%;
+  padding: 8px;
+  padding: 0.5rem;
+}
+.gallery__link {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.gallery__link:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
+.gallery__img {
+  width: 100%;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  max-height: 125px;
+  max-height: 7.8125rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.pagination {
+  text-align: center;
+}
+.pagination__element {
+  background: #f5f5f5;
+  margin: 0 4px;
+  margin: 0rem 0.25rem;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.pagination__element:hover {
+  background: #fafafa;
+}
+.pagination__element--links {
+  padding: 12px;
+  padding: 0.75rem;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.position--relative {
+  position: relative !important;
+}
+/*
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+.hiddenTitle {
+  position: absolute !important;
+  top: -100000em !important;
+  left: -100000em !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  text-indent: -100000em !important;
+}

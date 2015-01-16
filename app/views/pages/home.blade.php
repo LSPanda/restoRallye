@@ -1,25 +1,67 @@
 @extends('layouts.default')
 @section('content')
-    <div id="slide1" class="slideImage">
-        <blockquote>
-            Ne manquez pas notre prochain <a href="#">rendez-vous</a> dans la région de Namur.
+    <div itemscope itemtype="http://schema.org/Thing" class="parallax__img position--relative parallax__img--one">
+        <blockquote itemprop="description" class="quote">
+            Ne manquez pas notre prochain <a itemprop="url" href="evenements.html" class="quote__link">Rendez-vous </a>dans la région de Liège, à Seraing
         </blockquote>
     </div>
-    <div class="slideText explain">
-        <h3>{{ $about->name }}</h3>
-        <p>{{ $about->body }}</p>
+    <div itemscope itemtype="http://schema.org/Thing" class="parallax__body addText">
+        <h3 itemprop="headline" class="gamma">{{ $about->name }}</h3>
+        <!-- Todo pouvoir mettre la microdata itemprop="description" sur les balises p -->
+        {{ $about->body }}
     </div>
-    <div id="slide2" class="slideImage"></div>
-    <div class="slideText slideRestaurant"><h3>Nous vous conseillons ces adresses</h3>
-
+    <div class="parallax__img parallax__img--two"></div>
+    <div itemscope itemtype="http://schema.org/Event" class="parallax__body addDL">
+        <h3 itemprop="headline" class="gamma">Programme de la soirée</h3>
+        <!-- Todo Lister le contenu des menus dynamiquement -->
+        <dl class="inline-block programme">
+            <dt itemprop="doorTime" class="hightlight">18.30 - 19.30</dt>
+            <dd itemprop="description">Réception des Resto Rallyens au lieu d’accueil</dd>
+            <dt itemprop="duration" class="hightlight">19.30 - 19.45</dt>
+            <dd itemprop="description">Déplacement des Resto Rallyens vers les différents restaurants</dd>
+            <dt itemprop="duration" class="hightlight">19.45 - 20.30</dt>
+            <dd itemprop="description">Entrée froide</dd>
+            <dt itemprop="duration" class="hightlight">20.30 - 20.45</dt>
+            <dd itemprop="description">Déplacement des Resto Rallyens vers les différents restaurants</dd>
+        </dl>
+        <dl class="inline-block programme">
+            <dt itemprop="duration" class="hightlight">20.45 - 21.30</dt>
+            <dd itemprop="description">Entrée chaude</dd>
+            <dt itemprop="duration" class="hightlight">21.30 - 21.45</dt>
+            <dd itemprop="description">Déplacement des Resto Rallyens vers les différents restaurants</dd>
+            <dt itemprop="duration" class="hightlight">21.45 - 22.30</dt>
+            <dd itemprop="description">Plat principal</dd>
+            <dt itemprop="endDate" class="hightlight">22.30 - …</dt>
+            <dd itemprop="description">Retour au lieu d’accueil pour café, pousse et dessert</dd>
+        </dl>
+    </div>
+    <div class="parallax__img parallax__img--three"></div>
+    <div itemscope itemtype="http://schema.org/Event" class="parallax__body addText">
+        <h3 itemprop="headline" class="gamma">Le tarif par participant s'élève à 60 €, ce prix comprend</h3>
+        <ul class="tarif">
+            <li itemprop="description" class="tarif__element">L'apéro et ses zakouskis</li>
+            <li itemprop="description" class="tarif__element">L'entrée froide</li>
+            <li itemprop="description" class="tarif__element">L'entrée chaude</li>
+            <li itemprop="description" class="tarif__element">Le plat principal</li>
+            <li itemprop="description" class="tarif__element">Le café et son dessert</li>
+            <li itemprop="description" class="tarif__element">Le pousse-café</li>
+            <li itemprop="description" class="tarif__element">+ un verre de vin et d'eau dans chaque restaurant</li>
+        </ul>
+    </div>
+    <div class="parallax__img parallax__img--four"></div>
+    <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
+        <h3 itemprop="headline" class="gamma">Nous vous conseillons ces adresses</h3>
         @foreach($restaurants as $restaurant)
-            <div class="restaurants">
-                <a href="{{ route('restaurants.show', $restaurant->id) }}">
-                    <h4>{{ $restaurant->name }}, <span>{{ $restaurant->city }}</span></h4>
-                    <img src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" alt="">
+            <div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
+                <a itemprop="url" href="{{ route('restaurants.show', $restaurant->id) }}" class="removeLink">
+                    <h4 itemprop="name" class="delta">
+                        {{ $restaurant->name }},
+                        <span itemprop="addressLocality" class="span--spacing">{{ $restaurant->city }}</span>
+                    </h4>
+                    <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
                 </a>
             </div>
         @endforeach
     </div>
-    <div id="slide3" class="slideImage"></div>
+    <div class="parallax__img parallax__img--five"></div>
 @stop

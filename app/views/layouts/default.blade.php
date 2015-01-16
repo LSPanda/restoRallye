@@ -7,12 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Resto Rallye</title>
-    <meta name="description" content="">
+    <!-- TODO Description dynamique -->
+    <meta name="description" content="Bienvenue au Resto Rallye! Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ? Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.">
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="">
-    {{ HTML::style('css/screen.css') }}
-    <link src="http://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet" type="text/css">
-    <link src="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
+    {{ HTML::style('css/main.css') }}
 </head>
 <body>
     @include('partials.nav.main')
@@ -22,7 +21,6 @@
     @include('partials.footer')
 
     {{ HTML::script('js/vendor/modernizr/modernizr-2.6.2.min.js') }}
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&amp;sensor=false"></script>
     {{ HTML::script('js/vendor/jquery/jquery.min.js') }}
     {{ HTML::script('js/script.min.js') }}
 </body>
