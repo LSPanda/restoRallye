@@ -637,7 +637,7 @@ h6:first-child,
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
 .parallax__body {
-  padding: 2.5% 10%;
+  padding: 5vh 10%;
   background: #fff;
 }
 .parallax__img--one {
@@ -648,17 +648,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--one {
     background: url("images/parallax/1280x800/backgroundImage.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--one {
     background: url("images/parallax/800x500/backgroundImage.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--one {
     background: url("images/parallax/400x200/backgroundImage.jpg") center fixed no-repeat;
   }
@@ -671,17 +671,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage1.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--two {
     background: url("images/parallax/1280x800/backgroundImage1.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--two {
     background: url("images/parallax/800x500/backgroundImage1.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--two {
     background: url("images/parallax/400x200/backgroundImage1.jpg") center fixed no-repeat;
   }
@@ -694,17 +694,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage2.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--three {
     background: url("images/parallax/1280x800/backgroundImage2.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--three {
     background: url("images/parallax/800x500/backgroundImage2.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--three {
     background: url("images/parallax/400x200/backgroundImage2.jpg") center fixed no-repeat;
   }
@@ -717,17 +717,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage3.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--four {
     background: url("images/parallax/1280x800/backgroundImage3.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--four {
     background: url("images/parallax/800x500/backgroundImage3.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--four {
     background: url("images/parallax/400x200/backgroundImage3.jpg") center fixed no-repeat;
   }
@@ -740,17 +740,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage4.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--five {
     background: url("images/parallax/1280x800/backgroundImage4.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--five {
     background: url("images/parallax/800x500/backgroundImage4.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--five {
     background: url("images/parallax/400x200/backgroundImage4.jpg") center fixed no-repeat;
   }
@@ -763,17 +763,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage5.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--six {
     background: url("images/parallax/1280x800/backgroundImage5.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--six {
     background: url("images/parallax/800x500/backgroundImage5.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--six {
     background: url("images/parallax/400x200/backgroundImage5.jpg") center fixed no-repeat;
   }
@@ -786,17 +786,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage6.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--seven {
     background: url("images/parallax/1280x800/backgroundImage6.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--seven {
     background: url("images/parallax/800x500/backgroundImage6.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--seven {
     background: url("images/parallax/400x200/backgroundImage6.jpg") center fixed no-repeat;
   }
@@ -809,17 +809,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage7.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--height {
     background: url("images/parallax/1280x800/backgroundImage7.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--height {
     background: url("images/parallax/800x500/backgroundImage7.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--height {
     background: url("images/parallax/400x200/backgroundImage7.jpg") center fixed no-repeat;
   }
@@ -832,17 +832,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage8.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--nine {
     background: url("images/parallax/1280x800/backgroundImage8.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--nine {
     background: url("images/parallax/800x500/backgroundImage8.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--nine {
     background: url("images/parallax/400x200/backgroundImage8.jpg") center fixed no-repeat;
   }
@@ -855,17 +855,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage9.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--ten {
     background: url("images/parallax/1280x800/backgroundImage9.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--ten {
     background: url("images/parallax/800x500/backgroundImage9.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--ten {
     background: url("images/parallax/400x200/backgroundImage9.jpg") center fixed no-repeat;
   }
@@ -878,17 +878,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage10.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--eleven {
     background: url("images/parallax/1280x800/backgroundImage10.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--eleven {
     background: url("images/parallax/800x500/backgroundImage10.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--eleven {
     background: url("images/parallax/400x200/backgroundImage10.jpg") center fixed no-repeat;
   }
@@ -901,17 +901,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage11.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--twelve {
     background: url("images/parallax/1280x800/backgroundImage11.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--twelve {
     background: url("images/parallax/800x500/backgroundImage11.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--twelve {
     background: url("images/parallax/400x200/backgroundImage11.jpg") center fixed no-repeat;
   }
@@ -924,17 +924,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage12.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--thirteen {
     background: url("images/parallax/1280x800/backgroundImage12.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--thirteen {
     background: url("images/parallax/800x500/backgroundImage12.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--thirteen {
     background: url("images/parallax/400x200/backgroundImage12.jpg") center fixed no-repeat;
   }
@@ -947,17 +947,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage13.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--fourteen {
     background: url("images/parallax/1280x800/backgroundImage13.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--fourteen {
     background: url("images/parallax/800x500/backgroundImage13.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--fourteen {
     background: url("images/parallax/400x200/backgroundImage13.jpg") center fixed no-repeat;
   }
@@ -970,17 +970,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage14.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--fiveteen {
     background: url("images/parallax/1280x800/backgroundImage14.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--fiveteen {
     background: url("images/parallax/800x500/backgroundImage14.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--fiveteen {
     background: url("images/parallax/400x200/backgroundImage14.jpg") center fixed no-repeat;
   }
@@ -993,17 +993,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage15.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--sixteen {
     background: url("images/parallax/1280x800/backgroundImage15.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--sixteen {
     background: url("images/parallax/800x500/backgroundImage15.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--sixteen {
     background: url("images/parallax/400x200/backgroundImage15.jpg") center fixed no-repeat;
   }
@@ -1016,17 +1016,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage16.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--seventeen {
     background: url("images/parallax/1280x800/backgroundImage16.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--seventeen {
     background: url("images/parallax/800x500/backgroundImage16.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--seventeen {
     background: url("images/parallax/400x200/backgroundImage16.jpg") center fixed no-repeat;
   }
@@ -1039,17 +1039,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage17.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--heighteen {
     background: url("images/parallax/1280x800/backgroundImage17.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--heighteen {
     background: url("images/parallax/800x500/backgroundImage17.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--heighteen {
     background: url("images/parallax/400x200/backgroundImage17.jpg") center fixed no-repeat;
   }
@@ -1062,17 +1062,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage18.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--nineteen {
     background: url("images/parallax/1280x800/backgroundImage18.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--nineteen {
     background: url("images/parallax/800x500/backgroundImage18.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--nineteen {
     background: url("images/parallax/400x200/backgroundImage18.jpg") center fixed no-repeat;
   }
@@ -1085,17 +1085,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage19.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--twenty {
     background: url("images/parallax/1280x800/backgroundImage19.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--twenty {
     background: url("images/parallax/800x500/backgroundImage19.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--twenty {
     background: url("images/parallax/400x200/backgroundImage19.jpg") center fixed no-repeat;
   }
@@ -1108,17 +1108,17 @@ h6:first-child,
     background: url("images/parallax/1920x1080/backgroundImage20.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .parallax__img--twenty-one {
     background: url("images/parallax/1280x800/backgroundImage20.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img--twenty-one {
     background: url("images/parallax/800x500/backgroundImage20.jpg") center fixed no-repeat;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img--twenty-one {
     background: url("images/parallax/400x200/backgroundImage20.jpg") center fixed no-repeat;
   }
@@ -1192,10 +1192,22 @@ h6:first-child,
   width: 250px;
   width: 15.625rem;
 }
+@media screen and (max-width: 820px) {
+  .forms__search {
+    width: 100%;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+  }
+}
 .forms__search--right {
   position: absolute;
   top: 0;
   right: 0;
+}
+@media screen and (max-width: 820px) {
+  .forms__search--right {
+    position: static;
+  }
 }
 .search__submit {
   position: absolute;
@@ -1212,6 +1224,12 @@ h6:first-child,
   text-indent: -1000000px;
   text-indent: -62500rem;
 }
+@media screen and (max-width: 820px) {
+  .search__submit {
+    top: 68px;
+    top: 4.25rem;
+  }
+}
 .search__submit:hover {
   cursor: pointer;
 }
@@ -1224,6 +1242,11 @@ h6:first-child,
   padding: 0 2.5%;
   margin-bottom: 28px;
   margin-bottom: 1.75rem;
+}
+@media screen and (max-width: 820px) {
+  .form__element {
+    width: 100%;
+  }
 }
 .form__element--fullSize {
   width: 100%;
@@ -1264,6 +1287,12 @@ h6:first-child,
   -ms-transition: all 0.25s;
   transition: all 0.25s;
   cursor: pointer;
+}
+@media screen and (max-width: 820px) {
+  .input__submit {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 .input__submit:hover {
   background: #6db1d8;
