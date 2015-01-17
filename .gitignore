@@ -15,7 +15,6 @@ _mockUp/bin/js/script.js
 
 composer.phar
 composer.lock
-.env.php
 
 /bootstrap/compiled.php
 /vendor
