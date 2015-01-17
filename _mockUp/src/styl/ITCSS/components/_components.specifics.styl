@@ -33,11 +33,21 @@
     color wf_quote-color
     text-align center
     text-shadows( 2px, 2px, 0, 0.6 )
+
+    +media-query( screen, max-width 820px )
+        rem-fallback( width, 440px )
+        rem-fallback( font-size, 32px )
 .quote__link
     text-shadows( 1.5px, 1.5px, 0, 0.6 )
 
 .programme
     width 50%
+
+    +media-query( screen, max-width 820px )
+        width 100%
+        padding 0
+        margin 0
+
 
 .tarif
     list-style-type none
