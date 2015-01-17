@@ -32,31 +32,13 @@
             <div class="restaurant__gallery">
              <!-- TODO lister les fichiers présents dans le dossier uploads -->
                 <h4 itemprop="headline" class="delta">Notre salle</h4>
-                <div class="inline-block gallery">
-                    <a itemprop="url" href="/uploads/restaurants/1/main.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/uploads/restaurants/1/main.jpg" class="gallery__img">
-                    </a>
-                </div>
-                <div class="inline-block gallery">
-                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
-                    </a>
-                </div>
-                <div class="inline-block gallery">
-                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
-                    </a>
-                </div>
-                <div class="inline-block gallery">
-                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
-                    </a>
-                </div>
-                <div class="inline-block gallery">
-                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
-                    </a>
-                </div>
+                @for($i = 0; $i < 10; $i++)
+                    <div class="inline-block gallery">
+                        <a itemprop="url" href="/uploads/restaurants/1/main.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                            <img itemprop="image" src="/uploads/restaurants/1/main.jpg" class="gallery__img">
+                        </a>
+                    </div>
+                @endfor
             </div>
         </div>
     </div>

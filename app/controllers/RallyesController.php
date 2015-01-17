@@ -7,25 +7,22 @@ class RallyesController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		$rallyes = Rallye::all();
+	public function index() {
+		$rallyes = Rallye::where( 'date', '<', date( 'Y-m-d' ) )->get();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
-        {
-            $restaurants = [];
+		if ( Auth::check() && Auth::getUser()->role == 'a' && Request::is( 'admin*' ) ) {
+			$restaurants = [ ];
 
-            foreach($rallyes as $rallye)
-            {
-                $restaurants[$rallye->id][] = $rallye->restaurants();
-            }
+			foreach ( $rallyes as $rallye ) {
+				$restaurants[ $rallye->id ][ ] = $rallye->restaurants();
+			}
 
-            return View::make('rallyes.admin.index', compact('rallyes', 'restaurants'));
-        }
-        else
-        {
-            return View::make('rallyes.index', compact('rallyes'));
-        }
+			return View::make( 'rallyes.admin.index', compact( 'rallyes', 'restaurants' ) );
+		} else {
+			$nextRallye = Rallye::where( 'date', '>', date( 'Y-m-d' ) )->first();
+
+			return View::make( 'rallyes.index', compact( 'rallyes', 'nextRallye' ) );
+		}
 	}
 
 	/**
@@ -33,9 +30,8 @@ class RallyesController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-		return View::make('rallyes.create');
+	public function create() {
+		return View::make( 'rallyes.create' );
 	}
 
 	/**
@@ -43,79 +39,78 @@ class RallyesController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		$validator = Validator::make($data = Input::all(), Rallye::$rules);
+	public function store() {
+		$validator = Validator::make( $data = Input::all(), Rallye::$rules );
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
+		if ( $validator->fails() ) {
+			return Redirect::back()->withErrors( $validator )->withInput();
 		}
 
-		Rallye::create($data);
+		Rallye::create( $data );
 
-		return Redirect::route('rallyes.index');
+		return Redirect::route( 'rallyes.index' );
 	}
 
 	/**
 	 * Display the specified rallye.
 	 *
-	 * @param  int  $id
+	 * @param  int $id
+	 *
 	 * @return Response
 	 */
-	public function show($id)
-	{
-		$rallye = Rallye::findOrFail($id);
+	public function show( $id ) {
+		$rallye = Rallye::findOrFail( $id );
 
-		return View::make('rallyes.show', compact('rallye'));
+		$restaurants = $rallye->restaurants()->get();
+
+		return View::make( 'rallyes.show', compact( 'rallye', 'restaurants' ) );
 	}
 
 	/**
 	 * Show the form for editing the specified rallye.
 	 *
-	 * @param  int  $id
+	 * @param  int $id
+	 *
 	 * @return Response
 	 */
-	public function edit($id)
-	{
-		$rallye = Rallye::find($id);
+	public function edit( $id ) {
+		$rallye = Rallye::find( $id );
 
-		return View::make('rallyes.edit', compact('rallye'));
+		return View::make( 'rallyes.edit', compact( 'rallye' ) );
 	}
 
 	/**
 	 * Update the specified rallye in storage.
 	 *
-	 * @param  int  $id
+	 * @param  int $id
+	 *
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		$rallye = Rallye::findOrFail($id);
+	public function update( $id ) {
+		$rallye = Rallye::findOrFail( $id );
 
-		$validator = Validator::make($data = Input::all(), Rallye::$rules);
+		$validator = Validator::make( $data = Input::all(), Rallye::$rules );
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
+		if ( $validator->fails() ) {
+			return Redirect::back()->withErrors( $validator )->withInput();
 		}
 
-		$rallye->update($data);
+		$rallye->update( $data );
 
-		return Redirect::route('rallyes.index');
+		return Redirect::route( 'rallyes.index' );
 	}
 
 	/**
 	 * Remove the specified rallye from storage.
 	 *
-	 * @param  int  $id
+	 * @param  int $id
+	 *
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		Rallye::destroy($id);
+	public function destroy( $id ) {
+		Rallye::destroy( $id );
 
-		return Redirect::route('rallyes.index');
+		return Redirect::route( 'rallyes.index' );
 	}
 
 }
