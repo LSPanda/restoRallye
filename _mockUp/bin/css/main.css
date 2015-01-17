@@ -448,8 +448,8 @@ h6:first-child,
 }
 @media screen and (max-width: 1020px) {
   .parallax__body {
-    max-width: 1020px;
-    max-width: 63.75rem;
+    max-width: 1000px;
+    max-width: 62.5rem;
   }
 }
 @media screen and (max-width: 820px) {
@@ -460,8 +460,8 @@ h6:first-child,
 }
 @media screen and (max-width: 490px) {
   .parallax__body {
-    max-width: 380px;
-    max-width: 23.75rem;
+    max-width: 440px;
+    max-width: 27.5rem;
   }
 }
 /*
@@ -1354,10 +1354,20 @@ h6:first-child,
 .articles__img {
   width: 25%;
 }
+@media screen and (max-width: 820px) {
+  .articles__img {
+    display: none;
+  }
+}
 .articles__body {
   width: 75%;
   padding: 0 24px;
   padding: 0rem 1.5rem;
+}
+@media screen and (max-width: 820px) {
+  .articles__body {
+    width: 100%;
+  }
 }
 .body__dates {
   font-style: italic;
