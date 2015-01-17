@@ -28,7 +28,7 @@ class CreateNewsletterEmailsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('newsletterEmails');
+		Schema::drop('newsletter_emails');
 	}
 
 }

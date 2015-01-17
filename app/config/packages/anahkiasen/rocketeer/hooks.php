@@ -23,7 +23,9 @@
 	'after'  => array(
 		'setup'   => array(),
 		'deploy'  => array(),
-		'cleanup' => array(),
+		'cleanup' => array(
+			'php artisan migrate:reset --seed'
+		),
 	),
 
 	// Custom Tasks to register with Rocketeer
