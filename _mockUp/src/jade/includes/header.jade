@@ -6,6 +6,12 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
         div.nav
             h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation du site
             if current.main
+                span(itemprop="keywords").inline-block.nav__element.nav__element--accueil
+                    a(itemprop="url" href="index.html").element__link Accueil
+            else    
+                span(itemprop="keywords").inline-block.nav__element.nav__element--accueil
+                    a(itemprop="url" href="../index.html").element__link Accueil
+            if current.main
                 span(itemprop="keywords").inline-block.nav__element
                     a(itemprop="url" href="html/evenements.html").element__link Événements
             else    

@@ -20,15 +20,30 @@
     rem-fallback( margin-top, 8px )
     z-index 1
 
+    +media-query( screen, max-width 800px )
+        position static
+        margin 0
+
 .nav
     border-top 2px solid wf_border-menu
     border-bottom 2px solid wf_border-menu
+
 .nav__element
     font-family wf_font-nav
     rem-fallback( font-size, 20px )
     text-transform uppercase
     rem-fallback( padding, 16px 0 )
     rem-fallback( margin, 0 12px )
+
+    +media-query( screen, max-width 800px )
+        display block
+        rem-fallback( font-size, 22px )
+        rem-fallback( padding, 6px 0 )
+        margin 0
+.nav__element--accueil
+    display none
+    +media-query( screen, max-width 800px )
+        display block
 
 .element__link
     color wf_nav-color
@@ -38,9 +53,14 @@
         rem-fallback( padding-bottom, 4px )
         border-bottom 1px solid wf_nav-color
 
+        +media-query( screen, max-width 800px )
+            rem-fallback( padding-bottom, 2px )
 .banners
     position relative
     rem-fallback( width, 160px )
+
+    +media-query( screen, max-width 800px )
+        display none
 .banners__link
     position absolute
     rem-fallback( top, -128px )
