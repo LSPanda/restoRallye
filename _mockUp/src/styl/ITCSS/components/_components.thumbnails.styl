@@ -12,13 +12,18 @@
 
 // Style for show thumbnail
 .thumbnails
-    width: 33.333333%
+    width 33.333333%
     rem-fallback( padding, 16px 24px )
     rem-fallback( margin-bottom, 24px )
     transition( all, 0.25s )
+
+    +media-query( screen, max-width 1020px )
+        width 50%
+    +media-query( screen, max-width 490px )
+        width 100%
     &:hover
         background: wf_background-thumbnails
 .thumbnails__img
     width 100%
     rem-fallback( margin-bottom, 6px )
-    rem-fallback( max-height, 210px )
+    rem-fallback( max-height, 260px )

@@ -426,17 +426,17 @@ h6:first-child,
     min-height: 75vh;
   }
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1020px) {
   .parallax__img {
     min-height: 60vh;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__img {
     min-height: 50vh;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__img {
     min-height: 35vh;
   }
@@ -446,19 +446,19 @@ h6:first-child,
   max-width: 78.75rem;
   margin: 0 auto;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1020px) {
   .parallax__body {
     max-width: 1020px;
     max-width: 63.75rem;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .parallax__body {
     max-width: 720px;
     max-width: 45rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .parallax__body {
     max-width: 380px;
     max-width: 23.75rem;
@@ -561,7 +561,7 @@ h6:first-child,
   margin-top: 0.5rem;
   z-index: 1;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .header__nav {
     position: static;
     margin: 0;
@@ -581,7 +581,7 @@ h6:first-child,
   margin: 0 12px;
   margin: 0rem 0.75rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .nav__element {
     display: block;
     font-size: 22px;
@@ -594,7 +594,7 @@ h6:first-child,
 .nav__element--accueil {
   display: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .nav__element--accueil {
     display: block;
   }
@@ -609,7 +609,7 @@ h6:first-child,
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #fff;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .element__link:hover {
     padding-bottom: 2px;
     padding-bottom: 0.125rem;
@@ -620,7 +620,7 @@ h6:first-child,
   width: 160px;
   width: 10rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .banners {
     display: none;
   }
@@ -1131,14 +1131,14 @@ h6:first-child,
 .footer__information {
   width: 20%;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1020px) {
   .footer__information {
     width: 50%;
     margin-bottom: 32px;
     margin-bottom: 2rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .footer__information {
     width: 100%;
     margin-bottom: 32px;
@@ -1149,13 +1149,13 @@ h6:first-child,
   float: right;
   width: 25%;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1020px) {
   .footer__newsletter {
     float: none;
     width: 50%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .footer__newsletter {
     float: none;
     width: 100%;
@@ -1321,6 +1321,16 @@ h6:first-child,
   -ms-transition: all 0.25s;
   transition: all 0.25s;
 }
+@media screen and (max-width: 1020px) {
+  .thumbnails {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .thumbnails {
+    width: 100%;
+  }
+}
 .thumbnails:hover {
   background: #f5f5f5;
 }
@@ -1328,8 +1338,8 @@ h6:first-child,
   width: 100%;
   margin-bottom: 6px;
   margin-bottom: 0.375rem;
-  max-height: 210px;
-  max-height: 13.125rem;
+  max-height: 260px;
+  max-height: 16.25rem;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow

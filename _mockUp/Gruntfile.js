@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
 		"jade": {
 			"html": {
 				"options": {
-					"pretty": false, // - Change value to have lisible HTML
+					"pretty": true, // - Change value to have lisible HTML
 					"data": {
 						"debug": false,
 					},
