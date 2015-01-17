@@ -29,7 +29,7 @@
                 {{ Form::inputContact('cityRestaurant', 'Ville', [ 'placeholder' => 'Liège', 'class' => 'input__text' ], $errors, true) }}
                 {{ Form::inputContact('pcRestaurant', 'Code Postal', [ 'placeholder' => '4400', 'class' => 'input__text' ], $errors, true) }}
                 {{ Form::inputContact('telRestaurant', 'Tel ou GSM', [ 'placeholder' => '0498 32 72 89', 'class' => 'input__text' ], $errors, true) }}
-                {{ Form::inputContact('faxRestaurant', 'Fax', [ 'placeholder' => '0498 32 72 89', 'class' => 'input__text' ], $errors) }}
+                {{ Form::inputContact('faxRestaurant', 'Fax', [ 'placeholder' => '063 14 85 62', 'class' => 'input__text' ], $errors) }}
                 {{ Form::inputContact('mailRestaurant', 'Mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }}
                 {{ Form::inputContact('confirmMailRestaurant', 'Confirmation de mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }}
                 {{ Form::textareaContact('contentRestaurant', 'Votre message', [ 'placeholder' => 'Quelque chose à rajouter', 'class' => 'input__text' ], $errors) }}
