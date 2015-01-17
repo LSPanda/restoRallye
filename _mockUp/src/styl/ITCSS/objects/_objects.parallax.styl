@@ -14,15 +14,23 @@
 .parallax__img
     position static
     min-height 80vh
+
     +media-query( screen, max-width 1920px )
         min-height 75vh
     +media-query( screen, max-width 1280px )
-        min-height 70vh
+        min-height 60vh
     +media-query( screen, max-width 800px )
         min-height 50vh
     +media-query( screen, max-width 400px )
         min-height 35vh
 
 .parallax__body
-    rem-fallback( max-width, 1260px )
+    rem-fallback( max-width, 1200px )
     margin 0 auto
+    
+    +media-query( screen, max-width 1280px )
+        rem-fallback( max-width, 1080px )
+    +media-query( screen, max-width 800px )
+        rem-fallback( max-width, 680px )
+    +media-query( screen, max-width 400px )
+        rem-fallback( max-width, 360px )
