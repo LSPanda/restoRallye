@@ -19,9 +19,16 @@
     width 75%
     rem-fallback( padding, 0 16px )
 
+    +media-query( screen, max-width 1020px )
+        width 100%
+
 .restaurant__details
     width 25%
     rem-fallback( padding, 0 16px )
+
+    +media-query( screen, max-width 1020px )
+        width 100%
+        rem-fallback( margin-top, 24px )
 .restaurant__details--tel
     rem-fallback( margin, 8px 0 )
 

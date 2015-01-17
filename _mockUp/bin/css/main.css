@@ -1388,10 +1388,22 @@ h6:first-child,
   padding: 0 16px;
   padding: 0rem 1rem;
 }
+@media screen and (max-width: 1020px) {
+  .restaurant__body {
+    width: 100%;
+  }
+}
 .restaurant__details {
   width: 25%;
   padding: 0 16px;
   padding: 0rem 1rem;
+}
+@media screen and (max-width: 1020px) {
+  .restaurant__details {
+    width: 100%;
+    margin-top: 24px;
+    margin-top: 1.5rem;
+  }
 }
 .restaurant__details--tel {
   margin: 8px 0;
