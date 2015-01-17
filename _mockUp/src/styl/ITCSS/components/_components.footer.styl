@@ -13,6 +13,20 @@
 // Footer Style
 .footer__information
     width 20%
+
+    +media-query( screen, max-width 1080px )
+        width 50%
+        rem-fallback( margin-bottom, 32px )
+    +media-query( screen, max-width 400px )
+        width 100%
+        rem-fallback( margin-bottom, 32px )
 .footer__newsletter
     float right
     width 25%
+
+    +media-query( screen, max-width 1080px )
+        float none
+        width 50%
+    +media-query( screen, max-width 400px )
+        float none
+        width 100%
