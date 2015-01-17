@@ -15,6 +15,11 @@
     width: 20%
     rem-fallback( padding, 8px )
 
+    +media-query( screen, max-width 820px )
+        width 25%
+    +media-query( screen, max-width 490px )
+        width 50%
+
 .gallery__link
     transition( all, 0.25s )
     &:hover

@@ -1413,6 +1413,16 @@ h6:first-child,
   padding: 8px;
   padding: 0.5rem;
 }
+@media screen and (max-width: 820px) {
+  .gallery {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .gallery {
+    width: 50%;
+  }
+}
 .gallery__link {
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
