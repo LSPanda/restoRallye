@@ -12,6 +12,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="">
     {{ HTML::style('css/main.css') }}
+    @yield('styles')
 </head>
 <body>
     @include('partials.nav.main')

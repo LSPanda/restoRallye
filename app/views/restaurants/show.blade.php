@@ -1,7 +1,10 @@
 @extends('layouts.default')
 
+@section('styles')
+    {{ HTML::style('css/fresco/fresco.css') }}
+@stop
 @section('content')
-    <div id="slideMap" class="parallax__img" style="background: url(/uploads/restaurants/{{ $restaurant->id }}/main.jpg) center fixed no-repeat"></div>
+    <div id="slideMap" class="parallax__img" ></div>
     <div itemscope itemtype="http://schema.org/Restaurant" class="parallax__body">
         <div class="restaurant">
             <h3 itemprop="name" class="gamma">{{ $restaurant->name }}</h3>
@@ -30,32 +33,43 @@
              <!-- TODO lister les fichiers présents dans le dossier uploads -->
                 <h4 itemprop="headline" class="delta">Notre salle</h4>
                 <div class="inline-block gallery">
-                    <a itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="../css/images/mockUp/exempleRest.jpg" class="gallery__img">
+                    <a itemprop="url" href="/uploads/restaurants/1/main.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/uploads/restaurants/1/main.jpg" class="gallery__img">
                     </a>
                 </div>
                 <div class="inline-block gallery">
-                    <a itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="../css/images/mockUp/exempleRest.jpg" class="gallery__img">
+                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
                     </a>
                 </div>
                 <div class="inline-block gallery">
-                    <a itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="../css/images/mockUp/exempleRest.jpg" class="gallery__img">
+                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
                     </a>
                 </div>
                 <div class="inline-block gallery">
-                    <a itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="../css/images/mockUp/exempleRest.jpg" class="gallery__img">
+                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
                     </a>
                 </div>
                 <div class="inline-block gallery">
-                    <a itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="../css/images/mockUp/exempleRest.jpg" class="gallery__img">
+                    <a itemprop="url" href="/css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/css/images/mockUp/exempleRest.jpg" class="gallery__img">
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="parallax__img parallax__img--heighteen"></div>
+    <div class="parallax__img parallax__img" style="background: url(/uploads/restaurants/{{ $restaurant->id }}/main.jpg) center fixed no-repeat"></div>
+@stop
+@section ('script')
+    <script type="text/javascript">
+      var addressRdv = "{{ $restaurant->adress . ', ' . $restaurant->postal_code . ' ' . $restaurant->city . ', Belgique'}}";
+      var addressRsts = ["{{ $restaurant->adress . ', ' . $restaurant->postal_code . ' ' . $restaurant->city . ', Belgique'}}"];
+
+    </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&amp;sensor=false"></script>
+    <script type="text/javascript" src="/js/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/script.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/fresco/fresco.js"></script>
 @stop
