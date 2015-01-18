@@ -17,14 +17,14 @@ block content
     div#slideMap.parallax__img
     div(itemscope itemtype="http://schema.org/Restaurant").parallax__body
         div.restaurant
-            h3(itemprop="name").gamma Chez René
+            h2(itemprop="name").gamma Chez René
             div.inline-block.restaurant__body
-                h4(itemprop="servesCuisine").delta Cuisine Italienne
+                h3(itemprop="servesCuisine").delta Cuisine Italienne
                 p(itemprop="about") C'est dans une salle au couleur de son pays que René nous à accuilli pour notre soirée, belle table, jolie menu, tout était au rendez-vous pour passer une agréable soirée.
                 p(itemprop="about") C'est une fois notre assiette face à nous que nous avons put profiter des talents du son cuisinier, les plats étaient un vrai délice, une explosion de saveur.
                 p(itemprop="about") Le service, les plats, la joie, tout était au rendez vous pour cette soirée toute particulière.
             div.inline-block.restaurant__details
-                h4(itemprop="headline").delta Coordonnées
+                h3(itemprop="headline").delta Coordonnées
                 address(itemprop="address")
                     span.block Boulevard Piercot, n° 46
                     span.block 4400, Liège
@@ -33,7 +33,7 @@ block content
                 a(href="#" itemprop="url").block www.chezrené.be
             div.restaurant__gallery
                 - var numberPhoto = 0
-                h4(itemprop="headline").delta Notre salle
+                h3(itemprop="headline").delta Notre salle
                 
                 while numberPhoto < 5
                     div.inline-block.gallery

@@ -13,7 +13,7 @@ block content
     div#slideMap.parallax__img
     div.parallax__body
         div(itemscope itemtype="http://schema.org/FoodEvent")
-            h3(itemprop="headline").gamma
+            h2(itemprop="headline").gamma
                 | Rendez-vous le
                 span(itemprop="startDate").span--spacing 21 Octobre
                 | à
@@ -27,7 +27,7 @@ block content
     div.parallax__img.parallax__img--six
     div.parallax__body
         div(itemscope itemtype="http://schema.org/Thing")
-            h3(itemprop="headline").gamma Inscrivez-vous pour ce Resto-Rallye
+            h2(itemprop="headline").gamma Inscrivez-vous pour ce Resto-Rallye
             p(itemprop="description")
                 | Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne reste plus que
                 span.span--spacing.hightlight 30 places
@@ -88,7 +88,7 @@ block content
     div.parallax__img.parallax__img--seven
     div.parallax__body
         div(itemscope itemtype="http://schema.org/Thing")
-            h3(itemprop="headline").gamma Invitez vos amis à ce Resto-Rallye
+            h2(itemprop="headline").gamma Invitez vos amis à ce Resto-Rallye
             p(itemprop="description")
                 | Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que
                 span.span--spacing.hightlight 30 places
@@ -150,7 +150,7 @@ block content
     div.parallax__body
         - var numberItem = 0
         div.position--relative
-            h3.gamma Nos précédents Resto-Rallye
+            h2.gamma Nos précédents Resto-Rallye
             form.forms__search.forms__search--right
                 input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
@@ -158,7 +158,7 @@ block content
             while numberItem < 6
                 div(itemscope itemtype="http://schema.org/FoodEvent").inline-block.thumbnails
                     a(itemprop="url" href="evenement.html").removeLink
-                        h4(itemprop="attendee").delta
+                        h3(itemprop="attendee").delta
                             | Resto-Rallye à
                             span(itemprop="location").span--spacing Namur
                         img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img

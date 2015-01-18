@@ -20,7 +20,7 @@ block content
             a(itemprop="url" href="evenements.html").span--spacing.quote__link Rendez-vous
             | dans la région de Liège, à Seraing
     div(itemscope itemtype="http://schema.org/Thing").parallax__body.addText
-        h3(itemprop="headline").gamma Bienvenue au Resto-Rallye
+        h2(itemprop="headline").gamma Bienvenue au Resto-Rallye
         p(itemprop="description") Le Resto Rallye est un itinéraire gourmand en trois restaurants, pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ?
         p(itemprop="description") Le Resto Rallye offre la possibilité à ses « gastronomades » de faire connaissance, en une seule soirée, de plusieurs établissements d’une ville ainsi que de découvrir une nouvelle région de façon originale et ludique.
         p(itemprop="description") A l’instar d’un rallye automobile, les convives se réunissent dans un espace commun afin d’y déguster l’apéro et les mises en bouche. Chacun y reçoit le roadbook ; on trouve dans celui-ci un plan de la ville avec l’emplacement des restaurants, les bons donnant droit aux mets ainsi que l’itinéraire des restaurants proposés.
@@ -28,7 +28,7 @@ block content
 
     div.parallax__img.parallax__img--two
     div(itemscope itemtype="http://schema.org/Event").parallax__body.addDL
-        h3(itemprop="headline").gamma Programme de la soirée
+        h2(itemprop="headline").gamma Programme de la soirée
         dl.inline-block.programme
             dt(itemprop="doorTime").hightlight 18.30 - 19.30
             dd(itemprop="description") Réception des Resto Rallyens au lieu d’accueil
@@ -50,7 +50,7 @@ block content
 
     div.parallax__img.parallax__img--three
     div(itemscope itemtype="http://schema.org/Event").parallax__body.addText
-        h3(itemprop="headline").gamma Le tarif par participant s'élève à 60 €, ce prix comprend
+        h2(itemprop="headline").gamma Le tarif par participant s'élève à 60 €, ce prix comprend
         ul.tarif
             li(itemprop="description").tarif__element L'apéro et ses zakouskis
             li(itemprop="description").tarif__element L'entrée froide
@@ -63,12 +63,12 @@ block content
     div.parallax__img.parallax__img--four
     div(itemscope itemtype="http://schema.org/Thing").parallax__body
         - var numberItem = 0
-        h3(itemprop="headline").gamma Nous vous conseillons ces adresses
+        h2(itemprop="headline").gamma Nous vous conseillons ces adresses
 
         while numberItem < 3
             div(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
                 a(itemprop="url" href="html/restaurant.html").removeLink
-                    h4(itemprop="name").delta
+                    h3(itemprop="name").delta
                         | Chez René,
                         span(itemprop="addressLocality").span--spacing Liège
                     img(itemprop="image" src="css/images/mockUp/exempleRest.jpg").thumbnails__img
