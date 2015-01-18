@@ -2,106 +2,112 @@
 
 class PostsController extends \BaseController {
 
-	/**
-	 * Display a listing of posts
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		$posts = Post::all();
+    /**
+     * Display a listing of posts
+     *
+     * @return Response
+     */
+    public function index () {
+        $posts = Type::whereName ( 'post' )->first ()->posts ()->paginate ( 6 );
 
-		return View::make('posts.index', compact('posts'));
-	}
+        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
+        {
+            return View::make ( 'posts.admin.index', compact ( 'posts' ) );
+        }
+        else
+        {
+            return View::make ( 'posts.index', compact ( 'posts' ) );
+        }
 
-	/**
-	 * Show the form for creating a new post
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return View::make('posts.create');
-	}
 
-	/**
-	 * Store a newly created post in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		$validator = Validator::make($data = Input::all(), Post::$rules);
+    }
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
+    /**
+     * Show the form for creating a new post
+     *
+     * @return Response
+     */
+    public function create () {
+        return View::make ( 'posts.create' );
+    }
 
-		Post::create($data);
+    /**
+     * Store a newly created post in storage.
+     *
+     * @return Response
+     */
+    public function store () {
+        $validator = Validator::make ( $data = Input::all (), Post::$rules );
 
-		return Redirect::route('posts.index');
-	}
+        if ($validator->fails ())
+        {
+            return Redirect::back ()->withErrors ( $validator )->withInput ();
+        }
 
-	/**
-	 * Display the specified post.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		$post = Post::findOrFail($id);
+        Post::create ( $data );
 
-		return View::make('posts.show', compact('post'));
-	}
+        return Redirect::route ( 'posts.index' );
+    }
 
-	/**
-	 * Show the form for editing the specified post.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		$post = Post::find($id);
+    /**
+     * Display the specified post.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function show ($id) {
+        $post = Post::findOrFail ( $id );
 
-		return View::make('posts.edit', compact('post'));
-	}
+        return View::make ( 'posts.show', compact ( 'post' ) );
+    }
 
-	/**
-	 * Update the specified post in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		$post = Post::findOrFail($id);
+    /**
+     * Show the form for editing the specified post.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function edit ($id) {
+        $post = Post::find ( $id );
 
-		$validator = Validator::make($data = Input::all(), Post::$rules);
+        return View::make ( 'posts.edit', compact ( 'post' ) );
+    }
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
+    /**
+     * Update the specified post in storage.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function update ($id) {
+        $post = Post::findOrFail ( $id );
 
-		$post->update($data);
+        $validator = Validator::make ( $data = Input::all (), Post::$rules );
 
-		return Redirect::route('posts.index');
-	}
+        if ($validator->fails ())
+        {
+            return Redirect::back ()->withErrors ( $validator )->withInput ();
+        }
 
-	/**
-	 * Remove the specified post from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		Post::destroy($id);
+        $post->update ( $data );
 
-		return Redirect::route('posts.index');
-	}
+        return Redirect::route ( 'posts.index' );
+    }
+
+    /**
+     * Remove the specified post from storage.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function destroy ($id) {
+        Post::destroy ( $id );
+
+        return Redirect::route ( 'posts.index' );
+    }
 
 }
