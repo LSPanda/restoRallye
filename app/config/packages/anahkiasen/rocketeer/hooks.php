@@ -24,7 +24,7 @@
 		'setup'   => array(),
 		'deploy'  => array(),
 		'cleanup' => array(
-			'php artisan migrate:reset --seed'
+			'php artisan migrate:refresh --seed --force'
 		),
 	),
 

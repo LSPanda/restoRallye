@@ -20,7 +20,7 @@ return array(
 
 	// The root directory where your applications will be deployed
 	// This path *needs* to start at the root, ie. start with a /
-	'root_directory' => '/var/www/public_html/',
+	'root_directory' => '/var/www/resto-rallye.que.lu/public_html',
 
 	// The folder the application will be cloned in
 	// Leave empty to use `application_name` as your folder name
@@ -54,6 +54,7 @@ return array(
 		// the correct path to the public folder
 		'files'    => array(
 			'app/database/production.sqlite',
+            'app/storage/logs/laravel.log',
 			'{path.storage}',
 			'{path.public}',
 		),
