@@ -8,7 +8,7 @@ class RallyesController extends \BaseController {
 	 * @return Response
 	 */
 	public function index() {
-		$rallyes = Rallye::where( 'date', '<', date( 'Y-m-d' ) )->get();
+		$rallyes = Rallye::where( 'date', '<', date( 'Y-m-d' ) )->paginate(9);
 
 		if ( Auth::check() && Auth::getUser()->role == 'a' && Request::is( 'admin*' ) ) {
 			$restaurants = [ ];

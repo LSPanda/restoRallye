@@ -17,7 +17,7 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function index () {
-        $restaurants = Restaurant::all ();
+        $restaurants = Restaurant::paginate(9);
 
         if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {

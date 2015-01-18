@@ -38,33 +38,17 @@
         <div class="parallax__img parallax__img--eleven"></div>
         <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
             <h3 itemprop="headline">Souvenirs en image</h3>
-            <!-- TODO gallerie -->
+            <!-- TODO galerie -->
             <div itemscope itemrprop="about">
-                @for($i = 0; $i < 10; $i++){{--
+                @for($i = 0; $i < 30; $i++){{--
                     --}}<div class="inline-block gallery">
                         <a itemprop="url" href="/css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
                             <img itemprop="image" src="/css/images/mockUp/exempleGallery.jpg" class="gallery__img">
                         </a>
                     </div>{{--
                 --}}@endfor
-                <!-- TODO pagination -->
-                <div class="pagination">
-                    <span class="inline-block pagination__element">
-                        <a href="#" class="block removeLink pagination__element--links">&lang;&lang;</a>
-                    </span>
-                    <span class="inline-block pagination__element">
-                        <a href="#" class="block pagination__element--links">1</a>
-                    </span>
-                    <span class="inline-block pagination__element">
-                        <a href="#" class="block pagination__element--links">2</a>
-                    </span>
-                    <span class="inline-block pagination__element">
-                        <a href="#" class="block pagination__element--links">3</a>
-                    </span>
-                    <span class="inline-block pagination__element">
-                        <a href="#" class="block removeLink pagination__element--links">&rang;&rang;</a>
-                    </span>
-                </div>
+                <!-- TODO pagination ? -->
+                {{--{{ $photos->links('partials.paginate') }}--}}
             </div>
         </div>
     <div class="parallax__img parallax__img--twelve"></div>

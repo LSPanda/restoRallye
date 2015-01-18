@@ -56,7 +56,7 @@
         </div>
     @endif
     <div class="parallax__img parallax__img--height"></div>
-    <div class="parallax__body">
+    <div class="parallax__body" id="paginationAnchor">
         <div class="position--relative">
             <h3 class="gamma">Nos précédents Resto-Rallye</h3>
             <form class="forms__search forms__search--right">
@@ -74,24 +74,7 @@
                     </a>
                 </div>{{--
             --}}@endforeach
-            <div class="pagination">
-            <!-- TODO pagination -->
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block removeLink pagination__element--links">&lang;&lang;</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">1</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">2</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">3</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block removeLink pagination__element--links">&rang;&rang;</a>
-                </span>
-            </div>
+            {{ $rallyes->links('partials.paginate') }}
         </div>
     </div>
     <div class="parallax__img parallax__img--nine"></div>

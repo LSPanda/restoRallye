@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="parallax__img parallax__img--sixteen"></div>
-    <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
+    <div itemscope itemtype="http://schema.org/Thing" class="parallax__body" id="paginationAnchor">
         <div class="position--relative">
             <h3 itemprop="headline" class="gamma">Les habitués du Resto Rallye</h3>
             <form class="forms__search forms__search--right">
@@ -20,25 +20,7 @@
                     </a>
                 </div>{{--
             --}}@endforeach()
-
-            <div class="pagination">
-                <!-- TODO système de paginatio (pense qui en a un dans laravel) -->
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block removeLink pagination__element--links">&lang;&lang;</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">1</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">2</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block pagination__element--links">3</a>
-                </span>
-                <span class="inline-block pagination__element">
-                    <a href="#" class="block removeLink pagination__element--links">&rang;&rang;</a>
-                </span>
-            </div>
+             {{ $restaurants->links('partials.paginate') }}
         </div>
     </div>
     <div class="parallax__img parallax__img--seventeen"></div>
