@@ -3,6 +3,9 @@
     <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="header__nav">
         <div class="nav">
             <h2 itemprop="alternativeHeadline" class="hiddenTitle">Menu de navigation du site</h2>
+                <span itemprop="keywords" class="inline-block nav__element nav__element--accueil">
+                    <a itemprop="url" href="{{ route('home') }}" class="element__link">Accueil</a>
+                </span>
                 <span itemprop="keywords" class="inline-block nav__element">
                     <a itemprop="url" href="{{ route('rallyes.index') }}" class="element__link">Événements</a>
                 </span>

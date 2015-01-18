@@ -45,7 +45,7 @@
             <li itemprop="description" class="tarif__element">Le plat principal</li>
             <li itemprop="description" class="tarif__element">Le café et son dessert</li>
             <li itemprop="description" class="tarif__element">Le pousse-café</li>
-            <li itemprop="description" class="tarif__element">+ un verre de vin et d'eau dans chaque restaurant</li>
+            <li itemprop="description" class="tarif__element">Ainsi qu'un verre de vin et d'eau dans chaque restaurant</li>
         </ul>
     </div>
     <div class="parallax__img parallax__img--four"></div>
