@@ -3,7 +3,7 @@
 @section('content')
     <div class="parallax__img parallax__img--thirteen"></div>
     <div itemscope itemtype="http://schema.org/BlogPosting" class="parallax__body" id="paginationAnchor">
-        <h3 itemprop="headline" class="gamma">Les dernières nouvelles</h3>
+        <h2 itemprop="headline" class="gamma">Les dernières nouvelles</h2>
         <div itemrprop="about">
             @foreach($posts as $post)
                 <div class="articles">
@@ -11,7 +11,7 @@
                         <img itemrprop="image" src="/uploads/posts/{{ $post->id }}/main.jpg">
                     </div>{{--
                     --}}<div itemrprop="articleBody" class="inline-block articles__body">
-                        <h4 itemrprop="headline" class="delta">{{ $post->name  }}</h4>
+                        <h3 itemrprop="headline" class="delta">{{ $post->name  }}</h3>
                         <span itemrprop="date" class="block body__dates">Le {{ date( 'd/m/Y', strtotime($post->created_at) ) }}</span>
                         <!-- TODO Microdata sur la p itemprop="about" -->
                         {{ $post->body }}
@@ -23,7 +23,7 @@
     </div>
     <div class="parallax__img parallax__img--fourteen"></div>
     <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
-    <h3 itemprop="headline">Nos souvenirs à travers tous nos Rallyes</h3>
+    <h2 itemprop="headline">Nos souvenirs à travers tous nos Rallyes</h2>
     <div itemrprop="about">
         <!-- TODO lister les fichiers présents dans le dossier uploads -->
         @for($i = 0; $i < 20; $i++){{--

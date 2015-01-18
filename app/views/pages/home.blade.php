@@ -6,13 +6,13 @@
         </blockquote>
     </div>
     <div itemscope itemtype="http://schema.org/Thing" class="parallax__body addText">
-        <h3 itemprop="headline" class="gamma">{{ $about->name }}</h3>
+        <h2 itemprop="headline" class="gamma">{{ $about->name }}</h2>
         <!-- Todo pouvoir mettre la microdata itemprop="description" sur les balises p -->
         {{ $about->body }}
     </div>
     <div class="parallax__img parallax__img--two"></div>
     <div itemscope itemtype="http://schema.org/Event" class="parallax__body addDL">
-        <h3 itemprop="headline" class="gamma">Programme de la soirée</h3>
+        <h2 itemprop="headline" class="gamma">Programme de la soirée</h2>
         <!-- Todo Lister le contenu des menus dynamiquement -->
         <dl class="inline-block programme">
             <dt itemprop="doorTime" class="hightlight">18.30 - 19.30</dt>
@@ -37,7 +37,7 @@
     </div>
     <div class="parallax__img parallax__img--three"></div>
     <div itemscope itemtype="http://schema.org/Event" class="parallax__body addText">
-        <h3 itemprop="headline" class="gamma">Le tarif par participant s'élève à 60 €, ce prix comprend</h3>
+        <h2 itemprop="headline" class="gamma">Le tarif par participant s'élève à 60 €, ce prix comprend</h2>
         <ul class="tarif">
             <li itemprop="description" class="tarif__element">L'apéro et ses zakouskis</li>
             <li itemprop="description" class="tarif__element">L'entrée froide</li>
@@ -50,14 +50,14 @@
     </div>
     <div class="parallax__img parallax__img--four"></div>
     <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
-        <h3 itemprop="headline" class="gamma">Nous vous conseillons ces adresses</h3>
+        <h2 itemprop="headline" class="gamma">Nous vous conseillons ces adresses</h2>
         @foreach($restaurants as $restaurant){{--
             --}}<div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
                 <a itemprop="url" href="{{ route('restaurants.show', $restaurant->id) }}" class="removeLink">
-                    <h4 itemprop="name" class="delta">
+                    <h3 itemprop="name" class="delta">
                         {{ $restaurant->name }},
                         <span itemprop="addressLocality" class="span--spacing">{{ $restaurant->city }}</span>
-                    </h4>
+                    </h3>
                     <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
                 </a>
             </div>{{--

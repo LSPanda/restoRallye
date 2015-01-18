@@ -5,7 +5,7 @@
         <div id="slideMap" class="parallax__img"></div>
         <div class="parallax__body">
             <div itemscope itemtype="http://schema.org/FoodEvent">
-                <h3 itemprop="headline" class="gamma">Rendez-vous le<span itemprop="startDate" class="span--spacing">{{ date('d/m/Y' , strtotime($nextRallye->date)) }}</span>à<span itemprop="location" class="span--spacing">{{ $nextRallye->city }}</span></h3>
+                <h2 itemprop="headline" class="gamma">Rendez-vous le<span itemprop="startDate" class="span--spacing">{{ date('d/m/Y' , strtotime($nextRallye->date)) }}</span>à<span itemprop="location" class="span--spacing">{{ $nextRallye->city }}</span></h2>
                 <!-- TODO Microdata sur la p itemprop="description" -->
                 {{ $nextRallye->body }}
             </div>
@@ -13,7 +13,7 @@
         <div class="parallax__img parallax__img--six"></div>
         <div class="parallax__body">
             <div itemscope itemtype="http://schema.org/Thing">
-                <h3 itemprop="headline" class="gamma">Inscrivez-vous pour ce Resto-Rallye</h3>
+                <h2 itemprop="headline" class="gamma">Inscrivez-vous pour ce Resto-Rallye</h2>
                 <p itemprop="description">Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne reste plus que<span class="span--spacing hightlight">30 places</span>disponible.</p>
                 {{ Form::open(['route' => 'sendMail', 'class' => 'form']) }}
                     {{ Form::inputContact('participantsRallye', 'Nombre de participants', [ 'placeholder' => '1', 'class' => 'input__text' ], $errors, true) }}
@@ -35,7 +35,7 @@
         <div class="parallax__img parallax__img--seven"></div>
         <div class="parallax__body">
             <div itemscope itemtype="http://schema.org/Thing">
-                <h3 itemprop="headline" class="gamma">Invitez vos amis à ce Resto-Rallye</h3>
+                <h2 itemprop="headline" class="gamma">Invitez vos amis à ce Resto-Rallye</h2>
                 <p itemprop="description">Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que<span class="span--spacing hightlight">30 places</span>disponible.</p>
                 {{ Form::open(['route' => 'sendMail', 'class' => 'form']) }}
                     {{ Form::inputContact('participantsInvitation', 'Nombre de participants', [ 'placeholder' => '1', 'class' => 'input__text' ], $errors, true) }}
@@ -58,7 +58,7 @@
     <div class="parallax__img parallax__img--height"></div>
     <div class="parallax__body" id="paginationAnchor">
         <div class="position--relative">
-            <h3 class="gamma">Nos précédents Resto-Rallye</h3>
+            <h2 class="gamma">Nos précédents Resto-Rallye</h2>
             <form class="forms__search forms__search--right">
                 <input itemprop="object" type="text" placeholder="Recherche par Ville" class="input__text">
                 <input itemprop="target" type="submit" value="S'inscrire" class="search__submit">
@@ -66,10 +66,10 @@
             @foreach($rallyes as $rallye){{--
                 --}}<div itemscope itemtype="http://schema.org/FoodEvent" class="inline-block thumbnails">
                     <a itemprop="url" href="{{ route('rallyes.show', $rallye->id) }}" class="removeLink">
-                        <h4 itemprop="attendee" class="delta">
+                        <h3 itemprop="attendee" class="delta">
                             Resto-Rallye à
                             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
-                        </h4>
+                        </h3>
                         <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/main.jpg" class="thumbnails__img">
                     </a>
                 </div>{{--

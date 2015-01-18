@@ -4,7 +4,7 @@
     <div class="parallax__img parallax__img--nineteen"></div>
     <div class="parallax__body">
         <div itemscope itemtype="http://schema.org/Thing">
-            <h3 itemprop="headline" class="gamma">Un problème&nbsp;?</h3>
+            <h2 itemprop="headline" class="gamma">Un problème&nbsp;?</h2>
             <p itemprop="description">La moindre question &nbsp;? N'hesiter pas à nous contacter par mail ou via ce formulaire, nous serons heureux de vous répondre.</p>
             {{ Form::open(['route' => 'sendMail', 'class' => 'form']) }}
                 {{ Form::inputContact('nameQuestion', 'Nom', [ 'placeholder' => 'Doe', 'class' => 'input__text' ], $errors, true) }}
@@ -19,7 +19,7 @@
     <div class="parallax__img parallax__img--twenty"></div>
     <div class="parallax__body">
         <div itemscope itemtype="http://schema.org/Thing">
-            <h3 itemprop="headline" class="gamma">Votre restaurant hôte d'un soir</h3>
+            <h2 itemprop="headline" class="gamma">Votre restaurant hôte d'un soir</h2>
             <p itemprop="description">Désireux de faire connaître votre restaurant, et par la même occasion faire découvrir votre carte à nos membres&nbsp;? Remplissez donc ce formulaire, il vous permettera de rentrer en contact avec l'un de nos organisateur et peut-être, vous serez à l'affiche du prochain Resto-Rallye&nbsp;!</p>
             {{ Form::open(['route' => 'sendMail', 'class' => 'form']) }}
                 {{ Form::inputContact('nameRestaurant', 'Nom du restaurant', [ 'placeholder' => 'La Bonne Fourchette', 'class' => 'input__text' ], $errors, true) }}

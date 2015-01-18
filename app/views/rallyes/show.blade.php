@@ -7,20 +7,20 @@
 @section('content')
     <div id="slideMap" class="parallax__img"></div>
     <div itemscope itemtype="http://schema.org/FoodEvent" class="parallax__body">
-        <h3 itemprop="attendee" class="gamma">
+        <h2 itemprop="attendee" class="gamma">
             Resto-Rallye de
             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
-        </h3>
+        </h2>
         <!-- TODO Microdata sur la p itemprop="about" -->
         {{ $rallye->body }}
         </div>
         <div class="parallax__img parallax__img--ten"></div>
         <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
-            <h3 itemprop="headline" class="gamma">Les hôtes de la soirée</h3>
+            <h2 itemprop="headline" class="gamma">Les hôtes de la soirée</h2>
             @foreach($restaurants as $restaurant){{--
                 --}}<div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
                     <a itemprop="url" href="{{ route( 'restaurants.show', $restaurant-> id )}}" class="removeLink">
-                        <h4 itemprop="name" class="delta">{{ $restaurant->name }}</h4>
+                        <h3 itemprop="name" class="delta">{{ $restaurant->name }}</h3>
                         <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
                         <!-- TODO menu -->
                         <dl class="block">
@@ -37,7 +37,7 @@
         </div>
         <div class="parallax__img parallax__img--eleven"></div>
         <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
-            <h3 itemprop="headline">Souvenirs en image</h3>
+            <h2 itemprop="headline">Souvenirs en image</h2>
             <!-- TODO galerie -->
             <div itemscope itemrprop="about">
                 @for($i = 0; $i < 30; $i++){{--

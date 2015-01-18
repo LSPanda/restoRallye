@@ -7,15 +7,15 @@
     <div id="slideMap" class="parallax__img" ></div>
     <div itemscope itemtype="http://schema.org/Restaurant" class="parallax__body">
         <div class="restaurant">
-            <h3 itemprop="name" class="gamma">{{ $restaurant->name }}</h3>
+            <h2 itemprop="name" class="gamma">{{ $restaurant->name }}</h2>
             <div class="inline-block restaurant__body">
                 <!-- TODO Type de restaurant ? -->
-                <h4 itemprop="servesCuisine" class="delta">Cuisine Italienne</h4>
+                <h3 itemprop="servesCuisine" class="delta">Cuisine Italienne</h3>
                 <!-- TODO Microdata sur la p itemprop="about" -->
                 {{ $restaurant->body }}
             </div>
             <div class="inline-block restaurant__details">
-                <h4 itemprop="headline" class="delta">Coordonnées</h4>
+                <h3 itemprop="headline" class="delta">Coordonnées</h3>
                 <address itemprop="address">
                     <span class="block">{{ $restaurant->adress }}</span>
                     <span class="block">{{ $restaurant->postal_code }}, {{ $restaurant->city }}</span>
@@ -31,7 +31,7 @@
             </div>
             <div class="restaurant__gallery">
              <!-- TODO lister les fichiers présents dans le dossier uploads -->
-                <h4 itemprop="headline" class="delta">Notre salle</h4>
+                <h3 itemprop="headline" class="delta">Notre salle</h3>
                 @for($i = 0; $i < 10; $i++){{--
                     --}}<div class="inline-block gallery">
                         <a itemprop="url" href="/uploads/restaurants/1/main.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
