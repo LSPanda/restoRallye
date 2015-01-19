@@ -611,8 +611,8 @@ h6:first-child,
 }
 .nav__conn--logout {
   text-align: right;
-  padding: 12px 24px;
-  padding: 0.75rem 1.5rem;
+  padding: 52px 24px;
+  padding: 3.25rem 1.5rem;
 }
 .logout--height {
   height: 125px;
