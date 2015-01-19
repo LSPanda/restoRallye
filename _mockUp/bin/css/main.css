@@ -614,6 +614,12 @@ h6:first-child,
   padding: 12px 24px;
   padding: 0.75rem 1.5rem;
 }
+.logout--height {
+  height: 125px;
+  height: 7.8125rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
 .nav__element {
   font-family: "RobotoNav", sans-serif;
   font-size: 20px;
