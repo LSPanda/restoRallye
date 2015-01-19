@@ -13,7 +13,10 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
                     input(id="pwd" type="text" placeholder="*********").input__text
                 div.inline-block.login__element
                     p.login__log
-                        a(href="#") Inscrivez-vous&nbsp;!
+                        if current.main
+                            a(href="html/inscription.html") Inscrivez-vous&nbsp;!
+                        else    
+                            a(href="inscription.html") Inscrivez-vous&nbsp;!
                     input(type="submit" value="Se connecter").login__submit
         //-
             div.nav__conn.logout--height

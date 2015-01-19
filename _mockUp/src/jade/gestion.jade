@@ -1,9 +1,9 @@
-// - Contact.html
+// - Gestion.html
 
 extends includes/layout
 
 block title
-    title Resto Rallye - Contact
+    title Resto Rallye - Gestion du profil utilisateur
 
 block header
     - var current = { second: 'html' }
@@ -13,34 +13,65 @@ block content
     div.parallax__img.parallax__img--twenty-two
     div.parallax__body
         div(itemscope itemtype="http://schema.org/Thing")
-            h2(itemprop="headline").gamma Un problème&nbsp;?
-            p(itemprop="description") La moindre question &nbsp;? N'hesiter pas à nous contacter par mail ou via ce formulaire, nous serons heureux de vous répondre.
+            h2(itemprop="headline").gamma Complèter votre profil
+            p(itemprop="description") Changé d'adresse ou de numéro de téléphone? Rien de plus simple, completer ce formulaire et nous nous occuperons de corriger cela.
             form.form
                 div.inline-block.form__element
-                    label(for="nomQuestion").hightlight.label__text
+                    label(for="nomGestion").hightlight.label__text
                         | Nom
                         span.span--spacing.asterisque *
-                    input(id="nomQuestion" type="text" placeholder="Doe").input__text
-                div.inline-block.form__element
-                    label(for="prenomQuestion").hightlight.label__text
+                    input(id="nomGestion" type="text" placeholder="John").input__text
+                div.inline-block.form__element    
+                    label(for="prenomGestion").hightlight.label__text
                         | Prénom
                         span.span--spacing.asterisque *
-                    input(id="prenomQuestion" type="text" placeholder="John").input__text
-                div.inline-block.form__element
-                    label(for="sujetQuestion").hightlight.label__text
-                        | Sujet
+                    input(id="prenomGestion" type="text" placeholder="Doe").input__text
+                div.inline-block.form__element    
+                    label(for="addressGestion").hightlight.label__text
+                        | Adresse
                         span.span--spacing.asterisque *
-                    input(id="sujetQuestion" type="text" placeholder="Votre question").input__text
-                div.inline-block.form__element
-                    label(for="mailQuestion").hightlight.label__text
+                    input(id="addressGestion" type="text" placeholder="Rue de la Province, n° 10").input__text
+                div.inline-block.form__element    
+                    label(for="villeGestion").hightlight.label__text
+                        | Ville
+                        span.span--spacing.asterisque *
+                    input(id="villeGestion" type="text" placeholder="Liège").input__text
+                div.inline-block.form__element    
+                    label(for="codePostalGestion").hightlight.label__text
+                        | Code postal
+                        span.span--spacing.asterisque *
+                    input(id="codePostalGestion" type="text" placeholder="4400").input__text
+                div.inline-block.form__element    
+                    label(for="provinceGestion").hightlight.label__text Province
+                    input(id="provinceGestion" type="text" placeholder="Liège").input__text
+                div.inline-block.form__element    
+                    label(for="telGestion").hightlight.label__text
+                        | Téléphone
+                        span.span--spacing.asterisque *
+                    input(id="telGestion" type="text" placeholder="043 44 65 34").input__text
+                div.inline-block.form__element    
+                    label(for="gsmGestion").hightlight.label__text GSM
+                    input(id="gsmGestion" type="text" placeholder="0498 32 72 89").input__text
+                div.inline-block.form__element    
+                    label(for="faxGestion").hightlight.label__text Fax
+                    input(id="faxGestion" type="text" placeholder="0498 32 72 89").input__text
+                div.inline-block.form__element    
+                    label(for="mailGestion").hightlight.label__text
                         | Mail
                         span.span--spacing.asterisque *
-                    input(id="mailQuestion" type="text" placeholder="johndoe@gmail.com").input__text
+                    input(id="mailGestion" type="text" placeholder="John.doe@gmail.com").input__text
+                div.inline-block.form__element    
+                    label(for="pwdGestion").hightlight.label__text
+                        | Mot de passe
+                        span.span--spacing.asterisque *
+                    input(id="pwdGestion" type="text" placeholder="*********").input__text
+                div.inline-block.form__element    
+                    label(for="pwdConfirmGestion").hightlight.label__text
+                        | Confirmer mot de passe
+                        span.span--spacing.asterisque *
+                    input(id="pwdGestion" type="text" placeholder="*********").input__text
                 div.block.form__element--fullSize
-                    label(for="msgQuestion").hightlight.label__text Votre message
-                    textarea(id="msgQuestion" rows="10" placeholder="Votre question").input__text
-                div.block.form__element--fullSize
-                    input(type="submit" value="Envoyez").input__submit
+                    input(type="submit" value="Mettre à jour").input__submit
                     label.hightlight.label__text
                         | Tous les champs munis d’un astérisque
                         span.span--spacing.asterisque (*)
