@@ -501,16 +501,16 @@ h6:first-child,
 }
 @media screen and (max-width: 820px) {
   .quote {
-    width: 440px;
-    width: 27.5rem;
+    width: 400px;
+    width: 25rem;
     font-size: 32px;
     font-size: 2rem;
   }
 }
 @media screen and (max-width: 490px) {
   .quote {
-    width: 220px;
-    width: 13.75rem;
+    width: 200px;
+    width: 12.5rem;
     font-size: 24px;
     font-size: 1.5rem;
   }
@@ -600,6 +600,7 @@ h6:first-child,
   margin-top: -0.5rem;
 }
 .nav {
+  position: relative;
   border-top: 2px solid #fbfbfb;
   border-bottom: 2px solid #fbfbfb;
 }
@@ -620,8 +621,8 @@ h6:first-child,
   text-transform: uppercase;
   padding: 16px 0;
   padding: 1rem 0rem;
-  margin: 0 12px;
-  margin: 0rem 0.75rem;
+  margin: 0 8px;
+  margin: 0rem 0.5rem;
 }
 @media screen and (max-width: 820px) {
   .nav__element {
@@ -671,6 +672,34 @@ h6:first-child,
   position: absolute;
   top: -14px;
   left: 0;
+}
+.button__login {
+  position: absolute;
+  top: 6px;
+  top: 0.375rem;
+  right: 24px;
+  right: 1.5rem;
+  width: 45px;
+  width: 2.8125rem;
+  height: 45px;
+  height: 2.8125rem;
+  background: url("images/links/sprite.png") -90px -50px;
+  text-indent: -1000000px;
+  text-indent: -62500rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 820px) {
+  .button__login {
+    top: 78px;
+    top: 4.875rem;
+    right: 52px;
+    right: 3.25rem;
+  }
+}
+.button__login:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
 }
 /*
 * CSS Methodology based on InuitCSS, used for my owned workflow
@@ -1316,7 +1345,7 @@ h6:first-child,
   width: 100%;
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "RobotoHeading", sans-serif;
+  font-family: "RobotoNav", sans-serif;
   text-transform: uppercase;
   color: #fff;
   padding: 18px 0;
@@ -1364,7 +1393,7 @@ h6:first-child,
   width: 100%;
   font-size: 18px;
   font-size: 1.125rem;
-  font-family: "RobotoHeading", sans-serif;
+  font-family: "RobotoNav", sans-serif;
   text-transform: uppercase;
   color: #fff;
   padding: 9px 0;

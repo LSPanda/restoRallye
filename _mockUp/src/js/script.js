@@ -75,6 +75,12 @@
     }
 
     $( function() {
+        console.log("prout");
+        //Show login
+        $("span#login").click( function() {
+            console.log( "prout" );
+            $("header nav").toggleClass( "header__nav--conn" );
+        } );
         //Generate google gMap for event
         generateGoogleMap();
     } );

@@ -28,6 +28,7 @@
     rem-fallback( margin-top, -8px )
 
 .nav
+    position relative
     border-top 2px solid wf_border-menu
     border-bottom 2px solid wf_border-menu
 
@@ -44,7 +45,7 @@
     rem-fallback( font-size, 20px )
     text-transform uppercase
     rem-fallback( padding, 16px 0 )
-    rem-fallback( margin, 0 12px )
+    rem-fallback( margin, 0 8px )
 
     +media-query( screen, max-width 820px )
         display block
@@ -76,3 +77,21 @@
     position absolute
     top -14px
     left 0
+
+.button__login
+    position absolute
+    rem-fallback( top, 6px )
+    rem-fallback( right, 24px )
+    rem-fallback( width, 45px )
+    rem-fallback( height, 45px )
+    background: url("images/links/sprite.png") -90px -50px
+    rem-fallback( text-indent, -1000000px )
+    transtion( all, 0.25s )
+    cursor pointer
+
+    +media-query( screen, max-width 820px )
+        rem-fallback( top, 78px )
+        rem-fallback( right, 52px )
+
+    &:hover
+        opacity 0.6
