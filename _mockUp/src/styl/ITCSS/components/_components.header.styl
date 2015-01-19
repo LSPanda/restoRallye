@@ -17,16 +17,27 @@
     text-align center
     background wf_background-header
     rem-fallback( padding, 8px 0 )
-    rem-fallback( margin-top, 8px )
+    rem-fallback( margin-top, -136px )
     z-index 1
+    transition( all, 0.25s )
 
     +media-query( screen, max-width 820px )
         position static
-        margin 0
+        rem-fallback( margin-top, -388px )
+.header__nav--conn
+    rem-fallback( margin-top, -8px )
 
 .nav
     border-top 2px solid wf_border-menu
     border-bottom 2px solid wf_border-menu
+
+.nav__conn
+    background white
+    padding 0
+    margin 0
+.nav__conn--logout
+    text-align right
+    rem-fallback( padding, 12px 24px )
 
 .nav__element
     font-family wf_font-nav
@@ -63,5 +74,5 @@
         display none
 .banners__link
     position absolute
-    rem-fallback( top, -128px )
+    top -14px
     left 0

@@ -3,6 +3,26 @@
 header(itemscope itemtype="http://schema.org/WPHeader").header
     h1(itemprop="headline").hiddenTitle Bienvenue sur le site de Resto Rallye 
     nav(itemscope itemtype="http://schema.org/SiteNavigationElement").header__nav
+        div.nav__conn
+            form.form__login
+                div.inline-block.login__element
+                    label(for="login").hightlight.login__label Mail
+                    input(id="login" type="text" placeholder="john.doe@gmail.com").input__text
+                div.inline-block.login__element
+                    label(for="pwd").hightlight.login__label Mot de passe
+                    input(id="pwd" type="text" placeholder="*********").input__text
+                div.inline-block.login__element
+                    p.login__log
+                        a(href="#") Inscrivez-vous&nbsp;!
+                    input(type="submit" value="Se connecter").login__submit
+        //-
+            div.nav__conn
+            p.nav__conn--logout
+                | Bienvenue
+                span.span--spacing Michel
+                a(href="#") (&nbsp;Deconnexion&nbsp;)
+            
+        
         div.nav
             h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation du site
             if current.main

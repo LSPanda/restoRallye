@@ -507,6 +507,14 @@ h6:first-child,
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 490px) {
+  .quote {
+    width: 220px;
+    width: 13.75rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
 .quote__link {
   -webkit-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
   -moz-text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.6);
@@ -572,19 +580,38 @@ h6:first-child,
   background: #3498db;
   padding: 8px 0;
   padding: 0.5rem 0rem;
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  margin-top: -136px;
+  margin-top: -8.5rem;
   z-index: 1;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
 }
 @media screen and (max-width: 820px) {
   .header__nav {
     position: static;
-    margin: 0;
+    margin-top: -388px;
+    margin-top: -24.25rem;
   }
+}
+.header__nav--conn {
+  margin-top: -8px;
+  margin-top: -0.5rem;
 }
 .nav {
   border-top: 2px solid #fbfbfb;
   border-bottom: 2px solid #fbfbfb;
+}
+.nav__conn {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+.nav__conn--logout {
+  text-align: right;
+  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
 }
 .nav__element {
   font-family: "RobotoNav", sans-serif;
@@ -642,8 +669,7 @@ h6:first-child,
 }
 .banners__link {
   position: absolute;
-  top: -128px;
-  top: -8rem;
+  top: -14px;
   left: 0;
 }
 /*
@@ -1311,6 +1337,59 @@ h6:first-child,
 }
 .input__submit:hover {
   background: #6db1d8;
+}
+.form__login {
+  margin: 0 24px 12px;
+  margin: 0rem 1.5rem 0.75rem;
+}
+.login__element {
+  width: 25%;
+  margin: 20px 0;
+  margin: 1.25rem 0rem;
+  padding: 0 16px;
+  padding: 0rem 1rem;
+}
+@media screen and (max-width: 820px) {
+  .login__element {
+    width: 100%;
+  }
+}
+.login__label {
+  display: block;
+  margin: 10px 0;
+  margin: 0.625rem 0rem;
+  text-align: left;
+}
+.login__submit {
+  width: 100%;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: "RobotoHeading", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 9px 0;
+  padding: 0.5625rem 0rem;
+  border: none;
+  background: #3498db;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+@media screen and (max-width: 820px) {
+  .login__submit {
+    padding: 12px 0;
+    padding: 0.75rem 0rem;
+  }
+}
+.login__submit:hover {
+  background: #6db1d8;
+}
+.login__log {
+  text-align: left;
+  padding: 3px 0;
+  padding: 0.1875rem 0rem;
 }
 .error {
   position: relative;

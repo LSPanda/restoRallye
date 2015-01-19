@@ -96,6 +96,40 @@
     &:hover
         background wf_background-submit-hover
 
+// Forms login
+.form__login
+    rem-fallback( margin, 0 24px 12px )
+.login__element
+    width 25%
+    rem-fallback( margin, 20px 0 )
+    rem-fallback( padding, 0 16px )
+
+    +media-query( screen, max-width 820px )
+        width 100%
+.login__label
+    display block
+    rem-fallback( margin, 10px 0 )
+    text-align left
+.login__submit
+    width 100%
+    rem-fallback( font-size, 18px )
+    font-family wf_font-heading
+    text-transform uppercase
+    color wf_nav-color
+    rem-fallback( padding, 9px 0 )
+    border none
+    background wf_background-submit
+    transition( all, 0.25s )
+    cursor pointer
+
+    +media-query( screen, max-width 820px )
+        rem-fallback( padding, 12px 0 )
+    &:hover
+        background wf_background-submit-hover
+.login__log
+    text-align left
+    rem-fallback( padding, 3px 0 )
+
 // Errors for forms
 .error
     position relative
