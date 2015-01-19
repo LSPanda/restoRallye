@@ -29,22 +29,20 @@
                     <a href="{{ $restaurant->website }}" target="_blank" itemprop="url" class="block">{{ $restaurant->website }}</a>
                 @endif
             </div>
-            <div class="restaurant__gallery">
-             <!-- TODO lister les fichiers présents dans le dossier uploads -->
+            <div class="restaurant__gallery" id="paginationAnchor">
                 <h3 itemprop="headline" class="delta">Notre salle</h3>
-                @for($i = 0; $i < 10; $i++){{--
+                @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
                     --}}<div class="inline-block gallery">
-                        <a itemprop="url" href="/uploads/restaurants/1/main.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                            <img itemprop="image" src="/uploads/restaurants/1/main.jpg" class="gallery__img">
+                        <a itemprop="url" href="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
+                            <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
                         </a>
                     </div>{{--
                 --}}@endfor
-                <!-- TODO pagination ? -->
-                {{--{{ $photos->links('partials.paginate') }}--}}
+                {{ $photos->links('partials.paginate') }}
             </div>
         </div>
     </div>
-    <div class="parallax__img parallax__img" style="background: url(/uploads/restaurants/{{ $restaurant->id }}/main.jpg) center fixed no-repeat"></div>
+    <div class="parallax__img parallax__img parallax__img--nine"></div>
 @stop
 @section ('script')
     <script type="text/javascript">

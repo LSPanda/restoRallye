@@ -17,7 +17,7 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function index () {
-        $restaurants = Restaurant::paginate(9);
+        $restaurants = Restaurant::paginate ( 9 );
 
         if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {
@@ -71,7 +71,10 @@ class RestaurantsController extends \BaseController {
         }
         else
         {
-            return View::make ( 'restaurants.show', compact ( 'restaurant' ) );
+            $images = $this->getImages ( 'restaurants', $id );
+            $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
+
+            return View::make ( 'restaurants.show', compact ( 'restaurant', 'photos' ) );
         }
     }
 

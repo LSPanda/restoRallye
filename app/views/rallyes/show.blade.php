@@ -38,17 +38,15 @@
         <div class="parallax__img parallax__img--eleven"></div>
         <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
             <h2 itemprop="headline">Souvenirs en image</h2>
-            <!-- TODO galerie -->
             <div itemscope itemrprop="about">
-                @for($i = 0; $i < 30; $i++){{--
+                @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
                     --}}<div class="inline-block gallery">
-                        <a itemprop="url" href="/css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name" class="fresco gallery__link">
-                            <img itemprop="image" src="/css/images/mockUp/exempleGallery.jpg" class="gallery__img">
+                        <a itemprop="url" href="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
+                            <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
                         </a>
                     </div>{{--
                 --}}@endfor
-                <!-- TODO pagination ? -->
-                {{--{{ $photos->links('partials.paginate') }}--}}
+                {{ $photos->links('partials.paginate') }}
             </div>
         </div>
     <div class="parallax__img parallax__img--twelve"></div>
