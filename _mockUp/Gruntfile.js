@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
 		"jade": {
 			"html": {
 				"options": {
-					"pretty": false, // - Change value to have lisible HTML
+					"pretty": true, // - Change value to have lisible HTML
 					"data": {
 						"debug": false,
 					},
@@ -39,7 +39,9 @@ module.exports = function( grunt ) {
 					"bin/html/blog.html": "src/jade/blog.jade",
 					"bin/html/restaurants.html": "src/jade/restaurants.jade",
 					"bin/html/restaurant.html": "src/jade/restaurant.jade",
-					"bin/html/contact.html": "src/jade/contact.jade"
+					"bin/html/contact.html": "src/jade/contact.jade",
+					"bin/html/inscription.html": "src/jade/inscription.jade",
+					"bin/html/gestion.html": "src/jade/gestion.jade"
 				}
 			}
 		},
