@@ -130,6 +130,30 @@ Route::group ( [ 'before' => 'auth', 'prefix' => $_ENV[ 'PREFIX' ] ],
 
         Route::resource ( 'rallyes', 'RallyesController' );
 
+        Route::get ( '/rallyes/{id}/medias',
+            [
+                'as'     => 'admin.rallyes.medias',
+                'uses'   => 'RallyesController@editMedias'
+            ] );
+
+        Route::delete ( '/rallyes/{id}/medias/{file}',
+            [
+                'as'     => 'admin.rallyes.destroy.medias',
+                'uses'   => 'RallyesController@destroyMedia'
+            ] );
+
+        Route::post ( '/rallyes/{id}/medias/',
+            [
+                'as'     => 'admin.rallyes.add.medias',
+                'uses'   => 'RallyesController@addMedia'
+            ] );
+
+        Route::get ( '/rallyes/{id}/medias/couv/{file}',
+            [
+                'as'     => 'admin.rallye.setCouverture.medias',
+                'uses'   => 'RallyesController@setCouverture'
+            ] );
+
         Route::resource ( 'menus', 'MenusController' );
 
         Route::resource ( 'posts', 'PostsController' );
