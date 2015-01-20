@@ -6,6 +6,7 @@
 @stop
 
 @section('content')
+    <a class="btn btn-primary pull-right" href="{{ route( 'admin.restaurants.edit', $restaurant->id ) }}">Éditer</a>
     <h2 class="sub-header">{{ $restaurant->name }}</h2>
 
     {{ $restaurant->body }}
