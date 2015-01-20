@@ -94,7 +94,7 @@ class RallyesController extends \BaseController {
             $restaurants = $rallye->restaurants ()->get ();
         }
         $images = $this->getImages ( 'rallyes', $id );
-        if ($photos)
+        if ($images)
         {
             $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
         }

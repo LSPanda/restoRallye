@@ -77,7 +77,7 @@ class RestaurantsController extends \BaseController {
         else
         {
             $images = $this->getImages ( 'restaurants', $id );
-            $photos = [];
+            $photos = false;
             if ($images)
             {
                 $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
