@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-    {{ Form::open(['route' => [ 'admin.rallyes.update', null] ]) }}
+    {{ Form::open(['route' => [ 'admin.rallyes.update', null], 'method' => 'post', 'file' => true ]) }}
         <div class="form-group">
             {{ Form::label('body', 'Description') }}
             {{ Form::textarea('body', null, ['id' => 'summernote']) }}
@@ -47,6 +47,14 @@
                 </div>
                 {{ $errors->first('date', '<div class="alert alert-danger">:message</div>') }}
                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            {{ Form::file('image', ['class' => 'file-input btn-lg btn-block btn-info', 'title' => 'Ajouter une photo de couverture', 'data-filename-placement' => 'inside']) }}
+                            {{ $errors->first( 'image', '<div class="alert alert-danger">:message</div>' ) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-4">
                         <button type="submit" class="btn btn-block btn-lg btn-success">Créer</button>
                     </div>
@@ -81,5 +89,9 @@
                 lang: 'fr-FR'
             });
         });
+    </script>)
+    {{ HTML::script('js/vendor/bootstrap/fileButton.js') }}
+    <script type="text/javascript">
+        $('.file-input').bootstrapFileInput();
     </script>
 @stop

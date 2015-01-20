@@ -1,247 +1,264 @@
 <?php
 use App\Forms\Rallye as FormRallye;
+use App\Forms\RallyeCreate as FormRallyeCreate;
 
 class RallyesController extends \BaseController {
-    protected $formRallye;
+	protected $formRallye, $formRallyeCreate;
 
-    public function __construct (FormRallye $formRallye) {
-        $this->formRallye = $formRallye;
-    }
+	public function __construct( FormRallye $formRallye, FormRallyeCreate $formRallyeCreate ) {
+		$this->formRallye       = $formRallye;
+		$this->formRallyeCreate = $formRallyeCreate;
+	}
 
-    /**
-     * Display a listing of rallyes
-     *
-     * @return Response
-     */
-    public function index () {
-        $nextRallye = Rallye::where ( 'date', '>', date ( 'Y-m-d' ) )->first ();
+	/**
+	 * Display a listing of rallyes
+	 *
+	 * @return Response
+	 */
+	public function index() {
+		$nextRallye = Rallye::where( 'date', '>', date( 'Y-m-d' ) )->first();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
-        {
-            $rallyes                 = Rallye::where ( 'date', '<', date ( 'Y-m-d' ) )->get ();
-            $nextRallye->restaurants = $nextRallye->restaurants ()->get ();
+		if ( Auth::check() && Auth::getUser()->role == 'a' && Request::is( 'admin*' ) ) {
+			$rallyes = Rallye::where( 'date', '<', date( 'Y-m-d' ) )->get();
 
-            $restaurants = [ ];
+			$nextRallye->restaurants = $nextRallye->restaurants()->get();
 
-            foreach ($rallyes as $rallye)
-            {
-                $restaurants[ $rallye->id ] = $rallye->restaurants ()->get ();
-            }
+			$restaurants = [ ];
 
-            return View::make ( 'rallyes.admin.index', compact ( 'rallyes', 'nextRallye', 'restaurants' ) );
-        }
-        else
-        {
-            $rallyes = Rallye::where ( 'date', '<', date ( 'Y-m-d' ) )->paginate ( 9 );
+			foreach ( $rallyes as $rallye ) {
+				$restaurants[ $rallye->id ] = $rallye->restaurants()->get();
+			}
 
-            return View::make ( 'rallyes.index', compact ( 'rallyes', 'nextRallye' ) );
-        }
-    }
+			return View::make( 'rallyes.admin.index', compact( 'rallyes', 'nextRallye', 'restaurants' ) );
+		} else {
+			$rallyes = Rallye::where( 'date', '<', date( 'Y-m-d' ) )->paginate( 9 );
 
-    /**
-     * Show the form for creating a new rallye
-     *
-     * @return Response
-     */
-    public function create () {
-        return View::make ( 'rallyes.admin.create' );
-    }
+			return View::make( 'rallyes.index', compact( 'rallyes', 'nextRallye' ) );
+		}
+	}
 
-    /**
-     * Store a newly created rallye in storage.
-     *
-     * @return Response
-     */
-    public function store () {
-        $input           = Input::all ();
-        $input[ 'date' ] = $input[ 'dateYear' ] . '-' . $input[ 'dateMonth' ] . '-' . $input[ 'dateDay' ];
-        unset( $input[ 'dateYear' ], $input[ 'dateMonth' ], $input[ 'dateDay' ] );
+	/**
+	 * Show the form for creating a new rallye
+	 *
+	 * @return Response
+	 */
+	public function create() {
+		return View::make( 'rallyes.admin.create' );
+	}
 
-        $this->formRallye->validate ( $input );
+	/**
+	 * Store a newly created rallye in storage.
+	 *
+	 * @return Response
+	 */
+	public function store() {
+		$input = Input::all();
 
-        Rallye::create ( $input );
+		$input[ 'date' ] = $input[ 'dateYear' ] . '-' . $input[ 'dateMonth' ] . '-' . $input[ 'dateDay' ];
+		unset( $input[ 'dateYear' ], $input[ 'dateMonth' ], $input[ 'dateDay' ] );
 
-        return Redirect::route ( 'admin.rallyes.index' );
-    }
+		$this->formRallyeCreate->validate( $input );
 
-    /**
-     * Display the specified rallye.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function show ($id) {
-        $rallye = Rallye::findOrFail ( $id );
+		$filename = 'main.' . Input::file('image')->getClientOriginalExtension();
 
-        $restaurants = $rallye->restaurants ()->get ();
-        $images      = $this->getImages ( 'rallyes', $id );
-        $photos      = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
+		$rallye = Rallye::create( $input );
 
-        return View::make ( 'rallyes.show', compact ( 'rallye', 'restaurants', 'photos' ) );
-    }
+		Input::file('image')->move( 'uploads/rallyes/' . $rallye->id, $filename );
 
-    /**
-     * Show the form for editing the specified rallye.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function edit ($id) {
-        $rallye = Rallye::find ( $id );
+		return Redirect::route( 'admin.rallyes.index' );
+	}
 
-        $rallye->dateDay   = date ( 'd', strtotime ( $rallye->date ) );
-        $rallye->dateMonth = date ( 'm', strtotime ( $rallye->date ) );
-        $rallye->dateYear  = date ( 'Y', strtotime ( $rallye->date ) );
+	/**
+	 * Display the specified rallye.
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public
+	function show(
+		$id
+	) {
+		$rallye = Rallye::findOrFail( $id );
 
-        return View::make ( 'rallyes.admin.edit', compact ( 'rallye' ) );
-    }
+		$restaurants = $rallye->restaurants()->get();
+		$images      = $this->getImages( 'rallyes', $id );
+		$photos      = \Illuminate\Support\Facades\Paginator::make( $images, count( $images ), 15 );
 
-    /**
-     * Show the media management page
-     *
-     * @param $id_restaurant
-     *
-     * @return mixed
-     */
-    public function editMedias ($id_rallye) {
-        $photos          = $this->getImages ( 'rallyes', $id_rallye );
-        $photoCouverture = $this->getImageCouverture ( 'rallyes', $id_rallye );
+		return View::make( 'rallyes.show', compact( 'rallye', 'restaurants', 'photos' ) );
+	}
 
-        return View::make ( 'rallyes.admin.medias', compact ( 'photos', 'photoCouverture', 'id_rallye' ) );
-    }
+	/**
+	 * Show the form for editing the specified rallye.
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public
+	function edit(
+		$id
+	) {
+		$rallye = Rallye::find( $id );
 
-    /**
-     * Delete a media from the gallery
-     *
-     * @param $id_rallye
-     * @param $file
-     *
-     * @return mixed
-     */
-    public function destroyMedia ($id_rallye, $file) {
-        $url = public_path () . '/uploads/rallyes/' . $id_rallye . '/' . $file;
-        if (file_exists ( $url ))
-        {
-            unlink ( $url );
-        }
+		$rallye->dateDay   = date( 'd', strtotime( $rallye->date ) );
+		$rallye->dateMonth = date( 'm', strtotime( $rallye->date ) );
+		$rallye->dateYear  = date( 'Y', strtotime( $rallye->date ) );
 
-        return Redirect::route ( 'admin.rallyes.medias', $id_rallye );
-    }
+		return View::make( 'rallyes.admin.edit', compact( 'rallye' ) );
+	}
 
-    /**
-     * Add pictures into the gallery
-     *
-     * @param $id_rallye
-     *
-     * @return mixed
-     */
-    public function addMedia ($id_rallye) {
-        $images = Input::file ( 'images' );
-        if ($images[ 0 ] != null)
-        {
-            foreach ($images as $image)
-            {
-                $mime = explode ( '/', $image->getMimeType () );
-                if ($mime[ 0 ] == 'image')
-                {
-                    // Si il n'y a pas de couverture existante on prend le premier fichier comme couverture
-                    if ($this->getImageCouverture ( 'rallyes', $id_rallye ))
-                    {
-                        $filename = time () . str_random ( 12 ) . '.' . $image->getClientOriginalExtension ();
-                    }
-                    else
-                    {
-                        $filename = 'main.' . $image->getClientOriginalExtension ();
-                    }
+	/**
+	 * Show the media management page
+	 *
+	 * @param $id_restaurant
+	 *
+	 * @return mixed
+	 */
+	public
+	function editMedias(
+		$id_rallye
+	) {
+		$photos          = $this->getImages( 'rallyes', $id_rallye );
+		$photoCouverture = $this->getImageCouverture( 'rallyes', $id_rallye );
 
-                    if ($image->move ( 'uploads/rallyes/' . $id_rallye, $filename ))
-                    {
-                        $uploadedImages[ ] = $filename;
-                    }
+		return View::make( 'rallyes.admin.medias', compact( 'photos', 'photoCouverture', 'id_rallye' ) );
+	}
 
-                    return Redirect::route ( 'admin.rallyes.medias', $id_rallye );
-                }
-                else
-                {
-                    return Redirect::route ( 'admin.rallyes.medias', $id_rallye )
-                                   ->withErrors ( [
-                                       'images' => 'Le fichier ' .
-                                                   $image->getClientOriginalName () .
-                                                   'n\'est pas une image.'
-                                   ] );
-                }
-            }
-        }
-        else
-        {
-            return Redirect::route ( 'admin.rallyes.medias', $id_rallye )
-                           ->withErrors ( [ 'images' => 'Vous avez oublié les fichiers.' ] );
-        }
-    }
+	/**
+	 * Delete a media from the gallery
+	 *
+	 * @param $id_rallye
+	 * @param $file
+	 *
+	 * @return mixed
+	 */
+	public
+	function destroyMedia(
+		$id_rallye,
+		$file
+	) {
+		$url = public_path() . '/uploads/rallyes/' . $id_rallye . '/' . $file;
+		if ( file_exists( $url ) ) {
+			unlink( $url );
+		}
 
-    /**
-     * Set the picture given as couverture
-     *
-     * @param $id_rallye
-     * @param $file
-     *
-     * @return mixed
-     */
-    public function setCouverture ($id_rallye, $file) {
-        $url = public_path () . '/uploads/rallyes/' . $id_rallye . '/';
-        if (file_exists ( $url ))
-        {
-            // Ancienne couverture
-            $oldFile = $this->getImageCouverture ( 'rallyes', $id_rallye );
-            $old     = explode ( '.', $oldFile );
-            $ext     = '.' . array_pop ( $old );
+		return Redirect::route( 'admin.rallyes.medias', $id_rallye );
+	}
 
-            rename ( $url . $oldFile, $url . time () . str_random ( 12 ) . $ext );
+	/**
+	 * Add pictures into the gallery
+	 *
+	 * @param $id_rallye
+	 *
+	 * @return mixed
+	 */
+	public
+	function addMedia(
+		$id_rallye
+	) {
+		$images = Input::file( 'images' );
+		if ( $images[ 0 ] != null ) {
+			foreach ( $images as $image ) {
+				$mime = explode( '/', $image->getMimeType() );
+				if ( $mime[ 0 ] == 'image' ) {
+					// Si il n'y a pas de couverture existante on prend le premier fichier comme couverture
+					if ( $this->getImageCouverture( 'rallyes', $id_rallye ) ) {
+						$filename = time() . str_random( 12 ) . '.' . $image->getClientOriginalExtension();
+					} else {
+						$filename = 'main.' . $image->getClientOriginalExtension();
+					}
 
-            // Nouvelle couverture
-            $new = explode ( '.', $file );
-            $ext = '.' . array_pop ( $new );
+					if ( $image->move( 'uploads/rallyes/' . $id_rallye, $filename ) ) {
+						$uploadedImages[ ] = $filename;
+					}
 
-            rename ( $url . $file, $url . 'main' . $ext );
-        }
+					return Redirect::route( 'admin.rallyes.medias', $id_rallye );
+				} else {
+					return Redirect::route( 'admin.rallyes.medias', $id_rallye )
+					               ->withErrors( [
+						               'images' => 'Le fichier ' .
+						                           $image->getClientOriginalName() .
+						                           'n\'est pas une image.'
+					               ] );
+				}
+			}
+		} else {
+			return Redirect::route( 'admin.rallyes.medias', $id_rallye )
+			               ->withErrors( [ 'images' => 'Vous avez oublié les fichiers.' ] );
+		}
+	}
 
-        return Redirect::route ( 'admin.rallyes.medias', $id_rallye );
-    }
+	/**
+	 * Set the picture given as couverture
+	 *
+	 * @param $id_rallye
+	 * @param $file
+	 *
+	 * @return mixed
+	 */
+	public
+	function setCouverture(
+		$id_rallye,
+		$file
+	) {
+		$url = public_path() . '/uploads/rallyes/' . $id_rallye . '/';
+		if ( file_exists( $url ) ) {
+			// Ancienne couverture
+			$oldFile = $this->getImageCouverture( 'rallyes', $id_rallye );
+			$old     = explode( '.', $oldFile );
+			$ext     = '.' . array_pop( $old );
 
-    /**
-     * Update the specified rallye in storage.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function update ($id) {
-        $input           = Input::all ();
-        $input[ 'date' ] = $input[ 'dateYear' ] . '-' . $input[ 'dateMonth' ] . '-' . $input[ 'dateDay' ];
-        unset( $input[ 'dateYear' ], $input[ 'dateMonth' ], $input[ 'dateDay' ] );
+			rename( $url . $oldFile, $url . time() . str_random( 12 ) . $ext );
 
-        $this->formRallye->validate ( $input );
+			// Nouvelle couverture
+			$new = explode( '.', $file );
+			$ext = '.' . array_pop( $new );
 
-        $rallye = Rallye::findOrFail ( $id );
+			rename( $url . $file, $url . 'main' . $ext );
+		}
 
-        $rallye->update ( $input );
+		return Redirect::route( 'admin.rallyes.medias', $id_rallye );
+	}
 
-        return Redirect::route ( 'admin.rallyes.index' );
-    }
+	/**
+	 * Update the specified rallye in storage.
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public
+	function update(
+		$id
+	) {
+		$input           = Input::all();
+		$input[ 'date' ] = $input[ 'dateYear' ] . '-' . $input[ 'dateMonth' ] . '-' . $input[ 'dateDay' ];
+		unset( $input[ 'dateYear' ], $input[ 'dateMonth' ], $input[ 'dateDay' ] );
 
-    /**
-     * Remove the specified rallye from storage.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function destroy ($id) {
-        Rallye::destroy ( $id );
+		$this->formRallye->validate( $input );
 
-        return Redirect::route ( 'admin.rallyes.index' );
-    }
+		$rallye = Rallye::findOrFail( $id );
+
+		$rallye->update( $input );
+
+		return Redirect::route( 'admin.rallyes.index' );
+	}
+
+	/**
+	 * Remove the specified rallye from storage.
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public
+	function destroy(
+		$id
+	) {
+		Rallye::destroy( $id );
+
+		return Redirect::route( 'admin.rallyes.index' );
+	}
 
 }

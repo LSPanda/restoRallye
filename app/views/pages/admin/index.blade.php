@@ -26,6 +26,9 @@
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <td colspan="2"><a class="btn btn-block btn-info" href="{{ route( 'admin.rallyes.edit', $nextRallye->id ) }}">Modifier le resto-rallye</a></td>
+                        </tr>
                     </table>
                 @else
                     <div class="panel-body">

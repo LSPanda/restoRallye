@@ -52,6 +52,7 @@ class RestaurantsController extends \BaseController {
 
         $inputs = Input::all ();
 
+	    // TODO Prendre une image de couverture (voir dans RallyesController
         $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
 
         Restaurant::create ( $inputs );
