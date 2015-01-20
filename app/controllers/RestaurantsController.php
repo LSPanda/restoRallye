@@ -52,7 +52,7 @@ class RestaurantsController extends \BaseController {
 
         $inputs = Input::all ();
 
-	    // TODO Prendre une image de couverture (voir dans RallyesController
+        // TODO Prendre une image de couverture (voir dans RallyesController
         $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
 
         Restaurant::create ( $inputs );
@@ -77,7 +77,11 @@ class RestaurantsController extends \BaseController {
         else
         {
             $images = $this->getImages ( 'restaurants', $id );
-            $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
+            $photos = [];
+            if ($images)
+            {
+                $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
+            }
 
             return View::make ( 'restaurants.show', compact ( 'restaurant', 'photos' ) );
         }

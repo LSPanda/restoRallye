@@ -13,7 +13,8 @@
         </h2>
         <!-- TODO Microdata sur la p itemprop="about" -->
         {{ $rallye->body }}
-        </div>
+    </div>
+    @if ($restaurants)
         <div class="parallax__img parallax__img--ten"></div>
         <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
             <h2 itemprop="headline" class="gamma">Les hôtes de la soirée</h2>
@@ -35,6 +36,8 @@
                 </div>{{--
             --}}@endforeach
         </div>
+    @endif
+    @if ($photos)
         <div class="parallax__img parallax__img--eleven"></div>
         <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
             <h2 itemprop="headline">Souvenirs en image</h2>
@@ -49,6 +52,7 @@
                 {{ $photos->links('partials.paginate') }}
             </div>
         </div>
+    @endif
     <div class="parallax__img parallax__img--twelve"></div>
 @stop
 
@@ -56,9 +60,11 @@
     <script type="text/javascript">
       var addressRdv = "{{ $rallye->adress . ', ' . $rallye->postal_code . ' ' . $rallye->city . ', Belgique'}}";
       var addressRsts = [];
-      @foreach ($restaurants as $restaurant)
-        addressRsts.push("{{ $restaurant->adress . ', ' . $restaurant->postal_code . ' ' . $restaurant->city . ', Belgique'}}");
-      @endforeach
+      @if($restaurants)
+          @foreach ($restaurants as $restaurant)
+            addressRsts.push("{{ $restaurant->adress . ', ' . $restaurant->postal_code . ' ' . $restaurant->city . ', Belgique'}}");
+          @endforeach
+      @endif
 
       console.log(addressRsts);
 

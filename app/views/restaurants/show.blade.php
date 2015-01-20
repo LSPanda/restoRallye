@@ -29,17 +29,19 @@
                     <a href="{{ $restaurant->website }}" target="_blank" itemprop="url" class="block">{{ $restaurant->website }}</a>
                 @endif
             </div>
-            <div class="restaurant__gallery" id="paginationAnchor">
-                <h3 itemprop="headline" class="delta">Notre salle</h3>
-                @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
-                    --}}<div class="inline-block gallery">
-                        <a itemprop="url" href="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
-                            <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
-                        </a>
-                    </div>{{--
-                --}}@endfor
-                {{ $photos->links('partials.paginate') }}
-            </div>
+            @if($photos)
+                <div class="restaurant__gallery" id="paginationAnchor">
+                    <h3 itemprop="headline" class="delta">Notre salle</h3>
+                    @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
+                        --}}<div class="inline-block gallery">
+                            <a itemprop="url" href="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
+                                <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
+                            </a>
+                        </div>{{--
+                    --}}@endfor
+                    {{ $photos->links('partials.paginate') }}
+                </div>
+            @endif
         </div>
     </div>
     <div class="parallax__img parallax__img parallax__img--nine"></div>

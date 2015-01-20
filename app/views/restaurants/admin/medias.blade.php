@@ -13,7 +13,7 @@
                 <p class="text-center lead">Photo de couverture</p>
                 <img src="/uploads/restaurants/{{ $id_restaurant }}/{{ $photoCouverture }}?{{ rand(0,100) }}">
             @else
-                <p class="text-center lead">Débutez botre galerie de photo à l'aide du bouton à droite.</p>
+                <p class="text-center lead">Débutez votre galerie de photo à l'aide du bouton à droite.</p>
             @endif
         </div>
         <div class="caption col-md-6">
