@@ -55,7 +55,11 @@ class PagesController extends \BaseController {
      * @return mixed
      */
     public function homeAdmin () {
-        return View::make ( 'pages.admin.index', compact ( 'about' ) );
+        $nextRallye = Rallye::where ( 'date', '>', date ( 'Y-m-d' ) )->first ();
+
+        $nextRallye->restaurants = $nextRallye->restaurants()->get();
+
+        return View::make ( 'pages.admin.index', compact ( 'about', 'nextRallye' ) );
     }
 
     /**
