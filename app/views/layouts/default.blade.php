@@ -22,7 +22,7 @@
     @include('partials.footer')
 
     {{ HTML::script('js/vendor/modernizr/modernizr-2.6.2.min.js') }}
+    {{ HTML::script('js/vendor/jquery/jquery.min.js') }}
+    {{ HTML::script('js/script.min.js') }}
     @yield('script')
-    {{--{{ HTML::script('js/vendor/jquery/jquery.min.js') }}--}}
-    {{--{{ HTML::script('js/script.min.js') }}--}}
 </body>

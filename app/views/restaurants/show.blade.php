@@ -51,7 +51,5 @@
 
     </script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&amp;sensor=false"></script>
-    <script type="text/javascript" src="/js/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/script.min.js"></script>
-    <script type="text/javascript" src="/js/vendor/fresco/fresco.js"></script>
+    {{ HTML::script('js/vendor/fresco/fresco.js') }}
 @stop

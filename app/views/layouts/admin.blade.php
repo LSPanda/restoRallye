@@ -39,7 +39,7 @@
 
         {{ HTML::script('js/vendor/jquery/jquery.min.js') }}
         {{ HTML::script('js/vendor/bootstrap/bootstrap.min.js') }}
-        @yield('scripts')
         {{ HTML::script('js/vendor/pace/pace.min.js') }}
+        @yield('scripts')
     </body>
 </html>

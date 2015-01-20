@@ -32,7 +32,7 @@
         </section>
         <div class="signature">
             <p>Designed and created by&nbsp;
-            <a itemprop="url" href="http://luc-matagne.be/Portfolio/">Luc Matagne</a>
+            <a itemprop="url" href="http://luc-matagne.be/">Luc Matagne</a>
             &nbsp;and&nbsp;
             <a itemprop="url" href="http://portfolio.simon-leyder.be/">Simon Leyder</a> &nbsp;@ 2014</p>
         </div>
