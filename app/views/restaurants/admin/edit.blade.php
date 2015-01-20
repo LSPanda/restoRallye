@@ -67,7 +67,17 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary pull-right">Éditer</button>
+                <div class="row">
+                    <div class="col-md-8">
+                        <a href="{{ route( 'admin.restaurants.medias', $restaurant->id ) }}" type="submit" class="btn btn-block btn-lg btn-info">
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                            Gestion de la galerie
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-block btn-lg btn-success">Éditer</button>
+                    </div>
+                </div>
             </div>
         </div>
     {{ Form::close() }}

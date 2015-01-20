@@ -21,7 +21,7 @@ class BaseController extends Controller {
         $imgNames = [ ];
         while ($entry = @readdir ( $imgDir ))
         {
-            if ($entry != '.' && $entry != '..')
+            if ($entry != '.' && $entry != '..' && substr ( $entry, 0, 4 ) != 'main')
             {
                 $imgNames[ ] = $entry;
             }
@@ -29,6 +29,23 @@ class BaseController extends Controller {
         closedir ( $imgDir );
 
         return $imgNames;
+    }
+
+    public function getImageCouverture ($type, $id) {
+        $imgDir = opendir ( public_path () . '/uploads/' . $type . '/' . $id . '/' ) or die( 'Erreur' );
+
+        $imgName = false;
+        while ($entry = @readdir ( $imgDir ))
+        {
+            if (substr ( $entry, 0, 4 ) == 'main')
+            {
+                $imgName = $entry;
+                break;
+            }
+        }
+        closedir ( $imgDir );
+
+        return $imgName;
     }
 
 }

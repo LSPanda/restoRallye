@@ -104,6 +104,30 @@ Route::group ( [ 'before' => 'auth', 'prefix' => $_ENV[ 'PREFIX' ] ],
     {
         Route::resource ( 'restaurants', 'RestaurantsController' );
 
+        Route::get ( '/restaurants/{id}/medias',
+            [
+                'as'     => 'admin.restaurants.medias',
+                'uses'   => 'RestaurantsController@editMedias'
+            ] );
+
+        Route::delete ( '/restaurants/{id}/medias/{file}',
+            [
+                'as'     => 'admin.restaurants.destroy.medias',
+                'uses'   => 'RestaurantsController@destroyMedia'
+            ] );
+
+        Route::post ( '/restaurants/{id}/medias/',
+            [
+                'as'     => 'admin.restaurants.add.medias',
+                'uses'   => 'RestaurantsController@addMedia'
+            ] );
+
+        Route::get ( '/restaurants/{id}/medias/couv/{file}',
+            [
+                'as'     => 'admin.restaurant.setCouverture.medias',
+                'uses'   => 'RestaurantsController@setCouverture'
+            ] );
+
         Route::resource ( 'rallyes', 'RallyesController' );
 
         Route::resource ( 'menus', 'MenusController' );
