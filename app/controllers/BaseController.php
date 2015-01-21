@@ -48,4 +48,26 @@ class BaseController extends Controller {
         return $imgName;
     }
 
+    public function rmdir_r($path)
+    {
+        if (is_dir($path) === true)
+        {
+            $files = array_diff(scandir($path), array('.', '..'));
+
+            foreach ($files as $file)
+            {
+                $this->rmdir_r(realpath($path) . '/' . $file);
+            }
+
+            return rmdir($path);
+        }
+
+        else if (is_file($path) === true)
+        {
+            return unlink($path);
+        }
+
+        return false;
+    }
+
 }

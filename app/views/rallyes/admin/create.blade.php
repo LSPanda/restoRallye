@@ -6,11 +6,25 @@
 @stop
 
 @section('content')
-    {{ Form::open(['route' => [ 'admin.rallyes.update', null], 'method' => 'post', 'file' => true ]) }}
-        <div class="form-group">
-            {{ Form::label('body', 'Description') }}
-            {{ Form::textarea('body', null, ['id' => 'summernote']) }}
-            {{ $errors->first('body', '<div class="alert alert-danger">:message</div>') }}
+    {{ Form::open(['route' => [ 'admin.rallyes.update', null], 'method' => 'post', 'files' => true ]) }}
+        <div class="row">
+            <div class="form-group col-md-9">
+                {{ Form::label('body', 'Description') }}
+                {{ Form::textarea('body', null, ['id' => 'summernote']) }}
+                {{ $errors->first('body', '<div class="alert alert-danger">:message</div>') }}
+            </div>
+            <div class="form-group col-md-3 well">
+                {{ Form::label('restaurantList', 'Restaurants du rallyes') }}
+                @foreach($restaurants as $restaurant)
+                    <div class="checkbox">
+                        <label for="{{ $restaurant->id }}">
+                            {{ Form::checkbox('restaurants[]', $restaurant->id, null, [ 'id' => $restaurant->id ]) }}
+                            {{ $restaurant->name }}
+                        </label>
+                    </div>
+                @endforeach
+                {{ $errors->first('restaurants', '<div class="alert alert-danger">:message</div>') }}
+            </div>
         </div>
         <div class="row">
             <div class="col-md-7">

@@ -18,7 +18,8 @@ class RallyeCreate extends FormValidator {
         'postal_code' => 'required|digits:4',
         'city'        => 'required',
         'date'        => 'date',
-	    'image'       => 'required|image'
+        'image'       => [ 'required', 'image' ],
+        'restaurants' => 'required'
     ];
 
     /**
@@ -33,7 +34,8 @@ class RallyeCreate extends FormValidator {
         'postal_code.digits'   => 'Le code postal doit être composé de 4 chiffres.',
         'city.required'        => 'La ville est requise.',
         'date.date'            => 'La date entrée est incorrecte.',
-	    'image.required'       => 'Une image de couverture est requise.',
-	    'image.image'          => 'Le fichier envoyé n\'est pas une image.'
+        'image.required'       => 'Une image de couverture est requise.',
+        'image.image'          => 'Le fichier envoyé n\'est pas une image.',
+        'restaurants.required' => 'Vous devez choisir au moins un restaurant.'
     ];
 }

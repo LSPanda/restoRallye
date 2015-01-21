@@ -32,9 +32,10 @@
 
                     <button type="submit" class="btn btn-block btn-lg btn-default">Envoyer</button>
                 </div>
-                <div class="fallback">
-                </div>
             {{ Form::close() }}
+            <div class="form-group">
+                <a href="{{ route('admin.restaurants.edit', $id_restaurant) }}" type="submit" class="btn btn-block btn-lg btn-default">Retour</a>
+            </div>
         </div>
     </div>
     <div class="row">

@@ -7,10 +7,24 @@
 
 @section('content')
     {{ Form::open(['route' => ['admin.rallyes.update', $rallye->id], 'method' => 'put']) }}
-        <div class="form-group">
-            {{ Form::label('body', 'Description') }}
-            {{ Form::textarea('body', $rallye->body, ['id' => 'summernote']) }}
-            {{ $errors->first('body', '<div class="alert alert-danger">:message</div>') }}
+        <div class="row">
+            <div class="form-group col-md-9">
+                {{ Form::label('body', 'Description') }}
+                {{ Form::textarea('body', $rallye->body, ['id' => 'summernote']) }}
+                {{ $errors->first('body', '<div class="alert alert-danger">:message</div>') }}
+            </div>
+            <div class="form-group col-md-3 well">
+                {{ Form::label('restaurantList', 'Restaurants du rallyes') }}
+                @foreach($restaurants as $restaurant)
+                    <div class="checkbox">
+                        <label for="{{ $restaurant->id }}">
+                            {{ Form::checkbox('restaurants[]', $restaurant->id, in_array($restaurant->id, $restaurants_attached), [ 'id' => $restaurant->id ]) }}
+                            {{ $restaurant->name }}
+                        </label>
+                    </div>
+                @endforeach
+                {{ $errors->first('restaurants', '<div class="alert alert-danger">:message</div>') }}
+            </div>
         </div>
         <div class="row">
             <div class="col-md-7">

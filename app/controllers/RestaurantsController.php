@@ -39,7 +39,7 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function create () {
-        return View::make ( 'restaurants.admin.create' );
+        return View::make ( 'restaurants.admin.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class RestaurantsController extends \BaseController {
 
         $inputs = Input::all ();
 
-        // TODO Prendre une image de couverture (voir dans RallyesController
+        // TODO Prendre une image de couverture (voir dans RallyesController)
         $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
 
         Restaurant::create ( $inputs );

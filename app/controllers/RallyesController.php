@@ -47,7 +47,9 @@ class RallyesController extends \BaseController {
      * @return Response
      */
     public function create () {
-        return View::make ( 'rallyes.admin.create' );
+        $restaurants = Restaurant::all ();
+
+        return View::make ( 'rallyes.admin.create', compact ( 'restaurants' ) );
     }
 
     /**
@@ -63,11 +65,21 @@ class RallyesController extends \BaseController {
 
         $this->formRallyeCreate->validate ( $input );
 
-        $filename = 'main.' . Input::file ( 'image' )->getClientOriginalExtension ();
+        $restaurants_id = $input[ 'restaurants' ];
+        unset( $input[ 'restaurants' ] );
 
         $rallye = Rallye::create ( $input );
 
-        Input::file ( 'image' )->move ( 'uploads/rallyes/' . $rallye->id, $filename );
+        $images   = Input::file ( 'image' );
+        $filename = 'main.' . $images->getClientOriginalExtension ();
+        $images->move ( 'uploads/rallyes/' . $rallye->id, $filename );
+        //        TODO Récupérer le menu
+        $menu = Menu::all ()->first ();
+
+        foreach ($restaurants_id as $id)
+        {
+            $rallye->restaurants ()->attach ( $id, [ 'menu_id' => $menu->id ] );
+        }
 
         return Redirect::route ( 'admin.rallyes.index' );
     }
@@ -116,7 +128,11 @@ class RallyesController extends \BaseController {
         $rallye->dateMonth = date ( 'm', strtotime ( $rallye->date ) );
         $rallye->dateYear  = date ( 'Y', strtotime ( $rallye->date ) );
 
-        return View::make ( 'rallyes.admin.edit', compact ( 'rallye' ) );
+        $restaurants = Restaurant::all ();
+
+        $restaurants_attached = $rallye->restaurants()->lists('restaurant_id');
+
+        return View::make ( 'rallyes.admin.edit', compact ( 'rallye', 'restaurants', 'restaurants_attached' ) );
     }
 
     /**
@@ -245,21 +261,55 @@ class RallyesController extends \BaseController {
 
         $this->formRallye->validate ( $input );
 
+        $restaurants_id = $input[ 'restaurants' ];
+        unset( $input[ 'restaurants' ] );
+
         $rallye = Rallye::findOrFail ( $id );
 
         $rallye->update ( $input );
+
+        // Deleting all relations to refresh them
+        $rallye = Rallye::find ( $id );
+
+        $restaurants = $rallye->restaurants ()->get ();
+        // TODO Récupérer le menu
+        $menu = Menu::all ()->first ();
+
+        foreach ($restaurants as $restaurant)
+        {
+            $rallye->restaurants ()->detach ( $restaurant->id, [ 'menu_id' => $menu->id ] );
+        }
+
+        // Re-attaching new restaurants
+        foreach ($restaurants_id as $id)
+        {
+            $rallye->restaurants ()->attach ( $id, [ 'menu_id' => $menu->id ] );
+        }
 
         return Redirect::route ( 'admin.rallyes.index' );
     }
 
     /**
-     * Remove the specified rallye from storage.
+     * Remove the specified rallye (with images & relations) from storage
      *
      * @param  int $id
      *
      * @return Response
      */
     public function destroy ($id) {
+        $this->rmdir_r ( public_path () . '/uploads/rallyes/' . $id );
+
+        $rallye = Rallye::find ( $id );
+
+        $restaurants = $rallye->restaurants ()->get ();
+        // TODO Récupérer le menu
+        $menu = Menu::all ()->first ();
+
+        foreach ($restaurants as $restaurant)
+        {
+            $rallye->restaurants ()->detach ( $restaurant->id, [ 'menu_id' => $menu->id ] );
+        }
+
         Rallye::destroy ( $id );
 
         return Redirect::route ( 'admin.rallyes.index' );

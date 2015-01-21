@@ -17,7 +17,8 @@ class Rallye extends FormValidator {
         'adress'      => 'required',
         'postal_code' => 'required|digits:4',
         'city'        => 'required',
-        'date'        => 'date'
+        'date'        => 'date',
+        'restaurants' => 'required'
     ];
 
     /**
@@ -31,6 +32,7 @@ class Rallye extends FormValidator {
         'postal_code.required' => 'Le code postal est requis.',
         'postal_code.digits'   => 'Le code postal doit être composé de 4 chiffres.',
         'city.required'        => 'La ville est requise.',
-        'date.date'            => 'La date entrée est incorrecte.'
+        'date.date'            => 'La date entrée est incorrecte.',
+        'restaurants.required' => 'Vous devez choisir au moins un restaurant.'
     ];
 }
