@@ -1,6 +1,14 @@
 <?php
+use App\Forms\Post as FormPost;
+use App\Helpers\Slug as HelperSlug;
 
 class PostsController extends \BaseController {
+
+    protected $formPost;
+
+    public function __construct (FormPost $formPost) {
+        $this->formPost = $formPost;
+    }
 
     /**
      * Display a listing of posts
@@ -8,18 +16,18 @@ class PostsController extends \BaseController {
      * @return Response
      */
     public function index () {
-        $posts = Type::whereName ( 'post' )->first ()->posts ()->paginate ( 6 );
-
         if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
         {
+            $posts = Type::whereName ( 'post' )->first ()->posts ()->orderBy ( 'id', 'DESC' )->get ();
+
             return View::make ( 'posts.admin.index', compact ( 'posts' ) );
         }
         else
         {
+            $posts = Type::whereName ( 'post' )->first ()->posts ()->orderBy ( 'id', 'DESC' )->paginate ( 6 );
+
             return View::make ( 'posts.index', compact ( 'posts' ) );
         }
-
-
     }
 
     /**
@@ -28,7 +36,7 @@ class PostsController extends \BaseController {
      * @return Response
      */
     public function create () {
-        return View::make ( 'posts.create' );
+        return View::make ( 'posts.admin.create' );
     }
 
     /**
@@ -37,16 +45,18 @@ class PostsController extends \BaseController {
      * @return Response
      */
     public function store () {
-        $validator = Validator::make ( $data = Input::all (), Post::$rules );
+        $input = Input::all ();
+        $this->formPost->validate ( $input );
 
-        if ($validator->fails ())
-        {
-            return Redirect::back ()->withErrors ( $validator )->withInput ();
-        }
+        $type               = Type::whereName ( 'post' )->first ();
+        $input[ 'type_id' ] = $type->id;
 
-        Post::create ( $data );
+        $slug            = new HelperSlug();
+        $input[ 'slug' ] = $slug->setSlugAttribute ( $input[ 'name' ], new Post() );
 
-        return Redirect::route ( 'posts.index' );
+        Post::create ( $input );
+
+        return Redirect::route ( 'admin.posts.index' );
     }
 
     /**
@@ -59,7 +69,9 @@ class PostsController extends \BaseController {
     public function show ($id) {
         $post = Post::findOrFail ( $id );
 
-        return View::make ( 'posts.show', compact ( 'post' ) );
+        $post->thumb = $this->getImageCouverture ( 'posts', $id );
+
+        return View::make ( 'posts.admin.show', compact ( 'post' ) );
     }
 
     /**
@@ -72,7 +84,9 @@ class PostsController extends \BaseController {
     public function edit ($id) {
         $post = Post::find ( $id );
 
-        return View::make ( 'posts.edit', compact ( 'post' ) );
+        $post->thumb = $this->getImageCouverture ( 'posts', $id );
+
+        return View::make ( 'posts.admin.edit', compact ( 'post' ) );
     }
 
     /**
@@ -85,16 +99,22 @@ class PostsController extends \BaseController {
     public function update ($id) {
         $post = Post::findOrFail ( $id );
 
-        $validator = Validator::make ( $data = Input::all (), Post::$rules );
+        $input = Input::all ();
+        $image = Input::file ( 'image' );
 
-        if ($validator->fails ())
+        if ($image)
         {
-            return Redirect::back ()->withErrors ( $validator )->withInput ();
+            $this->rmdir_r ( public_path () . '/uploads/posts/' . $id );
+            $image->move ( 'uploads/posts/' . $id, 'main.' . $image->getClientOriginalExtension () );
         }
 
-        $post->update ( $data );
+        unset( $input[ 'image' ] );
 
-        return Redirect::route ( 'posts.index' );
+        $this->formPost->validate ( $input );
+
+        $post->update ( $input );
+
+        return Redirect::route ( 'admin.posts.index' );
     }
 
     /**
@@ -105,9 +125,10 @@ class PostsController extends \BaseController {
      * @return Response
      */
     public function destroy ($id) {
+        $this->rmdir_r ( public_path () . '/uploads/posts/' . $id );
         Post::destroy ( $id );
 
-        return Redirect::route ( 'posts.index' );
+        return Redirect::route ( 'admin.posts.index' );
     }
 
 }

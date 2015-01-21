@@ -12,9 +12,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ route('admin.home') }}">Dashboard</a></li>
-                <li><a href="{{ route('home') }}">Voir le site</a></li>
-                <li><a href="#">Profil</a></li>
-                <li class="text-center"><a>Gestion</a></li>
+                <li><a href="{{ route('home') }}" target="_blank">Voir le site</a></li>
+                <li class="text-center visible-xs-block"><a>Gestion</a></li>
                 <li class="visible-xs-block"><a href="{{ route('admin.restaurants.index') }}">Restaurants</a></li>
                 <li class="visible-xs-block"><a href="{{ route('admin.menus.index') }}">Menus</a></li>
                 <li class="visible-xs-block"><a href="{{ route('admin.rallyes.index') }}">Rallyes</a></li>
@@ -23,9 +22,6 @@
                 <li class="visible-xs-block"><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li><a href="{{ route('logout') }}">Déconnexion</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Recherche...">
-            </form>
         </div>
     </div>
 </nav>
