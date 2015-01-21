@@ -61,7 +61,7 @@
                                     --}}</button>{{--
                                 --}}</a>{{--
                                 --}}{{ Form::open(['route' => ['admin.restaurants.destroy', $restaurant->id], 'method' => 'delete', 'class' => 'inline']) }}{{--
-                                --}}<button type="submit" class="btn btn-danger" title="Supprimer le restaurant">{{--
+                                --}}<button type="submit" class="btn btn-danger deleteButton" title="Supprimer le restaurant" data-message="Voulez-vous vraiment supprimer ce restaurant ? Vous perdrez également la galerie liée à celui-ci." >{{--
                                     --}}<span class="glyphicon glyphicon-remove"></span>{{--
                                 --}}</button>
                                 {{ Form::close() }}
@@ -129,6 +129,12 @@
             $(function(){
                 $("#tableSorter").tablesorter();
             });
+        });
+        
+        $('.deleteButton').click(function ( e ) {
+            if( !window.confirm($(this).attr('data-message')) ) {
+                e.preventDefault();
+            }
         });
     </script>
 @stop

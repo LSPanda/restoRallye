@@ -59,7 +59,7 @@
                                     ],
                                     'method' => 'delete'
                                 ]) }}
-                                    <button type="submit" class="btn btn-block btn-danger" title="Supprimer la photo">
+                                    <button type="submit" class="btn btn-block btn-danger deleteButton" title="Supprimer la photo" data-message="Voulez-vous vraiment supprimer cette photo ?">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </button>
                                 {{ Form::close() }}
@@ -106,5 +106,11 @@
     {{ HTML::script('js/vendor/bootstrap/fileButton.js') }}
     <script type="text/javascript">
         $('.file-input').bootstrapFileInput();
+
+        $('.deleteButton').click(function ( e ) {
+            if( !window.confirm($(this).attr('data-message')) ) {
+                e.preventDefault();
+            }
+        });
     </script>
 @stop

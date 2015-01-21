@@ -60,41 +60,41 @@
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="tableSorter">
             <thead>
-            <tr>
-                <th>#</th>
-                <th>Lieu</th>
-                <th>Restaurants</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Lieu</th>
+                    <th>Restaurants</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
             </thead>
             <tbody>
-            @foreach($rallyes as $rallye)
-            <tr>
-                <td>{{ $rallye->id }}</td>
-                <td>{{ $rallye->adress . ', ' . $rallye->postal_code . ' ' . $rallye->city }}</td>
-                <td>
-                    <ul>
-                        @foreach($restaurants[$rallye->id] as $restaurant)
-                            <li><a href="{{ route( 'admin.restaurants.show', $restaurant->id ) }}">{{ $restaurant->name }}</a></li>
-                        @endforeach
-                    </ul>
-                </td>
-                <td>{{ date('d/m/Y' , strtotime($rallye->date)) }}</td>
-                <td>
-                    <a href="{{ route('admin.rallyes.edit', $rallye->id) }}" title="Éditer le rallye">
-                        <button class="btn btn-primary">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                        </button>
-                    </a>
-                    {{ Form::open(['route' => ['admin.rallyes.destroy', $rallye->id], 'method' => 'delete', 'class' => 'inline']) }}
-                        <button type="submit" class="btn btn-danger" title="Supprimer le restaurant">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                    {{ Form::close() }}
-                </td>
-            </tr>
-            @endforeach
+                @foreach($rallyes as $rallye)
+                    <tr>
+                        <td>{{ $rallye->id }}</td>
+                        <td>{{ $rallye->adress . ', ' . $rallye->postal_code . ' ' . $rallye->city }}</td>
+                        <td>
+                            <ul>
+                                @foreach($restaurants[$rallye->id] as $restaurant)
+                                    <li><a href="{{ route( 'admin.restaurants.show', $restaurant->id ) }}">{{ $restaurant->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </td>
+                        <td>{{ date('d/m/Y' , strtotime($rallye->date)) }}</td>
+                        <td>
+                            <a href="{{ route('admin.rallyes.edit', $rallye->id) }}" title="Éditer le rallye">
+                                <button class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                            </a>
+                            {{ Form::open(['route' => ['admin.rallyes.destroy', $rallye->id], 'method' => 'delete', 'class' => 'inline']) }}
+                                <button type="submit" class="btn btn-danger deleteButton" title="Supprimer le rallye" data-message="Voulez-vous vraiment supprimer ce rallye ? Vous perdrez également la galerie liée à cet événement." >
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            {{ Form::close() }}
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
             <tbody>
                 <tr>
@@ -156,6 +156,12 @@
             $(function(){
                 $("#tableSorter").tablesorter();
             });
+        });
+
+        $('.deleteButton').click(function ( e ) {
+            if( !window.confirm($(this).attr('data-message')) ) {
+                e.preventDefault();
+            }
         });
     </script>
 @stop

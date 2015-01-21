@@ -243,6 +243,19 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function destroy ($id) {
+        $this->rmdir_r ( public_path () . '/uploads/restaurants/' . $id );
+
+        $restaurant = Restaurant::find ( $id );
+
+        $rallyes = $restaurant->rallyes ()->get ();
+        // TODO Récupérer le menu
+        $menu = Menu::all ()->first ();
+
+        foreach ($rallyes as $rallye)
+        {
+            $restaurant->rallyes()->detach ( $rallye->id, [ 'menu_id' => $menu->id ] );
+        }
+
         Restaurant::destroy ( $id );
 
         return Redirect::route ( 'admin.restaurants.index' );

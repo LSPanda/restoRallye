@@ -54,7 +54,7 @@
                                     --}}</button>{{--
                                 --}}</a>{{--
                                 --}}{{ Form::open(['route' => ['admin.posts.destroy', $post->id], 'method' => 'delete', 'class' => 'inline']) }}{{--
-                                --}}<button type="submit" class="btn btn-danger" title="Supprimer le post">{{--
+                                --}}<button type="submit" class="btn btn-danger deleteButton" title="Supprimer le post" data-message="Voulez-vous vraiment supprimer cet article ?">{{--
                                     --}}<span class="glyphicon glyphicon-remove"></span>{{--
                                 --}}</button>
                                 {{ Form::close() }}
@@ -122,6 +122,12 @@
             $(function(){
                 $("#tableSorter").tablesorter();
             });
+        });
+
+        $('.deleteButton').click(function ( e ) {
+            if( !window.confirm($(this).attr('data-message')) ) {
+                e.preventDefault();
+            }
         });
     </script>
 @stop

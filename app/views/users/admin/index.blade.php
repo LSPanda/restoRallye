@@ -69,7 +69,7 @@
                                     --}}</button>{{--
                                 --}}</a>{{--
                                 --}}{{ Form::open(['route' => ['admin.users.destroy', $user->id], 'method' => 'delete', 'class' => 'inline']) }}{{--
-                                --}}<button type="submit" class="btn btn-danger" title="Supprimer l'utilisateur">{{--
+                                --}}<button type="submit" class="btn btn-danger deleteButton" title="Supprimer l'utilisateur" data-message="Voulez-vous vraiment supprimer l'utilisateur '{{ $user->login }}' ?" >{{--
                                     --}}<span class="glyphicon glyphicon-remove"></span>{{--
                                 --}}</button>
                                 {{ Form::close() }}
@@ -138,5 +138,12 @@
                 $("#tableSorter").tablesorter();
             });
         });
+
+        $('.deleteButton').click(function ( e ) {
+            if( !window.confirm($(this).attr('data-message')) ) {
+                e.preventDefault();
+            }
+        });
     </script>
+
 @stop
