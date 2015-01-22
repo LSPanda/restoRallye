@@ -29,9 +29,11 @@ class PagesController extends \BaseController {
     public function home () {
         $about = Type::whereName ( 'about-home' )->first ()->posts ()->first ();
 
+        $nextRallye = Rallye::where ( 'date', '>', date ( 'Y-m-d' ) )->first ();
+
         $restaurants = Restaurant::all ()->random ( 3 );
 
-        return View::make ( 'pages.home', compact ( 'about', 'restaurants' ) );
+        return View::make ( 'pages.home', compact ( 'about', 'restaurants', 'nextRallye' ) );
     }
 
     /**

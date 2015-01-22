@@ -2,7 +2,7 @@
 @section('content')
     <div itemscope itemtype="http://schema.org/Thing" class="parallax__img position--relative parallax__img--one">
         <blockquote itemprop="description" class="quote">
-            Ne manquez pas notre prochain <a itemprop="url" href="evenements.html" class="quote__link">Rendez-vous </a>dans la région de Liège, à Seraing
+            Ne manquez pas notre prochain <a itemprop="url" href="{{ route('rallyes.show', $nextRallye->id) }}" class="quote__link">Rendez-vous </a>dans la région de {{ $nextRallye->city }}
         </blockquote>
     </div>
     <div itemscope itemtype="http://schema.org/Thing" class="parallax__body addText">
