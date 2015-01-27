@@ -10,21 +10,21 @@ class RallyeRestaurantTableSeeder extends Seeder {
         $resto[ 'jeux2saveurs' ] = Restaurant::whereName ( 'Jeux2Saveurs' )->first ();
         $resto[ 'alPierino' ]    = Restaurant::whereName ( 'Al Pierino' )->first ();
         // Getting the menu
-        $menu = Menu::all ()->first ();
+        $menus = Menu::all ();
 
         // Future rallye
         $rallye = Rallye::whereCity ( 'Blehen' )->first ();
         // Attach the restaurants
-        $rallye->restaurants ()->attach ( $resto[ 'tambouille' ]->id, [ 'menu_id' => $menu->id ] );
-        $rallye->restaurants ()->attach ( $resto[ 'fallais_oser' ]->id, [ 'menu_id' => $menu->id ] );
-        $rallye->restaurants ()->attach ( $resto[ 'jeux2saveurs' ]->id, [ 'menu_id' => $menu->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'tambouille' ]->id, [ 'menu_id' => $menus[0]->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'fallais_oser' ]->id, [ 'menu_id' => $menus[1]->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'jeux2saveurs' ]->id, [ 'menu_id' => $menus[2]->id ] );
 
         // Past rallye
         $rallye = Rallye::whereCity ( 'Liège' )->first ();
         // Attach the restaurants
-        $rallye->restaurants ()->attach ( $resto[ 'alPierino' ]->id, [ 'menu_id' => $menu->id ] );
-        $rallye->restaurants ()->attach ( $resto[ 'jeux2saveurs' ]->id, [ 'menu_id' => $menu->id ] );
-        $rallye->restaurants ()->attach ( $resto[ 'tambouille' ]->id, [ 'menu_id' => $menu->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'alPierino' ]->id, [ 'menu_id' => $menus[2]->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'jeux2saveurs' ]->id, [ 'menu_id' => $menus[0]->id ] );
+        $rallye->restaurants ()->attach ( $resto[ 'tambouille' ]->id, [ 'menu_id' => $menus[1]->id ] );
     }
 
 }

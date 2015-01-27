@@ -25,12 +25,12 @@
                         <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
                         <!-- TODO menu -->
                         <dl class="block">
-                            <dt class="hightlight">Entrée froide</dt>
-                            <dd itemprop="menu">Foie gras de canard</dd>
-                            <dt class="hightlight">Entrée chaude</dt>
-                            <dd itemprop="menu">Croquette de fromage sur son lit de laitue</dd>
-                            <dt class="hightlight">Plat principale</dt>
-                            <dd itemprop="menu">Ours à la bière</dd>
+                            @foreach($restaurant->menu as $menu)
+                                <dt class="hightlight">{{ $menu->name }}</dt>
+                                @foreach($menu->content as $menuContent)
+                                    <dd itemprop="menu">{{ $menuContent }}</dd>
+                                @endforeach
+                            @endforeach
                         </dl>
                     </a>
                 </div>{{--
@@ -63,9 +63,6 @@
             addressRsts.push("{{ $restaurant->adress . ', ' . $restaurant->postal_code . ' ' . $restaurant->city . ', Belgique'}}");
           @endforeach
       @endif
-
-      console.log(addressRsts);
-
     </script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&amp;sensor=false"></script>
     {{ HTML::script('js/vendor/fresco/fresco.js') }}

@@ -106,13 +106,22 @@ class RallyesController extends \BaseController {
         if ($diff->invert == 1)
         {
             $restaurants = $rallye->restaurants ()->get ();
+	        for ($i= 0; $i < count ( $restaurants ); $i++ ) {
+		        $restaurants[ $i ]->menu = $this->getMenu( $restaurants[ $i ]->pivot->menu_id );
+	        }
         }
         $images = $this->getImages ( 'rallyes', $id );
 	    array_unshift($images, $this->getImageCouverture( 'rallyes', $id ) );
         $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
 
-        return View::make ( 'rallyes.show', compact ( 'rallye', 'restaurants', 'photos' ) );
+	    return View::make ( 'rallyes.show', compact ( 'rallye', 'restaurants', 'photos' ) );
     }
+
+	public function getMenu( $id ) {
+		$menu = Menu::find ( $id );
+		$menu = explode ( '[', $menu->body, 2 );
+		return json_decode( '[' . $menu[ 1 ] );
+	}
 
     /**
      * Show the form for editing the specified rallye.

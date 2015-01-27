@@ -58,10 +58,6 @@ Route::resource ( 'rallyes',
     'RallyesController',
     [ 'only' => [ 'index', 'show' ] ] );
 
-Route::resource ( 'menus',
-    'MenusController',
-    [ 'only' => [ 'index', 'show' ] ] );
-
 Route::resource ( 'posts',
     'PostsController',
     [ 'only' => [ 'index', 'show' ] ] );

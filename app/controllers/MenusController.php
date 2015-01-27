@@ -11,14 +11,7 @@ class MenusController extends \BaseController {
 	{
 		$menus = Menu::all();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
-        {
-            return View::make('menus.admin.index', compact('menus'));
-        }
-        else
-        {
-            return View::make('menus.index', compact('menus'));
-        }
+		return View::make('menus.admin.index', compact('menus'));
 	}
 
 	/**
