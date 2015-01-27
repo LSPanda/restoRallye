@@ -1,13 +1,16 @@
 <?php
 use App\Forms\Post as FormPost;
+use App\Forms\PostCreate as FormPostCreate;
 use App\Helpers\Slug as HelperSlug;
 
 class PostsController extends \BaseController {
 
     protected $formPost;
+    protected $formPostCreate;
 
-    public function __construct (FormPost $formPost) {
+    public function __construct (FormPost $formPost, FormPostCreate $formPostCreate) {
         $this->formPost = $formPost;
+        $this->formPostCreate = $formPostCreate;
     }
 
     /**
@@ -25,6 +28,10 @@ class PostsController extends \BaseController {
         else
         {
             $posts = Type::whereName ( 'post' )->first ()->posts ()->orderBy ( 'id', 'DESC' )->paginate ( 6 );
+
+	        for ( $i = 0; $i < count( $posts ); $i++ ) {
+		        $posts[ $i ]->photo = $this->getImageCouverture( 'posts', $posts[ $i ]->id );
+	        }
 
             return View::make ( 'posts.index', compact ( 'posts' ) );
         }
@@ -46,7 +53,7 @@ class PostsController extends \BaseController {
      */
     public function store () {
         $input = Input::all ();
-        $this->formPost->validate ( $input );
+        $this->formPostCreate->validate ( $input );
 
         $type               = Type::whereName ( 'post' )->first ();
         $input[ 'type_id' ] = $type->id;
@@ -54,7 +61,11 @@ class PostsController extends \BaseController {
         $slug            = new HelperSlug();
         $input[ 'slug' ] = $slug->setSlugAttribute ( $input[ 'name' ], new Post() );
 
-        Post::create ( $input );
+        $post = Post::create ( $input );
+
+	    $images   = Input::file ( 'image' );
+	    $filename = 'main.' . $images->getClientOriginalExtension ();
+	    $images->move ( 'uploads/posts/' . $post->id, $filename );
 
         return Redirect::route ( 'admin.posts.index' );
     }
@@ -100,19 +111,18 @@ class PostsController extends \BaseController {
         $post = Post::findOrFail ( $id );
 
         $input = Input::all ();
-        $image = Input::file ( 'image' );
-
-        if ($image)
-        {
-            $this->rmdir_r ( public_path () . '/uploads/posts/' . $id );
-            $image->move ( 'uploads/posts/' . $id, 'main.' . $image->getClientOriginalExtension () );
-        }
-
-        unset( $input[ 'image' ] );
 
         $this->formPost->validate ( $input );
 
         $post->update ( $input );
+
+	    $image = Input::file ( 'image' );
+
+	    if ($image)
+	    {
+		    $this->rmdir_r ( public_path () . '/uploads/posts/' . $id );
+		    $image->move ( 'uploads/posts/' . $id, 'main.' . $image->getClientOriginalExtension () );
+	    }
 
         return Redirect::route ( 'admin.posts.index' );
     }

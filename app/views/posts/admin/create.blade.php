@@ -17,10 +17,14 @@
             {{ Form::textarea('body', null, ['id' => 'summernote']) }}
             {{ $errors->first('body', '<div class="alert alert-danger">:message</div>') }}
         </div>
-        <div class="form-group">
-            {{ Form::file('image', ['class' => 'file-input btn-lg btn-block btn-info', 'title' => 'Ahouter une image de couverture', 'data-filename-placement' => 'inside']) }}
-                            {{ $errors->first( 'image', '<div class="alert alert-danger">:message</div>' ) }}
-            <button type="submit" class="btn btn-block btn-lg btn-success">Créer</button>
+        <div class="form-group row">
+            <div class="col-md-8">
+                {{ Form::file('image', ['class' => 'file-input btn-lg btn-block btn-info', 'title' => 'Ajouter une image de couverture', 'data-filename-placement' => 'inside']) }}
+                {{ $errors->first( 'image', '<div class="alert alert-danger">:message</div>' ) }}
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-block btn-lg btn-success btn-block">Créer</button>
+            </div>
         </div>
     {{ Form::close() }}
 @stop

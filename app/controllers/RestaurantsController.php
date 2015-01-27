@@ -1,16 +1,22 @@
 <?php
 use App\Forms\Restaurant as FormRestaurant;
+use App\Forms\RestaurantCreate as FormRestaurantCreate;
 use App\Forms\Image as ImageRestaurant;
 use App\Helpers\Slug as HelperSlug;
 
 class RestaurantsController extends \BaseController {
 
-    protected $formRestaurant, $imageRestaurant, $helperSlug;
+	protected $formRestaurant;
+	protected $formRestaurantCreate;
+	protected $imageRestaurant;
+	protected $helperSlug;
 
     public function __construct (FormRestaurant $formRestaurant,
+	                             FormRestaurantCreate $formRestaurantCreate,
                                  ImageRestaurant $imageRestaurant,
                                  HelperSlug $helperSlug) {
         $this->formRestaurant  = $formRestaurant;
+        $this->formRestaurantCreate  = $formRestaurantCreate;
         $this->imageRestaurant = $imageRestaurant;
         $this->helperSlug      = $helperSlug;
     }
@@ -52,14 +58,17 @@ class RestaurantsController extends \BaseController {
      * @return Response
      */
     public function store () {
-        $this->formRestaurant->validate ( Input::all () );
+        $this->formRestaurantCreate->validate ( Input::all () );
 
         $inputs = Input::all ();
 
-        // TODO Prendre une image de couverture (voir dans RallyesController)
         $inputs[ 'slug' ] = $this->helperSlug->setSlugAttribute ( $inputs[ 'name' ], new Restaurant() );
 
-        Restaurant::create ( $inputs );
+        $restaurant = Restaurant::create ( $inputs );
+
+	    $images   = Input::file ( 'image' );
+	    $filename = 'main.' . $images->getClientOriginalExtension ();
+	    $images->move ( 'uploads/restaurants/' . $restaurant->id, $filename );
 
         return Redirect::route ( 'admin.restaurants.index' );
     }

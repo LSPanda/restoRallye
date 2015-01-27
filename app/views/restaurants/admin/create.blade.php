@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-    {{ Form::open(['route' => 'admin.restaurants.store']) }}
+    {{ Form::open( [ 'route' => 'admin.restaurants.store', 'files' => true ] ) }}
         {{ Form::hidden('slug', null) }}
         <div class="form-group">
             {{ Form::label('name', 'Nom du restaurant') }}
@@ -67,7 +67,15 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary pull-right">Créer</button>
+                <div class="row form-group">
+                    <div class="col-md-8">
+                        {{ Form::file('image', ['class' => 'file-input btn-lg btn-block btn-info', 'title' => 'Ajouter une photo de couverture', 'data-filename-placement' => 'inside']) }}
+                        {{ $errors->first( 'image', '<div class="alert alert-danger">:message</div>' ) }}
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-lg btn-success btn-block">Créer</button>
+                    </div>
+                </div>
             </div>
         </div>
     {{ Form::close() }}
@@ -98,5 +106,9 @@
                 lang: 'fr-FR'
             });
         });
+    </script>
+    {{ HTML::script('js/vendor/bootstrap/fileButton.js') }}
+    <script type="text/javascript">
+        $('.file-input').bootstrapFileInput();
     </script>
 @stop

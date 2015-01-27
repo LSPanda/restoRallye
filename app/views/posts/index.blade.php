@@ -8,7 +8,7 @@
             @foreach($posts as $post)
                 <div class="articles">
                     <div itemrprop="pageStart" class="inline-block articles__img">
-                        <img itemrprop="image" src="/uploads/posts/{{ $post->id }}/main.jpg">
+                        <img itemrprop="image" src="/uploads/posts/{{ $post->id }}/{{ $post->photo}}">
                     </div>{{--
                     --}}<div itemrprop="articleBody" class="inline-block articles__body">
                         <h3 itemrprop="headline" class="delta">{{ $post->name  }}</h3>

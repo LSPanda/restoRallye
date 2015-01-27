@@ -3,30 +3,30 @@
 use Laracasts\Validation\FormValidator;
 
 /**
- * Class Post
+ * Class PostCreate
  * @package App\Forms
  */
-class Post extends FormValidator {
+class PostCreate extends FormValidator {
     /**
-     * Validation rules for post
+     * Validation rules for post creation
      *
      * @var array
      */
     protected $rules = [
         'name'        => 'required',
         'body'        => 'required',
-	    'image'       => 'image|size:2048'
+	    'image'       => 'required|image'
     ];
 
     /**
-     * Error messages for post
+     * Error messages for post creation
      *
      * @var array
      */
     protected $messages = [
         'name.required'        => 'Le nom est requis.',
         'body.required'        => 'La description est requise.',
+        'image.required'       => 'Une image de couverture est requise.',
         'image.image'          => 'Le fichier envoyé n\'est pas une image.',
-        'image.size'           => 'Le fichier fait plus de 2MB.',
     ];
 }
