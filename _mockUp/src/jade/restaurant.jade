@@ -14,7 +14,7 @@ block header
     include includes/header.jade
 
 block content
-    div#slideMap.parallax__img
+    div.parallax__img.parallax__img--heighteen
     div(itemscope itemtype="http://schema.org/Restaurant").parallax__body
         div.restaurant
             h2(itemprop="name").gamma Chez René
@@ -41,7 +41,7 @@ block content
                             img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").gallery__img
                         - numberPhoto++
                 
-    div.parallax__img.parallax__img--heighteen
+    div#slideMap.parallax__map
 
 block footer
     include includes/footer.jade
