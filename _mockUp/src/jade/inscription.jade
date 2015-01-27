@@ -11,71 +11,70 @@ block header
 
 block content
     div.parallax__img.parallax__img--twenty-two
-    div.parallax__body
-        div(itemscope itemtype="http://schema.org/Thing")
-            h2(itemprop="headline").gamma Inscrivez-vous&nbsp;!
-            p(itemprop="description") Inscrivez vous à notre site et ne manquer jamais un de nos évènements, soyez toujours avertis en remplissant simplement ce formulaire.
-            form.form
-                div.inline-block.form__element
-                    label(for="nomInscription").hightlight.label__text
-                        | Nom
-                        span.span--spacing.asterisque *
-                    input(id="nomInscription" type="text" placeholder="John").input__text
-                div.inline-block.form__element    
-                    label(for="prenomInscription").hightlight.label__text
-                        | Prénom
-                        span.span--spacing.asterisque *
-                    input(id="prenomInscription" type="text" placeholder="Doe").input__text
-                div.inline-block.form__element    
-                    label(for="addressInscription").hightlight.label__text
-                        | Adresse
-                        span.span--spacing.asterisque *
-                    input(id="addressInscription" type="text" placeholder="Rue de la Province, n° 10").input__text
-                div.inline-block.form__element    
-                    label(for="villeInscription").hightlight.label__text
-                        | Ville
-                        span.span--spacing.asterisque *
-                    input(id="villeInscription" type="text" placeholder="Liège").input__text
-                div.inline-block.form__element    
-                    label(for="codePostalInscription").hightlight.label__text
-                        | Code postal
-                        span.span--spacing.asterisque *
-                    input(id="codePostalInscription" type="text" placeholder="4400").input__text
-                div.inline-block.form__element    
-                    label(for="provinceInscription").hightlight.label__text Province
-                    input(id="provinceInscription" type="text" placeholder="Liège").input__text
-                div.inline-block.form__element    
-                    label(for="telInscription").hightlight.label__text
-                        | Téléphone
-                        span.span--spacing.asterisque *
-                    input(id="telInscription" type="text" placeholder="043 44 65 34").input__text
-                div.inline-block.form__element    
-                    label(for="gsmInscription").hightlight.label__text GSM
-                    input(id="gsmInscription" type="text" placeholder="0498 32 72 89").input__text
-                div.inline-block.form__element    
-                    label(for="faxInscription").hightlight.label__text Fax
-                    input(id="faxInscription" type="text" placeholder="0498 32 72 89").input__text
-                div.inline-block.form__element    
-                    label(for="mailInscription").hightlight.label__text
-                        | Mail
-                        span.span--spacing.asterisque *
-                    input(id="mailInscription" type="text" placeholder="John.doe@gmail.com").input__text
-                div.inline-block.form__element    
-                    label(for="pwdInscription").hightlight.label__text
-                        | Mot de passe
-                        span.span--spacing.asterisque *
-                    input(id="pwdInscription" type="text" placeholder="*********").input__text
-                div.inline-block.form__element    
-                    label(for="pwdConfirmInscription").hightlight.label__text
-                        | Confirmer mot de passe
-                        span.span--spacing.asterisque *
-                    input(id="pwdInscription" type="text" placeholder="*********").input__text
-                div.block.form__element--fullSize
-                    input(type="submit" value="M'inscrire").input__submit
-                    label.hightlight.label__text
-                        | Tous les champs munis d’un astérisque
-                        span.span--spacing.asterisque (*)
-                        | sont obligatoires
+    section(itemscope itemtype="http://schema.org/Thing").parallax__body
+        h2(itemprop="headline").gamma Inscrivez-vous&nbsp;!
+        p(itemprop="description") Inscrivez vous à notre site et ne manquer jamais un de nos évènements, soyez toujours avertis en remplissant simplement ce formulaire.
+        form.form
+            div.inline-block.form__element
+                label(for="nomInscription").hightlight.label__text
+                    | Nom
+                    span.span--spacing.asterisque *
+                input(id="nomInscription" type="text" placeholder="John").input__text
+            div.inline-block.form__element    
+                label(for="prenomInscription").hightlight.label__text
+                    | Prénom
+                    span.span--spacing.asterisque *
+                input(id="prenomInscription" type="text" placeholder="Doe").input__text
+            div.inline-block.form__element    
+                label(for="addressInscription").hightlight.label__text
+                    | Adresse
+                    span.span--spacing.asterisque *
+                input(id="addressInscription" type="text" placeholder="Rue de la Province, n° 10").input__text
+            div.inline-block.form__element    
+                label(for="villeInscription").hightlight.label__text
+                    | Ville
+                    span.span--spacing.asterisque *
+                input(id="villeInscription" type="text" placeholder="Liège").input__text
+            div.inline-block.form__element    
+                label(for="codePostalInscription").hightlight.label__text
+                    | Code postal
+                    span.span--spacing.asterisque *
+                input(id="codePostalInscription" type="text" placeholder="4400").input__text
+            div.inline-block.form__element    
+                label(for="provinceInscription").hightlight.label__text Province
+                input(id="provinceInscription" type="text" placeholder="Liège").input__text
+            div.inline-block.form__element    
+                label(for="telInscription").hightlight.label__text
+                    | Téléphone
+                    span.span--spacing.asterisque *
+                input(id="telInscription" type="text" placeholder="043 44 65 34").input__text
+            div.inline-block.form__element    
+                label(for="gsmInscription").hightlight.label__text GSM
+                input(id="gsmInscription" type="text" placeholder="0498 32 72 89").input__text
+            div.inline-block.form__element    
+                label(for="faxInscription").hightlight.label__text Fax
+                input(id="faxInscription" type="text" placeholder="0498 32 72 89").input__text
+            div.inline-block.form__element    
+                label(for="mailInscription").hightlight.label__text
+                    | Mail
+                    span.span--spacing.asterisque *
+                input(id="mailInscription" type="text" placeholder="John.doe@gmail.com").input__text
+            div.inline-block.form__element    
+                label(for="pwdInscription").hightlight.label__text
+                    | Mot de passe
+                    span.span--spacing.asterisque *
+                input(id="pwdInscription" type="text" placeholder="*********").input__text
+            div.inline-block.form__element    
+                label(for="pwdConfirmInscription").hightlight.label__text
+                    | Confirmer mot de passe
+                    span.span--spacing.asterisque *
+                input(id="pwdConfirmInscription" type="text" placeholder="*********").input__text
+            div.block.form__element--fullSize
+                input(type="submit" value="M'inscrire").input__submit
+                p.hightlight.label__text
+                    | Tous les champs munis d’un astérisque
+                    span.span--spacing.asterisque (*)
+                    | sont obligatoires
 
     div.parallax__img.parallax__img--twenty-three
 

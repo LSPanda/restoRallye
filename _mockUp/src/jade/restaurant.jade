@@ -15,15 +15,15 @@ block header
 
 block content
     div.parallax__img.parallax__img--heighteen
-    div(itemscope itemtype="http://schema.org/Restaurant").parallax__body
+    section(itemscope itemtype="http://schema.org/Restaurant").parallax__body
         div.restaurant
             h2(itemprop="name").gamma Chez René
-            div.inline-block.restaurant__body
-                h3(itemprop="servesCuisine").delta Cuisine Italienne
+            article.inline-block.restaurant__body
+                h3(itemprop="servesCuisine").delta Notre cuisine Italienne
                 p(itemprop="about") C'est dans une salle au couleur de son pays que René nous à accuilli pour notre soirée, belle table, jolie menu, tout était au rendez-vous pour passer une agréable soirée.
                 p(itemprop="about") C'est une fois notre assiette face à nous que nous avons put profiter des talents du son cuisinier, les plats étaient un vrai délice, une explosion de saveur.
                 p(itemprop="about") Le service, les plats, la joie, tout était au rendez vous pour cette soirée toute particulière.
-            div.inline-block.restaurant__details
+            article.inline-block.restaurant__details
                 h3(itemprop="headline").delta Coordonnées
                 address(itemprop="address")
                     span.block Boulevard Piercot, n° 46
@@ -31,14 +31,14 @@ block content
                 div(itemprop="telephone").block.restaurant__details--tel Tel&nbsp;:
                     span.span--spacing 0471 31 77 91
                 a(href="#" itemprop="url").block www.chezrené.be
-            div.restaurant__gallery
+            article.restaurant__gallery
                 - var numberPhoto = 0
                 h3(itemprop="headline").delta Notre salle
                 
                 while numberPhoto < 5
                     div.inline-block.gallery
                         a(itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name").fresco.gallery__link
-                            img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").gallery__img
+                            img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg" alt="Image personnel d'un restaurant").gallery__img
                         - numberPhoto++
                 
     div#slideMap.parallax__map

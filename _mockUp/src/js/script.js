@@ -21,10 +21,10 @@
         //Init mapOptions
         mapOptions = {
             center: defaultPosition,
-            zoom: 15,
+            zoom: 13,
             disableDefaultUI: true,
             scrollwheel: false,
-            draggable: false,
+            draggable: true,
             mapTypeId: google.maps.MapTypeId.ROADMAPx
         };
         //Marker rendez-vous
@@ -76,8 +76,8 @@
 
     $( function() {
         //Show login
-        $("span#login").click( function() {
-            $("header nav").toggleClass( "header__nav--conn" );
+        $("span#loginButton").click( function() {
+            $("div.header__nav").toggleClass( "header__nav--conn" );
         } );
         //Generate google gMap for event
         generateGoogleMap();

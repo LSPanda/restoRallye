@@ -1,9 +1,10 @@
 // - includes/header.jade
 
-header(itemscope itemtype="http://schema.org/WPHeader").header
-    h1(itemprop="headline").hiddenTitle Bienvenue sur le site de Resto Rallye 
-    nav(itemscope itemtype="http://schema.org/SiteNavigationElement").position--relative.header__nav
-        div.nav__conn
+header(itemscope itemtype="http://schema.org/WPHeader").header 
+    h1(itemprop="headline").hiddenTitle Bienvenue sur le site de Resto Rallye
+    div(itemscope itemtype="http://schema.org/SiteNavigationElement").header__nav
+        section.nav__conn
+            h2(itemprop="alternativeHeadline").hiddenTitle Accès à mon compte Gastronomade
             form.form__login
                 div.inline-block.login__element
                     label(for="login").hightlight.login__label Mail
@@ -26,7 +27,7 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
                         | Michel 
                         a(href="#") (&nbsp;Modifier informations personnel&nbsp;/
                         a(href="#") &nbsp;Déconnexion&nbsp;)    
-        div.nav
+        nav.position--relative.nav
             h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation du site
             if current.main
                 span(itemprop="keywords").inline-block.nav__element
@@ -48,15 +49,6 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
                 span(itemprop="keywords").inline-block.nav__element.banners
                     a(itemprop="url" href="../index.html").element__link Accueil
                         img(itemprop="image" src="../css/images/links/Ecusson.png", alt="Banners Resto Rallye").banners__link
-            //-    
-                if current.main
-                    span.inline-block.banners
-                        a(itemprop="url" href="index.html").banners__link
-                            img(itemprop="image" src="css/images/links/Ecusson.png", alt="Banners Resto Rallye")
-                else    
-                    span.inline-block.banners
-                        a(itemprop="url" href="../index.html").banners__link
-                            img(itemprop="image" src="../css/images/links/Ecusson.png", alt="Banners Resto Rallye")
             if current.main
                 span(itemprop="keywords").inline-block.nav__element
                     a(itemprop="url" href="html/restaurants.html").element__link Restaurants
@@ -69,4 +61,4 @@ header(itemscope itemtype="http://schema.org/WPHeader").header
             else
                 span(itemprop="keywords").inline-block.nav__element
                     a(itemprop="url" href="contact.html").element__link Contact
-            span(itemprop="keywords")#login.inline-block.nav__element.button__login Mon compte
+            span(itemprop="keywords")#loginButton.nav__element.button__login Mon compte

@@ -15,7 +15,7 @@ block header
 
 block content
     div#slideMap.parallax__map
-    div(itemscope itemtype="http://schema.org/FoodEvent").parallax__body
+    section(itemscope itemtype="http://schema.org/FoodEvent").parallax__body
         h2(itemprop="attendee").gamma
             | Resto-Rallye de
             span(itemprop="location").span--spacing Namur
@@ -24,15 +24,15 @@ block content
         p(itemprop="description") Et voilà
 
     div.parallax__img.parallax__img--ten
-    div(itemscope itemtype="http://schema.org/Thing").parallax__body
+    section(itemscope itemtype="http://schema.org/Thing").parallax__body
         - var numberItem = 0
         h2(itemprop="headline").gamma Les hôtes de la soirée
 
         while numberItem < 3
-            div(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
+            article(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
                 a(itemprop="url" href="restaurant.html").removeLink
                     h3(itemprop="name").delta Chez René
-                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").thumbnails__img
+                    img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg" alt="Image de la salle du restaurant").thumbnails__img
                     dl.block
                         dt.hightlight Entrée froide
                         dd(itemprop="menu") Foie gras de canard
@@ -44,15 +44,15 @@ block content
 
 
     div.parallax__img.parallax__img--eleven
-    div(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
+    section(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
         h2(itemprop="headline") Souvenirs en image
         - var numberPhoto = 0
 
-        div(itemscope itemrprop="about")
+        div(itemscope itemprop="about")
             while numberPhoto < 10
                 div.inline-block.gallery
                     a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco.gallery__link
-                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg" alt="Photo souvenir du rallye").gallery__img
                 - numberPhoto++
         div.pagination
                 span.inline-block.pagination__element

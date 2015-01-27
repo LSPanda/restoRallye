@@ -15,19 +15,19 @@ block header
 
 block content
     div.parallax__img.parallax__img--thirteen
-    div(itemscope itemtype="http://schema.org/BlogPosting").parallax__body
+    section(itemscope itemtype="http://schema.org/BlogPosting").parallax__body
         h2(itemprop="headline").gamma Les dernières nouvelles
         
         - var numberArticle = 0
         
-        div(itemrprop="about")
+        div(itemprop="about")
             while numberArticle < 3
-                div.articles
-                    div(itemrprop="pageStart").inline-block.articles__img
-                        img(itemrprop="image" src="../css/images/mockUp/exempleBlog.jpg")
-                    div(itemrprop="articleBody").inline-block.articles__body
-                        h3(itemrprop="headline").delta Un chouette article
-                        span(itemrprop="date").block.body__dates Le 7 Janvier 2015
+                article.articles
+                    div(itemprop="pageStart").inline-block.articles__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleBlog.jpg" alt="Thumbnail d'un article de blog")
+                    div(itemprop="articleBody").inline-block.articles__body
+                        h3(itemprop="headline").delta Un chouette article
+                        span(itemprop="date").block.body__dates Le 7 Janvier 2015
                         p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate consequatur molestiae debitis cumque impedit et, in sint maiores eaque numquam! Veritatis deleniti dolor sapiente obcaecati alias quis, et nemo.
                         p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga laboriosam iure beatae in, quidem, veritatis nesciunt, mollitia sit, cumque inventore tempora culpa sint. Hic perspiciatis libero doloremque laborum, voluptatem, delectus!
                 - numberArticle++
@@ -46,15 +46,15 @@ block content
 
 
     div.parallax__img.parallax__img--fourteen
-    div(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
+    section(itemscope itemtype="http://schema.org/ImageGallery").parallax__body
         h2(itemprop="headline") Nos souvenirs à travers tous nos Rallyes
         - var numberPhoto = 0
 
-        div(itemrprop="about")
+        div(itemprop="about")
             while numberPhoto < 20
                 div.inline-block.gallery
                     a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco.gallery__link
-                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg").gallery__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg" alt="Souvenir des ancien rallye").gallery__img
                 - numberPhoto++
         div.pagination
                 span.inline-block.pagination__element

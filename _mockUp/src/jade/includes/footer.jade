@@ -3,7 +3,7 @@
 div.parallax__body.myFooter
     footer(itemscope itemtype="http://schema.org/WPFooter")
         section(itemscope itemtype="http://schema.org/SiteNavigationElement").inline-block.footer__information
-            h4(itemprop="headline").delta Navigation
+            h2(itemprop="headline").delta Navigation
             if current.main
                 span.block(itemprop="keywords")
                     a(itemprop="url" href="index.html") Accueil
@@ -36,23 +36,23 @@ div.parallax__body.myFooter
                     a(itemprop="url" href="contact.html") Contact
         
         section(itemscope itemtype="http://schema.org/TouristInformationCenter").inline-block.footer__information
-            h4(itemprop="headline").delta Nous contacter 
+            h2(itemprop="headline").delta Nous contacter 
             p(itemprop="contactPoint")
                 span.block.hightlight Mail&nbsp;: 
-                a(itemprop="url" href="mailto: info@restorallye.com") info@restorallye.com
+                a(itemprop="url" href="mailto:info@restorallye.com") info@restorallye.com
             p(itemprop="telephone")
                 span.block.hightlight Téléphone&nbsp;: 
                 | 0471 38 06 38                                           
     
         section(itemscope itemtype="http://schema.org/Action").inline-block.footer__information
-            h4(itemprop="headline").delta Suivez-nous
+            h2(itemprop="headline").delta Suivez-nous
             span(itemprop="result").inline-block.social__link
                 a(itemprop="url" href="https://www.facebook.com/RestoRallye?fref=ts").block.social__link--fb Accèder à la page Facebook
             span(itemprop="result").inline-block.social__link
                 a(itemprop="url" href="#").block.social__link--rss Inscriver vous au flux RSS
         
         section(itemscope itemtype="http://schema.org/Action").inline-block.footer__newsletter
-            h4(itemprop="headline").delta Newsletter
+            h2(itemprop="headline").delta Newsletter
             form#ancreError.forms__newsletter
                 input(itemprop="object" type="text" placeholder="votre@mail.com").input__text
                 input(itemprop="target" type="submit" value="S'inscrire").newsletter__submit

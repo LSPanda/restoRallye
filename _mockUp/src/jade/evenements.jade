@@ -11,7 +11,7 @@ block header
 
 block content
     div#slideMap.parallax__map
-    div.parallax__body
+    section.parallax__body
         div(itemscope itemtype="http://schema.org/FoodEvent")
             h2(itemprop="headline").gamma
                 | Rendez-vous le
@@ -25,7 +25,7 @@ block content
                 span(itemprop="location").span--spacing.hightlight l'Église St Etienne
 
     div.parallax__img.parallax__img--six
-    div.parallax__body
+    section.parallax__body
         div(itemscope itemtype="http://schema.org/Thing")
             h2(itemprop="headline").gamma Inscrivez-vous pour ce Resto-Rallye
             p(itemprop="description")
@@ -80,88 +80,88 @@ block content
                     textarea(id="msgRallye" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
                 div.block.form__element--fullSize
                     input(type="submit" value="Inscrivez-vous !").input__submit
-                    label.hightlight.label__text
+                    p.hightlight.label__text
                         | Tous les champs munis d’un astérisque
                         span.span--spacing.asterisque (*)
                         | sont obligatoires
 
     div.parallax__img.parallax__img--seven
-    div.parallax__body
+    section.parallax__body
         div(itemscope itemtype="http://schema.org/Thing")
             h2(itemprop="headline").gamma Invitez vos amis à ce Resto-Rallye
             p(itemprop="description")
                 | Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que
                 span.span--spacing.hightlight 30 places
                 | disponible.
-                form.form
-                    div.inline-block.form__element
-                        label(for="participantInvitation").hightlight.label__text
-                            | Nombre de participants
-                            span.span--spacing.asterisque *
-                        input(id="participantInvitation" type="text" placeholder="1").input__text
-                    div.inline-block.form__element
-                        label(for="nomInvitation").hightlight.label__text
-                            | Nom
-                            span.span--spacing.asterisque *
-                        input(id="nomInvitation" type="text" placeholder="Doe").input__text
-                    div.inline-block.form__element
-                        label(for="prenomInvitation").hightlight.label__text
-                            | Prénom
-                            span.span--spacing.asterisque *
-                        input(id="prenomInvitation" type="text" placeholder="John").input__text
-                    div.inline-block.form__element
-                        label(for="addressInvitation").hightlight.label__text Adresse
-                        input(id="addressInvitation" type="text" placeholder="Rue de la Province, n° 10").input__text
-                    div.inline-block.form__element
-                        label(for="villeInvitation").hightlight.label__text Ville
-                        input(id="villeInvitation" type="text" placeholder="Liège").input__text
-                    div.inline-block.form__element
-                        label(for="postalInvitation").hightlight.label__text  Code Postal
-                        input(id="postalInvitation" type="text" placeholder="4400").input__text
-                    div.inline-block.form__element
-                        label(for="telInvitation").hightlight.label__text
-                            | Tel ou GSM
-                            span.span--spacing.asterisque *
-                        input(id="telInvitation" type="text" placeholder="0498 32 72 89").input__text
-                    div.inline-block.form__element
-                        label(for="faxInvitation").hightlight.label__text Fax
-                        input(id="faxInvitation" type="text" placeholder="063 14 85 62").input__text
-                    div.inline-block.form__element
-                        label(for="mailInvitation").hightlight.label__text
-                            | Mail
-                            span.span--spacing.asterisque *
-                        input(id="mailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
-                    div.inline-block.form__element
-                        label(for="confirmMailInvitation").hightlight.label__text
-                            | Confirmer mail
-                            span.span--spacing.asterisque *
-                        input(id="confirmMailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
-                    div.block.form__element--fullSize
-                        label(for="msgInvitation").hightlight.label__text Votre message
-                        textarea(id="msgInvitation" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
-                    div.block.form__element--fullSize
-                        input(type="submit" value="Invitez vos amis !").input__submit
-                        label.hightlight.label__text
-                            | Tous les champs munis d’un astérisque
-                            span.span--spacing.asterisque (*)
-                            | sont obligatoires
+            form.form
+                div.inline-block.form__element
+                    label(for="participantInvitation").hightlight.label__text
+                        | Nombre de participants
+                        span.span--spacing.asterisque *
+                    input(id="participantInvitation" type="text" placeholder="1").input__text
+                div.inline-block.form__element
+                    label(for="nomInvitation").hightlight.label__text
+                        | Nom
+                        span.span--spacing.asterisque *
+                    input(id="nomInvitation" type="text" placeholder="Doe").input__text
+                div.inline-block.form__element
+                    label(for="prenomInvitation").hightlight.label__text
+                        | Prénom
+                        span.span--spacing.asterisque *
+                    input(id="prenomInvitation" type="text" placeholder="John").input__text
+                div.inline-block.form__element
+                    label(for="addressInvitation").hightlight.label__text Adresse
+                    input(id="addressInvitation" type="text" placeholder="Rue de la Province, n° 10").input__text
+                div.inline-block.form__element
+                    label(for="villeInvitation").hightlight.label__text Ville
+                    input(id="villeInvitation" type="text" placeholder="Liège").input__text
+                div.inline-block.form__element
+                    label(for="postalInvitation").hightlight.label__text  Code Postal
+                    input(id="postalInvitation" type="text" placeholder="4400").input__text
+                div.inline-block.form__element
+                    label(for="telInvitation").hightlight.label__text
+                        | Tel ou GSM
+                        span.span--spacing.asterisque *
+                    input(id="telInvitation" type="text" placeholder="0498 32 72 89").input__text
+                div.inline-block.form__element
+                    label(for="faxInvitation").hightlight.label__text Fax
+                    input(id="faxInvitation" type="text" placeholder="063 14 85 62").input__text
+                div.inline-block.form__element
+                    label(for="mailInvitation").hightlight.label__text
+                        | Mail
+                        span.span--spacing.asterisque *
+                    input(id="mailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
+                div.inline-block.form__element
+                    label(for="confirmMailInvitation").hightlight.label__text
+                        | Confirmer mail
+                        span.span--spacing.asterisque *
+                    input(id="confirmMailInvitation" type="text" placeholder="johndoe@gmail.com").input__text
+                div.block.form__element--fullSize
+                    label(for="msgInvitation").hightlight.label__text Votre message
+                    textarea(id="msgInvitation" rows="10" placeholder="Nom des participants et/ou informations complémentaire").input__text
+                div.block.form__element--fullSize
+                    input(type="submit" value="Invitez vos amis !").input__submit
+                    p.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.span--spacing.asterisque (*)
+                        | sont obligatoires
 
     div.parallax__img.parallax__img--height
-    div.parallax__body
+    section.position--relative.parallax__body
         - var numberItem = 0
         div.position--relative
             h2.gamma Nos précédents Resto-Rallye
             form.forms__search.forms__search--right
-                input(itemprop="object" type="text" placeholder="Recherche par Ville").input__text
-                input(itemprop="target" type="submit" value="S'inscrire").search__submit
+                input(type="text" placeholder="Recherche par Ville").input__text
+                input(type="submit" value="S'inscrire").search__submit
                 
             while numberItem < 6
-                div(itemscope itemtype="http://schema.org/FoodEvent").inline-block.thumbnails
+                article(itemscope itemtype="http://schema.org/FoodEvent").inline-block.thumbnails
                     a(itemprop="url" href="evenement.html").removeLink
                         h3(itemprop="attendee").delta
                             | Resto-Rallye à
                             span(itemprop="location").span--spacing Namur
-                        img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg").thumbnails__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleRallye.jpg" alt="Thumbnails evenement").thumbnails__img
                 - numberItem++
             div.pagination
                 span.inline-block.pagination__element

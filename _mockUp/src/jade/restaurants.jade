@@ -11,7 +11,7 @@ block header
 
 block content
     div.parallax__img.parallax__img--sixteen
-    div(itemscope itemtype="http://schema.org/Thing").parallax__body
+    section(itemscope itemtype="http://schema.org/Thing").parallax__body
         - var numberItem = 0
         div.position--relative
             h2(itemprop="headline").gamma Les habitués du Resto Rallye
@@ -20,12 +20,12 @@ block content
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
                 
             while numberItem < 6
-                div(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
+                article(itemscope itemtype="http://schema.org/Restaurant").inline-block.thumbnails
                     a(itemprop="url" href="restaurant.html").removeLink
                         h3(itemprop="name").delta
                             | Chez René,
                             span(itemprop="addressLocality").span--spacing Liège
-                        img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg").thumbnails__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg" alt="Thumbnail d'un restaurant").thumbnails__img
                 - numberItem++
             div.pagination
                 span.inline-block.pagination__element
