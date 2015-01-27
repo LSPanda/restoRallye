@@ -70,7 +70,7 @@
                             Resto-Rallye à
                             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
                         </h3>
-                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/main.jpg" class="thumbnails__img">
+                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $rallye->photo }}" class="thumbnails__img">
                     </a>
                 </div>{{--
             --}}@endforeach

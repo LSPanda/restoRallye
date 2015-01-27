@@ -29,6 +29,10 @@ class RestaurantsController extends \BaseController {
         }
         else
         {
+	        for ( $i = 0; $i < count( $restaurants ); $i++ ) {
+		        $restaurants[ $i ]->photo = $this->getImageCouverture( 'restaurants', $restaurants[ $i ]->id );
+	        }
+
             return View::make ( 'restaurants.index', compact ( 'restaurants' ) );
         }
     }
@@ -77,11 +81,8 @@ class RestaurantsController extends \BaseController {
         else
         {
             $images = $this->getImages ( 'restaurants', $id );
-            $photos = false;
-            if ($images)
-            {
-                $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
-            }
+	        array_unshift($images, $this->getImageCouverture( 'restaurants', $id ) );
+	        $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
 
             return View::make ( 'restaurants.show', compact ( 'restaurant', 'photos' ) );
         }

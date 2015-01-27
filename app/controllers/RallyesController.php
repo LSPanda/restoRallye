@@ -24,9 +24,7 @@ class RallyesController extends \BaseController {
 
             $nextRallye->restaurants = $nextRallye->restaurants ()->get ();
 
-            $restaurants = [ ];
-
-            foreach ($rallyes as $rallye)
+            foreach ( ( array ) $rallyes as $rallye)
             {
                 $restaurants[ $rallye->id ] = $rallye->restaurants ()->get ();
             }
@@ -36,6 +34,10 @@ class RallyesController extends \BaseController {
         else
         {
             $rallyes = Rallye::where ( 'date', '<', date ( 'Y-m-d' ) )->paginate ( 9 );
+
+	        for ( $i = 0; $i < count( $rallyes ); $i++ ) {
+		        $rallyes[ $i ]->photo = $this->getImageCouverture( 'rallyes', $rallyes[ $i ]->id );
+	        }
 
             return View::make ( 'rallyes.index', compact ( 'rallyes', 'nextRallye' ) );
         }
@@ -106,10 +108,8 @@ class RallyesController extends \BaseController {
             $restaurants = $rallye->restaurants ()->get ();
         }
         $images = $this->getImages ( 'rallyes', $id );
-        if ($images)
-        {
-            $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
-        }
+	    array_unshift($images, $this->getImageCouverture( 'rallyes', $id ) );
+        $photos = \Illuminate\Support\Facades\Paginator::make ( $images, count ( $images ), 15 );
 
         return View::make ( 'rallyes.show', compact ( 'rallye', 'restaurants', 'photos' ) );
     }

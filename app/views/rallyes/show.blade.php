@@ -37,22 +37,20 @@
             --}}@endforeach
         </div>
     @endif
-    @if ($photos)
-        <div class="parallax__img parallax__img--eleven"></div>
-        <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
-            <h2 itemprop="headline">Souvenirs en image</h2>
-            <div itemscope itemrprop="about">
-                @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
-                    --}}<div class="inline-block gallery">
-                        <a itemprop="url" href="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
-                            <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
-                        </a>
-                    </div>{{--
-                --}}@endfor
-                {{ $photos->links('partials.paginate') }}
-            </div>
+    <div class="parallax__img parallax__img--eleven"></div>
+    <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
+        <h2 itemprop="headline">Souvenirs en image</h2>
+        <div itemscope itemrprop="about">
+            @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
+                --}}<div class="inline-block gallery">
+                    <a itemprop="url" href="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
+                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
+                    </a>
+                </div>{{--
+            --}}@endfor
+            {{ $photos->links('partials.paginate') }}
         </div>
-    @endif
+    </div>
     <div class="parallax__img parallax__img--twelve"></div>
 @stop
 
