@@ -18,7 +18,7 @@
     rem-fallback( width, 25px )
     rem-fallback( height, 25px )
     background: url("images/links/sprite.png") -90px -10px
-    rem-fallback( top, 10px )
+    rem-fallback( top, 12px )
     rem-fallback( right, 5px )
     border none
     rem-fallback( text-indent, -1000000px )
@@ -44,13 +44,13 @@
     rem-fallback( width, 25px )
     rem-fallback( height, 25px )
     background: url("images/links/sprite.png") -120px -10px
-    rem-fallback( top, 10px )
+    rem-fallback( top, 12px )
     rem-fallback( right, 8px )
     border none
     rem-fallback( text-indent, -1000000px )
 
     +media-query( screen, max-width 960px )
-        rem-fallback( top, 68px )
+        rem-fallback( top, 76px )
     +media-query( screen, max-width 413px )
         rem-fallback( top, 96px )
     &:hover
@@ -62,7 +62,7 @@
 .form__element
     width 50%
     padding 0 2.5%
-    rem-fallback( margin-bottom, 28px )
+    rem-fallback( margin-bottom, 16px )
 
     +media-query( screen, max-width 960px )
         width 100%
@@ -72,10 +72,9 @@
     rem-fallback( margin-bottom, 28px )
 .label__text
     display block
-    rem-fallback( margin, 10px 0 )
+    rem-fallback( margin, 6px 0 4px )
 .input__text
     width 100%
-    rem-fallback( font-size, 14px )
     background-color wf_form-background-color
     rem-fallback( padding, 12px 24px )
     border none
@@ -83,8 +82,6 @@
         background-color wf_form-background-color-focus
 .input__submit
     width 100%
-    rem-fallback( font-size, 24px )
-    font-family wf_font-heading
     text-transform uppercase
     color wf_nav-color
     rem-fallback( padding, 18px 0 )
@@ -92,9 +89,6 @@
     background wf_background-submit
     transition( all, 0.25s )
     cursor pointer
-
-    +media-query( screen, max-width 960px )
-        rem-fallback( font-size, 18px )
     &:hover
         background wf_background-submit-hover
 
@@ -114,8 +108,6 @@
     text-align left
 .login__submit
     width 100%
-    rem-fallback( font-size, 18px )
-    font-family wf_font-nav
     text-transform uppercase
     color wf_nav-color
     rem-fallback( padding, 9px 0 )
