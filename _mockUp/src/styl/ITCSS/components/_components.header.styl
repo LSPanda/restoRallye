@@ -63,6 +63,7 @@
         rem-fallback( padding-bottom, 2px )
         border-bottom 1px solid wf_nav-color
 
+//Style for banners
 .banners
     position relative
     rem-fallback( width, 160px )
@@ -71,12 +72,13 @@
         margin 0 auto
 .banners__link
     position absolute
-    top -14px
     left 0
+    rem-fallback( margin-top, -30px )
 
     +media-query( screen, max-width 960px )
         display none
 
+//Login label
 .button__login
     position absolute
     rem-fallback( top, 3.25px )
