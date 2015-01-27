@@ -9,7 +9,7 @@ class RestaurantsTableSeeder extends Seeder {
         Restaurant::create ( [
             'name'          => 'La Tambouille',
             'slug'          => Str::slug('La Tambouille'),
-            'body'          => $faker->text (),
+            'body'          => '<p>Ne vous fiez pas au nom de cet établissement ! Loin de proposer une cuisine de cantine, le chef vous servira des plats mettant en valeur les produits du terroir. Ici, pas de gastronomie de haute voltige mais des mets simples et délicieux. Le maître-mot du chef : qualité. N’hésitez pas à goûter les spécialités de la maison : bœuf irlandais, langue d’agneau, joues de porc, l’importante variété de croquettes et les moules en saison.</p><p>Quoi de mieux qu’une balade pour faciliter la digestion ? Le centre-ville de Châtelet accueille une promenade Magritte, vous y trouverez des lampadaires couverts de chapeaux melons en hommage à l’adolescence hennuyère du peintre surréaliste.</p>',
             'adress'        => 'Place de la victoire 13',
             'postal_code'   => 6200,
             'city'          => 'Châtelet',
@@ -20,7 +20,7 @@ class RestaurantsTableSeeder extends Seeder {
         Restaurant::create ( [
             'name'          => 'Fallais-Oser',
             'slug'          => Str::slug('Fallais-Oser'),
-            'body'          => $faker->text (),
+            'body'          => '<p>Restaurant situé dans le parc naturel des vallées de la Burdinale et de la Mehaigne au milieu du joli village de Fallais, vous y trouverez une gastronomie où les produits locaux et du terroir sont mis en valeur.</p><p>J\'ai choisi de travailler avec les artisans locaux et leurs produits car en discutant avec les habitants de notre belle région, j\'ai constaté le besoin d\'un retour aux sources.</p><p>Le restaurant est ouvert sur réservation uniquement le vendredi et samedi soir, le dimanche midi et les jours fériés mais également pour les groupes en semaine.</p>',
             'adress'        => 'Rue Guillaume Boline 22',
             'postal_code'   => 4260,
             'city'          => 'Fallais',

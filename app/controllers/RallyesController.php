@@ -24,7 +24,7 @@ class RallyesController extends \BaseController {
 
             $nextRallye->restaurants = $nextRallye->restaurants ()->get ();
 
-            foreach ( ( array ) $rallyes as $rallye)
+            foreach ( $rallyes as $rallye)
             {
                 $restaurants[ $rallye->id ] = $rallye->restaurants ()->get ();
             }

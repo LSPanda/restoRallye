@@ -4,7 +4,7 @@ use Faker\Factory as Faker;
 class UsersTableSeeder extends Seeder {
 
     public function run () {
-        $faker = Faker::create ( 'fr_FR' );
+        $faker = Faker::create ( 'fr_BE' );
 
         foreach (range ( 1, 10 ) as $index)
         {
