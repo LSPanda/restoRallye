@@ -1,5 +1,5 @@
 <section itemscope itemtype="http://schema.org/SiteNavigationElement" class="inline-block footer__information">
-    <h4 itemprop="headline" class="delta">Navigation</h4>
+    <h2 itemprop="headline" class="delta">Navigation</h2>
     <span itemprop="keywords" class="block">
         <a itemprop="url" href="{{ route('home') }}">Accueil</a>
     </span>

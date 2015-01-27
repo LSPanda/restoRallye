@@ -6,20 +6,20 @@
 
 @section('content')
     <div id="slideMap" class="parallax__img"></div>
-    <div itemscope itemtype="http://schema.org/FoodEvent" class="parallax__body">
+    <section itemscope itemtype="http://schema.org/FoodEvent" class="parallax__body">
         <h2 itemprop="attendee" class="gamma">
             Resto-Rallye de
             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
         </h2>
         <!-- TODO Microdata sur la p itemprop="about" -->
         {{ $rallye->body }}
-    </div>
+    </section>
     @if ($restaurants)
         <div class="parallax__img parallax__img--ten"></div>
-        <div itemscope itemtype="http://schema.org/Thing" class="parallax__body">
+        <section itemscope itemtype="http://schema.org/Thing" class="parallax__body">
             <h2 itemprop="headline" class="gamma">Les hôtes de la soirée</h2>
             @foreach($restaurants as $restaurant){{--
-                --}}<div itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
+                --}}<article itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
                     <a itemprop="url" href="{{ route( 'restaurants.show', $restaurant-> id )}}" class="removeLink">
                         <h3 itemprop="name" class="delta">{{ $restaurant->name }}</h3>
                         <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img">
@@ -33,12 +33,12 @@
                             @endforeach
                         </dl>
                     </a>
-                </div>{{--
+                </article>{{--
             --}}@endforeach
-        </div>
+        </section>
     @endif
     <div class="parallax__img parallax__img--eleven"></div>
-    <div itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
+    <section itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
         <h2 itemprop="headline">Souvenirs en image</h2>
         <div itemscope itemrprop="about">
             @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
@@ -50,7 +50,7 @@
             --}}@endfor
             {{ $photos->links('partials.paginate') }}
         </div>
-    </div>
+    </section>
     <div class="parallax__img parallax__img--twelve"></div>
 @stop
 
