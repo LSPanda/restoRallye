@@ -22,8 +22,7 @@
                 --}}<article itemscope itemtype="http://schema.org/Restaurant" class="inline-block thumbnails">
                     <a itemprop="url" href="{{ route( 'restaurants.show', $restaurant-> id )}}" class="removeLink">
                         <h3 itemprop="name" class="delta">{{ $restaurant->name }}</h3>
-                        <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img" alt="ADD ALT ATTRIBUTE">
-                        <!-- TODO menu -->
+                        <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img" alt="{{ $restaurant->name }}">
                         <dl class="block">
                             @foreach($restaurant->menu as $menu)
                                 <dt class="hightlight">{{ $menu->name }}</dt>
@@ -44,7 +43,7 @@
             @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
                 --}}<div class="inline-block gallery">
                     <a itemprop="url" href="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
-                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" class="gallery__img" alt="ADD ALT ATTRIBUTE">
+                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $photos[$i - 1] }}" class="gallery__img" alt="Photo du rallye du {{ date('d/m/Y' , strtotime($rallye->date)) }} à {{ $rallye->city }} - {{ $i }}">
                     </a>
                 </div>{{--
             --}}@endfor

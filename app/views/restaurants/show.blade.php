@@ -13,8 +13,8 @@
                 <h3 itemprop="servesCuisine" class="delta">Cuisine Italienne</h3>
                 <!-- TODO Microdata sur la p itemprop="about" -->
                 {{ $restaurant->body }}
-            --></article>
-            <article class="inline-block restaurant__details"><!--
+            </article>
+            <article class="inline-block restaurant__details">
                 <h3 itemprop="headline" class="delta">Coordonnées</h3>
                 <address itemprop="address">
                     <span class="block">{{ $restaurant->adress }}</span>
@@ -28,13 +28,13 @@
                 @if ($restaurant->website)
                     <a href="{{ $restaurant->website }}" target="_blank" itemprop="url" class="block">{{ $restaurant->website }}</a>
                 @endif
-            --></article>
-            <article class="restaurant__gallery" id="paginationAnchor">
+            </article>{{--
+            --}}<article class="restaurant__gallery" id="paginationAnchor">
                 <h3 itemprop="headline" class="delta">Notre salle</h3>
                 @for($i = $photos->getFrom(); $i <= $photos->getTo(); $i++){{--
                     --}}<div class="inline-block gallery">
                         <a itemprop="url" href="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" data-fresco-group="unique_name" class="fresco gallery__link">
-                            <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" class="gallery__img">
+                            <img itemprop="image" src="/uploads/restaurants/{{ $restaurant->id }}/{{ $photos[$i - 1] }}" class="gallery__img" alt="Photo du restaurant {{ $restaurant->name }} - {{ $i }}">
                         </a>
                     </div>{{--
                 --}}@endfor

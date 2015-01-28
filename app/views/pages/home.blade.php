@@ -13,8 +13,7 @@
     <div class="parallax__img parallax__img--two"></div>
     <section itemscope itemtype="http://schema.org/Event" class="parallax__body">
         <h2 itemprop="headline" class="gamma">Programme de la soirée</h2>
-        <!-- Todo Lister le contenu des menus dynamiquement -->
-        <dl class="inline-block programme"><!--
+        <dl class="inline-block programme">
             <dt itemprop="doorTime" class="hightlight">18.30 - 19.30</dt>
             <dd itemprop="description">Réception des Resto Rallyens au lieu d’accueil</dd>
             <dt itemprop="duration" class="hightlight">19.30 - 19.45</dt>
@@ -23,8 +22,8 @@
             <dd itemprop="description">Entrée froide</dd>
             <dt itemprop="duration" class="hightlight">20.30 - 20.45</dt>
             <dd itemprop="description">Déplacement des Resto Rallyens vers les différents restaurants</dd>
-        --></dl>
-        <dl class="inline-block programme"><!--
+        </dl>{{--
+        --}}<dl class="inline-block programme">
             <dt itemprop="duration" class="hightlight">20.45 - 21.30</dt>
             <dd itemprop="description">Entrée chaude</dd>
             <dt itemprop="duration" class="hightlight">21.30 - 21.45</dt>
@@ -33,7 +32,7 @@
             <dd itemprop="description">Plat principal</dd>
             <dt itemprop="endDate" class="hightlight">22.30 - …</dt>
             <dd itemprop="description">Retour au lieu d’accueil pour café, pousse et dessert</dd>
-        --></dl>
+        </dl>
     </section>
     <div class="parallax__img parallax__img--three"></div>
     <section itemscope itemtype="http://schema.org/Event" class="parallax__body">
@@ -58,7 +57,7 @@
                         {{ $restaurant->name }},
                         <span itemprop="addressLocality" class="span--spacing">{{ $restaurant->city }}</span>
                     </h3>
-                    <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img" alt="<!-- TODO: ADD ALT HERE -->">
+                    <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/main.jpg" class="thumbnails__img" alt="{{ $restaurant->name }}">
                 </a>
             </article>{{--
         --}}@endforeach

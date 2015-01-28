@@ -69,7 +69,7 @@
                             Resto-Rallye à
                             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
                         </h3>
-                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $rallye->photo }}" class="thumbnails__img" alt="ADD ALT HERE">
+                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $rallye->photo }}" class="thumbnails__img" alt="Rallye du {{ date('d/m/Y' , strtotime($rallye->date)) }} à {{ $rallye->city }}">
                     </a>
                 </article>{{--
             --}}@endforeach
