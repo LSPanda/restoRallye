@@ -107,3 +107,7 @@ body {
 form.inline {
     display: inline;
 }
+
+dd {
+    margin-left: 1em;
+}
