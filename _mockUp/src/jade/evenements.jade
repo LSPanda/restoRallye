@@ -152,7 +152,17 @@ block content
         div.position--relative
             h2.gamma Nos précédents Resto-Rallye
             form.forms__search.forms__search--right
-                input(type="text" placeholder="Recherche par Ville").input__text
+                input(type="text" list="town" placeholder="Recherche par Ville").input__text
+                datalist#town
+                    option(value="Liège")
+                    option(value="Namur")
+                    option(value="Bruxelle")
+                    option(value="Anvers")
+                    option(value="Seraing")
+                    option(value="Waremme")
+                    option(value="Jambe")
+                    option(value="Ebly")
+                    option(value="Ans")
                 input(type="submit" value="S'inscrire").search__submit
                 
             while numberItem < 6

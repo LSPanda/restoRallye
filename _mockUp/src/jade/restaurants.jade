@@ -16,7 +16,17 @@ block content
         div.position--relative
             h2(itemprop="headline").gamma Les habitués du Resto Rallye
             form.forms__search.forms__search--right
-                input(itemprop="object" type="text" placeholder="Recherche par région").input__text
+                input(itemprop="object" type="text" list="provinces" placeholder="Recherche par région").input__text
+                datalist#provinces
+                    option(value="Liège")
+                    option(value="Namur")
+                    option(value="Luxembourg")
+                    option(value="Anvers")
+                    option(value="Hainaut")
+                    option(value="Brabant Wallon")
+                    option(value="Limbourg")
+                    option(value="Flandre oriental")
+                    option(value="Brabant Flamand")
                 input(itemprop="target" type="submit" value="S'inscrire").search__submit
                 
             while numberItem < 6
