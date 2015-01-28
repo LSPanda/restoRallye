@@ -12,4 +12,4 @@
 
 // Fluide images for responsive
 li > ul, li > ol, dt, dd
-    margin-bottom calc_line-height( wf_line-height, wf_font-size )
+    rem-fallback( margin-bottom, value_line-height( wf_line-height, 5 ) )

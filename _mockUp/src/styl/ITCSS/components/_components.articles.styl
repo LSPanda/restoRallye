@@ -17,12 +17,13 @@
 
 .articles__img
     width 25%
+    rem-fallback( margin-top, value_line-height( wf_line-height, 3 ) )
     +media-query( screen, max-width 960px )
         display none
 
 .articles__body
     width 75%
-    rem-fallback( padding, 0 24px )
+    rem-fallback( padding, 0 20px )
     +media-query( screen, max-width 960px )
         width 100%
 .body__dates

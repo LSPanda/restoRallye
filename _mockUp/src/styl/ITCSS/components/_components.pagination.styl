@@ -12,12 +12,14 @@
 
 // Style for my pagination
 .pagination
+    rem-fallback( font-size, 20px )
     text-align center
 .pagination__element
-    background wf_background-pagination
     rem-fallback( margin, 0 4px )
     transition( all, 0.25s )
-    &:hover
-        background wf_background-pagination-hover
+.pagination__element--current
+    text-decoration none
+    color wf_link-color-hover
+    rem-fallback( padding, 12px )
 .pagination__element--links
     rem-fallback( padding, 12px )

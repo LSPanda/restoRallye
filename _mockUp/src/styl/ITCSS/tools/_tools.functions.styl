@@ -15,9 +15,13 @@
 strip-units( val )
     unit( val, "" )
 
-// Remove units of a number
+// Line height
 calc_line-height( val1, val2 )
     strip-units( val1 ) / strip-units( val2 )
+
+// Line height with px
+value_line-height( val, modulo )
+    val / modulo
 
 // Converse PX to REM with PX fallback
 rem-fallback( property, arguments )

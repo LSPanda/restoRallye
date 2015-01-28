@@ -26,17 +26,17 @@ block content
                     div(itemprop="pageStart").inline-block.articles__img
                         img(itemprop="image" src="../css/images/mockUp/exempleBlog.jpg" alt="Thumbnail d'un article de blog")
                     div(itemprop="articleBody").inline-block.articles__body
-                        h3(itemprop="headline").delta Un chouette article
+                        h3(itemprop="headline").delta En ce lendemain de soirée
                         span(itemprop="date").block.body__dates Le 7 Janvier 2015
-                        p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate consequatur molestiae debitis cumque impedit et, in sint maiores eaque numquam! Veritatis deleniti dolor sapiente obcaecati alias quis, et nemo.
-                        p(itemprop="about") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga laboriosam iure beatae in, quidem, veritatis nesciunt, mollitia sit, cumque inventore tempora culpa sint. Hic perspiciatis libero doloremque laborum, voluptatem, delectus!
+                        p(itemprop="about") Tous mes sens sont émus d'une volupté douce et pure, comme l'haleine du matin dans cette saison délicieuse. Seul, au milieu d'une contrée qui semble fait exprès pour un coeur tel que mien, j'y goûte à longs traits l'ivresse de la vie.
+                        p(itemprop="about") Je suis si heureux, mon ami, si absorbé dans le sentiment de ma paisible existence, que mon art en souffre. Incapable de dessiner le mointre trait, la plus faible ébauche, jamais pourtant je ne fus si grand peintre. Quand mon vallon chéri se couvre autour de moi d'une légère vapeur; qu'au-dessus de ma tête le soleil de midi darde ses rayons embrasés sur la sombre voûte de mon bois, au fond duquel, comme d'un sanctuaire, il introduit à peine une tremblante lumière; qu'étendu sur le gazon touffu, à la chute d'un ruisseau, je découvre avec ravissement une multitude de plantes, de fleurs d'une délicatesse infinie.
                 - numberArticle++
         
         div(itemprop="pagination").pagination
             span.inline-block.pagination__element
                 a(href="#").block.removeLink.pagination__element--links &lang;&lang;
             span.inline-block.pagination__element
-                a(href="#").block.pagination__element--links 1
+                a(href="#").block.pagination__element--current 1
             span.inline-block.pagination__element
                 a(href="#").block.pagination__element--links 2
             span.inline-block.pagination__element
@@ -60,7 +60,7 @@ block content
                 span.inline-block.pagination__element
                     a(href="#").block.removeLink.pagination__element--links &lang;&lang;
                 span.inline-block.pagination__element
-                    a(href="#").block.pagination__element--links 1
+                    a(href="#").block.pagination__element--current 1
                 span.inline-block.pagination__element
                     a(href="#").block.pagination__element--links 2
                 span.inline-block.pagination__element
