@@ -28,7 +28,6 @@
                      --}}{{ Form::inputContact('mailRallye', 'Mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }}{{--
                      --}}{{ Form::inputContact('confirmMailRallye', 'Confirmation de mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }} {{--
                     --}}{{ Form::textareaContact('contentRallye', 'Votre message', [ 'placeholder' => 'Quelque chose à rajouter', 'class' => 'input__text' ], $errors) }}
-                    <p class="hightlight label__text">Tous les champs munis d’un astérisque<span class="span--spacing asterisque">(*)</span>sont obligatoires</p>
                     {{ Form::submitContact('Envoyez') }}
                 {{ Form::close() }}
             </div>
@@ -50,7 +49,6 @@
                      --}}{{ Form::inputContact('mailInvitation', 'Mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }}{{--
                      --}}{{ Form::inputContact('confirmMailInvitation', 'Confirmation de mail', [ 'placeholder' => 'johndoe@gmail.com', 'class' => 'input__text' ], $errors, true) }}{{--
                     --}}{{ Form::textareaContact('contentInvitation', 'Votre message', [ 'placeholder' => 'Quelque chose à rajouter', 'class' => 'input__text' ], $errors) }}
-                    <p class="hightlight label__text">Tous les champs munis d’un astérisque<span class="span--spacing asterisque">(*)</span>sont obligatoires</p>
                     {{ Form::submitContact('Envoyez') }}
                 {{ Form::close() }}
             </div>
@@ -71,7 +69,7 @@
                             Resto-Rallye à
                             <span itemprop="location" class="span--spacing">{{ $rallye->city }}</span>
                         </h3>
-                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $rallye->photo }}" class="thumbnails__img">
+                        <img itemprop="image" src="/uploads/rallyes/{{ $rallye->id }}/{{ $rallye->photo }}" class="thumbnails__img" alt="ADD ALT HERE">
                     </a>
                 </article>{{--
             --}}@endforeach

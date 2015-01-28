@@ -16,7 +16,7 @@
                             {{ $restaurant->name }}
                             <span itemprop="addressLocality" class="span--spacing">{{ $restaurant->city }}</span>
                         </h3>
-                        <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/{{ $restaurant->photo }}" class="thumbnails__img">
+                        <img itemprop="image" src="uploads/restaurants/{{ $restaurant->id }}/{{ $restaurant->photo }}" class="thumbnails__img" alt="ADD ALT ATTRIBUTE">
                     </a>
                 </article>{{--
             --}}@endforeach()

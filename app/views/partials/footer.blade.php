@@ -6,7 +6,7 @@
             <p itemprop="contactPoint">
                 <!-- TODO Informations de contact dynamiques -->
                 <span class="block hightlight">Mail&nbsp;: </span>
-                <a itemprop="url" href="mailto: info@restorallye.com">info@restorallye.com</a>
+                <a itemprop="url" href="mailto:info@restorallye.com">info@restorallye.com</a>
             </p>
             <p itemprop="telephone">
                 <span class="block hightlight">Téléphone&nbsp;: </span>
@@ -26,7 +26,7 @@
         <section itemscope itemtype="http://schema.org/Action" class="inline-block footer__newsletter">
             <h2 itemprop="headline" class="delta">Newsletter</h2>
             {{ Form::open( [ 'route' => 'storeEmailNewsletter', 'id' => 'ancreError', 'class' => 'forms__newsletter' ] ) }}
-                {{ Form::text( 'email', null, [ 'placeholder' => 'votre@mail.com', 'class' => 'input__text', 'itempprop' => 'object' ] ) }}
+                {{ Form::text( 'email', null, [ 'placeholder' => 'votre@mail.com', 'class' => 'input__text', 'itemprop' => 'object' ] ) }}
                 {{ Form::submit( 'S\'inscrire', [ 'itemprop' => 'target', 'class' => 'newsletter__submit' ] ) }}
                 {{ $errors->first( 'email', '<span itemprop="error" class="error">:message</span>' ) }}
         </section>
