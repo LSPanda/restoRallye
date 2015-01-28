@@ -21,7 +21,7 @@
         //Init mapOptions
         mapOptions = {
             center: defaultPosition,
-            zoom: 13,
+            zoom: 14,
             disableDefaultUI: true,
             scrollwheel: false,
             draggable: true,
@@ -78,6 +78,17 @@
         //Show login
         $("span#loginButton").click( function() {
             $("div.header__nav").toggleClass( "header__nav--conn" );
+        } );
+        //Fluide scroll for my anchor
+        $( "a.fluidScroll" ).click( function( evt ) {
+            evt.preventDefault();
+            var target = $( this ).attr( "href" );
+
+            $( "html, body" )
+                .stop()
+                .animate( { scrollTop: $( target ).offset().top }, 1000 );
+
+            return false
         } );
         //Generate google gMap for event
         generateGoogleMap();

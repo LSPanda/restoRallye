@@ -23,9 +23,17 @@ block content
             p(itemprop="description")
                 | Retrouver nous à
                 span(itemprop="location").span--spacing.hightlight l'Église St Etienne
+        div.eventAnchor
+            div.inline-block.eventAnchor__link
+                a(href="#myInscription").removeLink.fluidScroll.eventAnchor__button Inscription à cet événement
+            div.inline-block.eventAnchor__link
+                a(href="#friendInscription").removeLink.fluidScroll.eventAnchor__button Inviter un ami à cet événement
+            div.inline-block.eventAnchor__link
+                a(href="#oldRallye").removeLink.fluidScroll.eventAnchor__button Voir les anciens événements
 
     div.parallax__img.parallax__img--six
-    section.parallax__body
+    section.parallax__body.position--relative
+        div#myInscription.anchor
         div(itemscope itemtype="http://schema.org/Thing")
             h2(itemprop="headline").gamma Inscrivez-vous pour ce Resto-Rallye
             p(itemprop="description")
@@ -86,7 +94,8 @@ block content
                     input(type="submit" value="Inscrivez-vous !").input__submit
 
     div.parallax__img.parallax__img--seven
-    section.parallax__body
+    section.parallax__body.position--relative
+        div#friendInscription.anchor
         div(itemscope itemtype="http://schema.org/Thing")
             h2(itemprop="headline").gamma Invitez vos amis à ce Resto-Rallye
             p(itemprop="description")
@@ -149,6 +158,7 @@ block content
     div.parallax__img.parallax__img--height
     section.position--relative.parallax__body
         - var numberItem = 0
+        div#oldRallye.anchor
         div.position--relative
             h2.gamma Nos précédents Resto-Rallye
             form.forms__search.forms__search--right

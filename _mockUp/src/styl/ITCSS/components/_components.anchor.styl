@@ -1,0 +1,41 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS ANCHOR
+//\*------------------------------------*/
+
+
+
+
+// Style for anchor
+.anchor
+    position absolute
+    rem-fallback( top, -100px )
+    left 0
+
+    +media-query( screen, max-width 960px )
+        top 0
+
+.eventAnchor
+    rem-fallback( margin, 24px 0 )
+.eventAnchor__link
+    width 33.33%
+    rem-fallback( font-size, 18px )
+    font-family wf_font-nav
+    color wf_nav-color
+    rem-fallback( margin, 8px 0 )
+    rem-fallback( padding, 0 8px )
+    text-align center
+
+    +media-query( screen, max-width 960px )
+        width 100%
+.eventAnchor__button
+    width 100%
+    display block
+    background wf_background-anchor
+    rem-fallback( padding, 12px 8px )
+    &:hover
+        background wf_background-anchor-hover
