@@ -9,10 +9,16 @@
                 <!-- TODO Microdata sur la p itemprop="description" -->
                 {{ $nextRallye->body }}
                 <p>Retrouvez nous à &laquo;<span class="span--spacing hightlight">{{ $nextRallye->adress . ', ' . $nextRallye->postal_code . ' ' . $nextRallye->city }}</span>&raquo;</p>
+                <div class="eventAnchor">
+                  <div class="inline-block eventAnchor__link"><!--<a href="#myInscription" class="removeLink fluidScroll eventAnchor__button">Inscription à cet événement</a>--></div>
+                  <div class="inline-block eventAnchor__link"><!--<a href="#friendInscription" class="removeLink fluidScroll eventAnchor__button">Inviter un ami à cet événement</a>--></div>
+                  <div class="inline-block eventAnchor__link"><!--<a href="#oldRallye" class="removeLink fluidScroll eventAnchor__button">Voir les anciens événements</a>--></div>
+                </div>
             </div>
         </section>
         <div class="parallax__img parallax__img--six"></div>
-        <section class="parallax__body">
+        <section class="parallax__body position--relative">
+            <div id="myInscription" class="anchor"></div>
             <div itemscope itemtype="http://schema.org/Thing">
                 <h2 itemprop="headline" class="gamma">Inscrivez-vous pour ce Resto-Rallye</h2>
                 <p itemprop="description">Désireux de nous rejoindre à notre prochain événement&nbsp;? Rien de plus simple, il suffit de remplir le formulaire ci-dessous. Dépèchez-vous&nbsp;! Il ne reste plus que<span class="span--spacing hightlight">30 places</span>disponible.</p>
@@ -33,7 +39,8 @@
             </div>
         </section>
         <div class="parallax__img parallax__img--seven"></div>
-        <section class="parallax__body">
+        <section class="parallax__body position--relative">
+            <div id="friendInscription" class="anchor"></div>
             <div itemscope itemtype="http://schema.org/Thing">
                 <h2 itemprop="headline" class="gamma">Invitez vos amis à ce Resto-Rallye</h2>
                 <p itemprop="description">Vous pouvez aussi décider d'offrir des places pour le prochain événement à l'un de vos amis. Vous n'avez qu'à remplir ce formulaire, nous nous occuperons de lui envoyer l'invitation. Dépèchez-vous&nbsp;! Il ne reste plus que<span class="span--spacing hightlight">30 places</span>disponible.</p>
@@ -55,7 +62,8 @@
         </section>
     @endif
     <div class="parallax__img parallax__img--height"></div>
-    <section class="parallax__body" id="paginationAnchor">
+    <section class="parallax__body position--relative" id="paginationAnchor">
+        <div id="oldRallye" class="anchor"></div>
         <div class="position--relative">
             <h2 class="gamma">Nos précédents Resto-Rallye</h2>
             <form class="forms__search forms__search--right">
