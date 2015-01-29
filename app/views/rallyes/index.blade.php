@@ -9,11 +9,11 @@
                 <!-- TODO Microdata sur la p itemprop="description" -->
                 {{ $nextRallye->body }}
                 <p>Retrouvez nous à &laquo;<span class="span--spacing hightlight">{{ $nextRallye->adress . ', ' . $nextRallye->postal_code . ' ' . $nextRallye->city }}</span>&raquo;</p>
-                <div class="eventAnchor">
-                  <div class="inline-block eventAnchor__link"><!--<a href="#myInscription" class="removeLink fluidScroll eventAnchor__button">Inscription à cet événement</a>--></div>
-                  <div class="inline-block eventAnchor__link"><!--<a href="#friendInscription" class="removeLink fluidScroll eventAnchor__button">Inviter un ami à cet événement</a>--></div>
-                  <div class="inline-block eventAnchor__link"><!--<a href="#oldRallye" class="removeLink fluidScroll eventAnchor__button">Voir les anciens événements</a>--></div>
-                </div>
+                <div class="eventAnchor">{{--
+                  --}}<div class="inline-block eventAnchor__link"><a href="#myInscription" class="removeLink fluidScroll eventAnchor__button">Inscription à cet événement</a></div>{{--
+                  --}}<div class="inline-block eventAnchor__link"><a href="#friendInscription" class="removeLink fluidScroll eventAnchor__button">Inviter un ami à cet événement</a></div>{{--
+                  --}}<div class="inline-block eventAnchor__link"><a href="#oldRallye" class="removeLink fluidScroll eventAnchor__button">Voir les anciens événements</a></div>{{--
+                --}}</div>
             </div>
         </section>
         <div class="parallax__img parallax__img--six"></div>
