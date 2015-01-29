@@ -9,6 +9,7 @@ _mockUp/bin/css/*.map
 _mockUp/bin/index.html
 _mockUp/bin/html
 _mockUp/bin/js/script.js
+_mockUp/bin/js/script-min.js
 
 
 .rocketeer

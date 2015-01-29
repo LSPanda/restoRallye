@@ -164,15 +164,16 @@ block content
             form.forms__search.forms__search--right
                 input(type="text" list="town" placeholder="Recherche par Ville").input__text
                 datalist#town
-                    option(value="Liège")
-                    option(value="Namur")
-                    option(value="Bruxelle")
-                    option(value="Anvers")
-                    option(value="Seraing")
-                    option(value="Waremme")
-                    option(value="Jambe")
-                    option(value="Ebly")
-                    option(value="Ans")
+                    //- Mais pourquoi des espaces insécables ? À l'utilisation de la sémantique jade, à savoir " option/(value="something") ", le navigateur interprettait de lui même les balises fermante de la balise "option". Et quand on passe l'html au validateur, le manque de contenu de la balise option générait une erreur. D'ou cette petite astuce.
+                    option(value="Liège") &nbsp;
+                    option(value="Namur") &nbsp;
+                    option(value="Bruxelle") &nbsp;
+                    option(value="Anvers") &nbsp;
+                    option(value="Seraing") &nbsp;
+                    option(value="Waremme") &nbsp;
+                    option(value="Jambe") &nbsp;
+                    option(value="Ebly") &nbsp;
+                    option(value="Ans") &nbsp;
                 input(type="submit" value="S'inscrire").search__submit
                 
             while numberItem < 6
@@ -208,4 +209,4 @@ block script
     script(src="../js/vendor/modernizr-2.6.2.min.js")
     script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&sensor=false")
     script(src="../js/vendor/jquery.js")
-    script(src="../js/script.js")
+    script(src="../js/script-min.js")
