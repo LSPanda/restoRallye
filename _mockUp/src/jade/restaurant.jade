@@ -6,7 +6,7 @@ block title
     title Resto Rallye - Restaurant
 
 block style
-    link(rel="stylesheet" href="../css/main.css")
+    link(rel="stylesheet" href="../css/main-min.css")
     link(rel="stylesheet" href="../css/fresco/fresco.css")
 
 block header
@@ -39,7 +39,7 @@ block content
                     div.inline-block.gallery
                         a(itemprop="url" href="../css/images/mockUp/exempleRest.jpg" data-fresco-group="unique_name").fresco.gallery__link
                             img(itemprop="image" src="../css/images/mockUp/exempleRest.jpg" alt="Image personnel d'un restaurant").gallery__img
-                        - numberPhoto++
+                    - numberPhoto++
                 
     div#slideMap.parallax__map
 
@@ -53,7 +53,6 @@ block script
         var addressRdv = "Boulevard Piercot 40, 4400 Liège, Belgique"
         var addressRsts = ["Boulevard Piercot 40, 4400 Liège, Belgique"]
 
-    script(src="../js/vendor/modernizr-2.6.2.min.js")
     script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&sensor=false")
     script(src="../js/vendor/jquery.js")
     script(src="../js/script-min.js")

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-    <div id="slideMap" class="parallax__img"></div>
+    <div id="slideMap" class="parallax__map"></div>
     <section itemscope itemtype="http://schema.org/FoodEvent" class="parallax__body">
         <h2 itemprop="attendee" class="gamma">
             Resto-Rallye de

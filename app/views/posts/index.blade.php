@@ -38,4 +38,13 @@
         </div>
     </section>
     <div class="parallax__img parallax__img--fiveteen"></div>
+
+    <!-- IMPORTANT! Lightbox can't work without this code -->
+    <div id="slideMap"></div>
+    <script type="text/javascript">
+      var addressRdv = "{{ $nextRallye->adress . ', ' . $nextRallye->postal_code . ' ' . $nextRallye->city . ', Belgique'}}";
+      var addressRsts = [];
+
+    </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&amp;sensor=false"></script>
 @stop

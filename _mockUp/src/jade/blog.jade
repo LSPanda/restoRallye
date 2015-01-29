@@ -6,7 +6,7 @@ block title
     title Resto Rallye - Actualités
 
 block style
-    link(rel="stylesheet" href="../css/main.css")
+    link(rel="stylesheet" href="../css/main-min.css")
     link(rel="stylesheet" href="../css/fresco/fresco.css")
 
 block header
@@ -50,11 +50,11 @@ block content
         h2(itemprop="headline") Nos souvenirs à travers tous nos Rallyes
         - var numberPhoto = 0
 
-        div(itemprop="about")
+        div(itemscope itemprop="about")
             while numberPhoto < 20
                 div.inline-block.gallery
                     a(itemprop="url" href="../css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name").fresco.gallery__link
-                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg" alt="Souvenir des ancien rallye").gallery__img
+                        img(itemprop="image" src="../css/images/mockUp/exempleGallery.jpg" alt="Photo souvenir du rallye").gallery__img
                 - numberPhoto++
         div.pagination
                 span.inline-block.pagination__element
@@ -70,12 +70,16 @@ block content
 
 
     div.parallax__img.parallax__img--fiveteen
+    div#slideMap
 
 block footer
     include includes/footer.jade
 
 block script
-    script(src="../js/vendor/modernizr-2.6.2.min.js")
+    script.
+        var addressRdv
+        var addressRsts = []
+    
     script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&sensor=false")
     script(src="../js/vendor/jquery.js")
     script(src="../js/script-min.js")
