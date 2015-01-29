@@ -5,13 +5,13 @@
         {{ Form::open(['route' => 'doLogin', 'class' => 'form-signin']) }}
         <h2 class="form-signin-heading">Connectez vous</h2>
             <p class="text-danger"><strong>{{ Session::get('message') }}</strong></p>
-            {{ Form::text('login', null, [
-                'placeholder'   => 'Login',
+            {{ Form::email('email', null, [
+                'placeholder'   => 'email@domaine.com',
                 'class'         => 'form-control',
                 'required'      => 'required',
                 'autofocus'     => 'autofocus'
             ]) }}
-            {{ $errors->first('login', '<span class="error-message">:message</span>') }}
+            {{ $errors->first('email', '<span class="error-message">:message</span>') }}
 
             {{ Form::password('password', [
                 'placeholder'   => 'Mot de passe',

@@ -12,7 +12,7 @@ class Login extends FormValidator {
      * @var array
      */
     protected $rules = [
-        'login'    => 'required',
+        'email'    => 'required|email|exists:users,email',
         'password' => 'required'
     ];
 
@@ -22,7 +22,9 @@ class Login extends FormValidator {
      * @var array
      */
     protected $messages = [
-        'login.required'    => 'Le login est requis.',
+        'email.required'    => 'L\'adresse email est requise.',
+        'email.email'    => 'L\'adresse email entrée est incorrecte.',
+        'email.exists'    => 'L\'adresse email n\'est pas dans notre base de donnée.',
         'password.required' => 'Le mot de passe est requis.'
     ];
 }

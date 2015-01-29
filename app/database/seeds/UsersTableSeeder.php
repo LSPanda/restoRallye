@@ -3,22 +3,20 @@ use Faker\Factory as Faker;
 
 class UsersTableSeeder extends Seeder {
 
-    public function run () {
-        $faker = Faker::create ( 'fr_BE' );
+	public function run() {
+		$faker = Faker::create( 'fr_BE' );
 
-        foreach (range ( 1, 10 ) as $index)
-        {
-            User::create ( [
-                'login'         => $faker->userName,
-                'password'      => Hash::make ( 'azerty' ),
-                'email'         => $faker->safeEmail,
-                'adress'        => $faker->streetName . ' ' . $faker->numberBetween ( 1, 500 ),
-                'postal_code'   => $faker->randomNumber ( 4 ),
-                'city'          => $faker->city,
-                'role'          => 'u'
-            ] );
-        }
+		foreach ( range( 1, 10 ) as $index ) {
+			User::create( [
+				'password'    => Hash::make( 'azerty' ),
+				'email'       => $faker->safeEmail,
+				'adress'      => $faker->streetName . ' ' . $faker->numberBetween( 1, 500 ),
+				'postal_code' => $faker->randomNumber( 4 ),
+				'city'        => $faker->city,
+				'role'        => 'u'
+			] );
+		}
 
-        User::create ( [ 'login'    => 'admin', 'password' => Hash::make ( 'admin' ), 'email'    => 'admin@admin.admin', 'role'     => 'a'   ] );
-    }
+		User::create( [ 'password' => Hash::make( 'admin' ), 'email' => 'admin@admin.admin', 'role' => 'a' ] );
+	}
 }

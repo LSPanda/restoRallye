@@ -1,31 +1,34 @@
 <header itemscope itemtype="http://schema.org/WPHeader" class="header">
     <h1 itemprop="headline" class="hiddenTitle">Bienvenue sur le site de Resto Rallye </h1>
         <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="header__nav">
-            <section class="nav__conn">
-                <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
-                <form class="form__login">
-                    <div class="inline-block login__element">
-                        <label for="login" class="hightlight login__label">Mail</label>
-                        <input id="login" type="text" placeholder="john.doe@gmail.com" class="input__text">
-                    </div>
-                    <div class="inline-block login__element">
-                        <label for="pwd" class="hightlight login__label">Mot de passe</label>
-                        <input id="pwd" type="text" placeholder="*********" class="input__text">
-                    </div>
-                    <div class="inline-block login__element">
-                        <p class="login__log"><a href="#">Inscrivez-vous&nbsp;!</a></p>
-                        <input type="submit" value="Se connecter" class="login__submit">
-                    </div>
-                </form>
-            </section>
-        <!--
-            <section class="nav__conn logout--height">
-                <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
-                <p class="nav__conn--logout">
-                    Bienvenue<span class="span--spacing"><a href="#">&nbsp;Modifier informations personnel&nbsp;/</a><a href="#">&nbsp;Déconnexion&nbsp;)</a></span>
-                </p>
-            </section>
-        -->
+            @if ( Auth::check() )
+                <section class="nav__conn logout--height">
+                    <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
+                    <p class="nav__conn--logout">
+                        Bienvenue&nbsp;<span class="hightlight">{{ Auth::user()->email }}</span>&nbsp;<span class="span--spacing"><a href="#">Modifier informations personnelles</a>&nbsp;/&nbsp;<a href="{{ route( 'logout' ) }}">Déconnexion</a></span>
+                    </p>
+                </section>
+            @else
+                <section class="nav__conn">
+                    <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
+                    {{ Form::open( [ 'route' => 'doLogin' ] ) }}
+                        <div class="inline-block login__element">
+                            {{ Form::label( 'email', 'Mail', [ 'class' => 'hightlight login__label' ] ) }}
+                            {{ Form::email( 'email', null, [ 'class' => 'input__text', 'placeholder' => 'john.doe@gmail.com', 'required' => 'required' ] ) }}
+                            {{ $errors->first('email', '<div class="alert alert-danger">:message</div>') }}
+                        </div>
+                        <div class="inline-block login__element">
+                            {{ Form::label( 'password', 'Mot de passe', [ 'class' => 'hightlight login__label' ] ) }}
+                            {{ Form::password( 'password', [ 'class' => 'input__text', 'placeholder' => '*********', 'required' => 'required' ] ) }}
+                            {{ $errors->first('password', '<div class="alert alert-danger">:message</div>') }}
+                        </div>
+                        <div class="inline-block login__element">
+                            <p class="login__log"><a href="#">Inscrivez-vous&nbsp;!</a></p>
+                            {{ Form::submit( 'Se connecter', [ 'class' => 'login__submit' ] ) }}
+                        </div>
+                    </form>
+                </section>
+            @endif
             <nav class="position--relative nav">
                 <h2 itemprop="alternativeHeadline" class="hiddenTitle">Menu de navigation du site</h2>
                     <span itemprop="keywords" class="inline-block nav__element">
