@@ -84,6 +84,18 @@ Route::get ( '/logout',
         'uses' => 'AuthController@logout'
     ] );
 
+Route::get ( '/inscription',
+    [
+        'as'   => 'signin',
+        'uses' => 'UsersController@signin'
+    ] );
+
+Route::post ( '/doSignin',
+    [
+        'as'   => 'doSignin',
+        'uses' => 'UsersController@doSignin'
+    ] );
+
 /**
  * Back End routes
  */

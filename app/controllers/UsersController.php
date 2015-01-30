@@ -1,116 +1,144 @@
 <?php
 use App\Forms\User as FormUser;
+use App\Forms\UserSignin as FormUserSignin;
 
 class UsersController extends \BaseController {
 
-    protected $formUser;
+	protected $formUser;
+	protected $formUserSignin;
 
-    public function __construct (FormUser $formUser){
-        $this->formUser = $formUser;
-    }
+	public function __construct( FormUser $formUser, FormUserSignin $formUserSignin ) {
+		$this->formUser       = $formUser;
+		$this->formUserSignin = $formUserSignin;
+	}
 
-    /**
-     * Display a listing of the resource.
-     * GET /users
-     *
-     * @return Response
-     */
-    public function index () {
-        $users = User::whereRole('u')->get();
-        $adresses = User::whereRole('u')->get(['postal_code', 'city']);
+	/**
+	 * Display a listing of the resource.
+	 * GET /users
+	 *
+	 * @return Response
+	 */
+	public function index() {
+		$users    = User::whereRole( 'u' )->get();
+		$adresses = User::whereRole( 'u' )->get( [ 'postal_code', 'city' ] );
 
-        $cities = array_unique(array_column($adresses->toArray(), 'city'));
-        $postal_codes = array_unique(array_column($adresses->toArray(), 'postal_code'));
+		$cities       = array_unique( array_column( $adresses->toArray(), 'city' ) );
+		$postal_codes = array_unique( array_column( $adresses->toArray(), 'postal_code' ) );
 
-        return View::make ( 'users.admin.index', compact ( 'users', 'cities', 'postal_codes' ) );
-    }
+		return View::make( 'users.admin.index', compact( 'users', 'cities', 'postal_codes' ) );
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     * GET /users/create
-     *
-     * @return Response
-     */
-    public function create () {
-        //
-    }
+	/**
+	 * Show the form for creating a new resource.
+	 * GET /users/create
+	 *
+	 * @return Response
+	 */
+	public function create() {
+		//
+	}
 
-    /**
-     * Store a newly created resource in storage.
-     * POST /users
-     *
-     * @return Response
-     */
-    public function store () {
-        //
-    }
+	/**
+	 * Show the form for signing in.
+	 * GET /inscriptions
+	 *
+	 * @return Response
+	 */
+	public function signin() {
+		return View::make( 'users.signin' );
+	}
 
-    /**
-     * Display the specified resource.
-     * GET /users/{id}
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function show ($id) {
-        $user = User::findOrFail ( $id );
+	public function doSignin() {
+		$this->formUserSignin->validate( Input::all() );
+		$inputs = Input::all();
 
-        if (Auth::check () && Auth::getUser ()->role == 'a' && Request::is ( 'admin*' ))
-        {
-            return View::make ( 'users.admin.show', compact ( 'user' ) );
-        }
-        else
-        {
-            return View::make ( 'users.show', compact ( 'user' ) );
-        }
-    }
+		// Deletes non necessary keys
+		$inputs[ 'email' ] = $inputs[ 'emailIns' ];
+		unset( $inputs[ 'emailIns' ] );
+		$inputs[ 'password' ] = Hash::make( $inputs[ 'passwordIns' ] );
+		unset( $inputs[ 'passwordIns' ] );
+		unset( $inputs[ 'passwordConf' ] );
 
-    /**
-     * Show the form for editing the specified resource.
-     * GET /users/{id}/edit
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function edit ($id) {
-        $user = User::find ( $id );
+		$user = User::create( $inputs );
 
-        return View::make ( 'users.admin.edit', compact ( 'user' ) );
-    }
+		Auth::loginUsingId( $user->id );
 
-    /**
-     * Update the specified resource in storage.
-     * PUT /users/{id}
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function update ($id) {
-        $this->formUser->validate ( Input::all () );
+		return Redirect::route( 'home' );
+	}
 
-        $user = Restaurant::findOrFail ( $id );
+	/**
+	 * Store a newly created resource in storage.
+	 * POST /users
+	 *
+	 * @return Response
+	 */
+	public function store() {
+		//
+	}
 
-        $user->update ( Input::all () );
+	/**
+	 * Display the specified resource.
+	 * GET /users/{id}
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public function show( $id ) {
+		$user = User::findOrFail( $id );
 
-        return Redirect::route ( 'admin.users.show', $id );
-    }
+		if ( Auth::check() && Auth::getUser()->role == 'a' && Request::is( 'admin*' ) ) {
+			return View::make( 'users.admin.show', compact( 'user' ) );
+		} else {
+			return View::make( 'users.show', compact( 'user' ) );
+		}
+	}
 
-    /**
-     * Remove the specified resource from storage.
-     * DELETE /users/{id}
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function destroy ($id) {
-        User::destroy ($id);
+	/**
+	 * Show the form for editing the specified resource.
+	 * GET /users/{id}/edit
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public function edit( $id ) {
+		$user = User::find( $id );
 
-	    return Redirect::route ( 'admin.users.index' );
+		return View::make( 'users.admin.edit', compact( 'user' ) );
+	}
 
-    }
+	/**
+	 * Update the specified resource in storage.
+	 * PUT /users/{id}
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public function update( $id ) {
+		$this->formUser->validate( Input::all() );
+
+		$user = Restaurant::findOrFail( $id );
+
+		$user->update( Input::all() );
+
+		return Redirect::route( 'admin.users.show', $id );
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 * DELETE /users/{id}
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public function destroy( $id ) {
+		User::destroy( $id );
+
+		return Redirect::route( 'admin.users.index' );
+
+	}
 
 }

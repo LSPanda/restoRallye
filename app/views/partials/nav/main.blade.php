@@ -5,7 +5,7 @@
                 <section class="nav__conn logout--height">
                     <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
                     <p class="nav__conn--logout">
-                        Bienvenue&nbsp;<span class="hightlight">{{ Auth::user()->email }}</span>&nbsp;<span class="span--spacing"><a href="#">Modifier informations personnelles</a>&nbsp;/&nbsp;<a href="{{ route( 'logout' ) }}">Déconnexion</a></span>
+                        Bienvenue&nbsp;<span class="hightlight">{{ Auth::user()->surname }}</span>&nbsp;<span class="span--spacing"><a href="#">Modifier informations personnelles</a>&nbsp;/&nbsp;<a href="{{ route( 'logout' ) }}">Déconnexion</a></span>
                     </p>
                 </section>
             @else
@@ -23,7 +23,7 @@
                             {{ $errors->first('password', '<div class="alert alert-danger">:message</div>') }}
                         </div>
                         <div class="inline-block login__element">
-                            <p class="login__log"><a href="#">Inscrivez-vous&nbsp;!</a></p>
+                            <p class="login__log"><a href="{{ route( 'signin' ) }}">Inscrivez-vous&nbsp;!</a></p>
                             {{ Form::submit( 'Se connecter', [ 'class' => 'login__submit' ] ) }}
                         </div>
                     </form>
