@@ -25,7 +25,7 @@
     <section itemscope itemtype="http://schema.org/ImageGallery" class="parallax__body">
         <h2 itemprop="headline">Nos souvenirs à travers tous nos Rallyes</h2>
         <div itemprop="about">
-            <!-- TODO lister les fichiers présents dans le dossier uploads -->
+            <!-- TODO Prendre certaines photos des événements -->
             @for($i = 0; $i < 20; $i++){{--
                 --}}<div class="inline-block gallery">
                     <a itemprop="url" href="/css/images/mockUp/exempleGallery1.jpg" data-fresco-group="unique_name" class="fresco gallery__link">

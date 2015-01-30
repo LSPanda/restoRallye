@@ -38,7 +38,7 @@ class PagesController extends \BaseController {
 
     /**
      * Enregistre une nouvelle adresse dans la liste des adresses pour la newsletter
-     * TODO Gérer la redirection correctement (renvoie
+     * TODO Gérer la redirection correctement (renvoie sur la page d'accueil)
      *
      * @return mixed
      * @throws \Laracasts\Validation\FormValidationException
