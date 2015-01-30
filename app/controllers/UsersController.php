@@ -119,9 +119,18 @@ class UsersController extends \BaseController {
 	public function update( $id ) {
 		$this->formUser->validate( Input::all() );
 
-		$user = Restaurant::findOrFail( $id );
+		$user = User::findOrFail( $id );
 
-		$user->update( Input::all() );
+		$inputs = Input::all();
+
+		if ( $inputs[ 'password' ] ) {
+			$inputs[ 'password' ] = Hash::make( $inputs[ 'password' ] );
+		} else {
+			unset( $inputs[ 'password' ] );
+		}
+		unset( $inputs[ 'passwordConf' ] );
+
+		$user->update( $inputs );
 
 		return Redirect::route( 'admin.users.show', $id );
 	}

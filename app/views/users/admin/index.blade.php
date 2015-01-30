@@ -43,9 +43,10 @@
                 <thead>
                     <tr class="info">
                         <th>#</th>
-                        <th>Login</th>
+                        <th>Nom/Prénom</th>
                         <th>Email</th>
                         <th>Adresse</th>
+                        <th>Téléphone/gsm</th>
                         <th class="sorter-false">Action</th>
                     </tr>
                 </thead>
@@ -53,10 +54,11 @@
                     @foreach($users as $user)
                         <tr>
                             <td>{{ $user->id }}</td>
-                            <td>{{ $user->login }}</td>
+                            <td>{{ $user->name . ' ' . $user->surname }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->adress }}<br>
                                 {{ $user->postal_code . ' ' . $user->city }}</td>
+                            <td>{{ $user->phone . '<br>' . $user->gsm }}</td>
                             <td>
                                 <a href="{{ route('admin.users.show', $user->id) }}" title="Voir le profil">{{--
                                     --}}<button class="btn btn-info">{{--

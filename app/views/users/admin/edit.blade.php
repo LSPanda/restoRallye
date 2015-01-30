@@ -7,13 +7,25 @@
 
 @section('content')
     {{ Form::open(['route' => ['admin.users.update', $user->id], 'method' => 'put']) }}
-        <div class="form-group">
-            {{ Form::label('email', 'Email') }}
-            {{ Form::email('email', $user->email, ['class' => 'form-control', 'require']) }}
-            {{ $errors->first('email', '<div class="alert alert-danger">:message</div>') }}
-        </div>
+        <h2>Édition</h2>
         <div class="row">
             <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ Form::label('name', 'Nom') }}
+                            {{ Form::text('name', $user->name, ['class' => 'form-control', 'require']) }}
+                            {{ $errors->first('name', '<div class="alert alert-danger">:message</div>') }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ Form::label('surname', 'Prénom') }}
+                            {{ Form::text('surname', $user->surname, ['class' => 'form-control', 'require']) }}
+                            {{ $errors->first('surname', '<div class="alert alert-danger">:message</div>') }}
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group">
                     {{ Form::label('adress', 'Adresse de l\'utilisateur') }}
                     {{ Form::text('adress', $user->adress, ['class' => 'form-control']) }}
@@ -35,8 +47,43 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary pull-right">Éditer</button>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    {{ Form::label('email', 'Email') }}
+                    {{ Form::email('email', $user->email, ['class' => 'form-control', 'require']) }}
+                    {{ $errors->first('email', '<div class="alert alert-danger">:message</div>') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::label('phone', 'Téléphone') }}
+                    {{ Form::text('phone', $user->phone, ['class' => 'form-control']) }}
+                    {{ $errors->first('phone', '<div class="alert alert-danger">:message</div>') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::label('gsm', 'GSM') }}
+                    {{ Form::text('gsm', $user->gsm, ['class' => 'form-control']) }}
+                    {{ $errors->first('gsm', '<div class="alert alert-danger">:message</div>') }}
+                </div>
             </div>
         </div>
+        <h2>Édition du mot de passe</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ Form::label('password', 'Mot de passe') }}
+                    {{ Form::password('password', ['class' => 'form-control']) }}
+                    {{ $errors->first('password', '<div class="alert alert-danger">:message</div>') }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ Form::label('passwordConf', 'Confirmation du mot de passe') }}
+                    {{ Form::password('passwordConf', ['class' => 'form-control']) }}
+                    {{ $errors->first('passwordConf', '<div class="alert alert-danger">:message</div>') }}
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary pull-right">Éditer</button>
     {{ Form::close() }}
 @stop
