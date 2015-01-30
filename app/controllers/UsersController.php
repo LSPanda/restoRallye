@@ -107,7 +107,10 @@ class UsersController extends \BaseController {
      * @return Response
      */
     public function destroy ($id) {
-        //
+        User::destroy ($id);
+
+	    return Redirect::route ( 'admin.users.index' );
+
     }
 
 }

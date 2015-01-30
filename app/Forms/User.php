@@ -13,12 +13,8 @@ class User extends FormValidator {
      * @var array
      */
     protected $rules = [
-        'login'       => 'required',
-        'password'    => 'required',
-        'email'       => 'required|email',
-        'adress'      => 'required',
-        'postal_code' => 'required|digits:4',
-        'city'        => 'required',
+        'email'       => 'required|email|exists:users,email',
+        'postal_code' => 'digits:4',
     ];
 
     /**
@@ -27,13 +23,9 @@ class User extends FormValidator {
      * @var array
      */
     protected $messages = [
-        'login.required'       => 'Le login est requis.',
-        'password.required'    => 'Le mot de passe est requis.',
         'email.required'       => 'L\'email est requis.',
         'email.email'          => 'Le format d\'email entré est incorrect.',
-        'adress.required'      => 'L\'adresse est requise.',
-        'postal_code.required' => 'Le code postal est requis.',
+        'email.exists'         => 'L\'adresse email entrée est déjà présente dans la base de donnée.',
         'postal_code.digits'   => 'Le code postal doit être composé de 4 chiffres.',
-        'city.required'        => 'La ville est requise.'
     ];
 }
