@@ -29,16 +29,6 @@ class UsersController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 * GET /users/create
-	 *
-	 * @return Response
-	 */
-	public function create() {
-		//
-	}
-
-	/**
 	 * Show the form for signing in.
 	 * GET /inscriptions
 	 *
@@ -64,16 +54,6 @@ class UsersController extends \BaseController {
 		Auth::loginUsingId( $user->id );
 
 		return Redirect::route( 'home' );
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /users
-	 *
-	 * @return Response
-	 */
-	public function store() {
-		//
 	}
 
 	/**
@@ -109,6 +89,20 @@ class UsersController extends \BaseController {
 	}
 
 	/**
+	 * Show the form for editing the specified resource.
+	 * GET /users/{id}/edit
+	 *
+	 * @param  int $id
+	 *
+	 * @return Response
+	 */
+	public function editProfile( ) {
+		$user = User::find( Auth::id() );
+
+		return View::make( 'users.edit', compact( 'user' ) );
+	}
+
+	/**
 	 * Update the specified resource in storage.
 	 * PUT /users/{id}
 	 *
@@ -116,7 +110,8 @@ class UsersController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function update( $id ) {
+	public function update( $id = null ) {
+		$id = ( $id ) ? $id : Auth::id();
 		$this->formUser->validate( Input::all() );
 
 		$user = User::findOrFail( $id );
@@ -132,7 +127,7 @@ class UsersController extends \BaseController {
 
 		$user->update( $inputs );
 
-		return Redirect::route( 'admin.users.show', $id );
+		return Redirect::back();
 	}
 
 	/**

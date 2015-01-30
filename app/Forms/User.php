@@ -20,7 +20,7 @@ class User extends FormValidator {
 		'city'         => 'required',
 		'email'        => 'required|email',
 		'password'     => 'required_with:passwordConf',
-		'passwordConf' => 'same:password',
+		'passwordConf' => 'same:password|required_with:password',
 	];
 
 	/**
@@ -29,15 +29,16 @@ class User extends FormValidator {
 	 * @var array
 	 */
 	protected $messages = [
-		'name.required'          => 'Le nom est requis.',
-		'surname.required'       => 'Le prénom est requis.',
-		'adress.required'        => 'L\'adresse est requise.',
-		'postal_code.required'   => 'Le code postal est requis.',
-		'postal_code.digits'     => 'Le code postal doit être composé de 4 chiffres.',
-		'city.required'          => 'La ville est requise.',
-		'email.required'         => 'L\'email est requis.',
-		'email.email'            => 'Le format d\'email entré est incorrect.',
-		'password.required_with' => 'Il faut entrer le premier mot de passe.',
-		'passwordConf.same'      => 'Les deux mots de passes sont différents.',
+		'name.required'              => 'Le nom est requis.',
+		'surname.required'           => 'Le prénom est requis.',
+		'adress.required'            => 'L\'adresse est requise.',
+		'postal_code.required'       => 'Le code postal est requis.',
+		'postal_code.digits'         => 'Le code postal doit être composé de 4 chiffres.',
+		'city.required'              => 'La ville est requise.',
+		'email.required'             => 'L\'email est requis.',
+		'email.email'                => 'Le format d\'email entré est incorrect.',
+		'password.required_with'     => 'Il faut entrer le premier mot de passe.',
+		'passwordConf.same'          => 'Les deux mots de passes sont différents.',
+		'passwordConf.required_with' => 'Il faut entrer les deux mots de passe.',
 	];
 }

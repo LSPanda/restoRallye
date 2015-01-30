@@ -96,6 +96,18 @@ Route::post ( '/doSignin',
         'uses' => 'UsersController@doSignin'
     ] );
 
+Route::get ( '/profil',
+    [
+        'as'   => 'profil',
+        'uses' => 'UsersController@editProfile'
+    ] );
+
+Route::post ( '/updateProfile',
+    [
+        'as'   => 'updateProfile',
+        'uses' => 'UsersController@update'
+    ] );
+
 /**
  * Back End routes
  */

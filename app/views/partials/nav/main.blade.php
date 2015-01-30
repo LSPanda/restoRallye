@@ -5,7 +5,7 @@
                 <section class="nav__conn logout--height">
                     <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
                     <p class="nav__conn--logout">
-                        Bienvenue&nbsp;<span class="hightlight">{{ Auth::user()->surname }}</span>&nbsp;<span class="span--spacing"><a href="#">Modifier informations personnelles</a>&nbsp;/&nbsp;<a href="{{ route( 'logout' ) }}">Déconnexion</a></span>
+                        Bienvenue&nbsp;<span class="hightlight">{{ Auth::user()->surname }}</span>&nbsp;<span class="span--spacing"><a href="{{ route('profil') }}">Modifier informations personnelles</a>&nbsp;/&nbsp;<a href="{{ route( 'logout' ) }}">Déconnexion</a></span>
                     </p>
                 </section>
             @else

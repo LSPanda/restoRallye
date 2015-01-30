@@ -11,7 +11,7 @@ Form::macro( 'inputContact',
 	 *
 	 * @return string
 	 */
-	function ( $name, $label, $options = [ ], $errors, $isObligatory = false ) {
+	function ( $name, $label, $options = [ ], $errors, $isObligatory = false , $value = null) {
 		$options[ 'id' ] = $name;
 		$html            = '<div class="inline-block form__element" >';
 		$html .= '<label for="' . $name . '" class="hightlight label__text">';
@@ -20,7 +20,7 @@ Form::macro( 'inputContact',
 			$html .= '<span class="span--spacing asterisque">*</span>';
 		}
 		$html .= '</label>';
-		$html .= Form::text( $name, null, $options );
+		$html .= Form::text( $name, $value, $options );
 		$html .= $errors->first( $name, '<span itemprop="error" class="error">:message</span>' );
 		$html .= '</div>';
 
