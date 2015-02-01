@@ -11,7 +11,7 @@
             @else
                 <section class="nav__conn">
                     <h2 itemprop="alternativeHeadline" class="hiddenTitle">Accès à mon compte Gastronomade</h2>
-                    {{ Form::open( [ 'route' => 'doLogin' ] ) }}
+                    {{ Form::open( [ 'route' => 'doLogin', 'class' => 'form__login' ] ) }}
                         <div class="inline-block login__element">
                             {{ Form::label( 'email', 'Mail', [ 'class' => 'hightlight login__label' ] ) }}
                             {{ Form::email( 'email', null, [ 'class' => 'input__text', 'placeholder' => 'john.doe@gmail.com', 'required' => 'required' ] ) }}
