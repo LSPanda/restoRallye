@@ -62,6 +62,12 @@ Route::resource ( 'posts',
     'PostsController',
     [ 'only' => [ 'index', 'show' ] ] );
 
+Route::post ( 'rallyeReg',
+    [
+        'as' => 'rallyeReg',
+        'uses' => 'RallyesController@registration'
+    ] );
+
 /**
  * Login routes
  */

@@ -324,4 +324,8 @@ class RallyesController extends \BaseController {
         return Redirect::route ( 'admin.rallyes.index' );
     }
 
+    public function registration () {
+        Redirect::back();
+    }
+
 }
